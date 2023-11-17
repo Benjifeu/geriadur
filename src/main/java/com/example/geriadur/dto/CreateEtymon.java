@@ -8,7 +8,7 @@ public class CreateEtymon {
     char gender;
     String description;
     String wordClass;
-    String languageRegister;
+    String semanticLanguage;
 
 
     Set<String> englishWords;

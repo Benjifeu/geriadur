@@ -1,8 +1,10 @@
 package com.example.geriadur.service;
 
-public class EtymonService {
+import com.example.geriadur.domain.Etymon;
 
-    public void addEtymon(String newEtymon){
+import java.util.List;
 
-    }
+public interface EtymonService {
+    List<Etymon> getAllEtymons();
+    void addEtymon(Etymon etymon);
 }

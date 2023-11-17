@@ -1,35 +1,50 @@
 package com.example.geriadur.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
+@Getter
+@Setter
+@NoArgsConstructor
+@Entity
+@Table(name = "author")
 public class Author {
 
     @Id
-    String authorId;
-    @Column(nullable = false)
-    String authorName;
-    @Column(nullable = false)
-    String biography;
-    @Column(nullable = false)
-    LocalDate dateOfBirth;
-    @Column(nullable = false)
-    LocalDate dateOfDeath;
-    @Column(nullable = false)
-    String nationality;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="author_id")
+    private Long authorId;
+
+    @Column(name="author_name",nullable = false)
+    private String authorName;
+
+    @Column(name="biography")
+    private String biography;
+
+    @Column(name="author_birthdate")
+    private LocalDate dateOfBirth;
+
+    @Column(name="author_deathdate")
+    private LocalDate dateOfDeath;
+
+    @Column(name="author_nationality",nullable = false)
+    private String nationality;
+
     @ManyToMany(
             fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST,CascadeType.MERGE}
+            cascade = {CascadeType.ALL}
     )
     @JoinTable(
             name="author_source",
             joinColumns = @JoinColumn(name = "author_id"),
-            inverseJoinColumns = @JoinColumn(name = "etymon")
+            inverseJoinColumns = @JoinColumn(name = "source_id")
     )
     private List<Source> sources = new ArrayList<>();
 }

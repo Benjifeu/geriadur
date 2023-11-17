@@ -8,6 +8,7 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -17,19 +18,24 @@ public class SemanticField {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int semanticFieldId;
+    @Column(name = "semanticfield_id")
+    private Long semanticFieldId;
 
-    @Column
-    String semanticFieldName;
+    @Column(name = "semanticfield_name")
+    private String semanticFieldName;
+
+    @Column(name = "semanticfield_size")
+    private int semanticFieldSize;
+
 
     @ManyToMany(
             fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST,CascadeType.MERGE}
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name="semanticField_Etymon",
-            joinColumns = @JoinColumn(name = "refWord"),
-            inverseJoinColumns = @JoinColumn(name = "etymon")
+            name = "semanticField_Etymon",
+            joinColumns = @JoinColumn(name = "semanticfield_id"),
+            inverseJoinColumns = @JoinColumn(name = "etymon_id")
     )
     private List<Etymon> etymons = new ArrayList<>();
 }

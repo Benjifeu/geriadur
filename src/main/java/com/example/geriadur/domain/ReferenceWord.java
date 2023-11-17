@@ -18,12 +18,14 @@ public class ReferenceWord {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @Column(name="refword_id")
+    private Long id;
 
-    @Column(name="name")
-    String word;
-    @Column(name="language")
-    LanguageEnum language;
+    @Column(name="ref_word_name")
+    String refWordName;
+
+    @Column(name="ref_word_language")
+    LanguageEnum refWordNameLanguage;
 
     @ManyToMany(
             fetch = FetchType.LAZY,
@@ -31,8 +33,8 @@ public class ReferenceWord {
     )
     @JoinTable(
             name="referceWord_Etymon",
-            joinColumns = @JoinColumn(name = "refWord"),
-            inverseJoinColumns = @JoinColumn(name = "etymon")
+            joinColumns = @JoinColumn(name = "refWord_id"),
+            inverseJoinColumns = @JoinColumn(name = "etymon_id")
     )
     private List<Etymon> etymons = new ArrayList<>();
 
