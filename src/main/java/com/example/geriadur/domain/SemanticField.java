@@ -3,9 +3,11 @@ package com.example.geriadur.domain;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -21,8 +23,11 @@ public class SemanticField {
     @Column(name = "semanticfield_id")
     private Long semanticFieldId;
 
-    @Column(name = "semanticfield_name")
-    private String semanticFieldName;
+    @Column(name = "semanticfield_nameFr", nullable = false)
+    private String semanticFieldNameFr;
+
+    @Column(name = "semanticfield_nameEng", nullable = false)
+    private String semanticFieldNameEng;
 
     @Column(name = "semanticfield_size")
     private int semanticFieldSize;
@@ -30,12 +35,12 @@ public class SemanticField {
 
     @ManyToMany(
             fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE,CascadeType.REFRESH}
     )
     @JoinTable(
             name = "semanticField_Etymon",
             joinColumns = @JoinColumn(name = "semanticfield_id"),
             inverseJoinColumns = @JoinColumn(name = "etymon_id")
     )
-    private List<Etymon> etymons = new ArrayList<>();
+    private Set<Etymon> etymons = new HashSet<>();
 }

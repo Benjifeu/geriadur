@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -36,6 +38,6 @@ public class ReferenceWord {
             joinColumns = @JoinColumn(name = "refWord_id"),
             inverseJoinColumns = @JoinColumn(name = "etymon_id")
     )
-    private List<Etymon> etymons = new ArrayList<>();
+    private Set<Etymon> etymons = new HashSet<>();
 
 }

@@ -12,7 +12,7 @@
     <h1 Add a semantic field></h1>
     <hr>
     <h2> Save Employee</h2>
-    <form action="#" th:action="@{/saveSemanticField}" th:object="${semanticField}"
+    <form action="#" th:action="@{/semanticfields/save}" th:object="${semanticField}"
           method="POST">
         <input type="text" th:field="*{semanticFieldName}"
                placeholder="Semantic Field Name" class="form-control mb-4 col-4">

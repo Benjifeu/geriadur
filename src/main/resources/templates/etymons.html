@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=" http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic Fields</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+
+    <script type="text/javascript" th:src="@{/js/script.js}" defer></script>
+</head>
+<body>
+
+<div align="center" class="container my-2">
+
+    <h1> List of Etymons</h1>
+    <a th:href="@{/etymons/add}" class="btn btn-primary btn-sm-mb-3">Add an Etymon</a>
+    <table border="1" class="table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th> Etymon</th>
+            <th> Traduction</th>
+            <th> Ascendant</th>
+            <th> Descendant</th>
+            <th> Gender</th>
+            <th> Wordclass</th>
+            <th> Semantic field</th>
+            <th> Delete</th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="etymon : ${etymons}">
+            <td><span
+                    class="langEtymon"
+                    th:text="${etymon.etymonLanguage}"
+                    th:title="${etymon.etymonLanguage}"
+            >
+            </span>:
+                <a th:href="@{/etymons/{id}(id=${etymon.etymonId})}" th:text="${etymon.etymonName}">
+                </a> [<span th:text="${etymon.phonetic}"></span>]
+                </span>
+            </td>
+            <td><p> Eng.: <span th:text="${etymon.referenceWordsEng}"></span></p>
+                <p>Fr.: <span th:text="${etymon.referenceWordsFr}"></span></p></td>
+            <td><p th:each="parent : ${etymon.parents}">
+                <span
+                        class="langEtymon"
+                        th:text="${parent.etymonLanguage}"
+                        th:title="${parent.etymonLanguage}"
+                ></span>
+                : <a th:href="@{/etymons/{id}(id=${parent.etymonId})}" th:text="${parent.etymonName}"></a></p></td>
+            <td><p th:each="child : ${etymon.children}">
+                <span
+                        class="langEtymon"
+                        th:text="${child.etymonLanguage}"
+                        th:title="${child.etymonLanguage}"
+                ></span>
+                : <a th:href="@{/etymons/{id}(id=${child.etymonId})}" th:text="${child.etymonName}"></a></p></td>
+            <td>
+                <span
+                        class="langEtymon"
+                        th:text="${etymon.gender}"
+                        th:title="${etymon.gender}"
+                ></span>
+            </td>
+            <td><span
+                    class="langEtymon"
+                    th:text="${etymon.wordClass}"
+                    th:title="${etymon.wordClass}"
+            ></span>
+            </td>
+            <td><span th:each="refs : ${etymon.semanticFields}"><a th:href="@{/etymons/{id}(id=${refs})}"
+                                                                   th:text="${semanticFields.semanticFieldName}"></a>, </span>
+            </td>
+            <td><a th:href="@{/etymons/delete/{id}(id=${etymon.etymonId})}">
+                <button class="btn"><i class="fa fa-trash"></i></button>
+            </a></td>
+        </tr>
+        </tbody>
+    </table>
+    <div th:if="${totalPages > 1}">
+        <div class="row col-sm-10">
+            <div class="col-sm-2">
+                Total Etymons: [[${totalItems}]]
+            </div>
+            <div class="col-sm-1">
+                <span th:each="i:${#numbers.sequence(1, totalPages)}">
+                    <a th:if="${currentPage != i}" th:href="@{'etymons/page/' + ${i}}">[[${i}]]</a>
+                    <span th:unless="${currentPage != i}"> [[${i}]]</span> &nbsp;&nbsp;
+                </span>
+            </div>
+            <div class="col-sm-1">
+                <a th:if="${currentPage < totalPages}" th:href="@{'etymons/page/'+${currentPage+1}}">Next</a>
+                <span th:unless="${currentPage < totalPages}">Next</span>
+            </div>
+            <div class="col-sm-1">
+                <a th:if="${currentPage < totalPages}" th:href="@{'etymons/page/'+${totalPages}}">Last</a>
+                <span th:unless="${currentPage < totalPages}">Last</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

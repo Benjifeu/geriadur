@@ -1,0 +1,34 @@
+[
+	{
+		"sourceNameInEnglish": "Catholicon",
+		"sourceNameInOriginalLanguage": "Catholicon",
+		"typeOfSource": "D",
+		"dateOfPublication": "1499",
+		"language": "LB",
+		"description": "The Catholicon is a 15th-century dictionary written in Breton, French, and Latin. It is the first Breton dictionary and also the first French dictionary. It contains six thousand entries and was compiled in 1464 by the Breton priest Jehan Lagadeuc."
+	},
+	{
+		"sourceNameInEnglish": "Red Book of Hergest",
+		"sourceNameInOriginalLanguage": "Llyfr Coch Hergest",
+		"typeOfSource": "P",
+		"dateOfPublication": "1382",
+		"language": "LW",
+		"description": "The Red Book of Hergest (Welsh: Llyfr Coch Hergest), Oxford, Jesus College, MS 111, is a large vellum manuscript written shortly after 1382, which ranks as one of the most important medieval manuscripts written in the Welsh language. It preserves a collection of Welsh prose and poetry, notably the tales of the Mabinogion and Gogynfeirdd poetry."
+	},
+	{
+		"sourceNameInEnglish": "The Cattle Raid of Cooley",
+		"sourceNameInOriginalLanguage": "Táin Bó Cúailnge",
+		"typeOfSource": "E",
+		"dateOfPublication": "1100",
+		"language": "LI",
+		"description": "The Cattle Raid of Cooley, is an epic from Irish mythology. It is often called \"The Irish Iliad\", although like most other early Irish literature, the Táin is written in prosimetrum, i.e. prose with periodic additions of verse composed by the characters."
+	},
+	{
+		"sourceNameInEnglish": "The Book of Invasions",
+		"sourceNameInOriginalLanguage": "Lebor Gabála Érenn",
+		"typeOfSource": "E",
+		"dateOfPublication": "1150",
+		"language": "LI",
+		"description": "The Book of Invasions, is a collection of poems and prose narratives in the Irish language intended to be a history of Ireland and the Irish from the creation of the world to the Middle Ages."
+	}
+]

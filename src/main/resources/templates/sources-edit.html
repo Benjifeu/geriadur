@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=" http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Semantic Fields</title>
+
+    <link rel="stylesheet"
+          href ="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+
+    <h2>Update a Source.</h2>
+    <div>
+        <form action="#" th:action="@{/save}" th:object="${source}"
+              method="POST">
+
+            <input type="hidden" th:field="*{sourceId}">
+            <p>Title in English
+                <br>
+                <input type="text" th:field="*{sourceNameInEnglish}"
+                       placeholder="Source Name in original language" class="form-control mb-4 col-4">
+            </p>
+            <p>Title in Original Language
+                <br>
+                <input type="text" th:field="*{sourceNameInOriginalLanguage}"
+                       placeholder="Source Name in original language" class="form-control mb-4 col-4">
+            </p>
+            <p>Year of Publication
+                <br>
+                <input type="text" th:field="*{dateOfPublication}"
+                       placeholder="Year of publication" class="form-control mb-4 col-4">
+            </p>
+            <p>Genre
+                <br>
+                <select th:field="*{typeOfSource}">
+                    <option th:each="typeOfSource : ${typeOfSources}"
+                            th:text="${typeOfSource}"
+                            th:value="${typeOfSource}">
+                    </option>
+                </select>
+            </p>
+            <p>Language
+                <br>
+                <select th:field="*{language}">
+                    <option
+                            th:each="language : ${languages}"
+                            th:text="${language}"
+                            th:value="${language}">
+                    </option>
+                </select>
+            </p>
+            <p>Description
+                <br>
+                <input type="text" th:field="*{description}"
+                       placeholder="Description" class="form-control mb-4 col-4">
+            <p>
+                <button type="submit" class="b">Update Etymon</button>
+        </form>
+    </div>
+
+    <a th:href="@{/}" >Back to sources list </a>
+</div>
+
+
+</body>
+</html>
+
