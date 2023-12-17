@@ -6,14 +6,17 @@ import java.util.List;
 
 public enum LanguageEnum {
     LB("Br.", "Breton"),
+    LOB("Br.", "Breton"),
+    LBQ("Bri.", "Brittonique"),
     LC("Corn.", "Cornique"),
     LE("Eng.", "Anglais"),
     LF("Fr.", "Français"),
     LG("Gaul.", "Gaulois"),
     LIE("P.I.E.", "Proto-indo-européen"),
     LI("Ga.", "Irlandais"),
+    LOI("Ga.", "vieil Irlandais"),
     LS("S.Ga.", "Gaélique écossais"),
-    LP("Pr.Cel.", "Proto-celte"),
+    LPC("Pr.Cel.", "Proto-celte"),
     LW("Cy.", "Gallois");
     private String eng;
     private String fr;

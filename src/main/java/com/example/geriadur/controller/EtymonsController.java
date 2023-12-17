@@ -18,7 +18,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Controller
-@RequestMapping("etymons")
 public class EtymonsController {
     @Autowired
     private EtymonService etymonService;
@@ -27,18 +26,18 @@ public class EtymonsController {
 
     //display list of semantic fields
 
-    @GetMapping()
+    @GetMapping("etymons")
     public String showEtymons(Model model) {
         return findPaginated(1, model);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("etymons/{id}")
     public String showEtymon(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("etymon", etymonService.getEtymonByID(id));
         return "etymons-Info";
     }
 
-    @GetMapping("/add")
+    @GetMapping("etymons/add")
     public String addEtymon(Model model) {
         Etymon etymon = new Etymon();
         model.addAttribute("etymon", etymon);
@@ -49,7 +48,7 @@ public class EtymonsController {
         return "etymons-add";
     }
 
-    @GetMapping("/edit/{id}")
+    @GetMapping("etymons/edit/{id}")
     public String editEtymon(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("etymon", etymonService.getEtymonByID(id));
         model.addAttribute("languages", LanguageEnum.values());
@@ -59,15 +58,15 @@ public class EtymonsController {
         return "etymons-edit";
     }
 
-    @PostMapping("/save")
+    @PostMapping("etymons/save")
     public String saveEtymon(@ModelAttribute("etymon") Etymon etymon) {
         etymonService.addEtymon(etymon);
         return "redirect:/etymons";
     }
 
-    @GetMapping("/page/{pageNo}")
+    @GetMapping("etymons/page/{pageNo}")
     public String findPaginated(@PathVariable("pageNo") int pageNo, Model model) {
-        int pageSize = 20;
+        int pageSize = 5;
         Page<Etymon> page = etymonService.findPaginated(pageNo, pageSize);
         List<Etymon> etymons = page.getContent();;
         //etymonService.getShowEtymons(List<Etymon> etymons);
@@ -78,7 +77,7 @@ public class EtymonsController {
         return "etymons";
     }
 
-    @GetMapping("/delete/{id}")
+    @GetMapping("etymons/delete/{id}")
     public String deleteEtymon(@PathVariable(value = "id") Long id) {
         etymonService.deleteEtymon(id);
         return "redirect:/etymons";

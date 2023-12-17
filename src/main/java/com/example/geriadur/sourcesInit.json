@@ -8,6 +8,14 @@
 		"description": "The Catholicon is a 15th-century dictionary written in Breton, French, and Latin. It is the first Breton dictionary and also the first French dictionary. It contains six thousand entries and was compiled in 1464 by the Breton priest Jehan Lagadeuc."
 	},
 	{
+		"sourceNameInEnglish": "Dictionary french celtic or french breton",
+		"sourceNameInOriginalLanguage": "Dictionnaire françois celtique ou françois breton",
+		"typeOfSource": "D",
+		"dateOfPublication": "1732",
+		"language": "LF",
+		"description": "Le \"dictionnaire françois celtique\" de Grégoire de Rostrenen est un lexique bilingue à destination du clergé breton désireux de prêcher dans la langue bretonne. Il mentionne les variantes selon le dialecte local."
+	},
+	{
 		"sourceNameInEnglish": "Red Book of Hergest",
 		"sourceNameInOriginalLanguage": "Llyfr Coch Hergest",
 		"typeOfSource": "P",

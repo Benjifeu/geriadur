@@ -19,8 +19,8 @@ public class Quote {
     @Column(name = "quote_id")
     private Long quoteId;
 
-    @Column(name = "quote_name", nullable = false)
-    private String quoteName;
+    @Column(name = "quote_text", nullable = false)
+    private String quoteText;
 
     @ManyToOne(
             fetch = FetchType.LAZY,
