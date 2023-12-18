@@ -1,4 +1,4 @@
-package com.example.geriadur.domain;
+package com.example.geriadur.domain.consultation;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -34,9 +34,9 @@ public class Quote {
             cascade = {CascadeType.PERSIST, CascadeType.MERGE}
     )
     @JoinTable(
-            name = "quote_etymon",
+            name = "quote_lexeme",
             joinColumns = @JoinColumn(name = "quote_id"),
-            inverseJoinColumns = @JoinColumn(name = "etymon_id")
+            inverseJoinColumns = @JoinColumn(name = "lexeme_id")
     )
-    private List<Etymon> etymons = new ArrayList<>();
+    private List<Lexeme> lexemes = new ArrayList<>();
 }

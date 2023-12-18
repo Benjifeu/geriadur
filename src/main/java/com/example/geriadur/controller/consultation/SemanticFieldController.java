@@ -1,7 +1,7 @@
-package com.example.geriadur.controller;
+package com.example.geriadur.controller.consultation;
 
 import com.example.geriadur.domain.SemanticField;
-import com.example.geriadur.service.SemanticFieldService;
+import com.example.geriadur.service.consultation.SemanticFieldService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,7 +33,7 @@ public class SemanticFieldController {
     }
     @GetMapping("/{id}")
     public String showWordsOfASemanticField(@PathVariable(value = "id")Long id, Model model) {
-        model.addAttribute("etymons", semanticFieldService.getListOfSemanticFieldById(id));
+        model.addAttribute("etymons", semanticFieldService.getListOfEtymonsById(id));
         return "etymons";
     }
 }

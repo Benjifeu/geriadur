@@ -1,4 +1,4 @@
-package com.example.geriadur.domain;
+package com.example.geriadur.domain.consultation;
 
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.TypeOfSourceEnum;
@@ -7,10 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Getter

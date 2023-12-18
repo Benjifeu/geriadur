@@ -1,15 +1,15 @@
-package com.example.geriadur.domain;
+package com.example.geriadur.domain.consultation;
 
+import com.example.geriadur.domain.consultation.Source;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.springframework.cglib.core.Local;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
+
 @Getter
 @Setter
 @NoArgsConstructor

@@ -1,6 +1,6 @@
-package com.example.geriadur.service;
+package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.Etymon;
+import com.example.geriadur.domain.EtymonName;
 import com.example.geriadur.domain.SemanticField;
 import com.example.geriadur.repositories.SemanticFieldRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +38,8 @@ public class SemanticFieldServiceImpl implements SemanticFieldService {
     }
 
     @Override
-    public Set<Etymon> getListOfSemanticFieldById(Long id){
+    public Set<EtymonName> getListOfEtymonsById(Long id){
         SemanticField semanticField = getSemanticFieldById(id);
-        return semanticField.getEtymons();
+        return semanticField.getEtymonNames();
     }
 }

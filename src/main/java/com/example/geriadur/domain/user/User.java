@@ -1,4 +1,4 @@
-package com.example.geriadur.domain;
+package com.example.geriadur.domain.user;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -26,6 +26,15 @@ public class User {
     private String email;
 
     private String password;
+
+    @Column(name = "score",columnDefinition = "integer default 0", nullable = false)
+    private int score;
+
+    /**language value: 1=french, 2=english, 3=breton*/
+    @Column(name = "language",columnDefinition = "integer default 1", nullable = false)
+    private int language;
+
+
 
 //the name of the role should always be preceded of the term "ROLE_" + the name of the role, ex: "ROLE_USER
     private String role;

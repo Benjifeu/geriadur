@@ -1,0 +1,278 @@
+[
+  {
+    "currentName": "Vercingetorix",
+    "etymonName": "Wer-kingeto-rig",
+    "descrFr": "Vercingetorix est un roi Arvèrne ayant réussi à rassemblé l'ensemble des peuple gaulois contre César en 52 avant JC, après plusieurs victoires, il sera malgré tout vaincu à Alésia",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 1,
+      "responseFr": "Le roi suprème des guerriers",
+      "responseEng": "The supreme king of warriors",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Carausius",
+    "etymonName": "Cara-wos-o",
+    "descrFr": "",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 2,
+      "responseFr": "Le celui qui demeure cher aux siens",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Commios",
+    "etymonName": "Com-bhiyos",
+    "descrFr": "Roi gaulois atrébate pendant la guerre des gaules",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 3,
+      "responseFr": "Le frappeur",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Acco",
+    "etymonName": "Ad-kon",
+    "descrFr": "Chef Sénone",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 4,
+      "responseFr": "Le grand loup",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Cunobelinos",
+    "etymonName": "Kuno-belinos",
+    "descrFr": "Roi et héros de la tribu bretonne des Cassiuellauni",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 5,
+      "responseFr": "Le chien puissant",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Taliesin",
+    "etymonName": "Tal-iesin",
+    "descrFr": "Barde gallois du Vième siècle auteur du livre de Taliesin, receuil de poésie lui étant attribué",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 6,
+      "responseFr": "Celui au front brillant",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Brennos",
+    "etymonName": "Branos",
+    "descrFr": "Chef gaulois de l'expédition militaire ayant aboutit au sac de Rome de -390",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 7,
+      "responseFr": "Le Corbeau",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Ambigatos",
+    "etymonName": "Ambi-catu",
+    "descrFr": "Roi biturige ayant rassemblé plusieurs tribus gauloises pour combattre les étrusques et s'installer au nord de l'Italie aux début du IVème siècle avant JC.",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 8,
+      "responseFr": "Celui qui combat des deux cotés",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Ambiorix",
+    "etymonName": "Ambio-rig",
+    "descrFr": "Roi belge ayant combattut les romains en 54 avant JC",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 9,
+      "responseFr": "Celui qui est roi des enclos",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Diviciacos",
+    "etymonName": "Di-uic-iacos",
+    "descrFr": "Druide éduen proche des romains lors de la guerre des Gaules",
+    "descrEng": "",
+    "literalTranslation": {
+      "id": 10,
+      "responseFr": "Le Vengeur",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Vortigern",
+    "etymonName": "Wer-tigern",
+    "descrFr": "Roi breton insulaire ayant combattut les irlandais et les saxons",
+    "descrEng": "",
+    "literalTranslation"
+    :
+    {
+      "id": 11,
+      "responseFr": "Le Grand Commandant",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Arganthonios",
+    "etymonName": "Arganto-onios",
+    "descrFr": "",
+    "descrEng": "",
+    "literalTranslation"
+    :
+    {
+      "id": 12,
+      "responseFr": "L'argenté",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  },
+  {
+    "currentName": "Arioviste",
+    "etymonName": "Ario-wisd",
+    "descrFr": "Roi des Suèves, d'origine germanique ou gauloise, celui-ci parlait en tout cas le gaulois et porte un prénom issu de la même langue",
+    "descrEng": "",
+    "literalTranslation"
+    :
+    {
+      "id": 13,
+      "responseFr": "Celui qui connait en avance",
+      "responseEng": "",
+      "typeOfResponse": "1"
+    }
+  }
+]
+
+
+
+
+arganthonios
+Arioviste
+Atepomaros
+Bellovesus
+Bouddica
+Riwal
+Cadwalladr
+Caratacos
+Cunodagos
+Conomor
+Conan
+Cuneda
+Deiotaros
+Deroch
+Dumnorix
+Guenolé
+Judicaël
+Maglocunus
+Tristan
+Tugdual
+
+
+- nom de tribu
+Venetes
+Vercingetorix
+Coriosolites
+Riedones
+Carnutes
+Bellovaces
+Caletes
+Venelles
+Cenomans
+Senones
+Lingons
+Sequanes
+Arvèrnes
+Allobroges
+Helvetes
+Ossismii
+Eduens
+Eburons
+Atrebates
+Iceni
+Ordovices
+Lexsovi
+lemovices
+Bituriges
+Turoni
+Pictaves
+Menapiens
+Remes
+Parisii
+Cornovii
+
+
+- nom de lieu (pays)
+Vosges
+Cantal
+Powys
+Paris
+Ardennes
+Périgord
+Quercy
+Angers
+Chartres
+Léon
+Ploermel
+Rouergue
+Flandre
+Auxerrois
+Gwent
+Morgannwg
+Savoie
+Berry
+Ulster
+Connaught
+Leinster
+Munster
+Galway
+Kildare
+Poitou
+Artois
+Dal riada
+Argyll
+Lothian
+Orkney
+Caithness
+
+
+- nom de ville
+Bourges
+Amiens
+Rouen
+
+
+- nom de dieu
+Cucuchlain
+Oengus
+Lugos
+Belenos
+Epona
+Brigantia
+Dianchecht
+ogmios
+Gobanon
+
+
+
+
+vercingetorix

@@ -1,8 +1,6 @@
-package com.example.geriadur.service;
+package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.Source;
-import com.example.geriadur.domain.Source;
-import com.example.geriadur.repositories.SourceRepository;
+import com.example.geriadur.domain.consultation.Source;
 import com.example.geriadur.repositories.SourceRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

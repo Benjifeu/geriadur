@@ -12,14 +12,14 @@ p{
     font-family: sans-serif;
 }
 /* Tooltip container */
-.langEtymon {
+.langLexeme {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
 }
 
 /* Tooltip text */
-.langEtymon .tooltiptext {
+.langLexeme .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: #555;
@@ -41,7 +41,7 @@ p{
 }
 
 /* Tooltip arrow */
-.langEtymon .tooltiptext::after {
+.langLexeme .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -53,7 +53,7 @@ p{
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.langEtymon:hover .tooltiptext {
+.langLexeme:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }

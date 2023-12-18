@@ -1,13 +1,13 @@
 package com.example.geriadur.util;
 
-import com.example.geriadur.domain.Etymon;
+import com.example.geriadur.domain.consultation.Lexeme;
 import com.example.geriadur.domain.SemanticField;
-import com.example.geriadur.domain.Source;
+import com.example.geriadur.domain.consultation.Source;
 import com.example.geriadur.dto.UserRegistrationDto;
-import com.example.geriadur.repositories.EtymonRepository;
+import com.example.geriadur.repositories.LexemeRepository;
 import com.example.geriadur.repositories.SemanticFieldRepository;
 import com.example.geriadur.repositories.SourceRepository;
-import com.example.geriadur.service.UserServiceImpl;
+import com.example.geriadur.service.user.UserServiceImpl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -19,8 +19,6 @@ import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -30,21 +28,21 @@ import java.util.stream.Stream;
 public class DataUtil {
     //@Value("${jsonFileName}")String jsonfile
     @Autowired
-    private EtymonRepository etymonRepository;
+    private LexemeRepository lexemeRepository;
     @Autowired
     private SemanticFieldRepository semanticFieldRepository;
     @Autowired
     private SourceRepository sourceRepository;
     @Autowired
     private UserServiceImpl userService;
-    private List<Etymon> etymonsInit = new ArrayList<>();
+    private List<Lexeme> lexemesInit = new ArrayList<>();
     private List<Source> sourcesInit = new ArrayList<>();
     @PostConstruct
     public void InjectionData() throws IOException {
-        etymonUtil();
+        lexemeUtil();
         sourceUtil();
-        etymonsInit.get(1).setChildren(Stream.of(etymonsInit.get(2),etymonsInit.get(3)).collect(Collectors.toSet()));
-        etymonsInit.get(6).setParents(Stream.of(etymonsInit.get(4),etymonsInit.get(0)).collect(Collectors.toSet()));
+        lexemesInit.get(1).setChildren(Stream.of(lexemesInit.get(2),lexemesInit.get(3)).collect(Collectors.toSet()));
+        lexemesInit.get(6).setParents(Stream.of(lexemesInit.get(4),lexemesInit.get(0)).collect(Collectors.toSet()));
         SemanticField semanticField =new SemanticField();
         semanticField.setSemanticFieldNameEng("battlefield");
         semanticField.setSemanticFieldNameFr("militaire");
@@ -61,19 +59,17 @@ public class DataUtil {
         semanticFieldRepository.save(semanticField2);
         semanticFieldRepository.save(semanticField3);
         semanticFieldRepository.save(semanticField4);
-        etymonsInit.get(2).setSemanticFields(new HashSet<>(semanticFieldRepository.findAll()));
-        System.out.println(etymonsInit.get(2).getSemanticFields());
-        etymonRepository.saveAll(etymonsInit);
+        lexemeRepository.saveAll(lexemesInit);
         sourceRepository.saveAll(sourcesInit);
         userService.save(new UserRegistrationDto("User","lastname","email","pass", "U"));
         userService.save(new UserRegistrationDto("Admin","lastname","emailAdmin","pass", "A"));
     }
 
-    void etymonUtil() throws IOException {
+    void lexemeUtil() throws IOException {
 
         JsonNode jsonNode = null;
         ObjectMapper mapper = new ObjectMapper();
-        InputStream is = new FileInputStream("src/main/java/com/example/geriadur/etymonsInit.json");
+        InputStream is = new FileInputStream("src/main/java/com/example/geriadur/lexemesInit.json");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
                 is
         ));
@@ -86,7 +82,7 @@ public class DataUtil {
         }
         log.info("initial data read");
         log.info(jsonNode.textValue());
-        etymonsInit = mapper.convertValue(jsonNode, new TypeReference<>() {
+        lexemesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
         });
     }
     void sourceUtil() throws IOException {

@@ -49,8 +49,8 @@ const nGender = ["neutral", "neutre","neptu"]
 
 const siteLanguage =1
 const lang =
-    document.querySelectorAll("span.langEtymon");
-const genre =    document.querySelectorAll("span.genEtymon");
+    document.querySelectorAll("span.langLexeme");
+const genre =    document.querySelectorAll("span.genLexeme");
 
 for (var i = 0; i < lang.length; i++) {
     lang[i].title=lang[i].title.replace("LB", bretonLanguage[siteLanguage])

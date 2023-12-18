@@ -10,17 +10,17 @@
 <body>
 <div class="container">
 
-    <h2>Update an Etymon.</h2>
+    <h2>Update an Lexeme.</h2>
     <div>
-        <form action="#" th:action="@{/save}" th:object="${etymon}"
+        <form action="#" th:action="@{/save}" th:object="${lexeme}"
               method="POST">
 
-            <input type="hidden" th:field="*{etymonId}">
-            <input type="text" th:field="*{etymonName}"
-                   placeholder="Etymon Name" class="form-control mb-4 col-4">
+            <input type="hidden" th:field="*{lexemeId}">
+            <input type="text" th:field="*{lexemeName}"
+                   placeholder="Lexeme Name" class="form-control mb-4 col-4">
             <input type="text" th:field="*{phonetic}"
                    placeholder="Phonetic Form" class="form-control mb-4 col-4">
-            <select th:field="*{etymonLanguage}">
+            <select th:field="*{lexemeLanguage}">
                 <option
                         th:each="language : ${languages}"
                         th:text="${language}"
@@ -43,11 +43,11 @@
             </select>
             <input type="text" th:field="*{description}"
                    placeholder="Description" class="form-control mb-4 col-4">
-            <button type="submit" class="b">Update Etymon</button>
+            <button type="submit" class="b">Update Lexeme</button>
         </form>
     </div>
 
-    <a th:href="@{/}" >Back to etymons list </a>
+    <a th:href="@{/}" >Back to lexemes list </a>
 </div>
 
 

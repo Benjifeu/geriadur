@@ -1,7 +1,6 @@
 package com.example.geriadur.repositories;
 
-import com.example.geriadur.domain.Etymon;
-import com.example.geriadur.domain.User;
+import com.example.geriadur.domain.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

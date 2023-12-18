@@ -1,11 +1,11 @@
-package com.example.geriadur.controller;
+package com.example.geriadur.controller.consultation;
 
 import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.TypeOfSourceEnum;
 import com.example.geriadur.constants.WordClassEnum;
-import com.example.geriadur.domain.Source;
-import com.example.geriadur.service.SourceService;
+import com.example.geriadur.domain.consultation.Source;
+import com.example.geriadur.service.consultation.SourceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;

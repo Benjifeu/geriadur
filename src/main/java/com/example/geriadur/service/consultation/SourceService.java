@@ -1,7 +1,6 @@
-package com.example.geriadur.service;
+package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.Etymon;
-import com.example.geriadur.domain.Source;
+import com.example.geriadur.domain.consultation.Source;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

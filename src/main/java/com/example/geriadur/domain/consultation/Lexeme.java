@@ -1,4 +1,4 @@
-package com.example.geriadur.domain;
+package com.example.geriadur.domain.consultation;
 
 import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
@@ -15,19 +15,19 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "etymon")
-public class Etymon {
+@Table(name = "lexeme")
+public class Lexeme {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "etymon_id")
-    private Long etymonId;
+    @Column(name = "lexeme_id")
+    private Long lexemeId;
 
-    @Column(name = "etymon_name", nullable = false)
-    private String etymonName;
+    @Column(name = "lexeme_name", nullable = false)
+    private String lexemeName;
 
-    @Column(name = "etymon_language",nullable = false)
-    private LanguageEnum etymonLanguage;
+    @Column(name = "lexeme_language",nullable = false)
+    private LanguageEnum lexemeLanguage;
 
     @Column(name = "phonetic")
     private String phonetic;
@@ -38,10 +38,10 @@ public class Etymon {
     @Column(name = "wordClass")
     private WordClassEnum wordClass;
 
-    @Column(name = "ref_words_eng",nullable = false)
+    @Column(name = "ref_words_eng")
     private String referenceWordsEng;
 
-    @Column(name = "ref_words_fr")
+    @Column(name = "ref_words_fr",nullable = false)
     private String referenceWordsFr;
 
     @Column(name = "descr_fr")
@@ -50,13 +50,9 @@ public class Etymon {
     @Column(name = "descr_eng")
     private String descrEng;
 
-    @ManyToMany(
-            mappedBy = "etymons"
-    )
-    private Set<SemanticField> semanticFields = new HashSet<>();
 
     @ManyToMany(
-            mappedBy = "etymons"
+            mappedBy = "lexemes"
     )
     private Set<Quote> quotes = new HashSet<>();
 
@@ -64,19 +60,19 @@ public class Etymon {
      @ManyToMany( fetch = FetchType.LAZY,
      cascade = {CascadeType.PERSIST,CascadeType.MERGE}
      )
-     @JoinTable( name="etymon_parent",
+     @JoinTable( name="lexeme_parent",
      joinColumns = @JoinColumn(name = "child_id"),
      inverseJoinColumns = @JoinColumn(name = "parent_id")
      )
-     private Set<Etymon> parents = new HashSet<>();
+     private Set<Lexeme> parents = new HashSet<>();
 
 
     @ManyToMany( fetch = FetchType.LAZY,
             cascade = {CascadeType.PERSIST,CascadeType.MERGE}
     )
-    @JoinTable( name="etymon_child",
+    @JoinTable( name="lexeme_child",
             joinColumns = @JoinColumn(name = "parent_id"),
             inverseJoinColumns = @JoinColumn(name = "child_id")
     )
-    private Set<Etymon> children = new HashSet<>();
+    private Set<Lexeme> children = new HashSet<>();
 }

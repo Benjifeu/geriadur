@@ -1,6 +1,6 @@
-package com.example.geriadur.service;
+package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.Etymon;
+import com.example.geriadur.domain.EtymonName;
 import com.example.geriadur.domain.SemanticField;
 
 import java.util.List;
@@ -11,6 +11,6 @@ public interface SemanticFieldService {
     List<SemanticField> getAllSemanticField();
     void saveSematicField(SemanticField semanticField);
     SemanticField getSemanticFieldById(Long id);
-    Set<Etymon> getListOfSemanticFieldById(Long id);
+    Set<EtymonName> getListOfEtymonsById(Long id);
 
 }

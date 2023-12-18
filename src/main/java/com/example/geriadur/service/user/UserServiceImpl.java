@@ -1,7 +1,7 @@
-package com.example.geriadur.service;
+package com.example.geriadur.service.user;
 
 import com.example.geriadur.constants.UserRoleEnum;
-import com.example.geriadur.domain.User;
+import com.example.geriadur.domain.user.User;
 import com.example.geriadur.dto.UserRegistrationDto;
 import com.example.geriadur.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,7 +65,7 @@ public class UserServiceImpl implements UserService {
             GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
             System.out.println(user.getEmail() + " " + user.getPassword() + " " + user.getFirstName() + " " + user.getRole());
             return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), Arrays.asList(authority));
-        } else throw new RuntimeException("Their is no etymon with the email:" + username);
+        } else throw new RuntimeException("Their is no lexeme with the email:" + username);
     }
 
     private Collection<? extends GrantedAuthority> mapRolesToAuthorities(List<String> roles) {

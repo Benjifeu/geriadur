@@ -1,6 +1,6 @@
-package com.example.geriadur.service;
+package com.example.geriadur.service.user;
 
-import com.example.geriadur.domain.User;
+import com.example.geriadur.domain.user.User;
 import com.example.geriadur.dto.UserRegistrationDto;
 import org.springframework.security.core.userdetails.UserDetailsService;
 

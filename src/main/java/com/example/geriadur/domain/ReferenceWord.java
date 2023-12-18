@@ -1,14 +1,13 @@
 package com.example.geriadur.domain;
 
 import com.example.geriadur.constants.LanguageEnum;
+import com.example.geriadur.domain.consultation.Lexeme;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -34,10 +33,10 @@ public class ReferenceWord {
             cascade = {CascadeType.PERSIST,CascadeType.MERGE}
     )
     @JoinTable(
-            name="referceWord_Etymon",
+            name="referceWord_lexeme",
             joinColumns = @JoinColumn(name = "refWord_id"),
-            inverseJoinColumns = @JoinColumn(name = "etymon_id")
+            inverseJoinColumns = @JoinColumn(name = "lexeme_id")
     )
-    private Set<Etymon> etymons = new HashSet<>();
+    private Set<Lexeme> lexemes = new HashSet<>();
 
 }
