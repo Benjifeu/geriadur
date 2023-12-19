@@ -46,6 +46,7 @@ public class UserServiceImpl implements UserService {
                 registrationDto.getFirstName(),
                 registrationDto.getLastName(),
                 registrationDto.getEmail(),
+                registrationDto.getLanguage(),
                 BCrypt.hashpw(registrationDto.getPassword(), BCrypt.gensalt()),
                 role
         );
@@ -58,17 +59,16 @@ public class UserServiceImpl implements UserService {
         if (username == null) {
             throw new UsernameNotFoundException("Please enter an email");
         }
-        System.out.println("ça passe " + username);
         Optional<User> opUser = userRepository.findByEmail(username);
         if (opUser.isPresent()) {
             User user = opUser.get();
             GrantedAuthority authority = new SimpleGrantedAuthority(user.getRole());
-            System.out.println(user.getEmail() + " " + user.getPassword() + " " + user.getFirstName() + " " + user.getRole());
             return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), Arrays.asList(authority));
-        } else throw new RuntimeException("Their is no lexeme with the email:" + username);
+        } else throw new RuntimeException("Their is no account with the email:" + username);
     }
 
     private Collection<? extends GrantedAuthority> mapRolesToAuthorities(List<String> roles) {
         return roles.stream().map(role -> new SimpleGrantedAuthority(role)).collect(Collectors.toList());
     }
+
 }

@@ -15,4 +15,5 @@ public class UserRegistrationDto {
     private String email;
     private String password;
     private String role;
+    private int language;
 }

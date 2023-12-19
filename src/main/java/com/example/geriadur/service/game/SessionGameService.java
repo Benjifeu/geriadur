@@ -7,12 +7,8 @@ import java.util.List;
 import java.util.Set;
 
 public interface SessionGameService {
-    Set<LiteralTranslation> get4LiteralTranslationWithoutSpecified(LiteralTranslation currentLitTrans);
-
-    Set<LiteralTranslation> getAllLiteralTranslationBySemField(long semanticFieldId, int language);
-
-    List<EtymonName> get15RandomEtymonName(long semanticFieldId);
-
-    EtymonName getNextEtymonName();
-
+    Set<LiteralTranslation> get5responseChoices(int gamestep);
+    List<EtymonName> get15RandomEtymonName();
+    boolean verifyResponse(int step, LiteralTranslation response);
+    int getScore();
 }

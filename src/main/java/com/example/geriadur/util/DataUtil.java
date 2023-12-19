@@ -61,8 +61,8 @@ public class DataUtil {
         semanticFieldRepository.save(semanticField4);
         lexemeRepository.saveAll(lexemesInit);
         sourceRepository.saveAll(sourcesInit);
-        userService.save(new UserRegistrationDto("User","lastname","email","pass", "U"));
-        userService.save(new UserRegistrationDto("Admin","lastname","emailAdmin","pass", "A"));
+        userService.save(new UserRegistrationDto("User","lastname","email","pass", "U",1));
+        userService.save(new UserRegistrationDto("Admin","lastname","emailAdmin","pass", "A",1));
     }
 
     void lexemeUtil() throws IOException {

@@ -7,7 +7,9 @@ import com.example.geriadur.repositories.EtymonNameRepository;
 import com.example.geriadur.repositories.SemanticFieldRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.RequestScope;
 
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
@@ -17,77 +19,50 @@ import java.util.concurrent.ThreadLocalRandom;
 public class SessionGameServiceImpl implements SessionGameService {
 
     @Autowired
-    private EtymonNameRepository etymonNameRepository;
+    private Set<LiteralTranslation> getAllLiteralTranslationBySemField;
     @Autowired
-    private SemanticFieldRepository semanticFieldRepository;
+    private List<EtymonName> get15RandomEtymonName;
+    @Autowired
+    private int getScore;
 
-    private Set<LiteralTranslation> sessionLiteralTranslations;
-    private List<EtymonName> sessionEtymonNames;
-
-    private int step;
-    private int score;
-
-    public SessionGameServiceImpl() {
-        this.sessionEtymonNames = get15RandomEtymonName(1);
-        this.sessionLiteralTranslations = getAllLiteralTranslationBySemField(1, 1);
+    public boolean verifyResponse(int step, LiteralTranslation response) {
+        if (Objects.equals(response.getResponse(), get15RandomEtymonName.get(step).getResponseFr())) {
+            getScore += 1;
+            return true;
+        }
+        return false;
+    }
+    public int getScore() {
+        return getScore;
     }
 
-
-    @Override
-    public EtymonName getNextEtymonName() {
-        return sessionEtymonNames.get(step);
+    public List<EtymonName> get15RandomEtymonName() {
+        return get15RandomEtymonName;
     }
 
-    @Override
-    public Set<LiteralTranslation> get4LiteralTranslationWithoutSpecified(LiteralTranslation currentLitTrans) {
+    public Set<LiteralTranslation> get5responseChoices(int gameStep) {
+        String response = get15RandomEtymonName.get(gameStep).getResponseFr();
         Set<LiteralTranslation> selectedLitTrans = new HashSet<>();
+        LiteralTranslation goodResponse = new LiteralTranslation();
+        goodResponse.setResponse(response);
+        selectedLitTrans.add(goodResponse);
         for (int i = 0; i < 4; i++) {
-            int randomIndex = ThreadLocalRandom.current().nextInt(sessionLiteralTranslations.size());
+            int randomIndex = ThreadLocalRandom.current().nextInt(getAllLiteralTranslationBySemField.size());
             int it = 0;
-            for (LiteralTranslation litTrans : sessionLiteralTranslations) {
+            for (LiteralTranslation litTrans : getAllLiteralTranslationBySemField) {
                 if (it == randomIndex) {
-                    if (!Objects.equals(litTrans.getResponse(), currentLitTrans.getResponse())) {
+                    if (!Objects.equals(litTrans.getResponse(), response)) {
                         selectedLitTrans.add(litTrans);
                         break;
                     }
                     it++;
                 }
             }
+
         }
         return selectedLitTrans;
     }
 
-
-    @Override
-    public Set<LiteralTranslation> getAllLiteralTranslationBySemField(long semanticFieldId, int language) {
-        Set<EtymonName> etymonNames = getAllEtymon(semanticFieldId);
-        Set<LiteralTranslation> literalTranslations = new HashSet<>();
-        for (EtymonName etymonName : etymonNames)
-            switch (language) {
-                case 1:
-                    literalTranslations.add(new LiteralTranslation(etymonName.getResponseFr()));
-                case 2:
-                    literalTranslations.add(new LiteralTranslation(etymonName.getResponseEng()));
-            }
-        return literalTranslations;
-    }
-
-    @Override
-    public List<EtymonName> get15RandomEtymonName(long semanticFieldId) {
-        Set<EtymonName> etymonNames = getAllEtymon(semanticFieldId);
-        for (EtymonName element : etymonNames)
-            if (etymonNames.size() > 15)
-                etymonNames.remove(element);
-        List<EtymonName> etymonNameList = new ArrayList<>(etymonNames);
-        return etymonNameList;
-    }
-
-    public Set<EtymonName> getAllEtymon(long semanticFieldId) {
-        Optional<SemanticField> semanticField = semanticFieldRepository.findById(semanticFieldId);
-        if (semanticField.isPresent()) {
-            return etymonNameRepository.findEtymonNamesBySemanticField(semanticField.get());
-        } else throw new RuntimeException("Their is no semantic field with the id:" + semanticFieldId);
-    }
 
 }
 
