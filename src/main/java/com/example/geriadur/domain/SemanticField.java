@@ -1,5 +1,6 @@
 package com.example.geriadur.domain;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,9 +31,7 @@ public class SemanticField {
     private int semanticFieldSize;
 
 
-    @OneToMany(
-            fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE,CascadeType.REFRESH}
+    @OneToMany(mappedBy = "semanticField"
     )
     private Set<EtymonName> etymonNames = new HashSet<>();
 }

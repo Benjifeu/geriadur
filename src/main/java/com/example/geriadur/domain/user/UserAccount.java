@@ -1,22 +1,16 @@
 package com.example.geriadur.domain.user;
 
-import com.example.geriadur.domain.EtymonName;
-import com.example.geriadur.dto.LiteralTranslation;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
 @Table(name = "user")
-public class User {
+public class UserAccount {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -41,7 +35,7 @@ public class User {
 //the name of the role should always be preceded of the term "ROLE_" + the name of the role, ex: "ROLE_USER
     private String role;
 
-    public User(String firstName, String lastName, String email, int language, String password, String role) {
+    public UserAccount(String firstName, String lastName, String email, int language, String password, String role) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

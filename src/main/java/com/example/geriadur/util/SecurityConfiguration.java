@@ -50,9 +50,10 @@ public class SecurityConfiguration {
     protected SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
 
         return httpSecurity.authorizeHttpRequests(authorize -> {
-            authorize.requestMatchers("/admin").hasRole("ADMIN");
-            authorize.requestMatchers("/**").hasRole("USER");
-                        authorize.anyRequest().authenticated();})
+                    authorize.requestMatchers("/admin").hasRole("ADMIN");
+                    authorize.requestMatchers("/**").hasRole("USER");
+                    authorize.anyRequest().authenticated();
+                })
                 .formLogin(login -> login.loginPage("/login")
                         .usernameParameter("email")
                         .defaultSuccessUrl("/", true)

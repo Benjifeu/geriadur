@@ -3,6 +3,7 @@ package com.example.geriadur.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -12,8 +13,11 @@ public class MainController {
         return "login";
     }
     @GetMapping("")
-    public String home() {
-        return "home";
+    public String home() {return "home";
+    }
+    @GetMapping("/sessionGame")
+    public String launchSessionGame() {
+        return "sessionGame";
     }
     @ResponseBody
     @GetMapping("/admin")
@@ -25,5 +29,8 @@ public class MainController {
     public String getAdmin(Model model) {
         return "Welcome user";
     }
-
+    @RequestMapping("/sessionGameTest")
+    public String sessionGame() {
+        return "showJson";
+    }
 }

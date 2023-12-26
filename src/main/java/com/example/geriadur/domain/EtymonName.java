@@ -1,6 +1,7 @@
 package com.example.geriadur.domain;
 
 import com.example.geriadur.domain.consultation.Lexeme;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,18 +27,12 @@ public class EtymonName {
     @Column(name = "current_name", nullable = false)
     private String currentName;
 
-    @Column(name = "etymo_name", nullable = false)
-    private String etymoName;
-
-    @Column(name = "response_fr", nullable = false, unique = true)
-    private String responseFr;
-
-    @Column(name = "response_eng")
-    private String responseEng;
+    @Column(name = "etymon_name", nullable = false)
+    private String etymonName;
 
     /** linked proto-celtic lexeme*/
-    @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
-    @JoinColumn(name = "lexeme_id")
+
+    @ManyToMany(mappedBy = "etymonNames")
     private Set<Lexeme> lexemePc;
 
     @Column(name = "descr_fr")
@@ -46,8 +41,12 @@ public class EtymonName {
     @Column(name = "descr_eng")
     private String descrEng;
 
-    @ManyToOne(cascade = CascadeType.PERSIST)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "sem_field_id")
     private SemanticField semanticField;
+
+    @OneToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "lit_trans_id")
+    private LiteralTranslation litTrans;
 
 }

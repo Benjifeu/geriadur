@@ -3,6 +3,8 @@ package com.example.geriadur.domain.consultation;
 import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.WordClassEnum;
+import com.example.geriadur.domain.EtymonName;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -64,6 +66,7 @@ public class Lexeme {
      joinColumns = @JoinColumn(name = "child_id"),
      inverseJoinColumns = @JoinColumn(name = "parent_id")
      )
+
      private Set<Lexeme> parents = new HashSet<>();
 
 
@@ -74,5 +77,15 @@ public class Lexeme {
             joinColumns = @JoinColumn(name = "parent_id"),
             inverseJoinColumns = @JoinColumn(name = "child_id")
     )
+
     private Set<Lexeme> children = new HashSet<>();
+
+    @ManyToMany( fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST,CascadeType.MERGE}
+    )
+    @JoinTable( name="lexeme_by_etymon",
+            joinColumns = @JoinColumn(name = "lexeme_id"),
+            inverseJoinColumns = @JoinColumn(name = "etymon_id")
+    )
+    private Set<EtymonName> etymonNames = new HashSet<>();
 }

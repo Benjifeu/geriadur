@@ -4,11 +4,10 @@
     "etymonName": "Wer-kingeto-rig",
     "descrFr": "Vercingetorix est un roi Arvèrne ayant réussi à rassemblé l'ensemble des peuple gaulois contre César en 52 avant JC, après plusieurs victoires, il sera malgré tout vaincu à Alésia",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 1,
-      "responseFr": "Le roi suprème des guerriers",
-      "responseEng": "The supreme king of warriors",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Le roi suprème des guerriers",
+      "litTransEng": "The supreme king of warriors",
+      "litTransType": "1"
     }
   },
   {
@@ -16,11 +15,10 @@
     "etymonName": "Cara-wos-o",
     "descrFr": "",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 2,
-      "responseFr": "Le celui qui demeure cher aux siens",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Le celui qui demeure cher aux siens",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -28,11 +26,10 @@
     "etymonName": "Com-bhiyos",
     "descrFr": "Roi gaulois atrébate pendant la guerre des gaules",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 3,
-      "responseFr": "Le frappeur",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Le frappeur",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -40,11 +37,10 @@
     "etymonName": "Ad-kon",
     "descrFr": "Chef Sénone",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 4,
-      "responseFr": "Le grand loup",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Le grand loup",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -52,11 +48,10 @@
     "etymonName": "Kuno-belinos",
     "descrFr": "Roi et héros de la tribu bretonne des Cassiuellauni",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 5,
-      "responseFr": "Le chien puissant",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Le chien puissant",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -64,11 +59,10 @@
     "etymonName": "Tal-iesin",
     "descrFr": "Barde gallois du Vième siècle auteur du livre de Taliesin, receuil de poésie lui étant attribué",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 6,
-      "responseFr": "Celui au front brillant",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Celui au front brillant",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -76,11 +70,10 @@
     "etymonName": "Branos",
     "descrFr": "Chef gaulois de l'expédition militaire ayant aboutit au sac de Rome de -390",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 7,
-      "responseFr": "Le Corbeau",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Le Corbeau",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -88,11 +81,10 @@
     "etymonName": "Ambi-catu",
     "descrFr": "Roi biturige ayant rassemblé plusieurs tribus gauloises pour combattre les étrusques et s'installer au nord de l'Italie aux début du IVème siècle avant JC.",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 8,
-      "responseFr": "Celui qui combat des deux cotés",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Celui qui combat des deux cotés",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -100,11 +92,10 @@
     "etymonName": "Ambio-rig",
     "descrFr": "Roi belge ayant combattut les romains en 54 avant JC",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 9,
-      "responseFr": "Celui qui est roi des enclos",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Celui qui est roi des enclos",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -112,11 +103,10 @@
     "etymonName": "Di-uic-iacos",
     "descrFr": "Druide éduen proche des romains lors de la guerre des Gaules",
     "descrEng": "",
-    "literalTranslation": {
-      "id": 10,
-      "responseFr": "Le Vengeur",
-      "responseEng": "",
-      "typeOfResponse": "1"
+    "litTrans": {
+      "litTransFr": "Le Vengeur",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -124,13 +114,12 @@
     "etymonName": "Wer-tigern",
     "descrFr": "Roi breton insulaire ayant combattut les irlandais et les saxons",
     "descrEng": "",
-    "literalTranslation"
+    "litTrans"
     :
     {
-      "id": 11,
-      "responseFr": "Le Grand Commandant",
-      "responseEng": "",
-      "typeOfResponse": "1"
+      "litTransFr": "Le Grand Commandant",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -138,13 +127,12 @@
     "etymonName": "Arganto-onios",
     "descrFr": "",
     "descrEng": "",
-    "literalTranslation"
+    "litTrans"
     :
     {
-      "id": 12,
-      "responseFr": "L'argenté",
-      "responseEng": "",
-      "typeOfResponse": "1"
+      "litTransFr": "L'argenté",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   },
   {
@@ -152,18 +140,181 @@
     "etymonName": "Ario-wisd",
     "descrFr": "Roi des Suèves, d'origine germanique ou gauloise, celui-ci parlait en tout cas le gaulois et porte un prénom issu de la même langue",
     "descrEng": "",
-    "literalTranslation"
+    "litTrans"
     :
     {
-      "id": 13,
-      "responseFr": "Celui qui connait en avance",
-      "responseEng": "",
-      "typeOfResponse": "1"
+      "litTransFr": "Celui qui connait en avance",
+      "litTransEng": "",
+      "litTransType": "1"
     }
   }
 ]
-
-
+/*
+[
+  {
+    "currentName": "Vercingetorix",
+    "etymonName": "Wer-kingeto-rig",
+    "descrFr": "Vercingetorix est un roi Arvèrne ayant réussi à rassemblé l'ensemble des peuple gaulois contre César en 52 avant JC, après plusieurs victoires, il sera malgré tout vaincu à Alésia",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 1,
+      "litTransFr": "Le roi suprème des guerriers",
+      "litTransEng": "The supreme king of warriors",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Carausius",
+    "etymonName": "Cara-wos-o",
+    "descrFr": "",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 2,
+      "litTransFr": "Le celui qui demeure cher aux siens",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Commios",
+    "etymonName": "Com-bhiyos",
+    "descrFr": "Roi gaulois atrébate pendant la guerre des gaules",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 3,
+      "litTransFr": "Le frappeur",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Acco",
+    "etymonName": "Ad-kon",
+    "descrFr": "Chef Sénone",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 4,
+      "litTransFr": "Le grand loup",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Cunobelinos",
+    "etymonName": "Kuno-belinos",
+    "descrFr": "Roi et héros de la tribu bretonne des Cassiuellauni",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 5,
+      "litTransFr": "Le chien puissant",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Taliesin",
+    "etymonName": "Tal-iesin",
+    "descrFr": "Barde gallois du Vième siècle auteur du livre de Taliesin, receuil de poésie lui étant attribué",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 6,
+      "litTransFr": "Celui au front brillant",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Brennos",
+    "etymonName": "Branos",
+    "descrFr": "Chef gaulois de l'expédition militaire ayant aboutit au sac de Rome de -390",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 7,
+      "litTransFr": "Le Corbeau",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Ambigatos",
+    "etymonName": "Ambi-catu",
+    "descrFr": "Roi biturige ayant rassemblé plusieurs tribus gauloises pour combattre les étrusques et s'installer au nord de l'Italie aux début du IVème siècle avant JC.",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 8,
+      "litTransFr": "Celui qui combat des deux cotés",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Ambiorix",
+    "etymonName": "Ambio-rig",
+    "descrFr": "Roi belge ayant combattut les romains en 54 avant JC",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 9,
+      "litTransFr": "Celui qui est roi des enclos",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Diviciacos",
+    "etymonName": "Di-uic-iacos",
+    "descrFr": "Druide éduen proche des romains lors de la guerre des Gaules",
+    "descrEng": "",
+    "litTrans": {
+      "litTransId": 10,
+      "litTransFr": "Le Vengeur",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Vortigern",
+    "etymonName": "Wer-tigern",
+    "descrFr": "Roi breton insulaire ayant combattut les irlandais et les saxons",
+    "descrEng": "",
+    "litTrans"
+    :
+    {
+      "litTransId": 11,
+      "litTransFr": "Le Grand Commandant",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Arganthonios",
+    "etymonName": "Arganto-onios",
+    "descrFr": "",
+    "descrEng": "",
+    "litTrans"
+    :
+    {
+      "litTransId": 12,
+      "litTransFr": "L'argenté",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Arioviste",
+    "etymonName": "Ario-wisd",
+    "descrFr": "Roi des Suèves, d'origine germanique ou gauloise, celui-ci parlait en tout cas le gaulois et porte un prénom issu de la même langue",
+    "descrEng": "",
+    "litTrans"
+    :
+    {
+      "litTransId": 13,
+      "litTransFr": "Celui qui connait en avance",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  }
+]
+*/
 
 
 arganthonios

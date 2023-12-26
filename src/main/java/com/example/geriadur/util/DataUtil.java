@@ -1,12 +1,12 @@
 package com.example.geriadur.util;
 
+import com.example.geriadur.domain.EtymonName;
+import com.example.geriadur.domain.LiteralTranslation;
 import com.example.geriadur.domain.consultation.Lexeme;
 import com.example.geriadur.domain.SemanticField;
 import com.example.geriadur.domain.consultation.Source;
 import com.example.geriadur.dto.UserRegistrationDto;
-import com.example.geriadur.repositories.LexemeRepository;
-import com.example.geriadur.repositories.SemanticFieldRepository;
-import com.example.geriadur.repositories.SourceRepository;
+import com.example.geriadur.repositories.*;
 import com.example.geriadur.service.user.UserServiceImpl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -35,41 +35,57 @@ public class DataUtil {
     private SourceRepository sourceRepository;
     @Autowired
     private UserServiceImpl userService;
+    @Autowired
+    private EtymonNameRepository etymonNameRepository;
+    @Autowired
+    private LiteralTranslationRepository literalTranslationRepository;
     private List<Lexeme> lexemesInit = new ArrayList<>();
+    private List<EtymonName> etymonNamesInit = new ArrayList<>();
     private List<Source> sourcesInit = new ArrayList<>();
+
     @PostConstruct
     public void InjectionData() throws IOException {
-        lexemeUtil();
-        sourceUtil();
-        lexemesInit.get(1).setChildren(Stream.of(lexemesInit.get(2),lexemesInit.get(3)).collect(Collectors.toSet()));
-        lexemesInit.get(6).setParents(Stream.of(lexemesInit.get(4),lexemesInit.get(0)).collect(Collectors.toSet()));
-        SemanticField semanticField =new SemanticField();
+        lexemeUtil("lexemesInit");
+        lexemeUtil("sourcesInit");
+        lexemeUtil("etymonsInit");
+        lexemesInit.get(1).setChildren(Stream.of(lexemesInit.get(2), lexemesInit.get(3)).collect(Collectors.toSet()));
+        lexemesInit.get(6).setParents(Stream.of(lexemesInit.get(4), lexemesInit.get(0)).collect(Collectors.toSet()));
+        SemanticField semanticField = new SemanticField();
         semanticField.setSemanticFieldNameEng("battlefield");
         semanticField.setSemanticFieldNameFr("militaire");
-        SemanticField semanticField2 =new SemanticField();
+        SemanticField semanticField2 = new SemanticField();
         semanticField2.setSemanticFieldNameEng("family");
         semanticField2.setSemanticFieldNameFr("famille");
-        SemanticField semanticField3 =new SemanticField();
+        SemanticField semanticField3 = new SemanticField();
         semanticField3.setSemanticFieldNameEng("working");
         semanticField3.setSemanticFieldNameFr("travail");
-        SemanticField semanticField4 =new SemanticField();
+        SemanticField semanticField4 = new SemanticField();
         semanticField4.setSemanticFieldNameEng("religion");
         semanticField4.setSemanticFieldNameFr("religion");
+        ArrayList<LiteralTranslation> literalTranslations = new ArrayList<>();
+        //ArrayList<EtymonName> etymonNames = new ArrayList<>();
+        for (EtymonName etymonName : etymonNamesInit) {
+            literalTranslations.add(etymonName.getLitTrans());
+            etymonName.setSemanticField(semanticField);
+        }
+        literalTranslationRepository.saveAll(literalTranslations);
         semanticFieldRepository.save(semanticField);
         semanticFieldRepository.save(semanticField2);
         semanticFieldRepository.save(semanticField3);
         semanticFieldRepository.save(semanticField4);
+        etymonNameRepository.saveAll(etymonNamesInit);
         lexemeRepository.saveAll(lexemesInit);
         sourceRepository.saveAll(sourcesInit);
-        userService.save(new UserRegistrationDto("User","lastname","email","pass", "U",1));
-        userService.save(new UserRegistrationDto("Admin","lastname","emailAdmin","pass", "A",1));
+
+        userService.save(new UserRegistrationDto("UserAccount", "lastname", "email", "pass", "U", 1));
+        userService.save(new UserRegistrationDto("Admin", "lastname", "emailAdmin", "pass", "A", 1));
     }
 
-    void lexemeUtil() throws IOException {
+    void lexemeUtil(String jsonName) throws IOException {
 
         JsonNode jsonNode = null;
         ObjectMapper mapper = new ObjectMapper();
-        InputStream is = new FileInputStream("src/main/java/com/example/geriadur/lexemesInit.json");
+        InputStream is = new FileInputStream("src/main/java/com/example/geriadur/" + jsonName + ".json");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
                 is
         ));
@@ -82,29 +98,17 @@ public class DataUtil {
         }
         log.info("initial data read");
         log.info(jsonNode.textValue());
-        lexemesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
-        });
-    }
-    void sourceUtil() throws IOException {
-
-        JsonNode jsonNode = null;
-        ObjectMapper mapper = new ObjectMapper();
-        InputStream is = new FileInputStream("src/main/java/com/example/geriadur/sourcesInit.json");
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
-                is
-        ));
-        try {
-            jsonNode = mapper.readTree(bufferedReader.lines().collect(Collectors.joining()));
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (jsonName.equals("lexemesInit")) {
+            lexemesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
+            });
+        } else if (jsonName.equals("sourcesInit")) {
+            sourcesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
+            });
+        } else if (jsonName.equals("etymonsInit")) {
+            etymonNamesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
+            });
         }
-        log.info("initial data read");
-        log.info(jsonNode.textValue());
-        sourcesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
-        });
-    }
 
+    }
 
 }

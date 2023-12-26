@@ -33,7 +33,7 @@ public class ReferenceWord {
             cascade = {CascadeType.PERSIST,CascadeType.MERGE}
     )
     @JoinTable(
-            name="referceWord_lexeme",
+            name="referenceWord_lexeme",
             joinColumns = @JoinColumn(name = "refWord_id"),
             inverseJoinColumns = @JoinColumn(name = "lexeme_id")
     )
