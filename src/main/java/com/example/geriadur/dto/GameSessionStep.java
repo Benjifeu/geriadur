@@ -7,6 +7,6 @@ import lombok.AllArgsConstructor;
 import java.util.List;
 @AllArgsConstructor
 public class GameSessionStep {
-    List<String> proposedLiteralTranslationList;
-    String etymonName;
+    List<ResponseChoice> proposedLiteralTranslationList;
+    ProperName properName;
 }

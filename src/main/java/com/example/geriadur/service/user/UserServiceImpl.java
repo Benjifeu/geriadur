@@ -5,6 +5,7 @@ import com.example.geriadur.domain.user.UserAccount;
 import com.example.geriadur.dto.UserRegistrationDto;
 import com.example.geriadur.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -65,12 +66,13 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-    public void saveScore(int sessionScore) {
+    public ResponseEntity saveScore(int sessionScore) {
         UserAccount userAccount =
                 userRepository.findByEmail(getCurrentUserEmail()).get();
         int finalScore = userAccount.getScore() + sessionScore;
         userAccount.setScore(finalScore);
         userRepository.save(userAccount);
+        return ResponseEntity.ok().body("Score of the user "+userAccount.getFirstName()+" has been updated");
     }
 
     public UserAccount getAccountInfo() {

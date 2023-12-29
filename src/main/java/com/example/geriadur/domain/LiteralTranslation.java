@@ -1,9 +1,5 @@
 package com.example.geriadur.domain;
 
-import com.example.geriadur.domain.EtymonName;
-import com.example.geriadur.domain.SemanticField;
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -30,11 +26,15 @@ public class LiteralTranslation {
     private String litTransFr;
 
     /**The type of literal transcription refer to the nature of the proper noun
-     * 1: male person or god name
-     * 2: female person or goddess name
-     * 3: tribe name
-     * 4: country or city name
-     *
+     * 1: male person or god name (singular)
+     * 2: female person or goddess name (singular)
+     * 3: tribe or people name (plural)
+     * 4: country name (singular)
+     * 5: country name (plural)
+     * 6: city name (singular)
+     * 7: river name (singular)
+     * 8: god and heroes name
+     * 9: goddess name
      */
     @Column(name = "lit_trans_type", nullable = false)
     private int litTransType;

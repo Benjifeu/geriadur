@@ -1,7 +1,6 @@
 package com.example.geriadur.domain;
 
 import com.example.geriadur.domain.consultation.Lexeme;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +8,8 @@ import lombok.Setter;
 
 import java.util.Set;
 
-/**The etymon define the proto-celtic root world and all his descandant
- *
+/**
+ * The etymon define the proto-celtic root world and all his descandant
  */
 @Getter
 @Setter
@@ -27,10 +26,12 @@ public class EtymonName {
     @Column(name = "current_name", nullable = false)
     private String currentName;
 
-    @Column(name = "etymon_name", nullable = false)
-    private String etymonName;
+    @Column(name = "etymo_name", nullable = false)
+    private String etymoName;
 
-    /** linked proto-celtic lexeme*/
+    /**
+     * linked proto-celtic lexeme
+     */
 
     @ManyToMany(mappedBy = "etymonNames")
     private Set<Lexeme> lexemePc;
@@ -40,6 +41,17 @@ public class EtymonName {
 
     @Column(name = "descr_eng")
     private String descrEng;
+
+    /**
+     * The wordTheme chosen for the gameSession
+     * 1: places and countries
+     * 2: historic figures
+     * 3: mythic figures
+     * 4: tribes and clans
+     * 5: arms and other things
+     */
+    @Column(name = "word_theme")
+    private Long wordTheme;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "sem_field_id")

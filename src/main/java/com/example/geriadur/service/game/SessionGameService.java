@@ -9,5 +9,5 @@ import java.util.Set;
 
 public interface SessionGameService {
     //boolean verifyResponse(LiteralTranslation response);
-    List<GameSessionStep> get15GameSessionStep(long semanticFieldId);
+    List<GameSessionStep> get15GameSessionStep(int wordTheme);
 }

@@ -12,23 +12,24 @@ public class MainController {
     public String login() {
         return "login";
     }
+
     @GetMapping("")
-    public String home() {return "home";
+    public String home() {
+        return "home";
     }
-    @GetMapping("/sessionGame")
-    public String launchSessionGame() {
-        return "sessionGame";
-    }
+
     @ResponseBody
     @GetMapping("/admin")
     public String getUser(Model model) {
         return "Welcome admin";
     }
+
     @ResponseBody
     @GetMapping("/user")
     public String getAdmin(Model model) {
         return "Welcome user";
     }
+
     @RequestMapping("/sessionGameTest")
     public String sessionGame() {
         return "showJson";

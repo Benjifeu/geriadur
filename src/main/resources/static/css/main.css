@@ -72,10 +72,34 @@ p{
     transition: all 0.3s;
 }
 
-.btn:hover{
+.btn.correct{
+    background:#9aeabc;
+}
+
+.btn.incorrect{
+    background: red;
+}
+
+.btn:hover:not([disabled]){
     background:#222;
     color:#fff;
 }
+.btn:disabled{
+    cursor: no-drop;
+}
+.menu-btn{
+    background: #001e4d;
+    color:#fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
 #next-btn{
     background: #001e4d;
     color:#fff;
@@ -87,5 +111,6 @@ p{
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.3s;
-
+    display: none;
 }
+
