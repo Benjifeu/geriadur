@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -33,8 +35,15 @@ public class EtymonName {
      * linked proto-celtic lexeme
      */
 
-    @ManyToMany(mappedBy = "etymonNames")
-    private Set<Lexeme> lexemePc;
+    /*@ManyToMany(mappedBy = "etymonNames")*/
+    @ManyToMany( fetch = FetchType.LAZY,
+            cascade = {CascadeType.ALL}
+    )
+    @JoinTable( name="lexeme_etymon",
+            joinColumns = @JoinColumn(name = "etymon_id"),
+            inverseJoinColumns = @JoinColumn(name = "lexeme_id")
+    )
+    private Map<Integer, Lexeme> lexemePc;
 
     @Column(name = "descr_fr")
     private String descrFr;

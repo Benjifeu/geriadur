@@ -9,4 +9,5 @@ import java.util.List;
 public class GameSessionStep {
     List<ResponseChoice> proposedLiteralTranslationList;
     ProperName properName;
+    List<PCelticRadical> pCelticRadicals;
 }

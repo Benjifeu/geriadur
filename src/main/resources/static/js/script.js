@@ -45,6 +45,7 @@ let totalQuestionNumber = 0;
 let wordTheme = 0;
 const currentNameElement = document.getElementById("currentName")
 const etymoNameElement = document.getElementById("etymoName")
+const translationNameElement = document.getElementById("translationName")
 const answerButton = document.getElementById("answer-buttons")
 const nextButton = document.getElementById("next-btn")
 const returnButton = document.getElementById("return-btn")
@@ -71,7 +72,11 @@ function showQuestion() {
     console.log(currentQuestion)
     let questionNo = currentQuestionIndex + 1;
     currentNameElement.innerHTML = questionNo + ". " + currentQuestion.properName.currentName;
-    etymoNameElement.innerHTML = "Forme celtique:" + currentQuestion.properName.etymoName;
+    etymoNameElement.innerHTML = "Forme celtique: ";
+    translationNameElement.innerHTML = "Traduction: ";
+    currentQuestion.pCelticRadicals.map((radical) =>{
+    etymoNameElement.innerHTML += radical.name + " - ";
+    translationNameElement.innerHTML += radical.translation + " - "})
     currentQuestion.proposedLiteralTranslationList.map(answer => {
         const button = document.createElement("button");
         console.log(answer.responseChoice.toString())

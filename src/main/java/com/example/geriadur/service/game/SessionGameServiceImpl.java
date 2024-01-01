@@ -2,7 +2,9 @@ package com.example.geriadur.service.game;
 
 import com.example.geriadur.domain.EtymonName;
 import com.example.geriadur.domain.LiteralTranslation;
+import com.example.geriadur.domain.consultation.Lexeme;
 import com.example.geriadur.dto.GameSessionStep;
+import com.example.geriadur.dto.PCelticRadical;
 import com.example.geriadur.dto.ProperName;
 import com.example.geriadur.dto.ResponseChoice;
 import com.example.geriadur.repositories.EtymonNameRepository;
@@ -26,8 +28,22 @@ public class SessionGameServiceImpl implements SessionGameService {
     public List<GameSessionStep> get15GameSessionStep(int wordTheme) {
         List<EtymonName> etymonNames = get15RandomEtymonName(wordTheme);
         List<GameSessionStep> gameSessionSteps = new ArrayList<>();
-        for (EtymonName etymonName : etymonNames)
-            gameSessionSteps.add(new GameSessionStep(get5responseChoices(etymonName.getLitTrans()), new ProperName(etymonName.getCurrentName(), etymonName.getEtymoName(), etymonName.getDescrFr())));
+        for (EtymonName etymonName : etymonNames) {
+            List<PCelticRadical> radicals = new ArrayList<>();
+            for (int i = 0; i < etymonName.getLexemePc().size(); i++) {
+
+                radicals.add(
+                        new PCelticRadical(etymonName.getLexemePc().get(i).getLexemeName(),
+                                etymonName.getLexemePc().get(i).getReferenceWordsFr()));
+            }
+            gameSessionSteps.add(new GameSessionStep(get5responseChoices(
+                    etymonName.getLitTrans()),
+                    new ProperName(
+                            etymonName.getCurrentName(),
+                            etymonName.getEtymoName(),
+                            etymonName.getDescrFr())
+                    , radicals));
+        }
         return gameSessionSteps;
     }
 

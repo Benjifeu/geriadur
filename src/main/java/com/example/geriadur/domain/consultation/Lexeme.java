@@ -10,7 +10,9 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -53,39 +55,26 @@ public class Lexeme {
     private String descrEng;
 
 
-    @ManyToMany(
-            mappedBy = "lexemes"
-    )
+    @ManyToMany(mappedBy = "lexemes")
     private Set<Quote> quotes = new HashSet<>();
 
 
      @ManyToMany( fetch = FetchType.LAZY,
-     cascade = {CascadeType.PERSIST,CascadeType.MERGE}
-     )
+     cascade = {CascadeType.PERSIST,CascadeType.MERGE})
      @JoinTable( name="lexeme_parent",
      joinColumns = @JoinColumn(name = "child_id"),
-     inverseJoinColumns = @JoinColumn(name = "parent_id")
-     )
-
+     inverseJoinColumns = @JoinColumn(name = "parent_id"))
      private Set<Lexeme> parents = new HashSet<>();
 
 
     @ManyToMany( fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST,CascadeType.MERGE}
-    )
+            cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinTable( name="lexeme_child",
             joinColumns = @JoinColumn(name = "parent_id"),
-            inverseJoinColumns = @JoinColumn(name = "child_id")
-    )
-
+            inverseJoinColumns = @JoinColumn(name = "child_id"))
     private Set<Lexeme> children = new HashSet<>();
 
-    @ManyToMany( fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST,CascadeType.MERGE}
-    )
-    @JoinTable( name="lexeme_by_etymon",
-            joinColumns = @JoinColumn(name = "lexeme_id"),
-            inverseJoinColumns = @JoinColumn(name = "etymon_id")
-    )
-    private Set<EtymonName> etymonNames = new HashSet<>();
+
+    @ManyToMany (mappedBy = "lexemePc")
+    private List<EtymonName> etymonNames = new ArrayList<>();
 }

@@ -23,20 +23,17 @@ public class Quote {
     private String quoteText;
 
     @ManyToOne(
-            fetch = FetchType.LAZY,
-            optional = false)
-    @JoinColumn(name = "source_id", nullable = false
+            fetch = FetchType.LAZY)
+    @JoinColumn(name = "source_id"
     )
     private Source source;
 
     @ManyToMany(
             fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE}
-    )
+            cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(
             name = "quote_lexeme",
             joinColumns = @JoinColumn(name = "quote_id"),
-            inverseJoinColumns = @JoinColumn(name = "lexeme_id")
-    )
+            inverseJoinColumns = @JoinColumn(name = "lexeme_id"))
     private List<Lexeme> lexemes = new ArrayList<>();
 }

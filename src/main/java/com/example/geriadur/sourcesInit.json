@@ -38,5 +38,13 @@
 		"dateOfPublication": "1150",
 		"language": "LI",
 		"description": "The Book of Invasions, is a collection of poems and prose narratives in the Irish language intended to be a history of Ireland and the Irish from the creation of the world to the Middle Ages."
+	},
+	{
+		"sourceNameInEnglish": "Dictionnary of the gaulish language",
+		"sourceNameInOriginalLanguage": "Dictionnaire de la langue Gauloise",
+		"typeOfSource": "D",
+		"dateOfPublication": "2003",
+		"language": "LB",
+		"description": "Dictionnaire de 800 entrées des principaux noms communs gaulois avec mention des sources physiques (inscriptions connues) et leur interprétation."
 	}
 ]

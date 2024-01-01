@@ -12,7 +12,7 @@
     }
   },
   {
-    "currentName": "Carausius",
+    "currentName": "Carausios",
     "etymoName": "Kara-wos-o",
     "descrFr": "",
     "descrEng": "",
@@ -37,19 +37,19 @@
   },
   {
     "currentName": "Acco",
-    "etymoName": "Ad-kon",
+    "etymoName": "Acc-kon",
     "descrFr": "Chef Sénone",
     "descrEng": "",
     "wordTheme": 2,
     "litTrans": {
-      "litTransFr": "Le grand loup",
+      "litTransFr": "Le Loup Rapide",
       "litTransEng": "",
       "litTransType": "1"
     }
   },
   {
     "currentName": "Cunobelinos",
-    "etymoName": "Kuno-belinos",
+    "etymoName": "Kuno-Belin-os",
     "descrFr": "Roi et héros de la tribu bretonne des Cassiuellauni",
     "descrEng": "",
     "wordTheme": 2,
@@ -66,14 +66,14 @@
     "descrEng": "",
     "wordTheme": 2,
     "litTrans": {
-      "litTransFr": "Celui au front brillant",
+      "litTransFr": "Celui au visage brillant",
       "litTransEng": "",
       "litTransType": "1"
     }
   },
   {
     "currentName": "Brennos",
-    "etymoName": "Branos",
+    "etymoName": "Bran-os",
     "descrFr": "Chef gaulois de l'expédition militaire ayant aboutit au sac de Rome de -390",
     "descrEng": "",
     "wordTheme": 2,
@@ -134,7 +134,7 @@
   {
     "currentName": "Arganthonios",
     "etymoName": "Arganto-onios",
-    "descrFr": "",
+    "descrFr": "Roi celtibère de Tartessos. Il s'agit probablement d'un titre honorifique.",
     "descrEng": "",
     "wordTheme": 2,
     "litTrans": {
@@ -174,7 +174,7 @@
     "descrEng": "",
     "wordTheme": 2,
     "litTrans": {
-      "litTransFr": "Celui d'une lignée valeureuse",
+      "litTransFr": "Le chef de clan",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -264,18 +264,6 @@
     }
   },
   {
-    "currentName": "Bellovaces",
-    "etymoName": "Bello-uaci",
-    "descrFr": "Tribu gauloise de belgique",
-    "descrEng": "",
-    "wordTheme": 4,
-    "litTrans": {
-      "litTransFr": "Les puissants",
-      "litTransEng": "",
-      "litTransType": "3"
-    }
-  },
-  {
     "currentName": "Cenomans",
     "etymoName": "Keno-mani",
     "descrFr": "Tribu gauloise éponyme de la région du Maine, une tribu du même nom était installée au nord de l'Italie",
@@ -354,7 +342,7 @@
     "descrEng": "",
     "wordTheme": 4,
     "litTrans": {
-      "litTransFr": "Les étrangers",
+      "litTransFr": "Ceux qui sont près de l'Aulne",
       "litTransEng": "",
       "litTransType": "3"
     }
@@ -788,7 +776,7 @@
     "litTrans": {
       "litTransFr": "La Délicieuse à Voir",
       "litTransEng": "",
-      "litTransType": "2"
+      "litTransType": "3"
     }
   }
 ]

@@ -18,7 +18,7 @@ import java.util.Set;
 public class Source {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="source_id")
+    @Column(name = "source_id")
     private Long sourceId;
 
     @Column(name = "source_name_english", nullable = false)
@@ -27,21 +27,22 @@ public class Source {
     @Column(name = "source_name_original")
     private String sourceNameInOriginalLanguage;
 
-    @Column(name = "type_source",nullable = false)
+    @Column(name = "type_source", nullable = false)
     private TypeOfSourceEnum typeOfSource;
 
-    @Column(name = "date_publication",nullable = false)
+    @Column(name = "date_publication", nullable = false)
     private int dateOfPublication;
 
-    @Column(name = "language",nullable = false)
+    @Column(name = "language", nullable = false)
     private LanguageEnum language;
 
-    @Column(name = "description",length = 100000)
+    @Column(name = "description", length = 100000)
     private String description;
 
-    @ManyToMany(
-            mappedBy = "sources"
-    )
+    @ManyToMany(mappedBy = "sources")
     private Set<Author> authors = new HashSet<>();
+
+    @OneToMany(mappedBy="source")
+    private Set<Quote> quotes = new HashSet<>();
 
 }
