@@ -1,6 +1,7 @@
 package com.example.geriadur.domain.consultation;
 
 import com.example.geriadur.domain.consultation.Source;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

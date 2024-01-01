@@ -58,6 +58,12 @@ public class Lexeme {
     @ManyToMany(mappedBy = "lexemes")
     private Set<Quote> quotes = new HashSet<>();
 
+    @ManyToMany( fetch = FetchType.LAZY,
+            cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+    @JoinTable( name="lexeme_source",
+            joinColumns = @JoinColumn(name = "lexeme_id"),
+            inverseJoinColumns = @JoinColumn(name = "source_id"))
+    private Set<Source> sources = new HashSet<>();
 
      @ManyToMany( fetch = FetchType.LAZY,
      cascade = {CascadeType.PERSIST,CascadeType.MERGE})

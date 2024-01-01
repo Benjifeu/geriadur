@@ -1,5 +1,6 @@
 [
 	{
+		"abbreviation": "CAT",
 		"sourceNameInEnglish": "Catholicon",
 		"sourceNameInOriginalLanguage": "Catholicon",
 		"typeOfSource": "D",
@@ -8,6 +9,7 @@
 		"description": "The Catholicon is a 15th-century dictionary written in Breton, French, and Latin. It is the first Breton dictionary and also the first French dictionary. It contains six thousand entries and was compiled in 1464 by the Breton priest Jehan Lagadeuc."
 	},
 	{
+		"abbreviation": "DFCFB",
 		"sourceNameInEnglish": "Dictionary french celtic or french breton",
 		"sourceNameInOriginalLanguage": "Dictionnaire françois celtique ou françois breton",
 		"typeOfSource": "D",
@@ -16,6 +18,7 @@
 		"description": "Le \"dictionnaire françois celtique\" de Grégoire de Rostrenen est un lexique bilingue à destination du clergé breton désireux de prêcher dans la langue bretonne. Il mentionne les variantes selon le dialecte local."
 	},
 	{
+		"abbreviation": "LCH",
 		"sourceNameInEnglish": "Red Book of Hergest",
 		"sourceNameInOriginalLanguage": "Llyfr Coch Hergest",
 		"typeOfSource": "P",
@@ -24,6 +27,7 @@
 		"description": "The Red Book of Hergest (Welsh: Llyfr Coch Hergest), Oxford, Jesus College, MS 111, is a large vellum manuscript written shortly after 1382, which ranks as one of the most important medieval manuscripts written in the Welsh language. It preserves a collection of Welsh prose and poetry, notably the tales of the Mabinogion and Gogynfeirdd poetry."
 	},
 	{
+		"abbreviation": "TBC",
 		"sourceNameInEnglish": "The Cattle Raid of Cooley",
 		"sourceNameInOriginalLanguage": "Táin Bó Cúailnge",
 		"typeOfSource": "E",
@@ -32,6 +36,7 @@
 		"description": "The Cattle Raid of Cooley, is an epic from Irish mythology. It is often called \"The Irish Iliad\", although like most other early Irish literature, the Táin is written in prosimetrum, i.e. prose with periodic additions of verse composed by the characters."
 	},
 	{
+		"abbreviation": "BI",
 		"sourceNameInEnglish": "The Book of Invasions",
 		"sourceNameInOriginalLanguage": "Lebor Gabála Érenn",
 		"typeOfSource": "E",
@@ -40,11 +45,136 @@
 		"description": "The Book of Invasions, is a collection of poems and prose narratives in the Irish language intended to be a history of Ireland and the Irish from the creation of the world to the Middle Ages."
 	},
 	{
-		"sourceNameInEnglish": "Dictionnary of the gaulish language",
-		"sourceNameInOriginalLanguage": "Dictionnaire de la langue Gauloise",
+		"abbreviation": "DFHCI",
+		"sourceNameInOriginalLanguage": "Dictionnaire des femmes et hommes celtiques illustres, de l'antiquité au haut moyen-âge",
+		"sourceNameInEnglish": "Dictionary of illustrated Celtic women and men, from antiquity to the early Middle Ages",
+		"typeOfSource": "D",
+		"dateOfPublication": "2023",
+		"language": "LF",
+		"description": "Descriptions biographiques avec interprétations des noms"
+	},
+	{
+		"abbreviation": "GHG",
+		"sourceNameInOriginalLanguage": "Le Grand Héritage des Gaulois",
+		"sourceNameInEnglish": "The great heritage of the gauls",
+		"typeOfSource": "D",
+		"dateOfPublication": "2023",
+		"language": "LI",
+		"description": "Etude de la toponymie française d'origine celtique"
+	},
+	{
+		"abbreviation": "DMRC",
+		"sourceNameInOriginalLanguage": "Dictionnaire des Mythologies et des Religions celtiques",
+		"sourceNameInEnglish": "Dictionnary of celtic mythologies and religions",
+		"typeOfSource": "D",
+		"dateOfPublication": "2012",
+		"language": "LF",
+		"description": "Entrèes couvrant l'ensemble des personnages, objets et pratiques concernant les mythes celtes"
+	},
+	{
+		"abbreviation": "CDC",
+		"sourceNameInOriginalLanguage": "Calendrier de Coligny",
+		"sourceNameInEnglish": "Coligny Calendar",
+		"typeOfSource": "D",
+		"dateOfPublication": "150",
+		"language": "LF",
+		"description": "Calendrier gaulois comportant des termes des jours et des mois"
+	},
+	{
+		"abbreviation": "CCC",
+		"sourceNameInOriginalLanguage": "Compert Con Culainn",
+		"sourceNameInEnglish": "La mort de cuchulainn",
+		"typeOfSource": "D",
+		"dateOfPublication": "1100",
+		"language": "LI",
+		"description": "Compert Con Culainn est un récit irlandais du début du Moyen Âge sur la conception et la naissance du héros Cú Chulainn. Faisant partie du cycle d'Ulster de la mythologie irlandaise, il survit en deux versions majeures."
+	},
+	{
+		"abbreviation": "PL",
+		"sourceNameInOriginalLanguage": "Plomb du Larzac",
+		"sourceNameInEnglish": "Larzac tablet",
+		"typeOfSource": "I",
+		"dateOfPublication": "100",
+		"language": "LG",
+		"description": "Le plomb du Larzac est une inscription gauloise à caractère magique découverte en août 1983 dans une tombe à incinération de la nécropole de La Vayssière (à L'Hospitalet-du-Larzac, Aveyron)"
+	},
+	{
+		"abbreviation": "LL",
+		"sourceNameInOriginalLanguage": "Lebor Laignech",
+		"sourceNameInEnglish": "Leinster Book",
+		"typeOfSource": "E",
+		"dateOfPublication": "1150",
+		"language": "LG",
+		"description": "Manuscrit irlandais médiéval compilé vers 1160 et conservé aujourd'hui au Trinity College de Dublin."
+	},
+	{
+		"abbreviation": "DLG",
+		"sourceNameInOriginalLanguage": "Dictionnaire de la langue gauloise : une approche linguistique du vieux-celtique continental",
+		"sourceNameInEnglish": "Dictionnary of gallic language",
+		"authors": "Xavier Delamarre",
+		"typeOfSource": "D",
+		"dateOfPublication": "2012",
+		"language": "LF",
+		"description": ""
+	},
+	{
+		"abbreviation": "DFG",
+		"sourceNameInOriginalLanguage": "Dictionnaire français-gaulois",
+		"sourceNameInEnglish": "French-gallic dictionnary",
+		"authors": "Jean-Paul Savignac",
 		"typeOfSource": "D",
 		"dateOfPublication": "2003",
-		"language": "LB",
-		"description": "Dictionnaire de 800 entrées des principaux noms communs gaulois avec mention des sources physiques (inscriptions connues) et leur interprétation."
+		"language": "LF",
+		"description": ""
+	},
+	{
+		"abbreviation": "EDPC",
+		"sourceNameInOriginalLanguage": "Etymological Dictionary of Proto-Celtic",
+		"sourceNameInEnglish": "Etymological Dictionary of Proto-Celtic",
+		"authors": "Ranko Matasović",
+		"typeOfSource": "D",
+		"dateOfPublication": "2009",
+		"language": "LE",
+		"description": ""
+	},
+	{
+		"abbreviation": "DGI",
+		"sourceNameInOriginalLanguage": "Dictionnaire de gaulois illustré",
+		"sourceNameInEnglish": "Dictionnaire de gaulois illustré",
+		"authors": "Jean-Paul Savignac",
+		"typeOfSource": "D",
+		"dateOfPublication": "2021",
+		"language": "LF",
+		"description": ""
+	},
+	{
+		"abbreviation": "NOGGC",
+		"sourceNameInOriginalLanguage": "Les noms d'origine gauloise - la gaule des combats",
+		"sourceNameInEnglish": "",
+		"authors": "Jacques Lacroix",
+		"typeOfSource": "D",
+		"dateOfPublication": "2003",
+		"language": "LF",
+		"description": ""
+	},
+	{
+		"abbreviation": "CHD",
+		"sourceNameInOriginalLanguage": "Les celtes - Histoire et dictionnaire",
+		"sourceNameInEnglish": "",
+		"authors": "Venceslas Kruta",
+		"typeOfSource": "D",
+		"dateOfPublication": "2000",
+		"language": "LF",
+		"description": ""
+	},
+	{
+		"abbreviation": "NLCEA",
+		"sourceNameInOriginalLanguage": "Noms de lieux celtiques de l'Europe ancienne",
+		"sourceNameInEnglish": "",
+		"authors": "Xavier Delamarre",
+		"typeOfSource": "D",
+		"dateOfPublication": "2012",
+		"language": "LF",
+		"description": ""
 	}
 ]

@@ -2,12 +2,15 @@ package com.example.geriadur.domain.consultation;
 
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.TypeOfSourceEnum;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -20,6 +23,9 @@ public class Source {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "source_id")
     private Long sourceId;
+
+    @Column(name = "abbreviation", nullable = false)
+    private String abbreviation;
 
     @Column(name = "source_name_english", nullable = false)
     private String sourceNameInEnglish;
@@ -39,10 +45,13 @@ public class Source {
     @Column(name = "description", length = 100000)
     private String description;
 
+    @JsonIgnore
     @ManyToMany(mappedBy = "sources")
     private Set<Author> authors = new HashSet<>();
 
     @OneToMany(mappedBy="source")
     private Set<Quote> quotes = new HashSet<>();
 
+    @ManyToMany(mappedBy = "sources")
+    private List<Lexeme> lexemes = new ArrayList<>();
 }

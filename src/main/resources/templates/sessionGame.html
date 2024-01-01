@@ -8,22 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/main.css">
 
-    <script type="text/javascript" th:src="@{/js/script.js}" defer></script>
+    <script type="text/javascript" th:src="@{/js/scriptGame.js}" defer></script>
 </head>
 <body>
-
-<div align="center" class="container my-2">
-    <div class="app">
-        <h1>Gerdarzh</h1>
-        <div class="quiz">
-            <h2 id="currentName"></h2>
-            <p class="langLexeme" id="etymoName"></p><br>
-            <p class="langLexeme" id="translationName"></p>
-            <div id="answer-buttons"></div>
-            <button id="next-btn"></button>
-        </div>
-        <div class="footer"> <a href=".." class="menu-btn">Menu</a></div>
+<header>
+    <h1>Gerdarzh</h1>
+</header>
+<section class="quiz">
+    <h2 id="currentName"></h2>
+    <div class="description" id="etymoDescription"></div>
+    <div class="etymoForm">
+        Radicaux:
+        <span class="etymoBtn" id="etymoName"></span>
     </div>
-</div>
+    <div class="answersForm" id="answer-btn"></div>
+    <button id="next-btn">Next</button>
+</section>
+<footer>
+    <a href="..">
+        <button class="menu-btn">Menu</button>
+    </a>
+</footer>
 </body>
 </html>
