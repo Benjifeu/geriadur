@@ -2151,6 +2151,20 @@
   },
   {
     "lexemeLanguage": "LPC",
+    "lexemeName": "ako",
+    "phonetic": "ako",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe patronymique (\"fils de\" ...)",
+    "referenceWordsEng": "patronymic suffix (\"son of\" ...)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
     "lexemeName": "-ritu-",
     "phonetic": "-ritu-",
     "gender": "NO",
@@ -2162,8 +2176,201 @@
     "sources": [
       "NLCEA"
     ]
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "coèm",
+    "phonetic": "koːi̯ṽ",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "cher, proche, gentil, noble, aimable",
+    "referenceWordsEng": "dear, gentle, beloved",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "án",
+    "phonetic": "",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "petit, gros (par ironie)",
+    "referenceWordsEng": "little, big (by irony)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "-ach",
+    "phonetic": "",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "petit, gros (par ironie)",
+    "referenceWordsEng": "little, big (by irony)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "makwos",
+    "phonetic": "makʷos",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "issu de, de la maison de",
+    "referenceWordsEng": "from the house of",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "aw",
+    "phonetic": "aw",
+    "gender": "NO",
+    "wordClass": "WPREP",
+    "referenceWordsFr": "de loin",
+    "referenceWordsEng": "away",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "sūle",
+    "phonetic": "sule",
+    "gender": "NO",
+    "wordClass": "WPREP",
+    "referenceWordsFr": "de loin",
+    "referenceWordsEng": "away",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dumno",
+    "gender": "GM",
+    "phonetic": "dumno",
+    "wordClass": "WAF",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "monde d'en bas, sombre, profond",
+    "referenceWordsEng": "underworld, real world, dark, deep"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "walos",
+    "gender": "GM",
+    "phonetic": "walos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "prince, chef",
+    "referenceWordsEng": "prince, chief"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "nél",
+    "gender": "GM",
+    "phonetic": "nel",
+    "wordClass": "WN",
+    "descrFr": "probablement emprunté au latin \"nebulus\"",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "nuage",
+    "referenceWordsEng": "cloud"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "uo",
+    "gender": "NO",
+    "phonetic": "wo",
+    "wordClass": "WPREF",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "sous, en-dessous",
+    "referenceWordsEng": "sub- , under"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "uo",
+    "gender": "NO",
+    "phonetic": "wo",
+    "wordClass": "WPREF",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "sous, en-dessous",
+    "referenceWordsEng": "sub- , under"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "klēyos",
+    "gender": "GM",
+    "phonetic": "klijos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "gauche",
+    "referenceWordsEng": "left"
+  },
+  {
+    "lexemeLanguage": "LLT",
+    "lexemeName": "manus",
+    "gender": "GM",
+    "phonetic": "manus",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "main, pouvoir",
+    "referenceWordsEng": "hand, power"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dubros",
+    "gender": "GM",
+    "phonetic": "dubros",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "eau",
+    "referenceWordsEng": "water"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "glenndos",
+    "gender": "GM",
+    "phonetic": "glendos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "vallée",
+    "referenceWordsEng": "valley"
   }
 ]
+
 
 birros
 ->

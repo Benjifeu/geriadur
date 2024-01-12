@@ -81,15 +81,17 @@ p {
 
 .etymoForm{
     text-align: left;
+    min-width: 600px;
     color: ghostwhite;
-    font-size: xx-large;
+    font-size: large;
     font-weight: 800;
-    padding: 30px 20px 20px 15%;
+    padding: 30px 20px 20px 20px;
     border: none;
 }
 
 .answersForm{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .etymoBtn2:hover span {
@@ -140,7 +142,7 @@ p {
     color: burlywood;
     font-weight: 700;
     padding: 50px 5px 15px 5px;
-    margin: 10px;
+    margin: 5px;
     text-align: center;
     cursor: default;
     transition: all 0.3s;
@@ -159,6 +161,9 @@ p {
 }
 
 .btn {
+    flex: 1;
+    min-width: 200px;
+    box-sizing: border-box;
     background: #555;
     color: burlywood;
     font-size: large;
@@ -233,7 +238,7 @@ header {
 
 footer {
     background: #555555;
-    position: absolute;
+    position: relative;
     bottom: 0;
     padding: 20px;
     width: 100%;

@@ -176,5 +176,15 @@
 		"dateOfPublication": "2012",
 		"language": "LF",
 		"description": ""
+	},
+	{
+		"abbreviation": "DIL",
+		"sourceNameInOriginalLanguage": "Dictionnary of the Irish Language",
+		"sourceNameInEnglish": "Dictionnary of the Irish Language",
+		"authors": "Royal Irish Academy",
+		"typeOfSource": "D",
+		"dateOfPublication": "2007",
+		"language": "LE",
+		"description": ""
 	}
 ]

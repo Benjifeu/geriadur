@@ -17,7 +17,8 @@ public enum LanguageEnum {
     LOI("Ga.", "vieil Irlandais"),
     LS("S.Ga.", "Gaélique écossais"),
     LPC("Pr.Cel.", "Proto-celte"),
-    LW("Cy.", "Gallois");
+    LW("Cy.", "Gallois"),
+    LLT("La.", "Latin");
     private String eng;
     private String fr;
 

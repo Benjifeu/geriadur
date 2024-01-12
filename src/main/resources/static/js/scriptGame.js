@@ -154,7 +154,7 @@ function chooseWordTheme() {
     button4.onclick = setWordTheme;
     answerButtonElement.appendChild(button4);
     const button5 = document.createElement("button");
-    button5.textContent = "Armes et Objets";
+    button5.textContent = "Objets divers";
     button5.classList.add("btn");
     button5.dataset.wt = "5";
     button5.onclick = setWordTheme;

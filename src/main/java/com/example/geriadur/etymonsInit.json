@@ -860,7 +860,7 @@
   {
     "currentName": "Cunedda",
     "etymoName": "Kunodagos",
-    "descrFr": ".",
+    "descrFr": "Chef gallois du Vème siècle originaire du Gododdin et qui regna sur le Gwynedd au nord du pays de Galles, il est contemporain de Vortigern et a peut-être été un de ses lieutenants",
     "descrEng": "",
     "wordTheme": 2,
     "lexemes": ["kuno","dagos"],
@@ -873,10 +873,10 @@
   {
     "currentName": "Riwal",
     "etymoName": "Rig-ual",
-    "descrFr": ".",
+    "descrFr": "Chef breton ayant participé à la conquête de l'Armorique au Vème siècle.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "lexemes": ["rix","ualos"],
     "litTrans": {
       "litTransFr": "Commandant Valeureux",
       "litTransEng": "",
@@ -889,7 +889,7 @@
     "descrFr": "Dumnorix était un chef Eduens, frère du druide Diviciacos, et farouche opposant à César. Il fut exécuté par les romains en 54 av. JC.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "lexemes": ["dumno","rix"],
     "litTrans": {
       "litTransFr": "Le Roi du Monde d'en Bas",
       "litTransEng": "",
@@ -902,9 +902,9 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "lexemes": ["kuno","án"],
     "litTrans": {
-      "litTransFr": "Le Roi du Monde d'en Bas",
+      "litTransFr": "Le Petit Guerrier-Loup",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -915,9 +915,9 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "lexemes": ["kara","ako"],
     "litTrans": {
-      "litTransFr": "Le bien aimé",
+      "litTransFr": "Le fils du bien aimé",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -941,23 +941,23 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "lexemes": ["maros","manus"],
     "litTrans": {
-      "litTransFr": "Celui à la Grande Autorité",
-      "litTransEng": "The one with the Great Authority",
+      "litTransFr": "Celui à la Grande Main (Autorité)",
+      "litTransEng": "The one with the Great Hand (Authority)",
       "litTransType": "1"
     }
   },
   {
-    "currentName": "Owain Glanndour",
-    "etymoName": "",
-    "descrFr": "",
+    "currentName": "Owain Glyndŵr",
+    "etymoName": "Awigėn Glendubhr",
+    "descrFr": "Chef militaire de la révolte galloise contre les Anglais et dernier Prince de Galles d'origine galloise",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "lexemes": ["awi","ganyos","glenndos","dubros"],
     "litTrans": {
-      "litTransFr": "à l'Eau Pure",
-      "litTransEng": "The Pure Water One",
+      "litTransFr": "Naissance Désirée de la Vallée de l'Eau",
+      "litTransEng": "Desired Birth of Water Valley",
       "litTransType": "1"
     }
   },
@@ -1025,9 +1025,139 @@
       "litTransEng": "The one with red hair",
       "litTransType": "1"
     }
+  },
+
+  {
+    "currentName": "Judicaël",
+    "etymoName": "Iud-ik-haelos ",
+    "descrFr": "",
+    "descrEng": "",
+    "wordTheme": 2,
+    "lexemes": [],
+    "litTrans": {
+      "litTransFr": "Le combattant magnanime",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Niall Glúndub",
+    "etymoName": "Niadh ",
+    "descrFr": "",
+    "descrEng": "",
+    "wordTheme": 2,
+    "lexemes": [],
+    "litTrans": {
+      "litTransFr": "Le champion au Genou Noir",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
   }
-
-
+  ,
+  {
+    "currentName": "Niall Noigiallach",
+    "etymoName": "Niadh ",
+    "descrFr": "",
+    "descrEng": "",
+    "wordTheme": 2,
+    "lexemes": [],
+    "litTrans": {
+      "litTransFr": "Le champion aux Neufs Otages",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  }  ,
+  {
+    "currentName": "Uí Néill",
+    "etymoName": "Uí Néill",
+    "descrFr": "",
+    "descrEng": "",
+    "wordTheme": 4,
+    "lexemes": [],
+    "litTrans": {
+      "litTransFr": "Les descendants de Néill",
+      "litTransEng": "",
+      "litTransType": "3"
+    }
+  }  ,
+  {
+    "currentName": "Kavanagh",
+    "etymoName": "Caomhán-ach",
+    "descrFr": "Clan irlandais issu de la lignée de Domhnall Caomhánach, roi du Leinster au XIIème siècle",
+    "descrEng": "",
+    "wordTheme": 4,
+    "lexemes": ["cóem", "án","-ach"],
+    "litTrans": {
+      "litTransFr": "Ceux issu du cher petit noble",
+      "litTransEng": "",
+      "litTransType": "3"
+    }
+  }  ,
+  {
+    "currentName": "MacCarthy",
+    "etymoName": "Mac Cárthaigh",
+    "descrFr": "Clan irlandais ayant régné sur le Munster, essentiellement sur le comté de Cork",
+    "descrEng": "",
+    "wordTheme": 4,
+    "lexemes": ["makwos","kara","ako"],
+    "litTrans": {
+      "litTransFr": "Les descendants du fils du bien aimé",
+      "litTransEng": "",
+      "litTransType": "3"
+    }
+  }  ,
+  {
+    "currentName": "O'Sullivan",
+    "etymoName": "Ó Súilleabháin",
+    "descrFr": "Clan irlandais ayant essentiellement regné sur le comté de Cork et du Kerry",
+    "descrEng": "Irish Gaelic clan based most prominently in what is today County Cork and County Kerry.",
+    "wordTheme": 4,
+    "lexemes": ["aw", "sūle","dubus"],
+    "litTrans": {
+      "litTransFr": "Ceux issu de celui aux yeux noirs",
+      "litTransEng": "",
+      "litTransType": "3"
+    }
+  }  ,
+  {
+    "currentName": "MacDonald",
+    "etymoName": "Mac Dòmhnaill",
+    "descrFr": "Clan écossais des highlands, dans la région de Cromarty. Ils ont donné leur nom au château Urquhart près du Lochness.",
+    "descrEng": "",
+    "wordTheme": 4,
+    "lexemes": ["dumno","walos"],
+    "litTrans": {
+      "litTransFr": "Les enfants du Valeureux Roi du Monde d'en Bas",
+      "litTransEng": "",
+      "litTransType": "3"
+    }
+  },
+  {
+    "currentName": "Nelson",
+    "etymoName": "Mac Neill",
+    "descrFr": "Clan écossais originaire de l'île de Barra.",
+    "descrEng": "",
+    "wordTheme": 4,
+    "lexemes": ["makwos","nél"],
+    "litTrans": {
+      "litTransFr": "Le fils du Nuage",
+      "litTransEng": "",
+      "litTransType": "3"
+    }
+  },
+  {
+    "currentName": "Hen Ogledd",
+    "etymoName": "Hen Gogledd",
+    "descrFr": "Région du sud de l'Écosse, comprise entre le mur d'Hadrien et le mur d'Antonin",
+    "descrEng": "",
+    "wordTheme": 1,
+    "lexemes": ["seno","uo","kliyos"],
+    "litTrans": {
+      "litTransFr": "Le fils du Nuage",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  }
 ]
 
 
@@ -1047,19 +1177,29 @@ Deiotaros
 Deroch
 
 Guenolé
-Judicaël
+
 Maglocunus
-
-
+/*
+{
+  "currentName": "Urquhart",
+  "etymoName": "Airdchartdan",
+  "descrFr": "Clan écossais des highlands, dans la région de Cromarty. Ils ont donné leur nom au château Urquhart près du Lochness.",
+  "descrEng": "",
+  "wordTheme": 4,
+  "lexemes": ["ardwos","cardden"],
+  "litTrans": {
+    "litTransFr": "Ceux du haut bosquet",
+    "litTransEng": "",
+    "litTransType": "3"
+  }
+}  ,*/
 
 
 
 
 
 - nom de tribu
-Venetes
-Vercingetorix
-Coriosolites
+
 Riedones
 Carnutes
 Bellovaces

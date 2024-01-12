@@ -117,6 +117,7 @@ public class DataUtil {
         setSourceQuoteLink(quoteRepository.findByQuoteId(2L).get(), 6L);//Dictionnaire gaulois delamarre
 
         for (CreateEtymo etymonName : etymonNamesInit) {
+            System.out.println(etymonName.getLexemes());
             setLexemeEtymonLink(etymonNameRepository.findEtymonNameByCurrentName(etymonName.getCurrentName()).get(), etymonName.getLexemes());
         }
 
