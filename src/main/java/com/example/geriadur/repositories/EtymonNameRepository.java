@@ -14,5 +14,7 @@ public interface EtymonNameRepository extends JpaRepository<EtymonName, Long> {
     Optional<EtymonName> findEtymonNameByEtymonId(Long id);
     Optional<EtymonName> findEtymonNameByCurrentName(String currentName);
     @Query("FROM EtymonName g where g.wordTheme = :word_theme ORDER BY RAND() LIMIT 15")
-    Set<EtymonName> findEtymonNamesByWordTheme(@Param("word_theme")int wordTheme);
+    Set<EtymonName> find15EtymonNamesByWordTheme(@Param("word_theme")int wordTheme);
+
+    Set<EtymonName> findAllEtymonNamesByWordTheme(@Param("word_theme")int wordTheme);
 }

@@ -1248,18 +1248,6 @@
   },
   {
     "lexemeLanguage": "LPC",
-    "lexemeName": "ande",
-    "phonetic": "ande",
-    "gender": "GM",
-    "wordClass": "WN",
-    "descrFr": "",
-    "descrEng": "",
-    "sources": [],
-    "referenceWordsFr": "",
-    "referenceWordsEng": ""
-  },
-  {
-    "lexemeLanguage": "LPC",
     "lexemeName": "bouda",
     "phonetic": "boudā",
     "gender": "GF",
@@ -1371,9 +1359,9 @@
     "lexemeLanguage": "LPC",
     "lexemeName": "kaui",
     "phonetic": "kawi",
-    "gender": "NO",
-    "wordClass": "WADJ",
-    "referenceWordsFr": "creux",
+    "gender": "GU",
+    "wordClass": "WN",
+    "referenceWordsFr": "creux, cave, récipient, grotte",
     "referenceWordsEng": "hollow",
     "descrFr": "",
     "descrEng": "",
@@ -1425,11 +1413,12 @@
     "phonetic": "bitu",
     "gender": "GM",
     "wordClass": "WN",
-    "referenceWordsFr": "monde",
-    "referenceWordsEng": "world",
+    "referenceWordsFr": "monde intermédiaire, monde des vivants, monde du milieu",
+    "referenceWordsEng": "world of the living, middle world",
     "descrFr": "",
     "descrEng": "",
     "sources": [
+      "DLG"
     ]
   },
   {
@@ -1490,21 +1479,8 @@
     "phonetic": "wik",
     "gender": "NO",
     "wordClass": "WV",
-    "referenceWordsFr": "tuer",
-    "referenceWordsEng": "kill",
-    "descrFr": "",
-    "descrEng": "",
-    "sources": [
-    ]
-  },
-  {
-    "lexemeLanguage": "LPC",
-    "lexemeName": "kario",
-    "phonetic": "kario",
-    "gender": "NO",
-    "wordClass": "WV",
-    "referenceWordsFr": "chaudron",
-    "referenceWordsEng": "cauldron",
+    "referenceWordsFr": "vaincre, tuer",
+    "referenceWordsEng": "tuer, kill",
     "descrFr": "",
     "descrEng": "",
     "sources": [
@@ -1542,17 +1518,17 @@
     "phonetic": "jowincos",
     "gender": "NO",
     "wordClass": "WV",
-    "referenceWordsFr": "jeune",
-    "referenceWordsEng": "young",
+    "referenceWordsFr": "jeune, vigoureux",
+    "referenceWordsEng": "young, vigorous",
     "descrFr": "",
     "descrEng": "",
     "sources": [
     ]
   },
   {
-    "lexemeLanguage": "LG",
-    "lexemeName": "epos",
-    "phonetic": "epos",
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ekwos",
+    "phonetic": "ekwos",
     "gender": "NO",
     "wordClass": "WV",
     "referenceWordsFr": "cheval",
@@ -1913,6 +1889,34 @@
   },
   {
     "lexemeLanguage": "LPC",
+    "lexemeName": "men",
+    "phonetic": "men",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "penser, se souvenir",
+    "referenceWordsEng": "to think, to remember",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "monītor",
+    "phonetic": "men",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "aller",
+    "referenceWordsEng": "to go",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
     "lexemeName": "rem",
     "phonetic": "rem",
     "gender": "GM",
@@ -1927,12 +1931,54 @@
   },
   {
     "lexemeLanguage": "LPC",
+    "lexemeName": "remos",
+    "phonetic": "remos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "premier",
+    "referenceWordsEng": "first",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
     "lexemeName": "ro-",
     "phonetic": "rŏ-",
     "gender": "NO",
     "wordClass": "WAF",
     "referenceWordsFr": "très, en avant, devant",
     "referenceWordsEng": "very, in front of, foreward",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "lexsouio",
+    "phonetic": "lexsowio",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "oblique, boiteux, tordu, pentu",
+    "referenceWordsEng": "oblique, twisted, steep",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "wlatos",
+    "phonetic": "wlatos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "souverain, prince",
+    "referenceWordsEng": "sovereign, prince",
     "descrFr": "",
     "descrEng": "",
     "sources": [
@@ -2123,20 +2169,6 @@
   },
   {
     "lexemeLanguage": "LPC",
-    "lexemeName": "duron",
-    "phonetic": "duron",
-    "gender": "GM",
-    "wordClass": "WN",
-    "referenceWordsFr": "cour, domaine",
-    "referenceWordsEng": "place, domain",
-    "descrFr": "",
-    "descrEng": "",
-    "sources": [
-      "NLCEA"
-    ]
-  },
-  {
-    "lexemeLanguage": "LPC",
     "lexemeName": "-ialon-",
     "phonetic": "jalon",
     "gender": "NO",
@@ -2179,7 +2211,7 @@
   },
   {
     "lexemeLanguage": "LOI",
-    "lexemeName": "coèm",
+    "lexemeName": "cóem",
     "phonetic": "koːi̯ṽ",
     "gender": "NO",
     "wordClass": "WADJ",
@@ -2302,19 +2334,7 @@
     "lexemeName": "uo",
     "gender": "NO",
     "phonetic": "wo",
-    "wordClass": "WPREF",
-    "descrFr": "",
-    "descrEng": "",
-    "sources": [],
-    "referenceWordsFr": "sous, en-dessous",
-    "referenceWordsEng": "sub- , under"
-  },
-  {
-    "lexemeLanguage": "LG",
-    "lexemeName": "uo",
-    "gender": "NO",
-    "phonetic": "wo",
-    "wordClass": "WPREF",
+    "wordClass": "WAF",
     "descrFr": "",
     "descrEng": "",
     "sources": [],
@@ -2368,6 +2388,114 @@
     "sources": [],
     "referenceWordsFr": "vallée",
     "referenceWordsEng": "valley"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "awi",
+    "gender": "GM",
+    "phonetic": "awi",
+    "wordClass": "WN",
+    "descrFr": "a donné le mot youl en breton",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "volonté",
+    "referenceWordsEng": "will"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "genos",
+    "gender": "GM",
+    "phonetic": "genos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "lignée, clan, naissance, origine",
+    "referenceWordsEng": "lineage, clan, birth, origine"
+  },
+  {
+    "lexemeLanguage": "LBQ",
+    "lexemeName": "iad",
+    "gender": "GM",
+    "phonetic": "jad",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DNFB"
+    ],
+    "referenceWordsFr": "front, couronne, tempe, partie supérieur de la tête",
+    "referenceWordsEng": "forehead, crown, upper part of the head"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "oino",
+    "gender": "GM",
+    "phonetic": "oino",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "un, unique",
+    "referenceWordsEng": "one, unique"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "artos",
+    "gender": "GM",
+    "phonetic": "artos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "ours",
+    "referenceWordsEng": "bear"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "isamo",
+    "gender": "NO",
+    "phonetic": "isamo",
+    "wordClass": "WAF",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "le plus",
+    "referenceWordsEng": "the most"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "redo",
+    "gender": "NO",
+    "phonetic": "redo",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "chevaucher",
+    "referenceWordsEng": "chevaucher"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ordos",
+    "gender": "GM",
+    "phonetic": "ordos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "marteau, massue",
+    "referenceWordsEng": "hammer, mace"
   }
 ]
 

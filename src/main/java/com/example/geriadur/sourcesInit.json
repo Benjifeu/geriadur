@@ -186,5 +186,15 @@
 		"dateOfPublication": "2007",
 		"language": "LE",
 		"description": ""
+	},
+	{
+		"abbreviation": "DNFB",
+		"sourceNameInOriginalLanguage": "Dictionnaire des noms de famille breton",
+		"sourceNameInEnglish": "Dictionnary of the breton family names",
+		"authors": "Label LN",
+		"typeOfSource": "D",
+		"dateOfPublication": "2021",
+		"language": "LF",
+		"description": ""
 	}
 ]

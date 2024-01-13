@@ -2,12 +2,9 @@ package com.example.geriadur.service.game;
 
 import com.example.geriadur.domain.EtymonName;
 import com.example.geriadur.domain.LiteralTranslation;
-import com.example.geriadur.domain.consultation.Lexeme;
-import com.example.geriadur.dto.GameSessionStep;
-import com.example.geriadur.dto.PCelticRadical;
-import com.example.geriadur.dto.ProperName;
-import com.example.geriadur.dto.ResponseChoice;
+import com.example.geriadur.dto.*;
 import com.example.geriadur.repositories.EtymonNameRepository;
+import com.example.geriadur.repositories.LexemeRepository;
 import com.example.geriadur.repositories.LiteralTranslationRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +21,8 @@ public class SessionGameServiceImpl implements SessionGameService {
     private EtymonNameRepository etymonNameRepository;
     @Autowired
     private LiteralTranslationRepository literalTranslationRepository;
-
+    @Autowired
+    private LexemeRepository lexemeRepository;
     public List<GameSessionStep> get15GameSessionStep(int wordTheme) {
         List<EtymonName> etymonNames = get15RandomEtymonName(wordTheme);
         List<GameSessionStep> gameSessionSteps = new ArrayList<>();
@@ -48,7 +46,7 @@ public class SessionGameServiceImpl implements SessionGameService {
     }
 
     public List<EtymonName> get15RandomEtymonName(int wordTheme) {
-        Set<EtymonName> etymonNames = etymonNameRepository.findEtymonNamesByWordTheme(wordTheme);
+        Set<EtymonName> etymonNames = etymonNameRepository.find15EtymonNamesByWordTheme(wordTheme);
         List<EtymonName> etymonNameList = new ArrayList<>(etymonNames);
         return etymonNameList;
     }
@@ -68,6 +66,16 @@ public class SessionGameServiceImpl implements SessionGameService {
         return selectedLitTrans;
     }
 
+    public StatisticDTO getStatisticInfo() {
+        StatisticDTO statisticDTO = new StatisticDTO();
+        statisticDTO.setPlacesCount(etymonNameRepository.findAllEtymonNamesByWordTheme(1).size());
+        statisticDTO.setHistoristicFiguresCount(etymonNameRepository.findAllEtymonNamesByWordTheme(2).size());
+        statisticDTO.setMythicFiguresCount(etymonNameRepository.findAllEtymonNamesByWordTheme(3).size());
+        statisticDTO.setTribesCount(etymonNameRepository.findAllEtymonNamesByWordTheme(4).size());
+        statisticDTO.setObjectsCount(etymonNameRepository.findAllEtymonNamesByWordTheme(5).size());
+        statisticDTO.setLexemesCount((int) lexemeRepository.count());
+        return statisticDTO;
+    }
 }
 
 

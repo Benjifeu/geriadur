@@ -45,10 +45,10 @@ public class EtymonName {
     )
     private Map<Integer, Lexeme> lexemePc;
 
-    @Column(name = "descr_fr")
+    @Column(name = "descr_fr", length =3000)
     private String descrFr;
 
-    @Column(name = "descr_eng")
+    @Column(name = "descr_eng", length =3000)
     private String descrEng;
 
     /**

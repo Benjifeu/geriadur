@@ -32,7 +32,7 @@ public class LexemeController {
     @GetMapping("lexemes/{id}")
     public String showLexeme(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("lexeme", lexemeService.getLexemeByID(id));
-        return "lexemes-Info";
+        return "lexemes/lexemes-Info";
     }
 
     @GetMapping("lexemes/add")
@@ -43,7 +43,7 @@ public class LexemeController {
         model.addAttribute("wordClasses", WordClassEnum.values());
         model.addAttribute("genders", GenderEnum.values());
         model.addAttribute("semanticFields", semanticFieldService.getAllSemanticField());
-        return "lexemes-add";
+        return "lexemes/lexemes-add";
     }
 
     @GetMapping("lexemes/edit/{id}")
@@ -53,7 +53,7 @@ public class LexemeController {
         model.addAttribute("wordClasses", WordClassEnum.values());
         model.addAttribute("genders", GenderEnum.values());
         model.addAttribute("semanticFields", semanticFieldService.getAllSemanticField());
-        return "lexemes-edit";
+        return "lexemes/lexemes-edit";
     }
 
     @PostMapping("lexemes/save")
@@ -72,7 +72,7 @@ public class LexemeController {
         model.addAttribute("totalPages", page.getTotalPages());
         model.addAttribute("totalItems", page.getTotalElements());
         model.addAttribute("lexemes", lexemes);
-        return "lexemes-show";
+        return "lexemes/lexemes-show";
     }
 
     @GetMapping("lexemes/delete/{id}")

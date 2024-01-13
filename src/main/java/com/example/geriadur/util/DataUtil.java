@@ -6,11 +6,9 @@ import com.example.geriadur.domain.consultation.Lexeme;
 import com.example.geriadur.domain.SemanticField;
 import com.example.geriadur.domain.consultation.Quote;
 import com.example.geriadur.domain.consultation.Source;
-import com.example.geriadur.dto.CreateEtymo;
-import com.example.geriadur.dto.CreateLexeme;
-import com.example.geriadur.dto.CreateSource;
-import com.example.geriadur.dto.UserRegistrationDto;
+import com.example.geriadur.dto.*;
 import com.example.geriadur.repositories.*;
+import com.example.geriadur.service.game.SessionGameService;
 import com.example.geriadur.service.user.UserServiceImpl;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -38,6 +36,8 @@ public class DataUtil {
     private SourceRepository sourceRepository;
     @Autowired
     private UserServiceImpl userService;
+    @Autowired
+    private SessionGameService sessionGameService;
     @Autowired
     private EtymonNameRepository etymonNameRepository;
     @Autowired
@@ -120,7 +120,14 @@ public class DataUtil {
             System.out.println(etymonName.getLexemes());
             setLexemeEtymonLink(etymonNameRepository.findEtymonNameByCurrentName(etymonName.getCurrentName()).get(), etymonName.getLexemes());
         }
-
+        StatisticDTO statisticDTO = sessionGameService.getStatisticInfo();
+        System.out.println(
+                " Lexemes count: " + statisticDTO.getLexemesCount() +
+                "\n Placescount: " + statisticDTO.getPlacesCount() +
+                "\n Historcic figures count: " + statisticDTO.getHistoristicFiguresCount() +
+                "\n Mythic figures count: " + statisticDTO.getMythicFiguresCount() +
+                "\n Tribes count: " + statisticDTO.getTribesCount() +
+                "\n Obects count: " + statisticDTO.getObjectsCount());
         userService.save(new UserRegistrationDto("UserAccount", "lastname", "email", "pass", "U", 1));
         userService.save(new UserRegistrationDto("Admin", "lastname", "emailAdmin", "pass", "A", 1));
     }

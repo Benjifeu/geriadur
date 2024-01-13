@@ -31,7 +31,7 @@ public class SourceController {
     @GetMapping("/{id}")
     public String showSource(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("Source", sourceService.getSourceByID(id));
-        return "sources-Info";
+        return "sources/sources-Info";
     }
 
     @GetMapping("/add")
@@ -40,7 +40,7 @@ public class SourceController {
         model.addAttribute("source", Source);
         model.addAttribute("languages", LanguageEnum.values());
         model.addAttribute("typeOfSources", TypeOfSourceEnum.values());
-        return "sources-add";
+        return "sources/sources-add";
     }
 
     @GetMapping("/edit/{id}")
@@ -49,7 +49,7 @@ public class SourceController {
         model.addAttribute("languages", LanguageEnum.values());
         model.addAttribute("wordClasses", WordClassEnum.values());
         model.addAttribute("genders", GenderEnum.values());
-        return "sources-edit";
+        return "sources/sources-edit";
     }
 
     @PostMapping("/save")
@@ -68,7 +68,7 @@ public class SourceController {
         model.addAttribute("totalPages", page.getTotalPages());
         model.addAttribute("totalItems", page.getTotalElements());
         model.addAttribute("Sources", Sources);
-        return "sources";
+        return "sources/sources";
     }
 
     @GetMapping("/delete/{id}")

@@ -25,7 +25,6 @@
             <th> Descendant</th>
             <th> Gender</th>
             <th> Wordclass</th>
-            <th> Semantic field</th>
             <th> Delete</th>
             <th></th>
         </tr>
@@ -71,8 +70,8 @@
                     th:title="${lexeme.wordClass}"
             ></span>
             </td>
-            <td><span th:each="refs : ${lexeme.semanticFields}"><a th:href="@{/lexemes/{id}(id=${refs})}"
-                                                                   th:text="${semanticFields.semanticFieldName}"></a>, </span>
+            <!-- <td><span th:each="refs : ${lexeme.semanticFields}"><a th:href="@{/lexemes/{id}(id=${refs})}"
+                                                                   th:text="${semanticFields.semanticFieldName}"></a>, </span> -->
             </td>
             <td><a th:href="@{/lexemes/delete/{id}(id=${lexeme.lexemeId})}">
                 <button class="btn"><i class="fa fa-trash"></i></button>
