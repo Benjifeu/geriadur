@@ -1009,6 +1009,18 @@
   },
   {
     "lexemeLanguage": "LPC",
+    "lexemeName": "sego",
+    "phonetic": "sego",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "force, victoire",
+    "referenceWordsEng": "force, victory"
+  },
+  {
+    "lexemeLanguage": "LPC",
     "lexemeName": "korios",
     "phonetic": "korjos",
     "gender": "GM",
@@ -1042,6 +1054,18 @@
     "sources": [],
     "referenceWordsFr": "ultime, extrême",
     "referenceWordsEng": "ultimate, extreme"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "tre",
+    "phonetic": "tre",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "trois",
+    "referenceWordsEng": "three"
   },
   {
     "lexemeLanguage": "LPC",
@@ -1581,8 +1605,8 @@
   },
   {
     "lexemeLanguage": "LG",
-    "lexemeName": "lemos",
-    "phonetic": "lemos",
+    "lexemeName": "lemo",
+    "phonetic": "lemo",
     "gender": "GM",
     "wordClass": "WN",
     "referenceWordsFr": "orme",
@@ -2001,16 +2025,16 @@
   },
   {
     "lexemeLanguage": "LPC",
-    "lexemeName": "piktau",
-    "phonetic": "sentu",
-    "gender": "GM",
+    "lexemeName": "pikto",
+    "phonetic": "pikto",
+    "gender": "NO",
     "wordClass": "WN",
-    "referenceWordsFr": "sentier",
-    "referenceWordsEng": "very, in front of, foreward",
+    "referenceWordsFr": "hostile, furieux",
+    "referenceWordsEng": "hostile, furor",
     "descrFr": "",
     "descrEng": "",
     "sources": [
-      "DLG"
+      "GHG"
     ]
   },
   {
@@ -2155,6 +2179,62 @@
   },
   {
     "lexemeLanguage": "LPC",
+    "lexemeName": "-auo-",
+    "phonetic": "-awo-",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe toponymique (\"domaine de\" ...)",
+    "referenceWordsEng": "toponymic suffix (\"domain of\" ...)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "ulcha",
+    "phonetic": "ulcha",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "barbe, laine",
+    "referenceWordsEng": "beard, wool",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "IGEW"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "tiros",
+    "phonetic": "tiros",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "terre, région, comté",
+    "referenceWordsEng": "land, earth",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "IGEW"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "axtā",
+    "phonetic": "axta",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe d'abstraction",
+    "referenceWordsEng": "abstract nouns suffix",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "IGEW"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
     "lexemeName": "dunon",
     "phonetic": "dunon",
     "gender": "GM",
@@ -2169,16 +2249,86 @@
   },
   {
     "lexemeLanguage": "LPC",
-    "lexemeName": "-ialon-",
-    "phonetic": "jalon",
-    "gender": "NO",
-    "wordClass": "WAF",
-    "referenceWordsFr": "suffixe toponymique (\"village des\" ...)",
-    "referenceWordsEng": "toponymic suffix (\"town of\" ...)",
+    "lexemeName": "dunon",
+    "phonetic": "dunon",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "forteresse, château",
+    "referenceWordsEng": "stronghold, castle",
     "descrFr": "",
     "descrEng": "",
     "sources": [
       "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "rŏ",
+    "phonetic": "ro",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "préfixe intensif; très, trop",
+    "referenceWordsEng": "intensive prefix; very too",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "medu",
+    "phonetic": "medu",
+    "gender": "GF",
+    "wordClass": "WN",
+    "referenceWordsFr": "hydromel",
+    "referenceWordsEng": "mead",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dord",
+    "phonetic": "dord",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "bourdonner, fredonner, murmurer",
+    "referenceWordsEng": "to hum, to buzz, to murmur",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "brugn",
+    "phonetic": "brugn",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "douleur, tristesse",
+    "referenceWordsEng": "pain, sadness",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "lankia",
+    "phonetic": "lankia",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "lance",
+    "referenceWordsEng": "spear",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
     ]
   },
   {
@@ -2283,10 +2433,10 @@
     "lexemeLanguage": "LPC",
     "lexemeName": "sūle",
     "phonetic": "sule",
-    "gender": "NO",
-    "wordClass": "WPREP",
-    "referenceWordsFr": "de loin",
-    "referenceWordsEng": "away",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "soleil",
+    "referenceWordsEng": "sun",
     "descrFr": "",
     "descrEng": "",
     "sources": [
@@ -2403,6 +2553,18 @@
   },
   {
     "lexemeLanguage": "LPC",
+    "lexemeName": "mātīr",
+    "gender": "GF",
+    "phonetic": "matir",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "mère",
+    "referenceWordsEng": "will"
+  },
+  {
+    "lexemeLanguage": "LPC",
     "lexemeName": "genos",
     "gender": "GM",
     "phonetic": "genos",
@@ -2496,6 +2658,20 @@
     ],
     "referenceWordsFr": "marteau, massue",
     "referenceWordsEng": "hammer, mace"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "brista",
+    "gender": "GM",
+    "phonetic": "brista",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "combat",
+    "referenceWordsEng": "fight"
   }
 ]
 

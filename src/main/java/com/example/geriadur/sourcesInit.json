@@ -191,10 +191,20 @@
 		"abbreviation": "DNFB",
 		"sourceNameInOriginalLanguage": "Dictionnaire des noms de famille breton",
 		"sourceNameInEnglish": "Dictionnary of the breton family names",
-		"authors": "Label LN",
+		"authors": "Albert Deshayes",
 		"typeOfSource": "D",
 		"dateOfPublication": "2021",
 		"language": "LF",
+		"description": ""
+	},
+	{
+		"abbreviation": "IGEW",
+		"sourceNameInOriginalLanguage": "Indogermanisches etymologisches Wörterbuch",
+		"sourceNameInEnglish": "Indo-european etymology dictionnary",
+		"authors": "Julius Pokorny",
+		"typeOfSource": "D",
+		"dateOfPublication": "1932",
+		"language": "LGER",
 		"description": ""
 	}
 ]
