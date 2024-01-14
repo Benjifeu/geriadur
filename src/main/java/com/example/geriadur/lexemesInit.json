@@ -25,6 +25,18 @@
   },
   {
     "lexemeLanguage": "LB",
+    "lexemeName": "dergo",
+    "gender": "GM",
+    "phonetic": "dergo",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "rouge foncé",
+    "referenceWordsEng": "red crimson"
+  },
+  {
+    "lexemeLanguage": "LB",
     "lexemeName": "barzh",
     "gender": "GM",
     "phonetic": "barz / barX",
@@ -2644,7 +2656,20 @@
     ],
     "referenceWordsFr": "chevaucher",
     "referenceWordsEng": "chevaucher"
-  },
+  },  {
+  "lexemeLanguage": "LG",
+  "lexemeName": "roto",
+  "gender": "GM",
+  "phonetic": "roto",
+  "wordClass": "WN",
+  "descrFr": "",
+  "descrEng": "",
+  "sources": [
+    "DLG"
+  ],
+  "referenceWordsFr": "roue, course (de char)",
+  "referenceWordsEng": "wheel, race"
+},
   {
     "lexemeLanguage": "LPC",
     "lexemeName": "ordos",
@@ -2672,7 +2697,62 @@
     ],
     "referenceWordsFr": "combat",
     "referenceWordsEng": "fight"
-  }
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "sriab",
+    "phonetic": "sriab",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "rayure, ligne",
+    "referenceWordsEng": "stripe, line"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "medio",
+    "phonetic": "medio",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "median, frontalière, intermediaire",
+    "referenceWordsEng": "median, border, intermediate"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "mag",
+    "phonetic": "mag",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "champ, plaine, marché",
+    "referenceWordsEng": "field, plain, market"
+  },  {
+  "lexemeLanguage": "LPC",
+  "lexemeName": "leuk",
+  "phonetic": "leuk",
+  "gender": "GM",
+  "wordClass": "WN",
+  "descrFr": "",
+  "descrEng": "",
+  "sources": [
+    "EDPC"
+  ],
+  "referenceWordsFr": "briller",
+  "referenceWordsEng": "to shine"
+}
 ]
 
 

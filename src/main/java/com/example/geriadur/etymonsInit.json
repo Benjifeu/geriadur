@@ -11,8 +11,8 @@
       "rix"
     ],
     "litTrans": {
-      "litTransFr": "Le roi suprème des guerriers",
-      "litTransEng": "The supreme king of warriors",
+      "litTransFr": "Le Commandant Suprème des Guerriers",
+      "litTransEng": "The Supreme Leader of the Warriors",
       "litTransType": "1"
     }
   },
@@ -28,7 +28,7 @@
       "os"
     ],
     "litTrans": {
-      "litTransFr": "Celui qui demeure cher aux siens",
+      "litTransFr": "Celui qui Demeure Cher aux Siens",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -45,7 +45,7 @@
       "os"
     ],
     "litTrans": {
-      "litTransFr": "Le frappeur",
+      "litTransFr": "Le Frappeur",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -61,7 +61,7 @@
       "kuno"
     ],
     "litTrans": {
-      "litTransFr": "Le grand loup",
+      "litTransFr": "Le Grand Guerrier-Loup",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -78,7 +78,7 @@
       "os"
     ],
     "litTrans": {
-      "litTransFr": "Le chien puissant",
+      "litTransFr": "Le Puissant Guerrier-Loup",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -94,7 +94,7 @@
       "iestin"
     ],
     "litTrans": {
-      "litTransFr": "Celui au front brillant",
+      "litTransFr": "Celui au Front Brillant",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -127,7 +127,7 @@
       "os"
     ],
     "litTrans": {
-      "litTransFr": "Celui qui combat des deux cotés",
+      "litTransFr": "Celui qui Combat des Deux Côtés",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -143,7 +143,7 @@
       "rix"
     ],
     "litTrans": {
-      "litTransFr": "Celui qui est roi des enclos",
+      "litTransFr": "Le Chef de l'Enceinte",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -174,7 +174,7 @@
       "tigern"
     ],
     "litTrans": {
-      "litTransFr": "Le Grand Commandant",
+      "litTransFr": "Le Grand Seigneur",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -190,7 +190,7 @@
       "onios"
     ],
     "litTrans": {
-      "litTransFr": "L'argenté",
+      "litTransFr": "L'Argenté",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -206,7 +206,7 @@
       "uid"
     ],
     "litTrans": {
-      "litTransFr": "Celui qui connait en avance",
+      "litTransFr": "Le Rusé",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -222,7 +222,7 @@
       "maros"
     ],
     "litTrans": {
-      "litTransFr": "Le grand chien-loup",
+      "litTransFr": "Le Grand Guerrier-Loup",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -238,7 +238,7 @@
       "ualos"
     ],
     "litTrans": {
-      "litTransFr": "Celui d'une lignée valeureuse",
+      "litTransFr": "Celui d'une Lignée Valeureuse",
       "litTransEng": "",
       "litTransType": "1"
     }
@@ -254,7 +254,7 @@
       "ianos"
     ],
     "litTrans": {
-      "litTransFr": "Ceux présents des deux côtés",
+      "litTransFr": "Ceux Présents des Deux Côtés",
       "litTransEng": "",
       "litTransType": "3"
     }
@@ -269,7 +269,7 @@
       "uindos"
     ],
     "litTrans": {
-      "litTransFr": "Les clairs/blancs",
+      "litTransFr": "Les Blancs",
       "litTransEng": "",
       "litTransType": "3"
     }
@@ -285,7 +285,7 @@
       "soldurio"
     ],
     "litTrans": {
-      "litTransFr": "L'armée de gardiens",
+      "litTransFr": "L'Armée des Gardiens",
       "litTransEng": "",
       "litTransType": "3"
     }
@@ -293,14 +293,14 @@
   {
     "currentName": "Ossismes",
     "etymoName": "Ostimii",
-    "descrFr": "Les Coriosolites sont une tribu gauloise de la confédération Aremorica",
+    "descrFr": "Les Ossismes sont une tribu gauloise de la confédération Aremorica",
     "descrEng": "",
     "wordTheme": 4,
     "lexemes": [
       "ostimios"
     ],
     "litTrans": {
-      "litTransFr": "Les ultimes",
+      "litTransFr": "Les Ultimes",
       "litTransEng": "",
       "litTransType": "3"
     }
@@ -489,7 +489,7 @@
       "kaui"
     ],
     "litTrans": {
-      "litTransFr": "La ville des Andévaves (\"Ceux au grand récipient\")",
+      "litTransFr": "La ville des Andécaves (\"Ceux au grand récipient\")",
       "litTransEng": "",
       "litTransType": "6"
     }
@@ -775,12 +775,12 @@
   },
   {
     "currentName": "Lug",
-    "etymoName": "Leuk",
+    "etymoName": "Lugos",
     "descrFr": "Qualifié d' \"Aux Bras Longs\" (Lamhfhada) et de \"Maître dans tous les Arts\", il est le plus grand des dieux. Amassant toutes les qualités divines, les autres dieux peuvent être considérés comme ses avatars",
     "descrEng": "",
     "wordTheme": 3,
     "lexemes": [
-      "gobanu"
+      "leuk"
     ],
     "litTrans": {
       "litTransFr": "Le Lumineux",
@@ -1557,7 +1557,7 @@
   },
   {
     "currentName": "Lemovices",
-    "etymoName": "Eburonoi",
+    "etymoName": "Lemowikoi",
     "descrFr": "Tribu gauloise éponyme de l'ancienne région du Limousin.",
     "descrEng": "",
     "wordTheme": 4,
@@ -1622,7 +1622,7 @@
   {
     "currentName": "Leinster",
     "etymoName": "Laigin Tir",
-    "descrFr": ".",
+    "descrFr": "Région du sud-est de l'irlande.",
     "descrEng": "",
     "wordTheme": 1,
     "lexemes": [
@@ -1713,9 +1713,67 @@
       "litTransType": "1"
     }
   }
-
+,
+  {
+    "currentName": "Lugaid Reo nDerg",
+    "etymoName": "Lugaid Reo nDerg",
+    "descrFr": "Grand roi (Ard Ri) mythique de l'Irlande, petit fils d'Eochaid Feidlech et disciple de Cuchulain.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "lexemes": [
+      "leuk","sriab","dergo"
+    ],
+    "litTrans": {
+      "litTransFr": "Le Lumineux à la Ligne Rouge",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Meath",
+    "etymoName": "Mide",
+    "descrFr": "Royaume irlandais du 1er siècle situé au centre de l'île.",
+    "descrEng": "",
+    "wordTheme": 1,
+    "lexemes": [
+      "medio"
+    ],
+    "litTrans": {
+      "litTransFr": "La zone Médiane",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Cardiff",
+    "etymoName": "Caerdyf",
+    "descrFr": "Cité du sud du pays de Galles dans le territoire des Silures. La ville fut quasiment abandonnée suite au départ de Magnus Maximus puis des Romain à la fin du IVème siècle.",
+    "descrEng": "",
+    "wordTheme": 1,
+    "lexemes": ["kagro"
+    ],
+    "litTrans": {
+      "litTransFr": "Le fort",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Rouen",
+    "etymoName": "Rotomagos",
+    "descrFr": ".",
+    "descrEng": "",
+    "wordTheme": 1,
+    "lexemes": [
+      "roto","mag","os"
+    ],
+    "litTrans": {
+      "litTransFr": "La PLaine de la Course de Char",
+      "litTransEng": "",
+      "litTransType": "1"
+    }
+  }
 ]
-
 
 
 
@@ -1765,7 +1823,6 @@ Guenolé
 Ploermel
 Rennes
 Quimper
-
 Nantes
 Pontivy
 Guigamp
@@ -1779,9 +1836,6 @@ Plougonvelin
 Corseul
 
 
-
-
-
 - nom  de Lieu (Wales)
 
 Gwent
@@ -1791,7 +1845,6 @@ Illtud
 Tenby
 AberTawe
 Dolgellau
-Cardiff
 Plwmp
 Aberdare
 Aberaeron
@@ -1812,15 +1865,6 @@ Acen
 Caer
 
 
-
-
-- nom de ville
-Rouen
-
-
-- nom de dieu Irlandais
-
-
 Nom de héros irlandais
 Caílte
 Conall
@@ -1837,7 +1881,7 @@ Emer
 Ferdiad
 Fergus mac Róich
 Fionn mac Cumhaill
-Lugaid
+
 
 Oisín
 Oscar
