@@ -1,0 +1,3481 @@
+[
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bailh",
+    "gender": "GM",
+    "phonetic": "baj",
+    "wordClass": "WN",
+    "descrFr": "Littéralement: qui a une tache blanche au front",
+    "descrEng": "Literally: who has a white spot on his forehead",
+    "sources": [],
+    "referenceWordsFr": "nigaud, con",
+    "referenceWordsEng": "goof"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bann",
+    "gender": "GM",
+    "phonetic": "ban",
+    "wordClass": "WN",
+    "descrFr": "Littéralement: qui a une tache blanche au front",
+    "descrEng": "Literally: who has a white spot on his forehead",
+    "sources": [],
+    "referenceWordsFr": "rayon, colonne",
+    "referenceWordsEng": "ray, column"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "dergo",
+    "gender": "GM",
+    "phonetic": "dergo",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "rouge foncé",
+    "referenceWordsEng": "red crimson"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "barzh",
+    "gender": "GM",
+    "phonetic": "barz / barX",
+    "wordClass": "WN",
+    "descrFr": "Le terme français barde est issu de la même souche",
+    "descrEng": "The english term \"bard\" comes from the same root",
+    "sources": [],
+    "referenceWordsFr": "barde, poète, menestrel",
+    "referenceWordsEng": "barde, poet, minstrel"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bazh",
+    "gender": "GM",
+    "phonetic": "baz / baX",
+    "wordClass": "WN",
+    "descrFr": "Forme pluriel: bizhier",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "bâton, barre, barreau, échelon",
+    "referenceWordsEng": "staff, bar"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bed",
+    "gender": "GM",
+    "phonetic": "bed",
+    "wordClass": "WN",
+    "descrFr": "Signifie initialement le monde des vivants, du gaulois bitu, par opposition à albos / albios le monde d’en haut et dubnos, le monde d’en-bas.",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "monde",
+    "referenceWordsEng": "world"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bev",
+    "gender": "GM",
+    "phonetic": "biw",
+    "wordClass": "WN",
+    "descrFr": "forme archaïque, le terme \"buhez\" est plus commun aujourd'hui.",
+    "descrEng": "archaïc form, the term \"buhez\" is more common today.",
+    "sources": [],
+    "referenceWordsFr": "la vie, le vivant, l'être vivant",
+    "referenceWordsEng": "the life, the living, the living one"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bleiz",
+    "gender": "GM",
+    "phonetic": "blez",
+    "wordClass": "WN",
+    "descrFr": "mot commun aux langue celtiques mais qui ne semble pas d'origine indo-européenne",
+    "descrEng": "word common to Celtic languages but which does not seem to be of Indo-European origin",
+    "sources": [],
+    "referenceWordsFr": "loup",
+    "referenceWordsEng": "wolf"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "breud",
+    "gender": "GM",
+    "phonetic": "ˈbʁøːt",
+    "wordClass": "WN",
+    "descrFr": "A eu anciennement le sens de procès, apparenté au mot \"barn\", jugement",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "litige, débat",
+    "referenceWordsEng": "dispute"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "aval",
+    "gender": "GM",
+    "phonetic": "ˈɑ:val",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pomme",
+    "referenceWordsEng": "apple"
+  },
+  {
+    "lexemeLanguage": "LIE",
+    "lexemeName": "*h₂ébōl",
+    "gender": "GU",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pomme",
+    "referenceWordsEng": "apple"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "abalom",
+    "gender": "GF",
+    "phonetic": "",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pommier, pomme",
+    "referenceWordsEng": "apple tree"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "*abalnos",
+    "gender": "GU",
+    "phonetic": "ˈaβalnos",
+    "wordClass": "WN",
+    "descrFr": "forme restituée, possiblement \"*abalna\"",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pommier, arbre (au sens large)",
+    "referenceWordsEng": "apple tree"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "aballo",
+    "gender": "GF",
+    "phonetic": "abalo",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pommier",
+    "referenceWordsEng": "apple tree"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "aball",
+    "gender": "GF",
+    "phonetic": "ˈaval͈",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pommier",
+    "referenceWordsEng": "apple tree"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "ubull",
+    "gender": "GF",
+    "phonetic": "ˈu.vul͈",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pomme",
+    "referenceWordsEng": "apple"
+  },
+  {
+    "lexemeLanguage": "LI",
+    "lexemeName": "abhaill",
+    "gender": "GF",
+    "phonetic": "ˈəuwəl̠ʲ",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pommier, pomme",
+    "referenceWordsEng": "apple tree"
+  },
+  {
+    "lexemeLanguage": "LW",
+    "lexemeName": "afal",
+    "gender": "GF",
+    "phonetic": "ˈaval",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pomme",
+    "referenceWordsEng": "apple"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "abona",
+    "gender": "GF",
+    "phonetic": "abona",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "rivière",
+    "referenceWordsEng": "river"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "aven",
+    "gender": "GF",
+    "phonetic": "ɑ:von",
+    "wordClass": "WN",
+    "descrFr": "Peut être écrit \"avon\"",
+    "descrEng": "Can be written \"avon\"",
+    "sources": [],
+    "referenceWordsFr": "rivière",
+    "referenceWordsEng": "river"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "amman",
+    "gender": "GU",
+    "phonetic": "ɑ:von",
+    "wordClass": "WN",
+    "descrFr": "Attesté dans le calendrier de Coligny",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "temps",
+    "referenceWordsEng": "time"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "amzer",
+    "gender": "GF",
+    "phonetic": "ãmzɛr",
+    "wordClass": "WN",
+    "descrFr": "composé du brittonique amman et stera",
+    "descrEng": "composed of the brittonic amman and stera",
+    "sources": [],
+    "referenceWordsFr": "temps, météorologie",
+    "referenceWordsEng": "time, weather"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "anation",
+    "gender": "GU",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "forme singulière reconstituée d'un pluriel <i>anatia</i>",
+    "descrEng": "reconstituted singular form of plural <i>anatia</i>",
+    "sources": [],
+    "referenceWordsFr": "souffle",
+    "referenceWordsEng": "breath"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "anal",
+    "gender": "GF",
+    "phonetic": "ãːnal",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "souffle, haleine",
+    "referenceWordsEng": "breath"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "anauo",
+    "gender": "GU",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "Le terme suggère un lien que les gaulois faisaient entre richesse matérielle et connexion au divin",
+    "descrEng": "The term suggests a link that the Gauls made between material wealth and connection to the divine",
+    "sources": [],
+    "referenceWordsFr": "richesse, inspiration",
+    "referenceWordsEng": "wealth, inspiration "
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "anavout",
+    "gender": "NO",
+    "phonetic": "ãnaːvut",
+    "wordClass": "WV",
+    "descrFr": "il existe aussi la forme \"anavezout\"",
+    "descrEng": "there is also the form \"anavezout\"",
+    "sources": [],
+    "referenceWordsFr": "connaître",
+    "referenceWordsEng": "to know"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "andoedo",
+    "gender": "GN",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "mobilier ?",
+    "referenceWordsEng": "furniture ?"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "annez",
+    "gender": "GM",
+    "phonetic": "ˈãnːe(s)",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "habitation, demeure",
+    "referenceWordsEng": "home"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "andounna",
+    "gender": "GF",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "Composé de ande- (inférieur) et **udnā (eau)",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "sources",
+    "referenceWordsEng": "spring water"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "andon",
+    "gender": "GF",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "sources",
+    "referenceWordsEng": "spring water"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "anuan",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "nom",
+    "referenceWordsEng": "name"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "anv",
+    "gender": "GM",
+    "phonetic": "ˈãnw",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "nom",
+    "referenceWordsEng": "name"
+  },
+  {
+    "lexemeName": "arganton",
+    "lexemeLanguage": "LG",
+    "phonetic": "?",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "définit tout ce qui est clair, briant, et par extension: la monnaie",
+    "descrEng": "define everything that is clear, brilliant, and by extension: currency",
+    "sources": [],
+    "referenceWordsFr": "argent, monnaie",
+    "referenceWordsEng": "silver, money"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "arc'hant",
+    "gender": "GM",
+    "phonetic": "ˈarɣãnt",
+    "wordClass": "WN",
+    "descrFr": "se prononce et s'écrit \"argant\" en vannetais",
+    "descrEng": "pronounced and written \"argant\" in Vannetais",
+    "sources": [],
+    "referenceWordsFr": "argent, monnaie",
+    "referenceWordsEng": "silver, money"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "argio",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "Peut avoir désigné la \"neige\", bien que ce sens semble être tardif",
+    "descrEng": "May have meant \"snow\", although this meaning appears to be late",
+    "sources": [],
+    "referenceWordsFr": "blanc, brillant",
+    "referenceWordsEng": "white, bright"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "erc'h",
+    "gender": "GM",
+    "phonetic": "ˈɛrx",
+    "wordClass": "WN",
+    "descrFr": "signifie littéralement \"blanc\"",
+    "descrEng": "literally means \"white\"",
+    "sources": [],
+    "referenceWordsFr": "neige",
+    "referenceWordsEng": "snow"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "aua",
+    "gender": "GF",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "petite-fille",
+    "referenceWordsEng": "grand-daughter"
+  },
+  {
+    "lexemeLanguage": "LBQ",
+    "lexemeName": "auintro",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "dérive du gaulois <i>aua</i>: \"petite fille\"",
+    "descrEng": "derives from the Gallic <i>aua</i>: “little girl”",
+    "sources": [],
+    "referenceWordsFr": "oncle",
+    "referenceWordsEng": "uncle"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "eontr",
+    "gender": "GM",
+    "phonetic": "ˈẽ.wnt(r)",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "oncle",
+    "referenceWordsEng": "uncle"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "bagauda",
+    "gender": "GU",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "A donné le terme \"bagaude\", désignant les troupes de brigands sévissant en Gaule à l'époque gallo-romaine",
+    "descrEng": "Gave the term \"bagaude\", designating the troops of brigands raging in Gaul during the Gallo-Roman era",
+    "sources": [],
+    "referenceWordsFr": "combattant, brigand, agresseur",
+    "referenceWordsEng": "fighter"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bagad",
+    "gender": "GM",
+    "phonetic": "ba.ɡad",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "troupe, groupe, bande (de brigands, de soldats, de musiciens...)",
+    "referenceWordsEng": "troop, group, band (of bandits, soldiers, musicians, etc.)"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "attegia",
+    "gender": "GF",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "On retrouve ce mot qui veut dire \"maison\", \"cabane\" dans des noms de lieux comme Athée, Athis, Etiolles...",
+    "descrEng": "We find this word which means \"house\" in place names like Athée, Athis, Etiolles...",
+    "sources": [],
+    "referenceWordsFr": "maison, maisonée, hutte, cabane",
+    "referenceWordsEng": "house, home, hut"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "ti",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "forme pluriel: Tiez",
+    "descrEng": "plurial form: Tiez",
+    "sources": [],
+    "referenceWordsFr": "maison, maisonée, hutte, cabane",
+    "referenceWordsEng": "house, home, hut"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "balanos",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "genêt",
+    "referenceWordsEng": "broom"
+  },
+  {
+    "lexemeLanguage": "LBQ",
+    "lexemeName": "banatlo",
+    "gender": "GU",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "Issu d'une métahthèse du mot gaulois \"balanos\". <br> Le suffixe en -tlo désignerait un instrument, d'où un possible rapprochement avec le mot \"balais\"",
+    "descrEng": "Coming from a metathesis of the Gallic word \"balanos\". <br> The suffix in -tlo would designate an instrument, hence a possible connection with the word \"balais\"(broom)",
+    "sources": [],
+    "referenceWordsFr": "genêt, balais?",
+    "referenceWordsEng": "broom"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "balan",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "S'écrit également \"banal\" qui descendrait du britonique \"banatlos\" contrairement \"balan\", qui descenderait directement du gaulois \"banalos\"",
+    "descrEng": "It is also written \"banal\" which would descend from the Britonic \"banatlos\" unlike \"balan\", which would directly descend from the Gaulish \"banalos\"",
+    "sources": [],
+    "referenceWordsFr": "genêt",
+    "referenceWordsEng": "broom"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "banna",
+    "gender": "GU",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "pointe, sommet",
+    "referenceWordsEng": "point, summit"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bann",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "Peut fair référence à toute pièce longue et droite",
+    "descrEng": "Can define any long, straight piece",
+    "sources": [],
+    "referenceWordsFr": "montant, colonne, rayon, éminence, rail, aile",
+    "referenceWordsEng": "column, radius, eminence, rail, wing"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "barros",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "tête, bout, cîme",
+    "referenceWordsEng": "head, tip, summit"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "barr",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "exprime l'idée de surface ou d'extrémité en contact avec l'extérieur",
+    "descrEng": "expresses the idea of surface or endpoint in contact with the outside",
+    "sources": [],
+    "referenceWordsFr": "sommet, surface, coup (de vent, de poing, de tête etc...)",
+    "referenceWordsEng": "column, radius, eminence, rail, wing"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "beccos",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "bec",
+    "referenceWordsEng": "beak"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "beg",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "probablement reprit du français \"bec\" descendant du gaulois \"beccos\"",
+    "descrEng": "probably taken from the French \"bec\"descended from the Gallic \"beccos\"",
+    "sources": [],
+    "referenceWordsFr": "bev",
+    "referenceWordsEng": "beak"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "bedo",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "fosse, canal, tombe",
+    "referenceWordsEng": "pit, canal, tomb"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "bez",
+    "gender": "GM",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "Forme interdialectale: \"bedh\"",
+    "descrEng": "Interdialectal form: \"bedh\"",
+    "sources": [],
+    "referenceWordsFr": "tombe",
+    "referenceWordsEng": "tomb"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "bena",
+    "gender": "GF",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "femme",
+    "referenceWordsEng": "woman"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "ben",
+    "gender": "GF",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "Très peu usité, se retrouve dans l'adjectif \"benel\"",
+    "descrEng": "Very little used, is found in the adjective \"benel\"",
+    "sources": [],
+    "referenceWordsFr": "femme",
+    "referenceWordsEng": "woman"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "bessu",
+    "gender": "GU",
+    "phonetic": "?",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "moeurs, habitudes",
+    "referenceWordsEng": "manners, habits"
+  },
+  {
+    "lexemeLanguage": "LB",
+    "lexemeName": "boaz",
+    "gender": "GF",
+    "phonetic": "?",
+    "wordClass": "WADV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "moeurs, habitudes",
+    "referenceWordsEng": "manners, habits"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kinget",
+    "gender": "GM",
+    "phonetic": "kiŋ.get-",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "guerrier, héros",
+    "referenceWordsEng": "warrior, heroes"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uer",
+    "gender": "NO",
+    "phonetic": "wɛr",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "super, supérieur, très",
+    "referenceWordsEng": "super, superior, very"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "rix",
+    "phonetic": "rix",
+    "gender": "GN",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "roi, commandant",
+    "referenceWordsEng": "king, commandant"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uos",
+    "phonetic": "wos",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "passer la nuit, demeurer, rester",
+    "referenceWordsEng": "spend the night, stay"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "os",
+    "phonetic": "os",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "descrFr": "suffixe du nominatif singulier proto-celtique",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "",
+    "referenceWordsEng": ""
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kara",
+    "phonetic": "kara",
+    "gender": "GM",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "ami, aimable, cher",
+    "referenceWordsEng": "friend, friendly"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kom",
+    "phonetic": "kom",
+    "gender": "GM",
+    "wordClass": "WCONJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "avec, également, en contact",
+    "referenceWordsEng": "with, equally, in contact"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bhiyo",
+    "phonetic": "bijo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "couper, frapper",
+    "referenceWordsEng": "to cut, to stab"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kuno",
+    "phonetic": "kuno",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "loup, chien",
+    "referenceWordsEng": "wolf, dog"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "aku",
+    "phonetic": "aku",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "rapide",
+    "referenceWordsEng": "fast"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "belin",
+    "phonetic": "belin",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "puissance",
+    "referenceWordsEng": "power"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "talu",
+    "phonetic": "talu",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "front, surface, bouclier",
+    "referenceWordsEng": "forehead, surface, shield"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "iestin",
+    "phonetic": "jɛstin",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "brillant, beau",
+    "referenceWordsEng": "shine, beautiful"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bran",
+    "phonetic": "bran",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "corbeau, corneille",
+    "referenceWordsEng": "raven, crow"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ambi",
+    "phonetic": "ambi",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "autour, alentour, des deux côtés",
+    "referenceWordsEng": "around, on both sides"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "catu",
+    "phonetic": "catu",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "combat, bataille",
+    "referenceWordsEng": "fight, battle"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ambio",
+    "phonetic": "ambio",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "enclos, forteresse",
+    "referenceWordsEng": "enclosure, stronghold"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "diuik",
+    "phonetic": "diwik",
+    "gender": "NO",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "venger, punir",
+    "referenceWordsEng": "enclosure, stronghold"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "tigern",
+    "phonetic": "tigɛrn",
+    "gender": "NO",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "seigneur, maître des lieux",
+    "referenceWordsEng": "lord, householder"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "argntom",
+    "phonetic": "argn̥tom",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "argent (métal)",
+    "referenceWordsEng": "silver"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "onios",
+    "phonetic": "?",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "suffixe",
+    "descrEng": "suffixe",
+    "sources": [],
+    "referenceWordsFr": "suffixe sur certains noms de figures",
+    "referenceWordsEng": "suffixe sur certains noms de figures"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ari",
+    "phonetic": "ari",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "devant, pré-, à l'est",
+    "referenceWordsEng": "front, fore, East"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uid",
+    "phonetic": "wid",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "savoir, connaissance",
+    "referenceWordsEng": "knowledge"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "maros",
+    "phonetic": "maros",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "grand, vaste",
+    "referenceWordsEng": "large, wide"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "teuta",
+    "phonetic": "tew",
+    "gender": "GF",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "tribu, peuple, clan",
+    "referenceWordsEng": "tribe, people, clan"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ualos",
+    "phonetic": "walos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "souverain, prince",
+    "referenceWordsEng": "sovereign, prince"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uindos",
+    "phonetic": "windos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "blanc",
+    "referenceWordsEng": "blanc"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "sego",
+    "phonetic": "sego",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "force, victoire",
+    "referenceWordsEng": "force, victory"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "korios",
+    "phonetic": "korjos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "armée",
+    "referenceWordsEng": "army"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "soldurio",
+    "phonetic": "soldurio",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "gardien, garde du corps",
+    "referenceWordsEng": "gardian, bodyguard"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ostimios",
+    "phonetic": "ostimjos",
+    "gender": "GU",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "ultime, extrême",
+    "referenceWordsEng": "ultimate, extreme"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "tre",
+    "phonetic": "tre",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "trois",
+    "referenceWordsEng": "three"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "treb",
+    "phonetic": "treb",
+    "gender": "GN",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "habitation",
+    "referenceWordsEng": "dwelling"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "tegos",
+    "phonetic": "tegos",
+    "gender": "GN",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "maison",
+    "referenceWordsEng": "house"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "karnon",
+    "phonetic": "karnon",
+    "gender": "GN",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "corne, trompe",
+    "referenceWordsEng": "horn, trump"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uak",
+    "phonetic": "wak",
+    "gender": "GN",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "quereller",
+    "referenceWordsEng": "quarrel"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ad",
+    "phonetic": "ad",
+    "gender": "NO",
+    "wordClass": "WPREP",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "vers",
+    "referenceWordsEng": "to, toward"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "keno",
+    "phonetic": "keno",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "loin",
+    "referenceWordsEng": "far"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "manos",
+    "phonetic": "manos",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "bon",
+    "referenceWordsEng": "bon"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kalet",
+    "phonetic": "kalet",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "solide, dur",
+    "referenceWordsEng": "hard, tough"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kaleto",
+    "phonetic": "kaleto",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "solide, dur",
+    "referenceWordsEng": "hard, tough"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "seno",
+    "phonetic": "seno",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "ancien,vieux",
+    "referenceWordsEng": "old"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "leng",
+    "phonetic": "leng",
+    "gender": "NO",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "sauter",
+    "referenceWordsEng": "to jump"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "sec",
+    "phonetic": "sec",
+    "gender": "NO",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "couper",
+    "referenceWordsEng": "to cut"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "gwanu",
+    "phonetic": "wana",
+    "gender": "NO",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "percer",
+    "referenceWordsEng": "to pierce"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "allo",
+    "phonetic": "al:o",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "autre, étrangers",
+    "referenceWordsEng": "other, stranger"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "brog",
+    "phonetic": "al:o",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "territoire, région, frontière",
+    "referenceWordsEng": "territory, region, border"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uerno",
+    "phonetic": "werno",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "aulne",
+    "referenceWordsEng": "alder"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ianos",
+    "phonetic": "ianos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "Suffixe.",
+    "descrEng": "Suffixe.",
+    "referenceWordsFr": "",
+    "referenceWordsEng": ""
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bouda",
+    "phonetic": "boudā",
+    "gender": "GF",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "victoire",
+    "referenceWordsEng": "victory"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dagos",
+    "phonetic": "dagos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "bon",
+    "referenceWordsEng": "good"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "-to",
+    "phonetic": "-to",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "marqueur d'un verbe au participe passé",
+    "referenceWordsEng": "marker of a verb in the past participle"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uotal",
+    "phonetic": "wotal",
+    "gender": "NO",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "sommet",
+    "referenceWordsEng": "ridge"
+  },
+  {
+    "lexemeLanguage": "LOB",
+    "lexemeName": "haelon",
+    "phonetic": "",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "sourcils",
+    "referenceWordsEng": "brows"
+  },
+  {
+    "lexemeLanguage": "LBQ",
+    "lexemeName": "alan",
+    "phonetic": "",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "faon",
+    "referenceWordsEng": "fawn"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "brigo",
+    "phonetic": "brigo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "noblesse",
+    "referenceWordsEng": "nobility"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bāus",
+    "phonetic": "bāus",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "bovin",
+    "referenceWordsEng": "cow"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ande",
+    "phonetic": "ande",
+    "gender": "NO",
+    "wordClass": "WPREP",
+    "referenceWordsFr": "très, superlatif",
+    "referenceWordsEng": "very, superlative",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kaui",
+    "phonetic": "kawi",
+    "gender": "GU",
+    "wordClass": "WN",
+    "referenceWordsFr": "creux, cave, récipient, grotte",
+    "referenceWordsEng": "hollow",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ardwos",
+    "phonetic": "ardwos",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "haut",
+    "referenceWordsEng": "high",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "duron",
+    "phonetic": "duron",
+    "gender": "GU",
+    "wordClass": "WN",
+    "referenceWordsFr": "porte, marché fermé, ville close",
+    "referenceWordsEng": "door, market, close city",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "autessio",
+    "phonetic": "autessio",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "porte, marché fermé, ville close",
+    "referenceWordsEng": "door, market, close city",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bitu",
+    "phonetic": "bitu",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "monde intermédiaire, monde des vivants, monde du milieu",
+    "referenceWordsEng": "world of the living, middle world",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kantalo",
+    "phonetic": "kantalo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "limite",
+    "referenceWordsEng": "limit",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "duro",
+    "phonetic": "duro",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "limite",
+    "referenceWordsEng": "limite",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kassi",
+    "phonetic": "kasi",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "tresses",
+    "referenceWordsEng": "curls",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "eburo",
+    "phonetic": "eburo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "if",
+    "referenceWordsEng": "yew",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uik",
+    "phonetic": "wik",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "vaincre, tuer",
+    "referenceWordsEng": "tuer, kill",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kario",
+    "phonetic": "kario",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "chaudron",
+    "referenceWordsEng": "cauldron",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ketuares",
+    "phonetic": "kʷetwares",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "quatre",
+    "referenceWordsEng": "four",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "iouincos",
+    "phonetic": "jowincos",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "jeune, vigoureux",
+    "referenceWordsEng": "young, vigorous",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ekwos",
+    "phonetic": "ekwos",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "cheval",
+    "referenceWordsEng": "horse",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "dewos",
+    "phonetic": "dēwos",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "dieu (du ciel)",
+    "referenceWordsEng": "sky god",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "kanto",
+    "phonetic": "kanto",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "edge, side, circle",
+    "referenceWordsEng": "bord, côté, cercle",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "GHG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "bodina",
+    "phonetic": "bodina",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "borne",
+    "referenceWordsEng": "landmark",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "GHG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "lemo",
+    "phonetic": "lemo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "orme",
+    "referenceWordsEng": "orme",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "GHG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "gabalos",
+    "phonetic": "gabalos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "javelot",
+    "referenceWordsEng": "javelot",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "GHG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "ablo",
+    "phonetic": "ablo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "force",
+    "referenceWordsEng": "strength",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "GHG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "teno",
+    "phonetic": "teno",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "chaleur, feu",
+    "referenceWordsEng": "hotness, fire",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "GHG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "briga",
+    "phonetic": "briga",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "hauteur, élévation",
+    "referenceWordsEng": "something high, elevated",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "cencto",
+    "phonetic": "kenkto",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "branche courbée, manche, charrue",
+    "referenceWordsEng": "curved branch, handle, plow",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "ogmos",
+    "phonetic": "ogmos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "chemin",
+    "referenceWordsEng": "path",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "gobanu",
+    "phonetic": "gobanu",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "forger",
+    "referenceWordsEng": "to forge",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "lugu",
+    "phonetic": "lugu",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "?",
+    "referenceWordsEng": "?",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "lugu",
+    "phonetic": "lugu",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "?",
+    "referenceWordsEng": "?",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "grenn",
+    "phonetic": "grenn",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "menton, barbe, poils",
+    "referenceWordsEng": "chin, beard, hair",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "su-",
+    "phonetic": "su-",
+    "gender": "NO",
+    "wordClass": "WPREP",
+    "referenceWordsFr": "bon, bien",
+    "referenceWordsEng": "well, good",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "cellos",
+    "phonetic": "kellos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "marteau, frappeur",
+    "referenceWordsEng": "hammer, hitter",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "toranos",
+    "phonetic": "toranos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "tonnerre",
+    "referenceWordsEng": "tonnerre",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "rigani",
+    "phonetic": "rīganī",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "reine",
+    "referenceWordsEng": "queen",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "kubros",
+    "phonetic": "kubros",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "avide",
+    "referenceWordsEng": "greedy",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      ""
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "turo",
+    "phonetic": "turo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "gonflé, rempli, fort",
+    "referenceWordsEng": "swollen, filled, strong",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dubus",
+    "phonetic": "dubus",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "noir",
+    "referenceWordsEng": "black",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bodios",
+    "phonetic": "bodios",
+    "gender": "GM",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "jaune, doré, blond, victoire?",
+    "referenceWordsEng": "yellow, golden, blond",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "turko",
+    "phonetic": "turko",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "sanglier",
+    "referenceWordsEng": "boar",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "aidu",
+    "phonetic": "aidu",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "feu",
+    "referenceWordsEng": "fire",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "mandu",
+    "phonetic": "mandu",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "poney, petit cheval, fouler aux pieds / écraser",
+    "referenceWordsEng": "poney, little horse",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "men",
+    "phonetic": "men",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "penser, se souvenir",
+    "referenceWordsEng": "to think, to remember",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "monītor",
+    "phonetic": "men",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "aller",
+    "referenceWordsEng": "to go",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "rem",
+    "phonetic": "rem",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "poney, petit cheval",
+    "referenceWordsEng": "poney, little horse",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "remos",
+    "phonetic": "remos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "premier",
+    "referenceWordsEng": "first",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ro-",
+    "phonetic": "rŏ-",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "très, en avant, devant",
+    "referenceWordsEng": "very, in front of, foreward",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "lexsouio",
+    "phonetic": "lexsowio",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "oblique, boiteux, tordu, pentu",
+    "referenceWordsEng": "oblique, twisted, steep",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "wlatos",
+    "phonetic": "wlatos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "souverain, prince",
+    "referenceWordsEng": "sovereign, prince",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "sentu",
+    "phonetic": "sentu",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "sentier",
+    "referenceWordsEng": "path",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "pikto",
+    "phonetic": "pikto",
+    "gender": "NO",
+    "wordClass": "WN",
+    "referenceWordsFr": "hostile, furieux",
+    "referenceWordsEng": "hostile, furor",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "GHG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "watu",
+    "phonetic": "watu",
+    "gender": "GU",
+    "wordClass": "WN",
+    "referenceWordsFr": "prophetie",
+    "referenceWordsEng": "prophecy",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "slougo",
+    "phonetic": "slougo",
+    "gender": "GU",
+    "wordClass": "WN",
+    "referenceWordsFr": "troupe, armée, groupe",
+    "referenceWordsEng": "troop, band, army",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "uelio",
+    "phonetic": "welio",
+    "gender": "GU",
+    "wordClass": "WN",
+    "referenceWordsFr": "troupe, armée, groupe",
+    "referenceWordsEng": "troop, band, army",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "necto",
+    "phonetic": "necto",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "lien",
+    "referenceWordsEng": "link",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bergo",
+    "phonetic": "bergo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "mont",
+    "referenceWordsEng": "mount",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bergo",
+    "phonetic": "bergo",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "mont",
+    "referenceWordsEng": "mount",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "bremio",
+    "phonetic": "bremio",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "grondant",
+    "referenceWordsEng": "rumbling",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "-ios",
+    "phonetic": "-ios",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe patronymique (\"fils de\" ...)",
+    "referenceWordsEng": "patronymic suffix (\"son of\" ...)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "-ano",
+    "phonetic": "-ano",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe toponymique (\"domaine de\" ...)",
+    "referenceWordsEng": "toponymic suffix (\"domain of\" ...)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "-auo-",
+    "phonetic": "-awo-",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe toponymique (\"domaine de\" ...)",
+    "referenceWordsEng": "toponymic suffix (\"domain of\" ...)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "-auo-",
+    "phonetic": "-awo-",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe toponymique (\"domaine de\" ...)",
+    "referenceWordsEng": "toponymic suffix (\"domain of\" ...)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "ulcha",
+    "phonetic": "ulcha",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "barbe, laine",
+    "referenceWordsEng": "beard, wool",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "IGEW"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "tiros",
+    "phonetic": "tiros",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "terre, région, comté",
+    "referenceWordsEng": "land, earth",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "IGEW"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "axtā",
+    "phonetic": "axta",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe d'abstraction",
+    "referenceWordsEng": "abstract nouns suffix",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "IGEW"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dunon",
+    "phonetic": "dunon",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "forteresse, château",
+    "referenceWordsEng": "stronghold, castle",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dunon",
+    "phonetic": "dunon",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "forteresse, château",
+    "referenceWordsEng": "stronghold, castle",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "rŏ",
+    "phonetic": "ro",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "préfixe intensif; très, trop",
+    "referenceWordsEng": "intensive prefix; very too",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "medu",
+    "phonetic": "medu",
+    "gender": "GF",
+    "wordClass": "WN",
+    "referenceWordsFr": "hydromel",
+    "referenceWordsEng": "mead",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dord",
+    "phonetic": "dord",
+    "gender": "NO",
+    "wordClass": "WV",
+    "referenceWordsFr": "bourdonner, fredonner, murmurer",
+    "referenceWordsEng": "to hum, to buzz, to murmur",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "brugn",
+    "phonetic": "brugn",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "douleur, tristesse",
+    "referenceWordsEng": "pain, sadness",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "lankia",
+    "phonetic": "lankia",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "lance",
+    "referenceWordsEng": "spear",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ako",
+    "phonetic": "ako",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "suffixe patronymique (\"fils de\" ...)",
+    "referenceWordsEng": "patronymic suffix (\"son of\" ...)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "-ritu-",
+    "phonetic": "-ritu-",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "passage",
+    "referenceWordsEng": "passage",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "NLCEA"
+    ]
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "cóem",
+    "phonetic": "koːi̯ṽ",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "referenceWordsFr": "cher, proche, gentil, noble, aimable",
+    "referenceWordsEng": "dear, gentle, beloved",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "án",
+    "phonetic": "",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "petit, gros (par ironie)",
+    "referenceWordsEng": "little, big (by irony)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "-ach",
+    "phonetic": "",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "petit, gros (par ironie)",
+    "referenceWordsEng": "little, big (by irony)",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "makwos",
+    "phonetic": "makʷos",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "issu de, de la maison de",
+    "referenceWordsEng": "from the house of",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "aw",
+    "phonetic": "aw",
+    "gender": "NO",
+    "wordClass": "WPREP",
+    "referenceWordsFr": "de loin",
+    "referenceWordsEng": "away",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "sūle",
+    "phonetic": "sule",
+    "gender": "GM",
+    "wordClass": "WN",
+    "referenceWordsFr": "soleil",
+    "referenceWordsEng": "sun",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dumno",
+    "gender": "GM",
+    "phonetic": "dumno",
+    "wordClass": "WAF",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "monde d'en bas, sombre, profond",
+    "referenceWordsEng": "underworld, real world, dark, deep"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "walos",
+    "gender": "GM",
+    "phonetic": "walos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "prince, chef",
+    "referenceWordsEng": "prince, chief"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "nél",
+    "gender": "GM",
+    "phonetic": "nel",
+    "wordClass": "WN",
+    "descrFr": "probablement emprunté au latin \"nebulus\"",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "nuage",
+    "referenceWordsEng": "cloud"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "uo",
+    "gender": "NO",
+    "phonetic": "wo",
+    "wordClass": "WAF",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "sous, en-dessous",
+    "referenceWordsEng": "sub- , under"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "klēyos",
+    "gender": "GM",
+    "phonetic": "klijos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "gauche",
+    "referenceWordsEng": "left"
+  },
+  {
+    "lexemeLanguage": "LLT",
+    "lexemeName": "manus",
+    "gender": "GM",
+    "phonetic": "manus",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "main, pouvoir",
+    "referenceWordsEng": "hand, power"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "dubros",
+    "gender": "GM",
+    "phonetic": "dubros",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "eau",
+    "referenceWordsEng": "water"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "glenndos",
+    "gender": "GM",
+    "phonetic": "glendos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "vallée",
+    "referenceWordsEng": "valley"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "awi",
+    "gender": "GM",
+    "phonetic": "awi",
+    "wordClass": "WN",
+    "descrFr": "a donné le mot youl en breton",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "volonté",
+    "referenceWordsEng": "will"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "mātīr",
+    "gender": "GF",
+    "phonetic": "matir",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "mère",
+    "referenceWordsEng": "will"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "genos",
+    "gender": "GM",
+    "phonetic": "genos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [],
+    "referenceWordsFr": "lignée, clan, naissance, origine",
+    "referenceWordsEng": "lineage, clan, birth, origine"
+  },
+  {
+    "lexemeLanguage": "LBQ",
+    "lexemeName": "iad",
+    "gender": "GM",
+    "phonetic": "jad",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DNFB"
+    ],
+    "referenceWordsFr": "front, couronne, tempe, partie supérieur de la tête",
+    "referenceWordsEng": "forehead, crown, upper part of the head"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "oino",
+    "gender": "GM",
+    "phonetic": "oino",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "un, unique",
+    "referenceWordsEng": "one, unique"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "artos",
+    "gender": "GM",
+    "phonetic": "artos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "ours",
+    "referenceWordsEng": "bear"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "isamo",
+    "gender": "NO",
+    "phonetic": "isamo",
+    "wordClass": "WAF",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "le plus",
+    "referenceWordsEng": "the most"
+  },
+  {
+    "lexemeLanguage": "LG",
+    "lexemeName": "redo",
+    "gender": "NO",
+    "phonetic": "redo",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "chevaucher",
+    "referenceWordsEng": "chevaucher"
+  },  {
+  "lexemeLanguage": "LG",
+  "lexemeName": "roto",
+  "gender": "GM",
+  "phonetic": "roto",
+  "wordClass": "WN",
+  "descrFr": "",
+  "descrEng": "",
+  "sources": [
+    "DLG"
+  ],
+  "referenceWordsFr": "roue, course (de char)",
+  "referenceWordsEng": "wheel, race"
+},
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "ordos",
+    "gender": "GM",
+    "phonetic": "ordos",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "marteau, massue",
+    "referenceWordsEng": "hammer, mace"
+  },
+  {
+    "lexemeLanguage": "LPC",
+    "lexemeName": "brista",
+    "gender": "GM",
+    "phonetic": "brista",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "combat",
+    "referenceWordsEng": "fight"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "sriab",
+    "phonetic": "sriab",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "rayure, ligne",
+    "referenceWordsEng": "stripe, line"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "medio",
+    "phonetic": "medio",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "median, frontalière, intermediaire",
+    "referenceWordsEng": "median, border, intermediate"
+  },
+  {
+    "lexemeLanguage": "LOI",
+    "lexemeName": "mag",
+    "phonetic": "mag",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "champ, plaine, marché",
+    "referenceWordsEng": "field, plain, market"
+  },  {
+  "lexemeLanguage": "LPC",
+  "lexemeName": "leuk",
+  "phonetic": "leuk",
+  "gender": "GM",
+  "wordClass": "WN",
+  "descrFr": "",
+  "descrEng": "",
+  "sources": [
+    "EDPC"
+  ],
+  "referenceWordsFr": "briller",
+  "referenceWordsEng": "to shine"
+}
+]
+
+
+birros
+->
+berr
+bisso
+->
+doigt
+bitu
+->
+bed
+biuiton
+->
+bevet
+bledinos
+->
+bleiz
+bo/bou
+->
+buoc
+'h
+boruo
+->
+bervi
+branos
+->
+bran
+brater
+->
+breuder
+britu
+->
+preder
+briga
+->
+bre
+(sommet)
+brixta
+->
+brizh
+(magie)
+brogi
+->
+bro
+brunnio
+->
+bron
+bugio
+bussu
+->
+gweuz
+(levres)
+caito
+->
+koad
+caddos
+->
+kaer
+cagio
+->
+kae
+caleto
+->
+dur
+cambo
+->
+kamm
+cantos
+->
+100
+carantos
+->
+karantez
+caruos
+->
+karv
+cattos->
+kazh
+catu-
+->
+kad
+cauannos
+->
+kaouenn
+caxtos
+->
+kaez
+cele
+->
+egile
+(compagnon)
+cellos
+(marteau)
+->
+bugel
+(gou-kolios
+->
+petit
+marteau)
+cintus
+->
+kentañ
+cladio
+->
+kleze
+cluto
+->
+klod
+cluio
+->
+klevet
+corios
+(armée)
+->
+koskor
+corro
+->
+korr
+cottos
+->
+kozh
+cun
+->
+ki
+curmi
+->
+korev
+dallo
+->
+dall
+dauios
+->
+deviñ
+delgu
+->
+dalc
+'h
+depro
+->
+debriñ
+deuos
+->
+doue
+dir/stir
+->
+sterenn
+diuic
+->
+dialiñ
+drageno
+->
+draen
+(epine)
+druid
+->
+drouiz
+druco
+->
+drouk
+drutos
+->
+druz
+
+
+
+
+
+
+
+eburos
+->
+ivin
+esox
+->
+eog
+etno
+->
+evn
+gabalos
+->
+gaol
+gaiso-
+->
+gwaew
+->
+goaf
+gargo
+->
+garv
+(rude)
+garo
+->
+garm
+gdonios
+->
+den
+genaua
+->
+genoù
+gestlos
+->
+gouestl
+giamos
+->
+goañv
+giluos
+->
+gell
+glanna
+->
+glann
+glano
+->
+glan
+glion
+->
+englenañ
+gniiou
+->
+gouion
+goben
+->
+gov
+gortia
+->
+gorzh
+graua
+->
+gro
+(grêve)
+gulbion
+->
+golban
+(bec)
+iago
+->
+yen
+iaros
+->
+yar
+ibetis
+->
+evit
+(evet)
+iorcos
+->
+yourc
+'h
+iouincos
+->
+yaouank
+isarnon
+->
+houarn
+iuos
+->
+ivin
+labaro
+->
+lavar
+lama
+->
+lom
+(v.breton: main)
+landa
+->
+lann
+lano
+->
+leun
+lautron
+->
+laouer
+lergo
+->
+lerc
+'h
+leto
+->
+louet
+ling
+->
+lamm
+linna
+->
+lenn
+(voile)
+lissos
+->
+lez
+litanos
+->
+ledan
+litawi
+->
+ledaw
+/
+ledan
+litu
+->
+lid
+lio
+->
+liv
+locu
+->
+loch
+longo
+->
+lestr
+losto
+->
+lost
+louernos
+->
+louarn
+lucot
+->
+logodenn
+luge
+->
+le
+magalos
+->
+mael
+mageto/magio
+->
+mac
+'h
+magos
+->
+maez/ma
+magus
+->
+mao
+mapo
+->
+mab
+mantalon
+->
+mantel
+marcos
+->
+marc
+'h
+maros
+->
+meur
+maruos
+->
+marv
+matir
+->
+matezh
+matu
+->
+mat
+mediolanon
+medu
+->
+mezv
+meddu->
+mid-
+(irl.)
+melinos
+->
+melen
+menman
+->
+meno
+mid
+->
+miz
+milo
+->
+mil
+moccos
+->
+moc
+'h
+molatus
+->
+meuliñ
+molton
+->
+maout
+mori
+->
+mor
+natu
+->
+nad
+(chant)
+nauson
+->
+nev
+ne
+->
+ne
+(negation)
+Nemeton
+->
+nemed
+(irl.: bois
+sacrée)
+nébhes
+(nuage)->
+nemo->
+neñv
+nepo
+->
+nep
+nerto->
+nerzh
+nouiios
+->
+nevez
+noxt
+->
+noz
+ollos
+->
+holl
+onno
+->
+onn
+orgeto
+->
+org
+(coup)
+orgiat
+(tueur)
+oxtu
+->
+eizh
+papos
+->
+pep
+pellignos
+->
+den
+hag
+a
+zeu
+eus
+pell
+pinp
+->
+pemp
+penno->
+penn
+patuar
+->
+pevar
+ponc
+->
+pand,
+pa
+poppos
+->
+poazh
+prenno
+->
+prenn
+prinas
+->
+prenañ
+ratis
+->
+radenn
+rectu
+->
+reizh
+redo
+->
+redek
+rica
+->
+rec
+'h
+rigani
+->
+rhiain
+rio
+->
+rid
+(libre)
+ritu
+->
+roudour
+?
+?
+ritu
+->
+red
+rix
+->
+rik
+roto
+->
+rod
+roudos
+->
+ruz
+rusca
+->
+ruskenn
+sacros->
+sakr
+salika
+->
+haleg
+samo
+->
+hañv
+sapo
+->
+sapin
+sati
+->
+hed
+sessa->
+sez
+senos
+->
+hen
+sindiu
+->
+hizhiv
+siros
+->
+hir
+slougo
+->
+lu
+smero
+->
+amerzh
+Saulio
+->
+heol
+sounos
+->
+hun
+sparno
+->
+spern
+srogna
+->
+fri
+srutua
+->
+froud
+stam
+->
+staoñ
+stero
+->
+start
+stir
+->
+sterenn
+su-
+->
+he-
+(bon)
+auelos
+->
+avel
+succos
+->
+hoc
+'h
+suexs
+->
+c
+'hwec'
+h
+suibitis
+->
+sivi
+suior
+->
+c
+'hoar
+talu
+->
+tal
+taranos
+->
+taruos
+->
+tarv
+tauo
+->
+tav
+tessi
+->
+toemm
+->
+tomm
+teuta
+->
+tud
+tigerno
+->
+tiern
+tigontias
+->
+tigom
+*teu-H
+->
+tev
+toncnaman
+->
+tonkad
+traget
+->
+troad
+tre
+->
+dre
+treb
+->
+trev
+truxo
+->
+trousk
+turcos
+->
+tourc
+'h
+turno
+->
+torn(hauteur)
+(tornaod)
+ualos
+->
+wal
+(Tudwal,
+Riwal)
+ulatis
+->
+glad
+uarina
+->
+gwerin
+uassos
+->
+gwaz
+ueadia
+->
+gwiad
+uecti
+->
+gwezh
+(acte,
+bataille)
+uelet
+->
+gwelet
+uelio
+->
+uvel
+uelor
+->
+gwell
+ueni
+->
+gouenn
+uepos
+->
+goap
+uerna
+->
+gwern
+(aulne)
+uidi
+->
+gouzout
+uidlua
+->
+gwyddon
+(gallois: sorcière)
+uidu
+->
+gwez
+uindos
+->
+gwenn
+uiroiono
+->
+gwir
+uiros
+->
+gwir
+uluos
+->
+uloc
+'h
+uoconti
+->
+ugent
+uolcos
+->
+falc
+'hun
+uolson
+->
+gwall
+uolto
+->
+guolt
+(vieux
+breton: chevelure)*
+uroica
+->
+brug
+uxedios
+->
+us
+uxellos
+->
+uhel
+
