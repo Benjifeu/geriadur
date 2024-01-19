@@ -11,6 +11,6 @@ public class StatisticDTO {
     int tribesCount;
     int objectsCount;
     int placesCount;
-    int lexemesCount;
+    int wordStemsCount;
 
 }

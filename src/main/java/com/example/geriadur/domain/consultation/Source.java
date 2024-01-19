@@ -53,5 +53,5 @@ public class Source {
     private Set<Quote> quotes = new HashSet<>();
 
     @ManyToMany(mappedBy = "sources")
-    private List<Lexeme> lexemes = new ArrayList<>();
+    private List<WordStem> wordStems = new ArrayList<>();
 }

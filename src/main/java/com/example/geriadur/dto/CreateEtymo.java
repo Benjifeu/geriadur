@@ -18,7 +18,7 @@ public class CreateEtymo {
 
     private String etymoName;
 
-    private List<String> lexemes;
+    private List<String> wordStems;
 
     private String descrFr;
 

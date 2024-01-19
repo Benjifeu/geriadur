@@ -1,5 +1,6 @@
 package com.example.geriadur.service.consultation;
 
+import com.example.geriadur.domain.consultation.Quote;
 import com.example.geriadur.domain.consultation.Source;
 import org.springframework.data.domain.Page;
 
@@ -11,4 +12,6 @@ public interface SourceService {
     Source getSourceByID(Long id);
     void deleteSource(Long id);
     Page<Source> findPaginated (int pageNum, int pageSize);
+    void setSourceQuoteLink(Quote quote, long l);
+    void addQuote(Quote quote);
 }

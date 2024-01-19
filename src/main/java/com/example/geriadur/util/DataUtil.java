@@ -1,15 +1,11 @@
 package com.example.geriadur.util;
 
-import com.example.geriadur.domain.EtymonName;
-import com.example.geriadur.domain.LiteralTranslation;
-import com.example.geriadur.domain.consultation.Lexeme;
 import com.example.geriadur.domain.SemanticField;
-import com.example.geriadur.domain.consultation.Quote;
 import com.example.geriadur.domain.consultation.Source;
 import com.example.geriadur.dto.*;
-import com.example.geriadur.repositories.*;
-import com.example.geriadur.service.game.SessionGameService;
-import com.example.geriadur.service.user.UserServiceImpl;
+import com.example.geriadur.service.consultation.WordStemService;
+import com.example.geriadur.service.consultation.SourceService;
+import com.example.geriadur.service.user.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -22,150 +18,82 @@ import org.springframework.stereotype.Service;
 import java.io.*;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+/**
+ * the DataUtil class is responsible to retrieve the data from the JSON files
+ * present at the root of the project
+ ** (wordStemsInit, , etymonsInit, semanticFieldinit, sourcesInit)
+ **/
 @Service
 @Slf4j
 public class DataUtil {
 
     @Autowired
-    private LexemeRepository lexemeRepository;
+    private UserService userService;
     @Autowired
-    private SemanticFieldRepository semanticFieldRepository;
+    private WordStemService wordStemService;
     @Autowired
-    private SourceRepository sourceRepository;
-    @Autowired
-    private UserServiceImpl userService;
-    @Autowired
-    private SessionGameService sessionGameService;
-    @Autowired
-    private EtymonNameRepository etymonNameRepository;
-    @Autowired
-    private LiteralTranslationRepository literalTranslationRepository;
-    @Autowired
-    private QuoteRepository quoteRepository;
-    private List<CreateLexeme> lexemesInit = new ArrayList<>();
+    private SourceService sourceService;
+
+    private List<CreateWordStem> wordStemsInit = new ArrayList<>();
     private List<CreateEtymo> etymonNamesInit = new ArrayList<>();
     private List<Source> sourcesInit = new ArrayList<>();
-    private List<Quote> quotesInit = new ArrayList<>();
+    private List<SemanticField> semanticFieldsInit = new ArrayList<>();
 
+    /**
+     * InjectionData() the data in order to be transformed as entities and then
+     * persisted in the mySql database
+     **/
     @PostConstruct
     public void InjectionData() throws IOException {
-        readJsonData("lexemesInit");
+        readJsonData("wordStemsInit");
         readJsonData("sourcesInit");
         readJsonData("etymonsInit");
-        readJsonData("quotesInit");
-        lexemesInit.get(1).setChildren(Stream.of(lexemesInit.get(2), lexemesInit.get(3)).collect(Collectors.toSet()));
-        lexemesInit.get(6).setParents(Stream.of(lexemesInit.get(4), lexemesInit.get(0)).collect(Collectors.toSet()));
-        SemanticField semanticField = new SemanticField();
-        semanticField.setSemanticFieldNameEng("battlefield");
-        semanticField.setSemanticFieldNameFr("militaire");
-        SemanticField semanticField2 = new SemanticField();
-        semanticField2.setSemanticFieldNameEng("family");
-        semanticField2.setSemanticFieldNameFr("famille");
-        SemanticField semanticField3 = new SemanticField();
-        semanticField3.setSemanticFieldNameEng("working");
-        semanticField3.setSemanticFieldNameFr("travail");
-        SemanticField semanticField4 = new SemanticField();
-        semanticField4.setSemanticFieldNameEng("religion");
-        semanticField4.setSemanticFieldNameFr("religion");
-        ArrayList<LiteralTranslation> literalTranslations = new ArrayList<>();
-        //ArrayList<EtymonName> etymonNames = new ArrayList<>();
-        semanticFieldRepository.save(semanticField);
-        semanticFieldRepository.save(semanticField2);
-        semanticFieldRepository.save(semanticField3);
-        semanticFieldRepository.save(semanticField4);
+        readJsonData("semanticFieldsInit");
 
-        sourceRepository.saveAll(sourcesInit);
-        quoteRepository.saveAll(quotesInit);
-        ArrayList<EtymonName> etymonNames = new ArrayList<>();
+        // save all the semanticField
+        for (SemanticField semanticField: semanticFieldsInit) {
+            wordStemService.addSemanticField(semanticField);
+        }
+
+        // save all the sources
+        for (Source source: sourcesInit) {
+            sourceService.addSource(source);
+        }
+
+        // save all the etymons
         for (CreateEtymo createEtymo : etymonNamesInit) {
-            literalTranslations.add(createEtymo.getLitTrans());
-            EtymonName etymonName = new EtymonName();
-            etymonName.setEtymoName(createEtymo.getEtymoName());
-            etymonName.setCurrentName(createEtymo.getCurrentName());
-            etymonName.setEtymoName(createEtymo.getEtymoName());
-            etymonName.setWordTheme(createEtymo.getWordTheme());
-            etymonName.setLitTrans(createEtymo.getLitTrans());
-            etymonName.setDescrFr(createEtymo.getDescrFr());
-            etymonName.setDescrEng(createEtymo.getDescrEng());
-            /* semanticfield is not define in etymonsInit.json yet*/
-            etymonName.setSemanticField(semanticFieldRepository.findById(1L).get());
-            etymonNames.add(etymonName);
-        }
-        literalTranslationRepository.saveAll(literalTranslations);
-        etymonNameRepository.saveAll(etymonNames);
-        ArrayList<Lexeme> lexemes = new ArrayList<>();
-        for (CreateLexeme createLexeme : lexemesInit) {
-            Lexeme lexeme = new Lexeme();
-            lexeme.setLexemeName(createLexeme.getLexemeName());
-            lexeme.setLexemeLanguage(createLexeme.getLexemeLanguage());
-            lexeme.setGender(createLexeme.getGender());
-            lexeme.setWordClass(createLexeme.getWordClass());
-            lexeme.setDescrEng(createLexeme.getDescrEng());
-            lexeme.setDescrFr(createLexeme.getDescrFr());
-            lexeme.setReferenceWordsEng(createLexeme.getReferenceWordsEng());
-            lexeme.setReferenceWordsFr(createLexeme.getReferenceWordsFr());
-            lexeme.setPhonetic(createLexeme.getPhonetic());
-            lexemes.add(lexeme);
+            wordStemService.addProperNoun(createEtymo);
         }
 
-        lexemeRepository.saveAll(lexemes);
-        setLexemeQuoteLink(quoteRepository.findByQuoteId(1L).get(), "bailh");
-        setLexemeQuoteLink(quoteRepository.findByQuoteId(2L).get(), "seno");
-        setSourceQuoteLink(quoteRepository.findByQuoteId(1L).get(), 2L);//Dictionaire Rostrenen
-        setSourceQuoteLink(quoteRepository.findByQuoteId(2L).get(), 6L);//Dictionnaire gaulois delamarre
+        // save all the wordStems
+        for (CreateWordStem createWordStem : wordStemsInit) {
+            wordStemService.addAWordStem(createWordStem);
+        }
 
+        // config the wordStems of each etymons
         for (CreateEtymo etymonName : etymonNamesInit) {
-            System.out.println(etymonName.getLexemes());
-            setLexemeEtymonLink(etymonNameRepository.findEtymonNameByCurrentName(etymonName.getCurrentName()).get(), etymonName.getLexemes());
+            System.out.println(etymonName.getWordStems());
+            wordStemService.setWordStemEtymonLink(etymonName.getCurrentName(), etymonName.getWordStems());
         }
-        StatisticDTO statisticDTO = sessionGameService.getStatisticInfo();
-        System.out.println(
-                " Lexemes count: " + statisticDTO.getLexemesCount() +
-                "\n Placescount: " + statisticDTO.getPlacesCount() +
-                "\n Historcic figures count: " + statisticDTO.getHistoristicFiguresCount() +
-                "\n Mythic figures count: " + statisticDTO.getMythicFiguresCount() +
-                "\n Tribes count: " + statisticDTO.getTribesCount() +
-                "\n Obects count: " + statisticDTO.getObjectsCount());
+
         userService.save(new UserRegistrationDto("UserAccount", "lastname", "email", "pass", "U", 1));
         userService.save(new UserRegistrationDto("Admin", "lastname", "emailAdmin", "pass", "A", 1));
-    }
-
-    private void setSourceQuoteLink(Quote quote, long l) {
-        quote.setSource(sourceRepository.getReferenceById(l));
-        quoteRepository.save(quote);
-    }
-
-    public void setLexemeQuoteLink(Quote quote, String lexemeStr) {
-        Optional<Lexeme> lexeme = lexemeRepository.findByLexemeName(lexemeStr);
-        if (lexeme.isPresent()) {
-            quote.setLexemes(Arrays.asList(lexeme.get()));
-            quoteRepository.save(quote);
-        } else throw new IllegalArgumentException("the lexeme: " + lexemeStr + " doesn't exist in DB.");
-    }
-
-    public void setLexemeEtymonLink(EtymonName etymonName, List<String> lexemesString) {
-        Map<Integer, Lexeme> lexemes = new HashMap<>();
-        for (int i = 0; i < lexemesString.size(); ++i) {
-            Optional<Lexeme> lexeme = lexemeRepository.findByLexemeName(lexemesString.get(i));
-            if (lexeme.isPresent()) {
-                lexemes.put(i, lexeme.get());
-            } else throw new IllegalArgumentException("the lexeme: " + lexemesString.get(i) + " doesn't exist in DB.");
-        }
-        etymonName.setLexemePc(lexemes);
-        etymonNameRepository.save(etymonName);
+        wordStemService.getStatisticInfo();
     }
 
 
+
+
+    /**
+     * readJsonData(String jsonName) fetch the data contained in the json files at the root of the project
+     **/
     void readJsonData(String jsonName) throws IOException {
-
         JsonNode jsonNode = null;
         ObjectMapper mapper = new ObjectMapper();
         InputStream is = new FileInputStream("src/main/java/com/example/geriadur/" + jsonName + ".json");
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
-                is
-        ));
+                is));
         try {
             jsonNode = mapper.readTree(bufferedReader.lines().collect(Collectors.joining()));
         } catch (JsonProcessingException e) {
@@ -175,8 +103,8 @@ public class DataUtil {
         }
         log.info("initial data read");
         log.info(jsonNode.textValue());
-        if (jsonName.equals("lexemesInit")) {
-            lexemesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
+        if (jsonName.equals("wordStemsInit")) {
+            wordStemsInit = mapper.convertValue(jsonNode, new TypeReference<>() {
             });
         } else if (jsonName.equals("sourcesInit")) {
             sourcesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
@@ -184,8 +112,8 @@ public class DataUtil {
         } else if (jsonName.equals("etymonsInit")) {
             etymonNamesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
             });
-        } else if (jsonName.equals("quotesInit")) {
-            quotesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
+        } else if (jsonName.equals("semanticFieldsInit")) {
+            semanticFieldsInit = mapper.convertValue(jsonNode, new TypeReference<>() {
             });
         }
 

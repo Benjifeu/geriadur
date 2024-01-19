@@ -1,6 +1,5 @@
 package com.example.geriadur.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,9 +25,6 @@ public class SemanticField {
 
     @Column(name = "sem_field_nameEng", nullable = false)
     private String semanticFieldNameEng;
-
-    @Column(name = "sem_field_size")
-    private int semanticFieldSize;
 
 
     @OneToMany(mappedBy = "semanticField"

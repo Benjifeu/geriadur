@@ -1,6 +1,8 @@
 package com.example.geriadur.service.consultation;
 
+import com.example.geriadur.domain.consultation.Quote;
 import com.example.geriadur.domain.consultation.Source;
+import com.example.geriadur.repositories.QuoteRepository;
 import com.example.geriadur.repositories.SourceRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,42 +14,62 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
 @Service
 @Slf4j
 public class SourceServiceImpl implements SourceService {
     @Autowired
-    private SourceRepository SourceRepository;
+    private SourceRepository sourceRepository;
+    @Autowired
+    private QuoteRepository quoteRepository;
 
     @Override
     public List<Source> getAllSources() {
         List<Source> Sources = new ArrayList<>();
-        for (Source Source : SourceRepository.findAll()) {
+        for (Source Source : sourceRepository.findAll()) {
             Sources.add(Source);
         }
         return Sources;
     }
+
     @Override
     public Source getSourceByID(Long id) {
-        Optional<Source> source = SourceRepository.findById(id);
-        if(source.isPresent()){
+        Optional<Source> source = sourceRepository.findById(id);
+        if (source.isPresent()) {
             return source.get();
-        }
-        else throw new RuntimeException("Their is no Source with the id:" + id);
+        } else
+            throw new RuntimeException("Their is no Source with the id:" + id);
     }
+
     @Override
     public void deleteSource(Long id) {
-        Optional<Source> Source = SourceRepository.findById(id);
-        if(Source.isPresent()){
-            SourceRepository.delete(Source.get());
-        }
-        else throw new RuntimeException("Their is no Source with the id: " + id + " to delete");
+        Optional<Source> Source = sourceRepository.findById(id);
+        if (Source.isPresent()) {
+            sourceRepository.delete(Source.get());
+        } else
+            throw new RuntimeException("Their is no Source with the id: " + id + " to delete");
     }
+
     @Override
     public Page<Source> findPaginated(int pageNum, int pageSize) {
-        Pageable pageable = PageRequest.of(pageNum-1, pageSize);
-        return SourceRepository.findAll(pageable);
+        Pageable pageable = PageRequest.of(pageNum - 1, pageSize);
+        return sourceRepository.findAll(pageable);
     }
-    public void addSource(Source Source){
-        SourceRepository.save(Source);
+
+    public void addSource(Source Source) {
+        sourceRepository.save(Source);
+    }
+
+
+    public void setSourceQuoteLink(Quote quote, long l) {
+        quote.setSource(sourceRepository.getReferenceById(l));
+        quoteRepository.save(quote);
+    }
+
+
+
+    @Override
+    public void addQuote(Quote quote) {
+        quoteRepository.save(quote);
     }
 }

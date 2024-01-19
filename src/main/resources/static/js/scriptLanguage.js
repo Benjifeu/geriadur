@@ -1,5 +1,5 @@
-const lang = document.querySelectorAll("span.langLexeme");
-const genre = document.querySelectorAll("span.genLexeme");
+const lang = document.querySelectorAll("span.langWordStem");
+const genre = document.querySelectorAll("span.genWordStem");
 
 for (var i = 0; i < lang.length; i++) {
     lang[i].title = lang[i].title.replace("LB", bretonLanguage[siteLanguage])

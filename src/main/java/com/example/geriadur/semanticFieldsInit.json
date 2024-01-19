@@ -1,0 +1,18 @@
+[
+	{
+		"semanticFieldNameFr": "battlefield",
+		"semanticFieldNameEng": "militaire"
+	},
+	{
+		"semanticFieldNameFr": "family",
+		"semanticFieldNameEng": "famille"
+	},
+	{
+		"semanticFieldNameFr": "working",
+		"semanticFieldNameEng": "travail"
+	},
+	{
+		"semanticFieldNameFr": "religion",
+		"semanticFieldNameEng": "religion"
+	}
+]

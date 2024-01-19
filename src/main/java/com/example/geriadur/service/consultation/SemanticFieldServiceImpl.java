@@ -12,6 +12,7 @@ import java.util.Set;
 
 @Service
 public class SemanticFieldServiceImpl implements SemanticFieldService {
+    
     @Autowired
     private SemanticFieldRepository semanticFieldRepository;
 
