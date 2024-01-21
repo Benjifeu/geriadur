@@ -54,7 +54,7 @@ public class WordStem {
     @Column(name = "descr_eng")
     private String descrEng;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
+    @ManyToOne
     @JoinColumn(name = "sem_field_id")
     private SemanticField semanticField;
 

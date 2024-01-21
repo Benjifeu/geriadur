@@ -9,7 +9,9 @@
     "descrEng": "Literally: who has a white spot on his forehead",
     "referenceWordsFr": "nigaud, con",
     "referenceWordsEng": "goof",
-    "quotes": ["162.a Cheval marqué de blanc au front. tr. Marc'h bailh"],
+    "quotes": [
+      "162.a Cheval marqué de blanc au front. tr. Marc'h bailh"
+    ],
     "sources": [
       "DFCFB"
     ]
@@ -134,7 +136,9 @@
     "descrEng": "",
     "referenceWordsFr": "pommier, pomme",
     "referenceWordsEng": "apple tree",
-    "parentsWordStemStr": ["hébol"]
+    "parentsWordStemStr": [
+      "hébol"
+    ]
   },
   {
     "wordStemLanguage": "LG",
@@ -157,7 +161,9 @@
     "descrEng": "",
     "referenceWordsFr": "pommier",
     "referenceWordsEng": "apple tree",
-    "parentsWordStemStr": ["abalom"]
+    "parentsWordStemStr": [
+      "abalom"
+    ]
   },
   {
     "wordStemLanguage": "LOI",
@@ -169,7 +175,9 @@
     "descrEng": "",
     "referenceWordsFr": "pommier",
     "referenceWordsEng": "apple tree",
-    "parentsWordStemStr": ["aballo"]
+    "parentsWordStemStr": [
+      "aballo"
+    ]
   },
   {
     "wordStemLanguage": "LOI",
@@ -903,7 +911,7 @@
   {
     "wordStemLanguage": "LPC",
     "wordStemName": "maros",
-    "phonetic": "maros",
+    "phonetic": "māros",
     "gender": "NO",
     "wordClass": "WADJ",
     "descrFr": "",
@@ -1106,11 +1114,14 @@
     "wordClass": "WADJ",
     "descrFr": "",
     "descrEng": "",
-    "quotes": ["270. Senos: ancien, vieux. Terme fréquent de nom de personne, Seno-bena, Seno-carus, Seno-Condus.(...) La tribu des Senones, qui a donné la ville de Sens, devait signifier \"Les Anciens\".(...)"],
-    "sources": ["DLG"],
+    "quotes": [
+      "270. Senos: ancien, vieux. Terme fréquent de nom de personne, Seno-bena, Seno-carus, Seno-Condus.(...) La tribu des Senones, qui a donné la ville de Sens, devait signifier \"Les Anciens\".(...)"
+    ],
+    "sources": [
+      "DLG"
+    ],
     "referenceWordsFr": "ancien,vieux",
     "referenceWordsEng": "old"
-
   },
   {
     "wordStemLanguage": "LPC",
@@ -1339,7 +1350,8 @@
     "referenceWordsEng": "door, market, close city",
     "descrFr": "",
     "descrEng": "",
-    "sources": ["GHG"
+    "sources": [
+      "GHG"
     ]
   },
   {
@@ -1670,8 +1682,8 @@
   },
   {
     "wordStemLanguage": "LG",
-    "wordStemName": "su-",
-    "phonetic": "su-",
+    "wordStemName": "su",
+    "phonetic": "su",
     "gender": "NO",
     "wordClass": "WPREP",
     "referenceWordsFr": "bon, bien",
@@ -2298,7 +2310,20 @@
     "sources": [
       "DIL"
     ]
-  },
+  },  {
+  "wordStemLanguage": "LW",
+  "wordStemName": "carn",
+  "phonetic": "karn",
+  "gender": "NO",
+  "wordClass": "WAF",
+  "referenceWordsFr": "handle, hilt, hoof",
+  "referenceWordsEng": "poignée, sabot",
+  "descrFr": "",
+  "descrEng": "",
+  "sources": [
+    "DIL"
+  ]
+},
   {
     "wordStemLanguage": "LOI",
     "wordStemName": "-ach",
@@ -2440,6 +2465,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "mineral",
     "referenceWordsFr": "vallée",
     "referenceWordsEng": "valley"
   },
@@ -2451,6 +2477,7 @@
     "wordClass": "WN",
     "descrFr": "a donné le mot youl en breton",
     "descrEng": "",
+    "semanticField": "feelings",
     "referenceWordsFr": "volonté",
     "referenceWordsEng": "will"
   },
@@ -2462,6 +2489,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "family",
     "referenceWordsFr": "mère",
     "referenceWordsEng": "will"
   },
@@ -2473,6 +2501,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "family",
     "referenceWordsFr": "lignée, clan, naissance, origine",
     "referenceWordsEng": "lineage, clan, birth, origine"
   },
@@ -2487,6 +2516,7 @@
     "sources": [
       "DNFB"
     ],
+    "semanticField": "anatomy",
     "referenceWordsFr": "front, couronne, tempe, partie supérieur de la tête",
     "referenceWordsEng": "forehead, crown, upper part of the head"
   },
@@ -2501,6 +2531,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "number",
     "referenceWordsFr": "un, unique",
     "referenceWordsEng": "one, unique"
   },
@@ -2515,6 +2546,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "animal",
     "referenceWordsFr": "ours",
     "referenceWordsEng": "bear"
   },
@@ -2529,6 +2561,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "abstract",
     "referenceWordsFr": "le plus",
     "referenceWordsEng": "the most"
   },
@@ -2543,6 +2576,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "war",
     "referenceWordsFr": "chevaucher",
     "referenceWordsEng": "chevaucher"
   },
@@ -2557,6 +2591,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "tool",
     "referenceWordsFr": "roue, course (de char)",
     "referenceWordsEng": "wheel, race"
   },
@@ -2571,6 +2606,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "war",
     "referenceWordsFr": "marteau, massue",
     "referenceWordsEng": "hammer, mace"
   },
@@ -2600,6 +2636,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "mineral",
     "referenceWordsFr": "rayure, ligne",
     "referenceWordsEng": "stripe, line"
   },
@@ -2614,6 +2651,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "border",
     "referenceWordsFr": "median, frontalière, intermediaire",
     "referenceWordsEng": "median, border, intermediate"
   },
@@ -2628,6 +2666,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "mineral",
     "referenceWordsFr": "champ, plaine, marché",
     "referenceWordsEng": "field, plain, market"
   },
@@ -2642,6 +2681,7 @@
     "sources": [
       "EDPC"
     ],
+    "semanticField": "cosmos",
     "referenceWordsFr": "briller",
     "referenceWordsEng": "to shine"
   },
@@ -2656,6 +2696,7 @@
     "sources": [
       "EDPC"
     ],
+    "semanticField": "building",
     "referenceWordsFr": "fort, forteresse",
     "referenceWordsEng": "fort, stronghold"
   },
@@ -2670,6 +2711,7 @@
     "sources": [
       "EDPC"
     ],
+    "semanticField": "mineral",
     "referenceWordsFr": "crevasse, fente",
     "referenceWordsEng": "crevice, slit"
   },
@@ -2684,10 +2726,10 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "tool",
     "referenceWordsFr": "sac, bourse",
     "referenceWordsEng": "bag, purse"
-  }
-,
+  },
   {
     "wordStemLanguage": "LPC",
     "wordStemName": "gaisos",
@@ -2697,11 +2739,162 @@
     "descrFr": "",
     "descrEng": "",
     "sources": [
-      "DLG","EDPC"
+      "DLG",
+      "EDPC"
     ],
     "semanticField": "war",
     "referenceWordsFr": "lance, javelot",
     "referenceWordsEng": "spear"
+  },
+  {
+    "wordStemLanguage": "LG",
+    "wordStemName": "cladio",
+    "phonetic": "kladio",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "semanticField": "war",
+    "referenceWordsFr": "épée, glaive",
+    "referenceWordsEng": "sword, gladius"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "phlentu",
+    "phonetic": "ɸlenstu",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ],
+    "semanticField": "cosmos",
+    "referenceWordsFr": "lumière, radiance, joie",
+    "referenceWordsEng": "light, radiance, joy"
+  },
+  {
+    "wordStemLanguage": "LG",
+    "wordStemName": "wroikos",
+    "phonetic": "wroikos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ],
+    "semanticField": "vegetation",
+    "referenceWordsFr": "bruyère",
+    "referenceWordsEng": "heather"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "fráech",
+    "phonetic": "fˠɾˠeːx",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "feelings",
+    "referenceWordsFr": "fureur",
+    "referenceWordsEng": "fury"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "biggos",
+    "phonetic": "biggos",
+    "gender": "GU",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "war",
+    "referenceWordsFr": "petit",
+    "referenceWordsEng": "small"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "glast",
+    "phonetic": "glast",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ],
+    "semanticField": "color",
+    "referenceWordsFr": "bleu, vert",
+    "referenceWordsEng": "blue, green"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "gurm",
+    "phonetic": "gurm",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ],
+    "semanticField": "color",
+    "referenceWordsFr": "bleu, vert",
+    "referenceWordsEng": "blue, green"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "lúin",
+    "phonetic": "lúin",
+    "gender": "GF",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "war",
+    "referenceWordsFr": "lance",
+    "referenceWordsEng": "spear"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "ón",
+    "phonetic": "ón  /////////////////TO DO",
+    "gender": "GF",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "war",
+    "referenceWordsFr": "from",
+    "referenceWordsEng": "from"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "och",
+    "phonetic": "och  /////////////////TO DO",
+    "gender": "GF",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "war",
+    "referenceWordsFr": "alas",
+    "referenceWordsEng": "alas"
   }
 ]
 

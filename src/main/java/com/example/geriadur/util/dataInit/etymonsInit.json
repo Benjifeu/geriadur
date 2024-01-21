@@ -883,11 +883,11 @@
   },
   {
     "currentName": "Sucellos",
-    "etymoName": "Su-Kello",
+    "etymoName": "Sukello",
     "descrFr": "Dieu pourvu d'un chaudron et d'un maillet, avec lequel il peut donner vie et morts aux hommes. Il est très probablement le même que le dieu Dagda et serait le personnage du chaudron de Gundestrup plongeant des guerriers dans un chaudron.",
     "descrEng": "",
     "wordStems": [
-      "su-",
+      "su",
       "cellos"
     ],
     "wordTheme": 3,
@@ -1159,7 +1159,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "wordStems": [],
+    "wordStems": ["gurm"],
     "litTrans": {
       "litTransFr": "Celui aux Sourcils Brun",
       "litTransEng": "The one with brown eyebrows",
@@ -1705,15 +1705,15 @@
     "descrEng": "",
     "wordTheme": 3,
     "wordStems": [
-      "dord","brugn"
+      "dord",
+      "brugn"
     ],
     "litTrans": {
       "litTransFr": "La Fredonneuse des Chagrins",
       "litTransEng": "",
       "litTransType": "1"
     }
-  }
-,
+  },
   {
     "currentName": "Lugaid Reo nDerg",
     "etymoName": "Lugaid Reo nDerg",
@@ -1721,7 +1721,9 @@
     "descrEng": "",
     "wordTheme": 3,
     "wordStems": [
-      "leuk","sriab","dergo"
+      "leuk",
+      "sriab",
+      "dergo"
     ],
     "litTrans": {
       "litTransFr": "Le Lumineux à la Ligne Rouge",
@@ -1750,7 +1752,8 @@
     "descrFr": "Cité du sud du pays de Galles dans le territoire des Silures. La ville fut quasiment abandonnée suite au départ de Magnus Maximus puis des Romain à la fin du IVème siècle.",
     "descrEng": "",
     "wordTheme": 1,
-    "wordStems": ["kagro"
+    "wordStems": [
+      "kagro"
     ],
     "litTrans": {
       "litTransFr": "Le fort",
@@ -1765,7 +1768,9 @@
     "descrEng": "",
     "wordTheme": 1,
     "wordStems": [
-      "roto","mag","os"
+      "roto",
+      "mag",
+      "os"
     ],
     "litTrans": {
       "litTransFr": "La PLaine de la Course de Char",
@@ -1780,7 +1785,8 @@
     "descrEng": "",
     "wordTheme": 5,
     "wordStems": [
-      "kalet","bolko"
+      "kalet",
+      "bolko"
     ],
     "litTrans": {
       "litTransFr": "La solide ",
@@ -1795,7 +1801,8 @@
     "descrEng": "",
     "wordTheme": 5,
     "wordStems": [
-      "gaisos","bolko"
+      "gaisos",
+      "bolko"
     ],
     "litTrans": {
       "litTransFr": "La PLaine de la Course de Char",
@@ -1808,13 +1815,134 @@
     "etymoName": "firginaich",
     "descrFr": "Epée de Manannán mac Lir / Nuada Airgetlám",
     "descrEng": "",
-    "wordTheme": 1,
+    "wordTheme": 5,
     "wordStems": [
-
+    ],
+    "litTrans": {
+      "litTransFr": "La Rétorqueuse",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Claíomh Solais",
+    "etymoName": "Claidheamh Soluis",
+    "descrFr": "Epée sacrée de Nuada à la Main d'Argent, elle est capable de trancher le fer et l'acier.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "cladio",
+      "su",
+      "phlentu"
+    ],
+    "litTrans": {
+      "litTransFr": "L'Épée Très Radiante",
+      "litTransEng": "The Sword of Light",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Cruaidín Catutchenn",
+    "etymoName": "firginaich",
+    "descrFr": "Epée sacrée de Nuada à la Main d'Argent, elle est capable de trancher le fer et l'acier.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
     ],
     "litTrans": {
       "litTransFr": "La PLaine de la Course de Char",
       "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Fraoch Mór et Fraoch Beag",
+    "etymoName": "Fraoch Mór agus Fraoch Mór",
+    "descrFr": "Epées de Manannán mac Lir.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "fráech",
+      "maros",
+      "biggos"
+    ],
+    "litTrans": {
+      "litTransFr": "La Grande et la Petite Furieuse",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Gorm Glas",
+    "etymoName": "Gurm Glas",
+    "descrFr": "Épée magique de Conchobhar max Nessa.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "gurm",
+      "glast"
+    ],
+    "litTrans": {
+      "litTransFr": "La Bleue Marine",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Ochain",
+    "etymoName": "Acéin",
+    "descrFr": "Bouclier magique de Conchobhar max Nessa.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "och",
+      "ón"
+    ],
+    "litTrans": {
+      "litTransFr": "La Grogne",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Orna",
+    "etymoName": "Orna",
+    "descrFr": "Épée du roi fomoire Tethra avant d'être récupérée par le danide Ogma.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+    ],
+    "litTrans": {
+      "litTransFr": "La petite verte",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Birgha",
+    "etymoName": "Birgha",
+    "descrFr": "Lance de Finn.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+    ],
+    "litTrans": {
+      "litTransFr": "La Lance Cracheuse",
+      "litTransEng": "The Spit-Spear",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Carnwennan",
+    "etymoName": "Carnwenhau",
+    "descrFr": "Dague d'Arthur fils de Pendragon.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": ["carn","uindos","án"
+    ],
+    "litTrans": {
+      "litTransFr": "La Petite Poignée Blanche",
+      "litTransEng": "The Little White Hilt",
       "litTransType": "10"
     }
   }
