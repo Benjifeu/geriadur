@@ -6,6 +6,7 @@ import com.example.geriadur.dto.*;
 import com.example.geriadur.repositories.EtymonNameRepository;
 import com.example.geriadur.repositories.LiteralTranslationRepository;
 import com.example.geriadur.service.game.api.ISessionGameService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,7 @@ import java.util.*;
     /** the ISessionGameService class is responsible for the traitment and the retrieving of data needed data in order to start the game session
     based on a 15 step where each show a proper name and a selection a 5 literal translantion among which lies the good one*/
 @Service
+@Slf4j
 public class SessionGameService implements ISessionGameService {
 
 

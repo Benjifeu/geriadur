@@ -41,26 +41,6 @@ public class WordStemService implements IWordStemService {
     @Autowired
     private SourceRepository sourceRepository;
 
-    /** getAllWordStems() returns all the wordStems present in the database */
-    @Override
-    public List<WordStem> getAllWordStems() {
-        List<WordStem> wordStems = new ArrayList<>();
-        for (WordStem wordStem : wordStemRepository.findAll()) {
-            wordStems.add(wordStem);
-        }
-        return wordStems;
-    }
-
-    public void setWordStemQuoteLink(Quote quote, String wordStemStr) {
-        Optional<WordStem> wordStem = wordStemRepository.findByWordStemName(wordStemStr);
-        if (wordStem.isPresent()) {
-            List<WordStem> wordStems = quote.getWordStems();
-            wordStems.add(wordStem.get());
-            quote.setWordStems(wordStems);
-            quoteRepository.save(quote);
-        } else
-            throw new IllegalArgumentException("the wordStem: " + wordStemStr + " doesn't exist in DB.");
-    }
 
     public void addProperNoun(CreateEtymo createEtymo) {
         literalTranslationRepository.save(createEtymo.getLitTrans());
@@ -204,4 +184,26 @@ public class WordStemService implements IWordStemService {
                         "\n Obects count: " + statisticDTO.getObjectsCount());
         return statisticDTO;
     }
+
+    /** getAllWordStems() returns all the wordStems present in the database */
+    @Override
+    public List<WordStem> getAllWordStems() {
+        List<WordStem> wordStems = new ArrayList<>();
+        for (WordStem wordStem : wordStemRepository.findAll()) {
+            wordStems.add(wordStem);
+        }
+        return wordStems;
+    }
+
+    public void setWordStemQuoteLink(Quote quote, String wordStemStr) {
+        Optional<WordStem> wordStem = wordStemRepository.findByWordStemName(wordStemStr);
+        if (wordStem.isPresent()) {
+            List<WordStem> wordStems = quote.getWordStems();
+            wordStems.add(wordStem.get());
+            quote.setWordStems(wordStems);
+            quoteRepository.save(quote);
+        } else
+            throw new IllegalArgumentException("the wordStem: " + wordStemStr + " doesn't exist in DB.");
+    }
+
 }

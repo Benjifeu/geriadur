@@ -6,10 +6,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
+import java.util.Set;
 
 
 @Repository
 public interface QuoteRepository extends JpaRepository<Quote, Long> {
-    Optional<Quote> findBySource(Source source);
-    Optional<Quote> findByQuoteId(Long id);
+    Set<Quote> findBySource(Source source);
 }
