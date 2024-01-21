@@ -35,6 +35,7 @@ public class LiteralTranslation {
      * 7: river name (singular)
      * 8: god and heroes name
      * 9: goddess name
+     * 10: object
      */
     @Column(name = "lit_trans_type", nullable = false)
     private int litTransType;

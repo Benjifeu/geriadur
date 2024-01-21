@@ -30,8 +30,8 @@ public class SessionGameRestController {
         return json;
     }
     @PostMapping("/sessionGame/saveResult")
-    public ResponseEntity saveScore(@RequestBody GameSessionResult gameSessionResult)  {
-        ResponseEntity response = userService.saveScore(gameSessionResult.getSessionScore());
+    public ResponseEntity<String> saveScore(@RequestBody GameSessionResult gameSessionResult)  {
+        ResponseEntity<String> response = userService.saveScore(gameSessionResult.getSessionScore());
         return response;
     }
 }

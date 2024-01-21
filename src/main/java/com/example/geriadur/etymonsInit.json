@@ -1772,6 +1772,51 @@
       "litTransEng": "",
       "litTransType": "1"
     }
+  },
+  {
+    "currentName": "Caladbolg",
+    "etymoName": "Caladbolg",
+    "descrFr": ".",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "kalet","bolko"
+    ],
+    "litTrans": {
+      "litTransFr": "La solide ",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Gae Bolg",
+    "etymoName": "Gáe Bulga",
+    "descrFr": "",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "gaisu","bolko"
+    ],
+    "litTrans": {
+      "litTransFr": "La PLaine de la Course de Char",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Fragarach",
+    "etymoName": "firginaich",
+    "descrFr": "Epée de Manannán mac Lir / Nuada Airgetlám",
+    "descrEng": "",
+    "wordTheme": 1,
+    "wordStems": [
+      "fir. gin. -aich","bolko"
+    ],
+    "litTrans": {
+      "litTransFr": "La PLaine de la Course de Char",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
   }
 ]
 

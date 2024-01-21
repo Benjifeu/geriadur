@@ -5,7 +5,8 @@ import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.TypeOfSourceEnum;
 import com.example.geriadur.constants.WordClassEnum;
 import com.example.geriadur.domain.consultation.Source;
-import com.example.geriadur.service.consultation.SourceService;
+import com.example.geriadur.service.consultation.api.ISourceService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -18,7 +19,7 @@ import java.util.List;
 @RequestMapping("sources")
 public class SourceController {
     @Autowired
-    private SourceService sourceService;
+    private ISourceService sourceService;
 
 
     //display list of semantic fields

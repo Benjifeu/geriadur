@@ -2,7 +2,7 @@ package com.example.geriadur.service.user;
 
 import com.example.geriadur.constants.UserRoleEnum;
 import com.example.geriadur.domain.user.UserAccount;
-import com.example.geriadur.dto.UserRegistrationDto;
+import com.example.geriadur.dto.CreateUser;
 import com.example.geriadur.repositories.UserRepository;
 import com.example.geriadur.service.user.api.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,19 +15,18 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCrypt;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+
+/** The UserService, . */
 @Service
 public class UserService implements IUserService {
 
     @Autowired
     private UserRepository userRepository;
-    @Autowired
-    private BCryptPasswordEncoder passwordEncoder;
 /*
     public UserService(UserRepository userRepository) {
         super();
@@ -35,7 +34,7 @@ public class UserService implements IUserService {
     }*/
 
     @Override
-    public void save(UserRegistrationDto registrationDto) {
+    public void save(CreateUser registrationDto) {
         String role;
         switch (registrationDto.getRole()) {
             case ("U"):
@@ -67,7 +66,7 @@ public class UserService implements IUserService {
         return null;
     }
 
-    public ResponseEntity saveScore(int sessionScore) {
+    public ResponseEntity<String> saveScore(int sessionScore) {
         UserAccount userAccount =
                 userRepository.findByEmail(getCurrentUserEmail()).get();
         int finalScore = userAccount.getScore() + sessionScore;

@@ -2651,8 +2651,37 @@
     ],
     "referenceWordsFr": "fort, forteresse",
     "referenceWordsEng": "fort, stronghold"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "bolko",
+    "phonetic": "bolko",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ],
+    "referenceWordsFr": "crevasse, fente",
+    "referenceWordsEng": "crevice, slit"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "bolga",
+    "phonetic": "bolga",
+    "gender": "GU",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "referenceWordsFr": "sac, bourse",
+    "referenceWordsEng": "bag, purse"
   }
 ]
+
 
 
 birros

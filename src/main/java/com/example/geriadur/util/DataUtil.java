@@ -3,12 +3,11 @@ package com.example.geriadur.util;
 import com.example.geriadur.domain.SemanticField;
 import com.example.geriadur.domain.consultation.Source;
 import com.example.geriadur.dto.*;
-import com.example.geriadur.service.consultation.WordStemService;
-import com.example.geriadur.service.consultation.SourceService;
+import com.example.geriadur.service.consultation.api.ISourceService;
+import com.example.geriadur.service.consultation.api.IWordStemService;
 import com.example.geriadur.service.user.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.io.*;
 import java.util.*;
-import java.util.stream.Collectors;
+
 
 /**
  * the DataUtil class is responsible to retrieve the data from the JSON files
@@ -31,14 +30,23 @@ public class DataUtil {
     @Autowired
     private UserService userService;
     @Autowired
-    private WordStemService wordStemService;
+    private IWordStemService wordStemService;
     @Autowired
-    private SourceService sourceService;
+    private ISourceService sourceService;
 
+    //list of data transfer objects that will be persisted in the database
     private List<CreateWordStem> wordStemsInit = new ArrayList<>();
     private List<CreateEtymo> etymonNamesInit = new ArrayList<>();
     private List<Source> sourcesInit = new ArrayList<>();
     private List<SemanticField> semanticFieldsInit = new ArrayList<>();
+    private List<CreateUser> usersInit = new ArrayList<>();
+
+    //names of the the json files to retrieve
+    private final String jsonWordStem = "wordStemsInit";
+    private final String jsonSource = "sourcesInit";
+    private final String jsonEtymon = "etymonsInit";
+    private final String jsonSemField = "semanticFieldsInit";
+    private final String jsonUser = "usersInit";
 
     /**
      * InjectionData() the data in order to be transformed as entities and then
@@ -46,18 +54,19 @@ public class DataUtil {
      **/
     @PostConstruct
     public void InjectionData() throws IOException {
-        readJsonData("wordStemsInit");
-        readJsonData("sourcesInit");
-        readJsonData("etymonsInit");
-        readJsonData("semanticFieldsInit");
+        readJsonData(jsonWordStem);
+        readJsonData(jsonSource);
+        readJsonData(jsonEtymon);
+        readJsonData(jsonSemField);
+        readJsonData(jsonUser);
 
         // save all the semanticField
-        for (SemanticField semanticField: semanticFieldsInit) {
+        for (SemanticField semanticField : semanticFieldsInit) {
             wordStemService.addSemanticField(semanticField);
         }
 
         // save all the sources
-        for (Source source: sourcesInit) {
+        for (Source source : sourcesInit) {
             sourceService.addSource(source);
         }
 
@@ -71,52 +80,57 @@ public class DataUtil {
             wordStemService.addAWordStem(createWordStem);
         }
 
+        // save all default users
+        for (CreateUser createUser : usersInit) {
+            userService.save(createUser);
+        }
+
         // config the wordStems of each etymons
         for (CreateEtymo etymonName : etymonNamesInit) {
             System.out.println(etymonName.getWordStems());
             wordStemService.setWordStemEtymonLink(etymonName.getCurrentName(), etymonName.getWordStems());
         }
 
-        userService.save(new UserRegistrationDto("UserAccount", "lastname", "email", "pass", "U", 1));
-        userService.save(new UserRegistrationDto("Admin", "lastname", "emailAdmin", "pass", "A", 1));
         wordStemService.getStatisticInfo();
     }
 
-
-
-
     /**
-     * readJsonData(String jsonName) fetch the data contained in the json files at the root of the project
+     * readJsonData(String jsonName) fetch the data contained in the json files at
+     * the root of the project
      **/
     void readJsonData(String jsonName) throws IOException {
-        JsonNode jsonNode = null;
+
         ObjectMapper mapper = new ObjectMapper();
-        InputStream is = new FileInputStream("src/main/java/com/example/geriadur/" + jsonName + ".json");
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(
-                is));
+        InputStream is = null;
+         try {
+         is = new FileInputStream("src/main/java/com/example/geriadur/" + jsonName + ".json");
+         } catch (FileNotFoundException e) {
+         e.printStackTrace();
+         }
+
         try {
-            jsonNode = mapper.readTree(bufferedReader.lines().collect(Collectors.joining()));
+            switch (jsonName) {
+                case jsonWordStem:
+                    wordStemsInit = mapper.readValue(is, new TypeReference<List<CreateWordStem>>() {});
+                    break;
+                    case jsonEtymon:
+                    etymonNamesInit = mapper.readValue(is, new TypeReference<List<CreateEtymo>>() {});
+                    break;
+                    case jsonSemField:
+                    semanticFieldsInit = mapper.readValue(is, new TypeReference<List<SemanticField>>() {});
+                    break;
+                    case jsonSource:
+                    sourcesInit = mapper.readValue(is, new TypeReference<List<Source>>() {});
+                    break;
+                    case jsonUser:
+                    usersInit = mapper.readValue(is, new TypeReference<List<CreateUser>>() {});
+                    break;
+                default:
+                    break;
+            }
         } catch (JsonProcessingException e) {
             e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-        log.info("initial data read");
-        log.info(jsonNode.textValue());
-        if (jsonName.equals("wordStemsInit")) {
-            wordStemsInit = mapper.convertValue(jsonNode, new TypeReference<>() {
-            });
-        } else if (jsonName.equals("sourcesInit")) {
-            sourcesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
-            });
-        } else if (jsonName.equals("etymonsInit")) {
-            etymonNamesInit = mapper.convertValue(jsonNode, new TypeReference<>() {
-            });
-        } else if (jsonName.equals("semanticFieldsInit")) {
-            semanticFieldsInit = mapper.convertValue(jsonNode, new TypeReference<>() {
-            });
-        }
-
+        log.info("initial json data read and converted");
     }
-
 }

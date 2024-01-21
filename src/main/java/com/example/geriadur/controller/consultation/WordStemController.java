@@ -4,8 +4,9 @@ import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.WordClassEnum;
 import com.example.geriadur.domain.consultation.WordStem;
-import com.example.geriadur.service.consultation.WordStemService;
-import com.example.geriadur.service.consultation.SemanticFieldService;
+import com.example.geriadur.service.consultation.api.ISemanticFieldService;
+import com.example.geriadur.service.consultation.api.IWordStemService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
@@ -17,9 +18,9 @@ import java.util.List;
 @Controller
 public class WordStemController {
     @Autowired
-    private WordStemService wordStemService;
+    private IWordStemService wordStemService;
     @Autowired
-    private SemanticFieldService semanticFieldService;
+    private ISemanticFieldService semanticFieldService;
     //private String "wordStems-show";
 
     //display list of semantic fields

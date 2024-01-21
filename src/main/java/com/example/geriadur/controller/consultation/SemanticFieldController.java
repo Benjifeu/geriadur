@@ -1,7 +1,8 @@
 package com.example.geriadur.controller.consultation;
 
 import com.example.geriadur.domain.SemanticField;
-import com.example.geriadur.service.consultation.SemanticFieldService;
+import com.example.geriadur.service.consultation.api.ISemanticFieldService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("semanticfields")
 public class SemanticFieldController {
     @Autowired
-    private SemanticFieldService semanticFieldService;
+    private ISemanticFieldService semanticFieldService;
 
     //display list of semantic fields
     @GetMapping()
