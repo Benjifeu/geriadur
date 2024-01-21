@@ -60,9 +60,6 @@ public class EtymonName {
     @Column(name = "word_theme")
     private Long wordTheme;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "sem_field_id")
-    private SemanticField semanticField;
 
     @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "lit_trans_id")

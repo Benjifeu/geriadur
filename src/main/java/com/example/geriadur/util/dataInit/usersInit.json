@@ -1,0 +1,18 @@
+[
+	{
+		"firstName": "user",
+		"lastName": "last",
+		"email": "testUser@gmol.com",
+		"password": "pass",
+		"role": "U",
+		"language": 1
+	},
+	{
+		"firstName": "admin",
+		"lastName": "last",
+		"email": "testAdmin@gmol.com",
+		"password": "pass",
+		"role": "A",
+		"language": 1
+	}
+]

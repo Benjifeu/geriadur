@@ -1,12 +1,17 @@
 package com.example.geriadur.service.consultation;
 
+import com.example.geriadur.domain.consultation.Author;
 import com.example.geriadur.domain.consultation.Quote;
 import com.example.geriadur.domain.consultation.Source;
+import com.example.geriadur.dto.CreateAuthor;
+import com.example.geriadur.dto.CreateSource;
+import com.example.geriadur.repositories.AuthorRepository;
 import com.example.geriadur.repositories.QuoteRepository;
 import com.example.geriadur.repositories.SourceRepository;
 import com.example.geriadur.service.consultation.api.ISourceService;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -14,15 +19,21 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
+@Slf4j
 public class SourceService implements ISourceService {
     @Autowired
     private SourceRepository sourceRepository;
     @Autowired
     private QuoteRepository quoteRepository;
+    @Autowired
+    private AuthorRepository authorRepository;
 
     @Override
     public List<Source> getAllSources() {
@@ -57,20 +68,26 @@ public class SourceService implements ISourceService {
         return sourceRepository.findAll(pageable);
     }
 
-    public void addSource(Source Source) {
-        sourceRepository.save(Source);
+    public void addSource(CreateSource createSource) {
+        Source source = new Source();
+        source.setSourceNameInOriginalLanguage(createSource.getSourceNameInOriginalLanguage());
+        source.setSourceNameInEnglish(createSource.getSourceNameInEnglish());
+        source.setTypeOfSource(createSource.getTypeOfSource());
+        source.setLanguage(createSource.getLanguage());
+        source.setAbbreviation(createSource.getAbbreviation());
+        source.setDescription(createSource.getDescription());
+        source.setDateOfPublication(createSource.getDateOfPublication());
+        if (createSource.getAuthors() != null) {
+            source.setAuthors(Stream.of(
+                    authorRepository.findAuthorByAuthorName(createSource.getAuthors()).get()
+            ).collect(Collectors.toSet()));
+        }
+        sourceRepository.save(source);
+        log.info("The source with the title name: \"" +source.getSourceNameInEnglish() + "\" has been saved.");
     }
-
-
-    public void setSourceQuoteLink(Quote quote, long l) {
-        quote.setSource(sourceRepository.getReferenceById(l));
-        quoteRepository.save(quote);
-    }
-
-
 
     @Override
-    public void addQuote(Quote quote) {
-        quoteRepository.save(quote);
+    public void addAuthor(Author author) {
+        authorRepository.save(author);
     }
 }

@@ -1,13 +1,13 @@
 package com.example.geriadur.domain.consultation;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Getter
 @Setter
@@ -27,23 +27,17 @@ public class Author {
     @Column(name="biography")
     private String biography;
 
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(name="author_birthdate")
-    private LocalDate dateOfBirth;
+    private Date dateOfBirth;
 
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(name="author_deathdate")
-    private LocalDate dateOfDeath;
+    private Date dateOfDeath;
 
     @Column(name="author_nationality",nullable = false)
     private String nationality;
 
-    @ManyToMany(
-            fetch = FetchType.LAZY,
-            cascade = {CascadeType.ALL}
-    )
-    @JoinTable(
-            name="author_source",
-            joinColumns = @JoinColumn(name = "author_id"),
-            inverseJoinColumns = @JoinColumn(name = "source_id")
-    )
-    private List<Source> sources = new ArrayList<>();
+    @ManyToMany(mappedBy = "authors")
+    private Set<Source> sources = new HashSet<>();
 }

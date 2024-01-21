@@ -140,7 +140,7 @@
 	{
 		"abbreviation": "DGI",
 		"sourceNameInOriginalLanguage": "Dictionnaire de gaulois illustré",
-		"sourceNameInEnglish": "Dictionnaire de gaulois illustré",
+		"sourceNameInEnglish": "Illustrated dictionnary of gaulish",
 		"authors": "Jean-Paul Savignac",
 		"typeOfSource": "D",
 		"dateOfPublication": "2021",
@@ -150,7 +150,7 @@
 	{
 		"abbreviation": "NOGGC",
 		"sourceNameInOriginalLanguage": "Les noms d'origine gauloise - la gaule des combats",
-		"sourceNameInEnglish": "",
+		"sourceNameInEnglish": "The original gaulish names - The Gaul of battles",
 		"authors": "Jacques Lacroix",
 		"typeOfSource": "D",
 		"dateOfPublication": "2003",
@@ -160,7 +160,7 @@
 	{
 		"abbreviation": "CHD",
 		"sourceNameInOriginalLanguage": "Les celtes - Histoire et dictionnaire",
-		"sourceNameInEnglish": "",
+		"sourceNameInEnglish": "The celts - Hystory and dictionnary",
 		"authors": "Venceslas Kruta",
 		"typeOfSource": "D",
 		"dateOfPublication": "2000",
@@ -170,7 +170,7 @@
 	{
 		"abbreviation": "NLCEA",
 		"sourceNameInOriginalLanguage": "Noms de lieux celtiques de l'Europe ancienne",
-		"sourceNameInEnglish": "",
+		"sourceNameInEnglish": "Celtic places names of the Ancient Europe",
 		"authors": "Xavier Delamarre",
 		"typeOfSource": "D",
 		"dateOfPublication": "2012",
@@ -181,7 +181,7 @@
 		"abbreviation": "DIL",
 		"sourceNameInOriginalLanguage": "Dictionnary of the Irish Language",
 		"sourceNameInEnglish": "Dictionnary of the Irish Language",
-		"authors": "Royal Irish Academy",
+		"authors": "Carl Marstrander",
 		"typeOfSource": "D",
 		"dateOfPublication": "2007",
 		"language": "LE",
@@ -206,5 +206,18 @@
 		"dateOfPublication": "1932",
 		"language": "LGER",
 		"description": ""
+	},
+	{
+		"abbreviation": "LEIA",
+		"sourceNameInOriginalLanguage": "Lexique Étymologique de l'Irlandais Ancien",
+		"sourceNameInEnglish": "Old irish etymological lexicon",
+		"authors": "Joseph Vendryes",
+		"typeOfSource": "D",
+		"dateOfPublication": "1959",
+		"language": "LF",
+		"description": ""
 	}
+
+
+
 ]

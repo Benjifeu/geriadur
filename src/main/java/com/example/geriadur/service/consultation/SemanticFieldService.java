@@ -1,7 +1,7 @@
 package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.EtymonName;
 import com.example.geriadur.domain.SemanticField;
+import com.example.geriadur.domain.consultation.WordStem;
 import com.example.geriadur.repositories.SemanticFieldRepository;
 import com.example.geriadur.service.consultation.api.ISemanticFieldService;
 
@@ -41,8 +41,8 @@ public class SemanticFieldService implements ISemanticFieldService {
     }
 
     @Override
-    public Set<EtymonName> getListOfEtymonsById(Long id){
+    public Set<WordStem> getListOfEtymonsBySemField(Long id){
         SemanticField semanticField = getSemanticFieldById(id);
-        return semanticField.getEtymonNames();
+        return semanticField.getWordStems();
     }
 }

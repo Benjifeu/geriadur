@@ -443,6 +443,7 @@
     "wordClass": "WN",
     "descrFr": "A donné le terme \"bagaude\", désignant les troupes de brigands sévissant en Gaule à l'époque gallo-romaine",
     "descrEng": "Gave the term \"bagaude\", designating the troops of brigands raging in Gaul during the Gallo-Roman era",
+    "semanticField": "war",
     "referenceWordsFr": "combattant, brigand, agresseur",
     "referenceWordsEng": "fighter"
   },
@@ -652,6 +653,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "war",
     "referenceWordsFr": "guerrier, héros",
     "referenceWordsEng": "warrior, heroes"
   },
@@ -817,6 +819,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "war",
     "referenceWordsFr": "combat, bataille",
     "referenceWordsEng": "fight, battle"
   },
@@ -1104,8 +1107,10 @@
     "descrFr": "",
     "descrEng": "",
     "quotes": ["270. Senos: ancien, vieux. Terme fréquent de nom de personne, Seno-bena, Seno-carus, Seno-Condus.(...) La tribu des Senones, qui a donné la ville de Sens, devait signifier \"Les Anciens\".(...)"],
+    "sources": ["DLG"],
     "referenceWordsFr": "ancien,vieux",
     "referenceWordsEng": "old"
+
   },
   {
     "wordStemLanguage": "LPC",
@@ -1334,7 +1339,7 @@
     "referenceWordsEng": "door, market, close city",
     "descrFr": "",
     "descrEng": "",
-    "sources": [
+    "sources": ["GHG"
     ]
   },
   {
@@ -1730,7 +1735,7 @@
     "descrFr": "",
     "descrEng": "",
     "sources": [
-      ""
+      "LEIA"
     ]
   },
   {
@@ -2229,10 +2234,11 @@
     "phonetic": "lankia",
     "gender": "NO",
     "wordClass": "WAF",
-    "referenceWordsFr": "lance",
-    "referenceWordsEng": "spear",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "war",
+    "referenceWordsFr": "lance",
+    "referenceWordsEng": "spear",
     "sources": [
       "DLG"
     ]
@@ -2579,6 +2585,7 @@
     "sources": [
       "DLG"
     ],
+    "semanticField": "war",
     "referenceWordsFr": "combat",
     "referenceWordsEng": "fight"
   },
@@ -2679,6 +2686,22 @@
     ],
     "referenceWordsFr": "sac, bourse",
     "referenceWordsEng": "bag, purse"
+  }
+,
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "gaisos",
+    "phonetic": "gaisos",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG","EDPC"
+    ],
+    "semanticField": "war",
+    "referenceWordsFr": "lance, javelot",
+    "referenceWordsEng": "spear"
   }
 ]
 

@@ -34,7 +34,7 @@ public class SemanticFieldController {
     }
     @GetMapping("/{id}")
     public String showWordsOfASemanticField(@PathVariable(value = "id")Long id, Model model) {
-        model.addAttribute("etymons", semanticFieldService.getListOfEtymonsById(id));
+        model.addAttribute("etymons", semanticFieldService.getListOfEtymonsBySemField(id));
         return "etymons";
     }
 }

@@ -1,0 +1,58 @@
+[
+  {
+    "authorName": "Xavier Delamarre",
+    "biography": "Xavier Delamarre est un linguiste français et un des plus grand spécialiste mondial de la langue gauloise.",
+    "dateOfBirth": "1954-06-05",
+    "nationality": "FR"
+  },
+  {
+    "authorName": "Jean-Paul Savignac",
+    "biography": "Linguiste français.",
+    "dateOfBirth": "1939-08-30",
+    "nationality": "FR"
+  },
+  {
+    "authorName": "Ranko Matasović",
+    "biography": "Linguiste croate.",
+    "dateOfBirth": "1968-05-14",
+    "nationality": "CR"
+  },
+  {
+    "authorName": "Jacques Lacroix",
+    "biography": "Linguiste français.",
+    "nationality": "CR"
+  },
+  {
+    "authorName": "Venceslas Kruta",
+    "biography": "Linguiste français.",
+    "dateOfBirth": "1939-11-04",
+    "nationality": "FR"
+  },
+  {
+    "authorName": "Carl Marstrander",
+    "biography": "Linguiste norvégien ayant participé à l'élaboration du Dictionnary of the Irish Language (DIL).",
+    "dateOfBirth": "1883-11-26",
+    "dateOfDeath": "1965-12-23",
+    "nationality": "FR"
+  },
+  {
+    "authorName": "Albert Deshayes",
+    "biography": "Linguiste français spécialisé dans la langue bretonne.",
+    "dateOfBirth": "1941-10-28",
+    "nationality": "FR"
+  },
+  {
+    "authorName": "Julius Pokorny",
+    "biography": "Linguiste autrichien spécialiste des langues celtiques.",
+    "dateOfBirth": "1887-06-12",
+    "dateOfDeath": "1970-04-08",
+    "nationality": "AU"
+  },
+  {
+    "authorName": "Joseph Vendryes",
+    "biography": "Linguiste français.",
+    "dateOfBirth": "1875-01-13",
+    "dateOfDeath": "1960-01-30",
+    "nationality": "FR"
+  }
+]

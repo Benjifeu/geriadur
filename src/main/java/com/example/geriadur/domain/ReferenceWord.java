@@ -13,9 +13,11 @@ import java.util.Set;
 /**
  * The referenceWord Entity registered french or english word
  * used as literal translation of the wordStems entities
- * This entity is not udes for the moment, the translation is directly
+ * This entity is not used for the moment, the translation is directly
  * registered as an attribute (column) of the wordStem entity
  */
+
+/*
 @Getter
 @Setter
 @NoArgsConstructor
@@ -46,3 +48,5 @@ public class ReferenceWord {
     private Set<WordStem> wordStems = new HashSet<>();
 
 }
+*/
+

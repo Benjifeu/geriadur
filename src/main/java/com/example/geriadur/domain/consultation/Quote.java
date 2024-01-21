@@ -40,12 +40,6 @@ public class Quote {
     private Source source;
 
 
-    @ManyToMany(
-            fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE})
-    @JoinTable(
-            name = "quote_wordStem",
-            joinColumns = @JoinColumn(name = "quote_id"),
-            inverseJoinColumns = @JoinColumn(name = "wordStem_id"))
+    @ManyToMany (mappedBy = "quotes")
     private List<WordStem> wordStems = new ArrayList<>();
 }

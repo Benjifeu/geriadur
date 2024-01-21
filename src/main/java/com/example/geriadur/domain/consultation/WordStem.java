@@ -4,6 +4,7 @@ import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.WordClassEnum;
 import com.example.geriadur.domain.EtymonName;
+import com.example.geriadur.domain.SemanticField;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -53,12 +54,21 @@ public class WordStem {
     @Column(name = "descr_eng")
     private String descrEng;
 
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "sem_field_id")
+    private SemanticField semanticField;
 
-    @ManyToMany(mappedBy = "wordStems")
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.MERGE})
+    @JoinTable(
+            name = "wordStem_quote",
+            joinColumns = @JoinColumn(name = "wordStem_id"),
+            inverseJoinColumns = @JoinColumn(name = "quote_id"))
     private Set<Quote> quotes = new HashSet<>();
 
     @ManyToMany( fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST,CascadeType.MERGE})
+            cascade = {CascadeType.MERGE})
     @JoinTable( name="wordStem_source",
             joinColumns = @JoinColumn(name = "wordStem_id"),
             inverseJoinColumns = @JoinColumn(name = "source_id"))

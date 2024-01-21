@@ -34,6 +34,8 @@ public class CreateWordStem {
 
     private String descrEng;
 
+    private String semanticField;
+
     private List<String> quotes;
 
     private List<String> sources;
