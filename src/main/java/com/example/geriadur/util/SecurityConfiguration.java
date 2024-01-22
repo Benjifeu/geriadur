@@ -1,14 +1,11 @@
 package com.example.geriadur.util;
 
 
-import com.example.geriadur.service.user.UserService;
-import jakarta.servlet.http.HttpServletRequest;
+import com.example.geriadur.service.user.api.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
-import org.springframework.context.annotation.Scope;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -18,14 +15,13 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 @Configuration
 @EnableWebSecurity
 public class SecurityConfiguration {
     @Lazy
     @Autowired
-    public UserService userService;
+    public IUserService userService;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {

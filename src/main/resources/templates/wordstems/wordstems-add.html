@@ -10,17 +10,17 @@
 <body>
 <div class="container">
 
-    <h2>Add an Lexeme.</h2>
+    <h2>Add an WordStem.</h2>
     <div>
-        <form action="#" th:action="@{/save}" th:object="${lexeme}"
+        <form action="#" th:action="@{/save}" th:object="${wordStem}"
               method="POST">
-            <input type="text" th:field="*{lexemeName}"
-                   placeholder="Lexeme Name" class="form-control mb-4 col-4">
+            <input type="text" th:field="*{wordStemName}"
+                   placeholder="WordStem Name" class="form-control mb-4 col-4">
             <br>
             <input type="text" th:field="*{phonetic}"
                    placeholder="Phonetic Form" class="form-control mb-4 col-4">
             <br>
-            <select th:field="*{lexemeLanguage}">
+            <select th:field="*{wordStemLanguage}">
                 <option
                         th:each="language : ${languages}"
                         th:text="${language}"
@@ -54,7 +54,7 @@
                             </li>
                         </ul>
                         <input type="text" th:field="*{semanticFields}"
-                               placeholder="Lexeme Name" class="form-control mb-4 col-4">
+                               placeholder="WordStem Name" class="form-control mb-4 col-4">
 
 
 
@@ -70,11 +70,11 @@
             -->
             <input type="text" th:field="*{descrFr}"
                    placeholder="Description" class="form-control mb-4 col-4">
-            <button type="submit" class="b">Save new Lexeme</button>
+            <button type="submit" class="b">Save new WordStem</button>
         </form>
     </div>
     <hr>
-    <a th:href="@{/}">Back to lexemes list </a>
+    <a th:href="@{/}">Back to wordStems list </a>
 </div>
 
 

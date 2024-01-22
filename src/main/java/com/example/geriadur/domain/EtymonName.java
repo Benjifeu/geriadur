@@ -1,14 +1,12 @@
 package com.example.geriadur.domain;
 
-import com.example.geriadur.domain.consultation.Lexeme;
+import com.example.geriadur.domain.consultation.WordStem;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * The etymon define the proto-celtic root world and all his descandant
@@ -32,18 +30,18 @@ public class EtymonName {
     private String etymoName;
 
     /**
-     * linked proto-celtic lexeme
+     * linked proto-celtic wordStem
      */
 
     /*@ManyToMany(mappedBy = "etymonNames")*/
     @ManyToMany( fetch = FetchType.LAZY,
             cascade = {CascadeType.ALL}
     )
-    @JoinTable( name="lexeme_etymon",
+    @JoinTable( name="wordStem_etymon",
             joinColumns = @JoinColumn(name = "etymon_id"),
-            inverseJoinColumns = @JoinColumn(name = "lexeme_id")
+            inverseJoinColumns = @JoinColumn(name = "wordStem_id")
     )
-    private Map<Integer, Lexeme> lexemePc;
+    private Map<Integer, WordStem> wordStemPc;
 
     @Column(name = "descr_fr", length =3000)
     private String descrFr;
@@ -62,9 +60,6 @@ public class EtymonName {
     @Column(name = "word_theme")
     private Long wordTheme;
 
-    @ManyToOne(cascade = CascadeType.MERGE)
-    @JoinColumn(name = "sem_field_id")
-    private SemanticField semanticField;
 
     @OneToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "lit_trans_id")

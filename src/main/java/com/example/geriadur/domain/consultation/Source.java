@@ -2,7 +2,7 @@ package com.example.geriadur.domain.consultation;
 
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.TypeOfSourceEnum;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -45,13 +45,21 @@ public class Source {
     @Column(name = "description", length = 100000)
     private String description;
 
-    @JsonIgnore
-    @ManyToMany(mappedBy = "sources")
+
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.MERGE}
+    )
+    @JoinTable(
+            name="source_author",
+            joinColumns = @JoinColumn(name = "source_id"),
+            inverseJoinColumns = @JoinColumn(name = "author_id")
+    )
     private Set<Author> authors = new HashSet<>();
 
     @OneToMany(mappedBy="source")
     private Set<Quote> quotes = new HashSet<>();
 
     @ManyToMany(mappedBy = "sources")
-    private List<Lexeme> lexemes = new ArrayList<>();
+    private List<WordStem> wordStems = new ArrayList<>();
 }

@@ -1,7 +1,7 @@
 package com.example.geriadur.controller;
 
-import com.example.geriadur.dto.UserRegistrationDto;
-import com.example.geriadur.service.user.UserService;
+import com.example.geriadur.dto.CreateUser;
+import com.example.geriadur.service.user.api.IUserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("registration")
 public class UserController {
 
-    private UserService userService;
+    private IUserService userService;
 
-    public UserController(UserService userService) {
+    public UserController(IUserService userService) {
         super();
         this.userService = userService;
     }
 
     @ModelAttribute("user")
-    public UserRegistrationDto userRegistrationDto(){
-        return new UserRegistrationDto();
+    public CreateUser userRegistrationDto(){
+        return new CreateUser();
     }
 
     @GetMapping
@@ -30,7 +30,7 @@ public class UserController {
     }
 
     @PostMapping
-    public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto userRegistrationDto) {
+    public String registerUserAccount(@ModelAttribute("user") CreateUser userRegistrationDto) {
         userService.save(userRegistrationDto);
         return "redirect:/registration?success";
     }

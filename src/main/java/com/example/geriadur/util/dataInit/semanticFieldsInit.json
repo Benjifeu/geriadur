@@ -1,0 +1,67 @@
+[
+  {
+    "semFieldNameFr": "militaire",
+    "semFieldNameEng": "war"
+  },
+  {
+    "semFieldNameFr": "famille",
+    "semFieldNameEng": "family"
+  },
+  {
+    "semFieldNameFr": "travail",
+    "semFieldNameEng": "working"
+  },
+  {
+    "semFieldNameFr": "religion",
+    "semFieldNameEng": "religion"
+  },
+  {
+    "semFieldNameFr": "couleur",
+    "semFieldNameEng": "color"
+  }
+,
+  {
+    "semFieldNameFr": "émotions",
+    "semFieldNameEng": "feelings"
+  },
+  {
+    "semFieldNameFr": "végétation",
+    "semFieldNameEng": "vegetation"
+  },
+  {
+    "semFieldNameFr": "cosmos",
+    "semFieldNameEng": "cosmos"
+  },
+  {
+    "semFieldNameFr": "outil",
+    "semFieldNameEng": "tool"
+  },
+  {
+    "semFieldNameFr": "mineral",
+    "semFieldNameEng": "mineral"
+  },
+  {
+    "semFieldNameFr": "architecture",
+    "semFieldNameEng": "building"
+  },
+  {
+    "semFieldNameFr": "frontière",
+    "semFieldNameEng": "border"
+  },
+  {
+    "semFieldNameFr": "abstractions",
+    "semFieldNameEng": "abstract"
+  },
+  {
+    "semFieldNameFr": "animal",
+    "semFieldNameEng": "animal"
+  },
+  {
+    "semFieldNameFr": "anatomie",
+    "semFieldNameEng": "anatomy"
+  },
+  {
+    "semFieldNameFr": "nombre",
+    "semFieldNameEng": "number"
+  }
+]

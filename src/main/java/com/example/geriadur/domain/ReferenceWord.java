@@ -1,7 +1,7 @@
 package com.example.geriadur.domain;
 
 import com.example.geriadur.constants.LanguageEnum;
-import com.example.geriadur.domain.consultation.Lexeme;
+import com.example.geriadur.domain.consultation.WordStem;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -10,6 +10,14 @@ import lombok.Setter;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * The referenceWord Entity registered french or english word
+ * used as literal translation of the wordStems entities
+ * This entity is not used for the moment, the translation is directly
+ * registered as an attribute (column) of the wordStem entity
+ */
+
+/*
 @Getter
 @Setter
 @NoArgsConstructor
@@ -33,10 +41,12 @@ public class ReferenceWord {
             cascade = {CascadeType.PERSIST,CascadeType.MERGE}
     )
     @JoinTable(
-            name="referenceWord_lexeme",
+            name="referenceWord_wordStem",
             joinColumns = @JoinColumn(name = "refWord_id"),
-            inverseJoinColumns = @JoinColumn(name = "lexeme_id")
+            inverseJoinColumns = @JoinColumn(name = "wordStem_id")
     )
-    private Set<Lexeme> lexemes = new HashSet<>();
+    private Set<WordStem> wordStems = new HashSet<>();
 
 }
+*/
+

@@ -1,6 +1,6 @@
 package com.example.geriadur.domain;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.example.geriadur.domain.consultation.WordStem;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,16 +22,13 @@ public class SemanticField {
     private Long semanticFieldId;
 
     @Column(name = "sem_field_nameFr", nullable = false)
-    private String semanticFieldNameFr;
+    private String semFieldNameFr;
 
     @Column(name = "sem_field_nameEng", nullable = false)
-    private String semanticFieldNameEng;
-
-    @Column(name = "sem_field_size")
-    private int semanticFieldSize;
+    private String semFieldNameEng;
 
 
     @OneToMany(mappedBy = "semanticField"
     )
-    private Set<EtymonName> etymonNames = new HashSet<>();
+    private Set<WordStem> wordStems = new HashSet<>();
 }

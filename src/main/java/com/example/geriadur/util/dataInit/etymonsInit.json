@@ -5,7 +5,7 @@
     "descrFr": "Vercingetorix est un roi Arvèrne ayant réussi à rassemblé l'ensemble des peuple gaulois contre César en 52 avant JC, après plusieurs victoires, il sera malgré tout vaincu à Alésia",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "uer",
       "kinget",
       "rix"
@@ -22,7 +22,7 @@
     "descrFr": "Chef militaire belge ayant opéré une secession du nord de la Gaule et de la Grande Bretagne contre le pouvoir Romain à la fin du IIIème siècle.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "kara",
       "uos",
       "os"
@@ -39,7 +39,7 @@
     "descrFr": "Roi gaulois atrébate pendant la guerre des gaules",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "kom",
       "bhiyo",
       "os"
@@ -56,7 +56,7 @@
     "descrFr": "Chef Sénone",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "aku",
       "kuno"
     ],
@@ -72,7 +72,7 @@
     "descrFr": "Roi et héros de la tribu bretonne des Cassiuellauni",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "kuno",
       "belin",
       "os"
@@ -89,7 +89,7 @@
     "descrFr": "Barde gallois du Vième siècle auteur du livre de Taliesin, receuil de poésie lui étant attribué",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "talu",
       "iestin"
     ],
@@ -105,7 +105,7 @@
     "descrFr": "Chef gaulois de l'expédition militaire ayant aboutit au sac de Rome de -390",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "bran",
       "os"
     ],
@@ -121,7 +121,7 @@
     "descrFr": "Roi biturige ayant rassemblé plusieurs tribus gauloises pour combattre les étrusques et s'installer au nord de l'Italie aux début du IVème siècle avant JC.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "ambi",
       "catu",
       "os"
@@ -138,7 +138,7 @@
     "descrFr": "Roi belge ayant combattut les romains en 54 avant JC",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "ambio",
       "rix"
     ],
@@ -154,7 +154,7 @@
     "descrFr": "Druide éduen proche des romains lors de la guerre des Gaules",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "diuik"
     ],
     "litTrans": {
@@ -169,7 +169,7 @@
     "descrFr": "Roi breton insulaire ayant combattut les irlandais et les saxons",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "uer",
       "tigern"
     ],
@@ -185,7 +185,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "argntom",
       "onios"
     ],
@@ -201,7 +201,7 @@
     "descrFr": "Roi des Suèves, d'origine germanique ou gauloise, celui-ci parlait en tout cas le gaulois et porte un prénom issu de la même langue",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "ari",
       "uid"
     ],
@@ -217,7 +217,7 @@
     "descrFr": "Roi breton du Vième siècle régnant sur le Poher et la Domnonée dont le teritoire s'étandait sur les deux côté de la Manche",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "kuno",
       "maros"
     ],
@@ -233,7 +233,7 @@
     "descrFr": "Nom d'un des saints fondateurs des évéchés de Bretagne, le nom à subi une métathèse et s'écrivait initialement \"Tudgual\" ou \"Tudwal\"",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "teuta",
       "ualos"
     ],
@@ -249,7 +249,7 @@
     "descrFr": "Les Ambiens sont une tribu gauloise ayant pris part à la rébellion belge contre les romains de 57 av. JC",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "ambi",
       "ianos"
     ],
@@ -265,7 +265,7 @@
     "descrFr": "Les vénètes sont une tribu gauloise connue pour avoir mené la bataille d'atlantique contre les romains",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "uindos"
     ],
     "litTrans": {
@@ -280,7 +280,7 @@
     "descrFr": "Les Coriosolites sont une tribu gauloise de la confédération Aremorica",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "korios",
       "soldurio"
     ],
@@ -296,7 +296,7 @@
     "descrFr": "Les Ossismes sont une tribu gauloise de la confédération Aremorica",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "ostimios"
     ],
     "litTrans": {
@@ -311,7 +311,7 @@
     "descrFr": "Tribu gauloise éponyme de l'Artois",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "ad",
       "treb",
       "tegos"
@@ -328,7 +328,7 @@
     "descrFr": "Tribu gauloise installé au pays de Beauce, éponyme de Chartres",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "karnon"
     ],
     "litTrans": {
@@ -343,7 +343,7 @@
     "descrFr": "Tribu gaulois de belgique",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "belin",
       "uak"
     ],
@@ -359,7 +359,7 @@
     "descrFr": "Tribu gauloise éponyme de la région du Maine, une tribu du même nom était installée au nord de l'Italie",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "keno",
       "manos"
     ],
@@ -375,7 +375,7 @@
     "descrFr": "Tribu gauloise de la confédération Armoricaine, éponyme du pays de Caux",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "kaleto"
     ],
     "litTrans": {
@@ -390,7 +390,7 @@
     "descrFr": "Tribu gauloise alliée des Parisii, éponyme de la ville de Sens",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "seno"
     ],
     "litTrans": {
@@ -405,7 +405,7 @@
     "descrFr": "Tribu gauloise éponyme de la ville de Langres, installé dans l'actuel département Côted'Or'",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "leng"
     ],
     "litTrans": {
@@ -420,7 +420,7 @@
     "descrFr": "Tribu gauloise installée le long du massif du Jura",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "sec",
       "gwanu"
     ],
@@ -436,7 +436,7 @@
     "descrFr": "Tribu gauloise installé à Vienne, réputés bons guerriers",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "allo",
       "brog"
     ],
@@ -452,7 +452,7 @@
     "descrFr": "Tribu gauloise installée le long du massif du Jura",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "ari",
       "uerno"
     ],
@@ -468,7 +468,7 @@
     "descrFr": "Ancienne capitale des Ambiens, anciènement nommé Samarobriva",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "ambi",
       "ianos"
     ],
@@ -484,7 +484,7 @@
     "descrFr": "Ancienne capitale de la tribu gauloise des Andécaves",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "ande",
       "kaui"
     ],
@@ -500,7 +500,7 @@
     "descrFr": "Pays issu du territoire de la tribu gauloise des Atrebates",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Pays des propriétaires",
       "litTransEng": "",
@@ -513,7 +513,7 @@
     "descrFr": "Massif forestier réputé sacré chez les celtes, qui s'étendait de l'Artois jusqu'à la Meuse",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "ardwos"
     ],
     "litTrans": {
@@ -528,7 +528,7 @@
     "descrFr": "Ville appartenant à l'ancien territoire des Éduens",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "autessio",
       "duron"
     ],
@@ -544,7 +544,7 @@
     "descrFr": "Pays de l'ancien territoires des Arvernes, dont la capitale était Gergovie",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Le pays des Arvernes",
       "litTransEng": "",
@@ -557,7 +557,7 @@
     "descrFr": "Capitale des Bituriges, appelée également Avaricon",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "bitu",
       "rix"
     ],
@@ -573,7 +573,7 @@
     "descrFr": "Partie ouest du Massif Central,",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "kantalo"
     ],
     "litTrans": {
@@ -588,7 +588,7 @@
     "descrFr": "Capitale des Carnutes batie sur les rives de l'Eure, anciennement nommée Autrikon",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "karnon"
     ],
     "litTrans": {
@@ -603,7 +603,7 @@
     "descrFr": "Capitale des Durocassi batie sur le confluent de l'Eure, la Blaise et l'Avre",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "La ville de ceux aux tresses d'acier",
       "litTransEng": "",
@@ -616,7 +616,7 @@
     "descrFr": "Capitale des Aulerques Éburovices batie sur les rives de l'Eure, anciennement nommée Mediolanion",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "La ville de ceux qui vainquent par l'if",
       "litTransEng": "",
@@ -629,7 +629,7 @@
     "descrFr": "Pays issu du territoire des Ménapiens, réputés pour leur industrie de la laine",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Pays des travailleurs de la laine",
       "litTransEng": "",
@@ -642,7 +642,7 @@
     "descrFr": "Capitale des Parisii, initialement construite sur la rive gauche de la Seine, puis nommée Lutetia ou Loukotokia lors de l'installation romaine",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "kario"
     ],
     "litTrans": {
@@ -657,7 +657,7 @@
     "descrFr": "Pays de l'ancien territoire des Petrocores, dont la capitale était l'actuelle Périgueux",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "ketuares",
       "korios"
     ],
@@ -673,7 +673,7 @@
     "descrFr": "Plus grand héros mythique de la tradition irlandaise, ses haut-faits sont particulièrement narrés dans le récit de la Táin Bó Cúailnge",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "kuno"
     ],
     "litTrans": {
@@ -688,7 +688,7 @@
     "descrFr": "Dieu lumineux des irlandais, symbole de la jeunesse et de la force vitale, fils de Dagda et de Boand",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "iouincos"
     ],
     "litTrans": {
@@ -703,7 +703,7 @@
     "descrFr": "Déesse de la fertilité, protectrice des chevaux et des cavaliers, elle était probablement invoquée comme guide des morts",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "ekwos"
     ],
     "litTrans": {
@@ -718,7 +718,7 @@
     "descrFr": "Déesse de la poésie et de la guerre, patronne des bardes, des médecins et des forgerons, fille de Dagda, elle est honoré lors de la fête d'Imbolc",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "briga"
     ],
     "litTrans": {
@@ -733,7 +733,7 @@
     "descrFr": "Membre éminent des Tuatha dé Danann. Médecin hors-pair, il sait aussi redonner le feu aux guerriers. Il est fils de Dagda, père de Cian et grand-père de Lug",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "dewos",
       "cencto"
     ],
@@ -749,7 +749,7 @@
     "descrFr": "Dieu psychopompe aux traits vieillis et doté d'une grande éloquence. Il est habillé d'une peau de lion et porte la massue et le carquois. Il est celui qui règne sur le Ciel Nocturne et détient le secret des Oghams. Patron des druides et des poètes.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "ogmos"
     ],
     "litTrans": {
@@ -764,7 +764,7 @@
     "descrFr": "Dieu forgeron des Tuatha Dé Danann. Frère de Diancecht, il est le maître des artisans, les meilleures armes sont forgées de sa main.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "gobanu"
     ],
     "litTrans": {
@@ -779,7 +779,7 @@
     "descrFr": "Qualifié d' \"Aux Bras Longs\" (Lamhfhada) et de \"Maître dans tous les Arts\", il est le plus grand des dieux. Amassant toutes les qualités divines, les autres dieux peuvent être considérés comme ses avatars",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "leuk"
     ],
     "litTrans": {
@@ -794,7 +794,7 @@
     "descrFr": "Dieu solaire de la gaule. Paragon de force et de jeunesse, il est fété lors de Beltaine, au 1er Mai. Des noms de lieux comme Bel Air ou Belmont peuvent avoir été dédié à Bélénos.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "belin"
     ],
     "litTrans": {
@@ -809,7 +809,7 @@
     "descrFr": "Déesse de la guerre et reine des ours chez les bretons insulaires, en particulier chez les Icènes.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "ande",
       "artos"
     ],
@@ -825,7 +825,7 @@
     "descrFr": "Déesse équivalente à Brigit, probablement un épithète de celle-ci, elle cependant davantage liée au foyer et à la médicine.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "belin",
       "isamo"
     ],
@@ -840,7 +840,7 @@
     "etymoName": "Karn-unnos",
     "descrFr": "Ce dieu aux bois de cerfs est mal connu bien qu'important dans le panthéon celte. On y voit généralement un maître des animaux, de la nature et des cycles saisoniers",
     "descrEng": "",
-    "lexemes": [
+    "wordStems": [
       "karnon"
     ],
     "wordTheme": 3,
@@ -856,7 +856,7 @@
     "descrFr": "Dieu principal de la fonction sacerdotale et patron des druides. Pendant diurne du dieu nocturne Ogmios, il est le plus grand maître des sciences sacrées et règne sur le Sith (la \"Demeure (des Dieux)\"). Le Sucellos gaulois serait probablement le même dieu ",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "dagos",
       "dewos"
     ],
@@ -872,7 +872,7 @@
     "descrFr": "Patron des sources curatives, hypostase de Bélénos.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "grenn"
     ],
     "litTrans": {
@@ -883,11 +883,11 @@
   },
   {
     "currentName": "Sucellos",
-    "etymoName": "Su-Kello",
+    "etymoName": "Sukello",
     "descrFr": "Dieu pourvu d'un chaudron et d'un maillet, avec lequel il peut donner vie et morts aux hommes. Il est très probablement le même que le dieu Dagda et serait le personnage du chaudron de Gundestrup plongeant des guerriers dans un chaudron.",
     "descrEng": "",
-    "lexemes": [
-      "su-",
+    "wordStems": [
+      "su",
       "cellos"
     ],
     "wordTheme": 3,
@@ -903,7 +903,7 @@
     "descrFr": "Dieu du ciel et de la foudre, il est celui qui féconde la terre par l'orage. La roue cosmique et le foudre sont ses attributs.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "toranos"
     ],
     "litTrans": {
@@ -918,7 +918,7 @@
     "descrFr": "Déesse  irlandaise de la guerre et du destin, elle incite les guerriers à la bravoure et influe sur l'issue des batailles. Elle est fréquemment mentionnée parmi une triade de trois déesses, avec Badb, Macha",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "maros",
       "rigani"
     ],
@@ -934,7 +934,7 @@
     "descrFr": "Roi mythique de l'Ulster, fils de Ness. Il est dépeint comme un roi bon et généreux, œuvrant pour la prospérité de son peuple. Il est le père spirituel de Cúchulainn",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "kuno",
       "kubros"
     ],
@@ -949,7 +949,7 @@
     "etymoName": "Turonos",
     "descrFr": "Cité établie sur la Loire, elle fut probablement fondée par les romains sous le nom de Caesarodunum avant d'être renomé selon la tribu éponyme des Turons",
     "descrEng": "",
-    "lexemes": [
+    "wordStems": [
       "turo"
     ],
     "wordTheme": 1,
@@ -965,7 +965,7 @@
     "descrFr": "Rivière prenant sa source dans le massif du Jura et se jetant dans le Rhône",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "dubus"
     ],
     "litTrans": {
@@ -980,7 +980,7 @@
     "descrFr": "Ville batie sur la rivière de l'Aure près des côtes de la Manche, elle tire son nom de la tribu des Badiocassi.",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "bodios",
       "kassi"
     ],
@@ -996,7 +996,7 @@
     "descrFr": "Nom de deux héroïnes du mythe de Tristan et Iseut, une princesse guerrisseuse, dit Iseut La Blonde, et une autre fille de seigneur de Bretagne, dit Iseut aux Blanches Mains",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "bodios",
       "kassi"
     ],
@@ -1012,7 +1012,7 @@
     "descrFr": "Reine des Icènes, tribu bretonne de l'île de Bretagne, elle leva les bretons contre les romains en 60 de notre ère.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "bouda"
     ],
     "litTrans": {
@@ -1027,7 +1027,7 @@
     "descrFr": "Chef gallois du Vème siècle originaire du Gododdin et qui regna sur le Gwynedd au nord du pays de Galles, il est contemporain de Vortigern et a peut-être été un de ses lieutenants",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "kuno",
       "dagos"
     ],
@@ -1043,7 +1043,7 @@
     "descrFr": "Chef breton ayant participé à la conquête de l'Armorique au Vème siècle.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "rix",
       "ualos"
     ],
@@ -1059,7 +1059,7 @@
     "descrFr": "Dumnorix était un chef Eduens, frère du druide Diviciacos, et farouche opposant à César. Il fut exécuté par les romains en 54 av. JC.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "dumno",
       "rix"
     ],
@@ -1075,7 +1075,7 @@
     "descrFr": "Roi mythique des bretons qui aurait régné sur les deux Bretagnes vers le Vème siècle. Son nom aurait inspiré le nom du hobbit Meriadoc dit \"Merry\" dans l'Oeuvre de J.R.R. Tolkien",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "kuno",
       "án",
       "maros",
@@ -1094,7 +1094,7 @@
     "descrFr": "Chef breton ayant réussi à fédérer toute les tribus bretonnes contre les romains, résistant pendant environ 10 ans lors de l'invasion de la Grande-Bretagne jusqu'en 43 après J-C. Il est le fils de Cymbeline, roi dont l'histoire a été reprise dans la pièce de Shakespear \"Cymbeline \" ",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "kara",
       "ako"
     ],
@@ -1110,7 +1110,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "catu"
     ],
     "litTrans": {
@@ -1125,7 +1125,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "maros",
       "manus"
     ],
@@ -1141,7 +1141,7 @@
     "descrFr": "Chef militaire de la révolte galloise contre les Anglais et dernier Prince de Galles d'origine galloise",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "awi",
       "genos",
       "glenndos",
@@ -1159,7 +1159,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "wordStems": ["gurm"],
     "litTrans": {
       "litTransFr": "Celui aux Sourcils Brun",
       "litTransEng": "The one with brown eyebrows",
@@ -1172,7 +1172,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Celui au poil roux",
       "litTransEng": "The one with red hair",
@@ -1185,7 +1185,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "L'ours",
       "litTransEng": "The bear",
@@ -1198,7 +1198,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Le noble Possesseur du Bétail",
       "litTransEng": "The one with red hair",
@@ -1211,7 +1211,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Celui qui court adroitement (légitimement)",
       "litTransEng": "The one with red hair",
@@ -1224,7 +1224,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Le combattant magnanime",
       "litTransEng": "",
@@ -1237,7 +1237,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Le champion au Genou Noir",
       "litTransEng": "",
@@ -1250,7 +1250,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Le champion aux Neufs Otages",
       "litTransEng": "",
@@ -1263,7 +1263,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [],
+    "wordStems": [],
     "litTrans": {
       "litTransFr": "Les descendants de Néill",
       "litTransEng": "",
@@ -1276,7 +1276,7 @@
     "descrFr": "Clan irlandais issu de la lignée de Domhnall Caomhánach, roi du Leinster au XIIème siècle",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "cóem",
       "án",
       "-ach"
@@ -1293,7 +1293,7 @@
     "descrFr": "Clan irlandais ayant régné sur le Munster, essentiellement sur le comté de Cork",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "makwos",
       "kara",
       "ako"
@@ -1310,7 +1310,7 @@
     "descrFr": "Clan irlandais ayant essentiellement regné sur le comté de Cork et du Kerry",
     "descrEng": "Irish Gaelic clan based most prominently in what is today County Cork and County Kerry.",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "aw",
       "sūle",
       "dubus"
@@ -1327,7 +1327,7 @@
     "descrFr": "Clan écossais des highlands, dans la région de Cromarty. Ils ont donné leur nom au château Urquhart près du Lochness.",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "dumno",
       "walos"
     ],
@@ -1343,7 +1343,7 @@
     "descrFr": "Clan écossais originaire de l'île de Barra.",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "makwos",
       "nél"
     ],
@@ -1359,7 +1359,7 @@
     "descrFr": "Région du sud de l'Écosse, comprise entre le mur d'Hadrien et le mur d'Antonin",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "seno",
       "uo",
       "klēyos"
@@ -1376,7 +1376,7 @@
     "descrFr": "Tribu gauloise éponyme de la ville de Bourges",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "bitu",
       "rix"
     ],
@@ -1392,7 +1392,7 @@
     "descrFr": "Tribu gauloise de la confédération armoricaine, éponyme de la ville de Rennes",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "redo"
     ],
     "litTrans": {
@@ -1407,7 +1407,7 @@
     "descrFr": "Tribu gauloise de la confédération armoricaine, éponyme de la ville de Rennes",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "ordos",
       "uik"
     ],
@@ -1423,7 +1423,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "aidu"
     ],
     "litTrans": {
@@ -1438,7 +1438,7 @@
     "descrFr": "Tribu gauloise faisant partie de la confédération Armoricaine, éponyme de la ville de Lisieux",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "lexsouio"
     ],
     "litTrans": {
@@ -1453,7 +1453,7 @@
     "descrFr": "Tribu gauloise éponyme de la ville de Reims",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "remos"
     ],
     "litTrans": {
@@ -1468,7 +1468,7 @@
     "descrFr": "Chef gallois du VIIème siècle, ayant régné sur le Gwynedd",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "catu",
       "wlatos"
     ],
@@ -1484,7 +1484,7 @@
     "descrFr": "Tribu gauloise de Gaule aquitaine, éponyme de la ville de Poitiers.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "pikto",
       "aw"
     ],
@@ -1500,7 +1500,7 @@
     "descrFr": "Ville forteresse de la pointe ouest armoricaine, capitale des Osismii.",
     "descrEng": "",
     "wordTheme": 2,
-    "lexemes": [
+    "wordStems": [
       "brista"
     ],
     "litTrans": {
@@ -1515,7 +1515,7 @@
     "descrFr": "Ancien royaume pays de Galles fondé par Caradoc Freichfras dont la capitale était Caerwent.",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "uindos"
     ],
     "litTrans": {
@@ -1530,7 +1530,7 @@
     "descrFr": "Chaine de montagnes du nord-est de la Gaule séparant l'ancien territoire des Leuques et des Triboques, le nom a été d'abord celui d'un dieu.",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "uo",
       "sego"
     ],
@@ -1546,7 +1546,7 @@
     "descrFr": "Tribu belge ayant combattu farouchement les romains avant d'être pris pour cible par César qui concentra toutes ses forces pour procéder au pillage et à l'extermination complète de la tribu.",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "eburo"
     ],
     "litTrans": {
@@ -1561,7 +1561,7 @@
     "descrFr": "Tribu gauloise éponyme de l'ancienne région du Limousin.",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "lemo",
       "uik"
     ],
@@ -1577,7 +1577,7 @@
     "descrFr": "Tribu gauloise éponyme de ville de Tours.",
     "descrEng": "",
     "wordTheme": 4,
-    "lexemes": [
+    "wordStems": [
       "turo"
     ],
     "litTrans": {
@@ -1592,14 +1592,14 @@
     "descrFr": ".",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "ulcha",
       "tiros"
     ],
     "litTrans": {
       "litTransFr": "La terre des barbus",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1608,7 +1608,7 @@
     "descrFr": ".",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "kuno",
       "walos",
       "axtā"
@@ -1625,7 +1625,7 @@
     "descrFr": "Région du sud-est de l'irlande.",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "lankia",
       "tiros"
     ],
@@ -1641,7 +1641,7 @@
     "descrFr": "",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "mātīr",
       "tiros"
     ],
@@ -1657,7 +1657,7 @@
     "descrFr": "Ville de la gaule celtique dont le nom est tiré de la tribu gauloise des Tricasses.",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "tre",
       "kassi"
     ],
@@ -1673,7 +1673,7 @@
     "descrFr": "Ancien territoire du sud de la Gaule, qui a tiré son nom de la tribu des Rutènes.",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "rŏ",
       "teno"
     ],
@@ -1689,7 +1689,7 @@
     "descrFr": "Reine mythique du Connacht et épouse de Ailill mac Máta, elle régnait depuis Cruachan. Elle déclenchera la guerre contre le roi d'Ulster Conchobar Mac Ness après s'être emparé du Taureau Brun de Cuailnge.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
+    "wordStems": [
       "medu"
     ],
     "litTrans": {
@@ -1704,24 +1704,26 @@
     "descrFr": "Fille du barde Fedelmid. D'une très grande beauté, elle sera pourchassé par le roi Conchobar qui la veut pour épouse. Elle sera finalement prise de force et emprisonnée par le roi et préférera mettre fin à sa vie au bout d'un an de captivité.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
-      "dord","brugn"
+    "wordStems": [
+      "dord",
+      "brugn"
     ],
     "litTrans": {
       "litTransFr": "La Fredonneuse des Chagrins",
       "litTransEng": "",
       "litTransType": "1"
     }
-  }
-,
+  },
   {
     "currentName": "Lugaid Reo nDerg",
     "etymoName": "Lugaid Reo nDerg",
     "descrFr": "Grand roi (Ard Ri) mythique de l'Irlande, petit fils d'Eochaid Feidlech et disciple de Cuchulain.",
     "descrEng": "",
     "wordTheme": 3,
-    "lexemes": [
-      "leuk","sriab","dergo"
+    "wordStems": [
+      "leuk",
+      "sriab",
+      "dergo"
     ],
     "litTrans": {
       "litTransFr": "Le Lumineux à la Ligne Rouge",
@@ -1735,7 +1737,7 @@
     "descrFr": "Royaume irlandais du 1er siècle situé au centre de l'île.",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
+    "wordStems": [
       "medio"
     ],
     "litTrans": {
@@ -1750,7 +1752,8 @@
     "descrFr": "Cité du sud du pays de Galles dans le territoire des Silures. La ville fut quasiment abandonnée suite au départ de Magnus Maximus puis des Romain à la fin du IVème siècle.",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": ["kagro"
+    "wordStems": [
+      "kagro"
     ],
     "litTrans": {
       "litTransFr": "Le fort",
@@ -1764,13 +1767,183 @@
     "descrFr": ".",
     "descrEng": "",
     "wordTheme": 1,
-    "lexemes": [
-      "roto","mag","os"
+    "wordStems": [
+      "roto",
+      "mag",
+      "os"
     ],
     "litTrans": {
       "litTransFr": "La PLaine de la Course de Char",
       "litTransEng": "",
       "litTransType": "1"
+    }
+  },
+  {
+    "currentName": "Caladbolg",
+    "etymoName": "Caladbolg",
+    "descrFr": ".",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "kalet",
+      "bolko"
+    ],
+    "litTrans": {
+      "litTransFr": "La solide ",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Gae Bolg",
+    "etymoName": "Gáe Bulga",
+    "descrFr": "",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "gaisos",
+      "bolko"
+    ],
+    "litTrans": {
+      "litTransFr": "La PLaine de la Course de Char",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Fragarach",
+    "etymoName": "firginaich",
+    "descrFr": "Epée de Manannán mac Lir / Nuada Airgetlám",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+    ],
+    "litTrans": {
+      "litTransFr": "La Rétorqueuse",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Claíomh Solais",
+    "etymoName": "Claidheamh Soluis",
+    "descrFr": "Epée sacrée de Nuada à la Main d'Argent, elle est capable de trancher le fer et l'acier.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "cladio",
+      "su",
+      "phlentu"
+    ],
+    "litTrans": {
+      "litTransFr": "L'Épée Très Radiante",
+      "litTransEng": "The Sword of Light",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Cruaidín Catutchenn",
+    "etymoName": "firginaich",
+    "descrFr": "Epée sacrée de Nuada à la Main d'Argent, elle est capable de trancher le fer et l'acier.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+    ],
+    "litTrans": {
+      "litTransFr": "La PLaine de la Course de Char",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Fraoch Mór et Fraoch Beag",
+    "etymoName": "Fraoch Mór agus Fraoch Mór",
+    "descrFr": "Epées de Manannán mac Lir.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "fráech",
+      "maros",
+      "biggos"
+    ],
+    "litTrans": {
+      "litTransFr": "La Grande et la Petite Furieuse",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Gorm Glas",
+    "etymoName": "Gurm Glas",
+    "descrFr": "Épée magique de Conchobhar max Nessa.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "gurm",
+      "glast"
+    ],
+    "litTrans": {
+      "litTransFr": "La Bleue Marine",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Ochain",
+    "etymoName": "Acéin",
+    "descrFr": "Bouclier magique de Conchobhar max Nessa.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+      "och",
+      "ón"
+    ],
+    "litTrans": {
+      "litTransFr": "La Grogne",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Orna",
+    "etymoName": "Orna",
+    "descrFr": "Épée du roi fomoire Tethra avant d'être récupérée par le danide Ogma.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+    ],
+    "litTrans": {
+      "litTransFr": "La petite verte",
+      "litTransEng": "",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Birgha",
+    "etymoName": "Birgha",
+    "descrFr": "Lance de Finn.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": [
+    ],
+    "litTrans": {
+      "litTransFr": "La Lance Cracheuse",
+      "litTransEng": "The Spit-Spear",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Carnwennan",
+    "etymoName": "Carnwenhau",
+    "descrFr": "Dague d'Arthur fils de Pendragon.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": ["carn","uindos","án"
+    ],
+    "litTrans": {
+      "litTransFr": "La Petite Poignée Blanche",
+      "litTransEng": "The Little White Hilt",
+      "litTransType": "10"
     }
   }
 ]
@@ -1807,7 +1980,7 @@ Guenolé
   "descrFr": "Clan écossais des highlands, dans la région de Cromarty. Ils ont donné leur nom au château Urquhart près du Lochness.",
   "descrEng": "",
   "wordTheme": 4,
-  "lexemes": ["ardwos","cardden"],
+  "wordStems": ["ardwos","cardden"],
   "litTrans": {
     "litTransFr": "Ceux du haut bosquet",
     "litTransEng": "",

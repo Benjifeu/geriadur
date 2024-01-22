@@ -1,15 +1,13 @@
 package com.example.geriadur.repositories;
 
-import com.example.geriadur.domain.consultation.Quote;
+import com.example.geriadur.domain.consultation.Author;
 import com.example.geriadur.domain.consultation.Source;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
-import java.util.Set;
-
 
 @Repository
-public interface QuoteRepository extends JpaRepository<Quote, Long> {
-    Set<Quote> findBySource(Source source);
+public interface AuthorRepository extends JpaRepository<Author, Long> {
+    Optional<Author> findAuthorByAuthorName(String authorName);
 }

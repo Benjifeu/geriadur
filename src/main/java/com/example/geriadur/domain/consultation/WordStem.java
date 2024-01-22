@@ -4,7 +4,7 @@ import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.WordClassEnum;
 import com.example.geriadur.domain.EtymonName;
-import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.example.geriadur.domain.SemanticField;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,19 +19,19 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "lexeme")
-public class Lexeme {
+@Table(name = "wordStem")
+public class WordStem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "lexeme_id")
-    private Long lexemeId;
+    @Column(name = "wordStem_id")
+    private Long wordStemId;
 
-    @Column(name = "lexeme_name", nullable = false)
-    private String lexemeName;
+    @Column(name = "wordStem_name", nullable = false)
+    private String wordStemName;
 
-    @Column(name = "lexeme_language",nullable = false)
-    private LanguageEnum lexemeLanguage;
+    @Column(name = "wordStem_language",nullable = false)
+    private LanguageEnum wordStemLanguage;
 
     @Column(name = "phonetic")
     private String phonetic;
@@ -54,33 +54,42 @@ public class Lexeme {
     @Column(name = "descr_eng")
     private String descrEng;
 
+    @ManyToOne
+    @JoinColumn(name = "sem_field_id")
+    private SemanticField semanticField;
 
-    @ManyToMany(mappedBy = "lexemes")
+    @ManyToMany(
+            fetch = FetchType.LAZY,
+            cascade = {CascadeType.MERGE})
+    @JoinTable(
+            name = "wordStem_quote",
+            joinColumns = @JoinColumn(name = "wordStem_id"),
+            inverseJoinColumns = @JoinColumn(name = "quote_id"))
     private Set<Quote> quotes = new HashSet<>();
 
     @ManyToMany( fetch = FetchType.LAZY,
-            cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-    @JoinTable( name="lexeme_source",
-            joinColumns = @JoinColumn(name = "lexeme_id"),
+            cascade = {CascadeType.MERGE})
+    @JoinTable( name="wordStem_source",
+            joinColumns = @JoinColumn(name = "wordStem_id"),
             inverseJoinColumns = @JoinColumn(name = "source_id"))
     private Set<Source> sources = new HashSet<>();
 
      @ManyToMany( fetch = FetchType.LAZY,
-     cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-     @JoinTable( name="lexeme_parent",
+     cascade = {CascadeType.MERGE})
+     @JoinTable( name="wordStem_parent",
      joinColumns = @JoinColumn(name = "child_id"),
      inverseJoinColumns = @JoinColumn(name = "parent_id"))
-     private Set<Lexeme> parents = new HashSet<>();
+     private Set<WordStem> parents = new HashSet<>();
 
-
+/*
     @ManyToMany( fetch = FetchType.LAZY,
             cascade = {CascadeType.PERSIST,CascadeType.MERGE})
-    @JoinTable( name="lexeme_child",
+    @JoinTable( name="wordStem_child",
             joinColumns = @JoinColumn(name = "parent_id"),
             inverseJoinColumns = @JoinColumn(name = "child_id"))
-    private Set<Lexeme> children = new HashSet<>();
+    private Set<WordStem> children = new HashSet<>();*/
 
 
-    @ManyToMany (mappedBy = "lexemePc")
+    @ManyToMany (mappedBy = "wordStemPc")
     private List<EtymonName> etymonNames = new ArrayList<>();
 }

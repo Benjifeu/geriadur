@@ -8,5 +8,5 @@ import java.util.Optional;
 
 @Repository
 public interface SourceRepository extends JpaRepository<Source, Long> {
-    Optional<Source> findBySourceNameInEnglish(String sourceName);
+    Optional<Source> findSourceByAbbreviation(String abbreviation);
 }
