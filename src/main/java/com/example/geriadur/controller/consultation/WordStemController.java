@@ -3,7 +3,7 @@ package com.example.geriadur.controller.consultation;
 import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.WordClassEnum;
-import com.example.geriadur.domain.consultation.WordStem;
+import com.example.geriadur.entity.consultation.WordStem;
 import com.example.geriadur.service.consultation.api.ISemanticFieldService;
 import com.example.geriadur.service.consultation.api.IWordStemService;
 

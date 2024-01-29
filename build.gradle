@@ -1,3 +1,16 @@
+buildscript {
+	repositories {
+		maven {
+			url ' https://bintray.com/bintray/jcenter'
+		}
+		jcenter()
+	}
+	dependencies {
+		classpath "io.spring.gradle:dependency-management-plugin:1.0.9.RELEASE"
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:2.2.6.RELEASE")
+	}
+}
+
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.5'
@@ -14,11 +27,31 @@ java {
 repositories {
 	mavenCentral()
 }
+bootJar {
+	archiveBaseName = 'geriadur'
+	version =  '1.0.0'
+}
+
+repositories {
+	mavenCentral()
+	flatDir {
+		dirs 'libs'
+	}
+}
+tasks.withType(Jar) {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+	manifest {
+		attributes["Main-Class"] = "com.example.geriadur.GeriadurApplication"
+	}
+}
+
 jar {
 	manifest {
 		attributes 'Main-Class': 'com.example.geriadur.GeriadurApplication'
 	}
 }
+
 dependencies {
 	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.3.0-rc1'
 	implementation group: 'org.springframework.data', name: 'spring-data-jpa', version: '3.1.5'
@@ -37,11 +70,6 @@ dependencies {
 	testCompileOnly 'org.projectlombok:lombok:1.18.30'
 	testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
 }
-
-tasks.named('bootBuildImage') {
-	builder = 'paketobuildpacks/builder-jammy-base:latest'
-}
-
 
 tasks.named('test') {
 	useJUnitPlatform()

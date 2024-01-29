@@ -1,6 +1,6 @@
 package com.example.geriadur.repositories;
 
-import com.example.geriadur.domain.SemanticField;
+import com.example.geriadur.entity.SemanticField;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

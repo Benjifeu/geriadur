@@ -1,4 +1,4 @@
-package com.example.geriadur.domain.consultation;
+package com.example.geriadur.entity.consultation;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
@@ -6,7 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
 import java.util.*;
 
 @Getter

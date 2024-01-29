@@ -1,7 +1,7 @@
 package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.SemanticField;
-import com.example.geriadur.domain.consultation.WordStem;
+import com.example.geriadur.entity.SemanticField;
+import com.example.geriadur.entity.consultation.WordStem;
 import com.example.geriadur.repositories.SemanticFieldRepository;
 import com.example.geriadur.service.consultation.api.ISemanticFieldService;
 

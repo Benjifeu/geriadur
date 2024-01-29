@@ -2310,20 +2310,21 @@
     "sources": [
       "DIL"
     ]
-  },  {
-  "wordStemLanguage": "LW",
-  "wordStemName": "carn",
-  "phonetic": "karn",
-  "gender": "NO",
-  "wordClass": "WAF",
-  "referenceWordsFr": "handle, hilt, hoof",
-  "referenceWordsEng": "poignée, sabot",
-  "descrFr": "",
-  "descrEng": "",
-  "sources": [
-    "DIL"
-  ]
-},
+  },
+  {
+    "wordStemLanguage": "LW",
+    "wordStemName": "carn",
+    "phonetic": "karn",
+    "gender": "NO",
+    "wordClass": "WAF",
+    "referenceWordsFr": "handle, hilt, hoof",
+    "referenceWordsEng": "poignée, sabot",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ]
+  },
   {
     "wordStemLanguage": "LOI",
     "wordStemName": "-ach",
@@ -2895,6 +2896,176 @@
     "semanticField": "war",
     "referenceWordsFr": "alas",
     "referenceWordsEng": "alas"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "durn",
+    "phonetic": "durn",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DFG",
+      "DLG"
+    ],
+    "semanticField": "anatomy",
+    "referenceWordsFr": "main",
+    "referenceWordsEng": "hand"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "lie",
+    "phonetic": "lie",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "mineral",
+    "referenceWordsFr": "pierre",
+    "referenceWordsEng": "stone"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "fáil",
+    "phonetic": "fáil",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "cosmos",
+    "referenceWordsFr": "possession, reception, cible, accès",
+    "referenceWordsEng": "possession, reception, target, access"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "agro",
+    "phonetic": "agro",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "cosmos",
+    "referenceWordsFr": "carnage, bataille",
+    "referenceWordsEng": "carnage, battle"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "éadbair",
+    "phonetic": "éadbair",
+    "gender": "GU",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "cosmos",
+    "referenceWordsFr": "???",
+    "referenceWordsEng": "???"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "Assal",
+    "phonetic": "asal",
+    "gender": "GF",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "Cosmos",
+    "referenceWordsFr": "Assal",
+    "referenceWordsEng": "Assal"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "daru",
+    "phonetic": "daru",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "semanticField": "vegetation",
+    "referenceWordsFr": "chêne",
+    "referenceWordsEng": "oak"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "dau",
+    "phonetic": "dau",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "semanticField": "number",
+    "referenceWordsFr": "deux",
+    "referenceWordsEng": "two"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "blatos",
+    "phonetic": "blātus",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "semanticField": "vegetation",
+    "referenceWordsFr": "fleur",
+    "referenceWordsEng": "flower"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "krowdi",
+    "phonetic": "krowdi",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "feelings",
+    "referenceWordsFr": "dur, cruel, rude",
+    "referenceWordsEng": "hard, cruel, harsh"
   }
 ]
 

@@ -1805,7 +1805,7 @@
       "bolko"
     ],
     "litTrans": {
-      "litTransFr": "La PLaine de la Course de Char",
+      "litTransFr": "La Lance Foudroyante",
       "litTransEng": "",
       "litTransType": "10"
     }
@@ -1844,14 +1844,14 @@
   {
     "currentName": "Cruaidín Catutchenn",
     "etymoName": "firginaich",
-    "descrFr": "Epée sacrée de Nuada à la Main d'Argent, elle est capable de trancher le fer et l'acier.",
+    "descrFr": "Epée sacrée de Cú Chulainn.",
     "descrEng": "",
     "wordTheme": 5,
-    "wordStems": [
+    "wordStems": ["krowdi"
     ],
     "litTrans": {
-      "litTransFr": "La PLaine de la Course de Char",
-      "litTransEng": "",
+      "litTransFr": "Le cruel acier",
+      "litTransEng": "The Hardhead Steeling",
       "litTransType": "10"
     }
   },
@@ -1938,11 +1938,75 @@
     "descrFr": "Dague d'Arthur fils de Pendragon.",
     "descrEng": "",
     "wordTheme": 5,
-    "wordStems": ["carn","uindos","án"
-    ],
+    "wordStems": ["carn","uindos","án"],
     "litTrans": {
       "litTransFr": "La Petite Poignée Blanche",
       "litTransEng": "The Little White Hilt",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Dyrnwyn",
+    "etymoName": "Dyrnwyn",
+    "descrFr": "Epée de Rhydderch Hael.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": ["durn","uindos"],
+    "litTrans": {
+      "litTransFr": "La Poignée Blanche",
+      "litTransEng": "The White Hilt",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Lia Fáil",
+    "etymoName": "Lia Fáil",
+    "descrFr": "Pierre magique lançant un cri lorsque le roi légitime s'y assoit, elle aurait reposé sur la colline de Tara.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": ["lie","fáil"],
+    "litTrans": {
+      "litTransFr": "La Pierre d'Accès",
+      "litTransEng": "The Access Stone",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Areadbhar",
+    "etymoName": "Ar-éadbair",
+    "descrFr": "Lance de Lug, confectionnée en boid d'If.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": ["agro","éadbair"],
+    "litTrans": {
+      "litTransFr": "La Meurtrière",
+      "litTransEng": "The Slaughterer",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Gae Assail",
+    "etymoName": "Gae Assail",
+    "descrFr": "Lance d'Assal, membre des danaïdes (déscendants de Danu), qui la transmettra au dieu Lug.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": ["gaisos","Assal"],
+    "litTrans": {
+      "litTransFr": "La Lance d'Assal",
+      "litTransEng": "The Spear of Assal",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Daur da Bláo",
+    "etymoName": "Daur da Bláo",
+    "descrFr": "Harpe de Dagda.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": ["daru","dau","blatos"],
+    "litTrans": {
+      "litTransFr": "Le Chêne aux Deux Fleurs",
+      "litTransEng": "The Oak of Two Blossoms",
       "litTransType": "10"
     }
   }

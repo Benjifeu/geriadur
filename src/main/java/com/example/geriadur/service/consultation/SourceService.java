@@ -1,9 +1,7 @@
 package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.consultation.Author;
-import com.example.geriadur.domain.consultation.Quote;
-import com.example.geriadur.domain.consultation.Source;
-import com.example.geriadur.dto.CreateAuthor;
+import com.example.geriadur.entity.consultation.Author;
+import com.example.geriadur.entity.consultation.Source;
 import com.example.geriadur.dto.CreateSource;
 import com.example.geriadur.repositories.AuthorRepository;
 import com.example.geriadur.repositories.QuoteRepository;
@@ -19,7 +17,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;

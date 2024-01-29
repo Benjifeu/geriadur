@@ -1,10 +1,10 @@
 package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.EtymonName;
-import com.example.geriadur.domain.SemanticField;
-import com.example.geriadur.domain.consultation.Source;
-import com.example.geriadur.domain.consultation.WordStem;
-import com.example.geriadur.domain.consultation.Quote;
+import com.example.geriadur.entity.EtymonName;
+import com.example.geriadur.entity.SemanticField;
+import com.example.geriadur.entity.consultation.Source;
+import com.example.geriadur.entity.consultation.WordStem;
+import com.example.geriadur.entity.consultation.Quote;
 import com.example.geriadur.dto.CreateEtymo;
 import com.example.geriadur.dto.CreateWordStem;
 import com.example.geriadur.dto.StatisticDTO;

@@ -1,7 +1,7 @@
 package com.example.geriadur.service.game;
 
-import com.example.geriadur.domain.EtymonName;
-import com.example.geriadur.domain.LiteralTranslation;
+import com.example.geriadur.entity.EtymonName;
+import com.example.geriadur.entity.LiteralTranslation;
 import com.example.geriadur.dto.*;
 import com.example.geriadur.repositories.EtymonNameRepository;
 import com.example.geriadur.repositories.LiteralTranslationRepository;

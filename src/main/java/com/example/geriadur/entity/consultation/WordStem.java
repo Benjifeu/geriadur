@@ -1,10 +1,10 @@
-package com.example.geriadur.domain.consultation;
+package com.example.geriadur.entity.consultation;
 
 import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.WordClassEnum;
-import com.example.geriadur.domain.EtymonName;
-import com.example.geriadur.domain.SemanticField;
+import com.example.geriadur.entity.EtymonName;
+import com.example.geriadur.entity.SemanticField;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

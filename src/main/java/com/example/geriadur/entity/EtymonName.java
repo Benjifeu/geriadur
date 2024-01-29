@@ -1,6 +1,6 @@
-package com.example.geriadur.domain;
+package com.example.geriadur.entity;
 
-import com.example.geriadur.domain.consultation.WordStem;
+import com.example.geriadur.entity.consultation.WordStem;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
