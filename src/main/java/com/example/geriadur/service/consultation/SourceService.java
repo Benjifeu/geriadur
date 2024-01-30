@@ -74,6 +74,7 @@ public class SourceService implements ISourceService {
         source.setAbbreviation(createSource.getAbbreviation());
         source.setDescription(createSource.getDescription());
         source.setDateOfPublication(createSource.getDateOfPublication());
+        System.out.println(createSource.getAuthors());
         if (createSource.getAuthors() != null) {
             source.setAuthors(Stream.of(
                     authorRepository.findAuthorByAuthorName(createSource.getAuthors()).get()
