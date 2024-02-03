@@ -65,7 +65,7 @@ public class WordStemController {
 
     @GetMapping("wordstems/page/{pageNo}")
     public String findPaginated(@PathVariable("pageNo") int pageNo, Model model) {
-        int pageSize = 5;
+        int pageSize = 10;
         Page<WordStem> page = wordStemService.findPaginated(pageNo, pageSize);
         List<WordStem> wordStems = page.getContent();;
         //wordStemService.getShowWordStems(List<WordStem> wordStems);

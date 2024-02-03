@@ -2,14 +2,13 @@
 <html lang="en" xmlns:th=" http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Semantic Fields</title>
-
+    <title>Lexique celtique</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/main.css">
 
     <script type="text/javascript" th:src="@{/js/scriptGame.js}" defer></script>
 </head>
+
 <body>
 
 <div align="center" class="container my-2">
@@ -50,13 +49,7 @@
                         th:title="${parent.wordStemLanguage}"
                 ></span>
                 : <a th:href="@{/wordStems/{id}(id=${parent.wordStemId})}" th:text="${parent.wordStemName}"></a></p></td>
-            <td><p th:each="child : ${wordStem.children}">
-                <span
-                        class="langWordStem"
-                        th:text="${child.wordStemLanguage}"
-                        th:title="${child.wordStemLanguage}"
-                ></span>
-                : <a th:href="@{/wordStems/{id}(id=${child.wordStemId})}" th:text="${child.wordStemName}"></a></p></td>
+            <td><p>TODO</p>  </td>
             <td>
                 <span
                         class="langWordStem"
@@ -73,8 +66,8 @@
             <!-- <td><span th:each="refs : ${wordStem.semanticFields}"><a th:href="@{/wordStems/{id}(id=${refs})}"
                                                                    th:text="${semanticFields.semanticFieldName}"></a>, </span> -->
             </td>
-            <td><a th:href="@{/wordStems/delete/{id}(id=${wordStem.wordStemId})}">
-                <button class="btn"><i class="fa fa-trash"></i></button>
+            <td style="width: 30px"><a th:href="@{/wordStems/delete/{id}(id=${wordStem.wordStemId})}">
+                <button class="btn" ><i class="fa fa-trash"></i></button>
             </a></td>
         </tr>
         </tbody>
@@ -86,20 +79,20 @@
             </div>
             <div class="col-sm-1">
                 <span th:each="i:${#numbers.sequence(1, totalPages)}">
-                    <a th:if="${currentPage != i}" th:href="@{'/wordStems/page/' + ${i}}">[[${i}]]</a>
+                    <a th:if="${currentPage != i}" th:href="@{'/wordstems/page/' + ${i}}">[[${i}]]</a>
                     <span th:unless="${currentPage != i}"> [[${i}]]</span> &nbsp;&nbsp;
                 </span>
             </div>
             <div class="col-sm-1">
-                <a th:if="${currentPage > 1}" th:href="@{'/wordStems/page/'+${currentPage-1}}">Previous</a>
+                <a th:if="${currentPage > 1}" th:href="@{'/wordstems/page/'+${currentPage-1}}">Previous</a>
                 <span th:unless="${currentPage > 1}">Previous</span>
             </div>
             <div class="col-sm-1">
-                <a th:if="${currentPage < totalPages}" th:href="@{'/wordStems/page/'+${currentPage+1}}">Next</a>
+                <a th:if="${currentPage < totalPages}" th:href="@{'/wordstems/page/'+${currentPage+1}}">Next</a>
                 <span th:unless="${currentPage < totalPages}">Next</span>
             </div>
             <div class="col-sm-1">
-                <a th:if="${currentPage < totalPages}" th:href="@{'/wordStems/page/'+${totalPages}}">Last</a>
+                <a th:if="${currentPage < totalPages}" th:href="@{'/wordstems/page/'+${totalPages}}">Last</a>
                 <span th:unless="${currentPage < totalPages}">Last</span>
             </div>
         </div>
