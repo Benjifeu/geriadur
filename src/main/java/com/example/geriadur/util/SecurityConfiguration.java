@@ -63,9 +63,9 @@ public class SecurityConfiguration {
                         .permitAll())
                 .build();
     }
-
+/*
     @Bean
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web -> web.ignoring().requestMatchers("/sessionGame/**"));
-    }
+    }*/
 }

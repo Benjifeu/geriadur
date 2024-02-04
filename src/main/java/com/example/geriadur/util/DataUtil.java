@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 import java.io.*;
 import java.util.*;
 
+
 /**
- * IMPORTANT: this class is unused in a deployed context (the data is fetched
- * from a remote database)
+ * IMPORTANT: this class is unused in a deployed context (the data is fetched from a remote database)
  *
  * the DataUtil class is responsible to retrieve the data from the JSON files
  * present at the root of the project
@@ -36,7 +36,7 @@ public class DataUtil {
     @Autowired
     private ISourceService sourceService;
 
-    // list of data transfer objects that will be persisted in the database
+    //list of data transfer objects that will be persisted in the database
     private List<CreateWordStem> wordStemsInit = new ArrayList<>();
     private List<Author> authorsInit = new ArrayList<>();
     private List<CreateEtymo> etymonNamesInit = new ArrayList<>();
@@ -44,7 +44,7 @@ public class DataUtil {
     private List<SemanticField> semanticFieldsInit = new ArrayList<>();
     private List<CreateUser> usersInit = new ArrayList<>();
 
-    // names of the the json files to retrieve
+    //names of the the json files to retrieve
     private final String jsonAuthors = "authorsInit";
     private final String jsonWordStem = "wordStemsInit";
     private final String jsonSource = "sourcesInit";
@@ -56,7 +56,7 @@ public class DataUtil {
      * InjectionData() the data in order to be transformed as entities and then
      * persisted in the mySql database
      **/
-    // @PostConstruct
+    @PostConstruct
     public void InjectionData() throws IOException {
         readJsonData(jsonAuthors);
         readJsonData(jsonWordStem);

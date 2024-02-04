@@ -49,6 +49,7 @@ public class SessionGameService implements ISessionGameService {
 
     /** get15EtymonName() returns a random list of 15 EtymonName from the DB according to the theme of words define by the user*/
     public List<EtymonName> get15RandomEtymonName(int wordTheme) {
+        System.out.println(wordTheme);
         Set<EtymonName> etymonNames = etymonNameRepository.find15EtymonNamesByWordTheme(wordTheme);
         List<EtymonName> etymonNameList = new ArrayList<>(etymonNames);
         return etymonNameList;
@@ -59,6 +60,7 @@ public class SessionGameService implements ISessionGameService {
         List<ResponseChoice> selectedLitTrans = new ArrayList<>();
         selectedLitTrans.add(new ResponseChoice(goodLitTrans.getLitTransFr(), true));
         List<LiteralTranslation> allLiteralTranslations = literalTranslationRepository.findAllByLitTransType(goodLitTrans.getLitTransType());
+        Collections.shuffle(allLiteralTranslations);
         for (LiteralTranslation literalTrans : allLiteralTranslations
         ) {
             if (!literalTrans.getLitTransFr().equals(goodLitTrans.getLitTransFr())) {

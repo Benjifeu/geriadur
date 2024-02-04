@@ -956,7 +956,7 @@
     "litTrans": {
       "litTransFr": "La cité de ceux remplis de fureur",
       "litTransEng": "",
-      "litTransType": "4"
+      "litTransType": "6"
     }
   },
   {
@@ -1018,7 +1018,7 @@
     "litTrans": {
       "litTransFr": "La Victorieuse",
       "litTransEng": "",
-      "litTransType": "3"
+      "litTransType": "2"
     }
   },
   {
@@ -1348,7 +1348,7 @@
       "nél"
     ],
     "litTrans": {
-      "litTransFr": "Le fils du Nuage",
+      "litTransFr": "La descendance du Nuage",
       "litTransEng": "",
       "litTransType": "3"
     }
@@ -1367,7 +1367,7 @@
     "litTrans": {
       "litTransFr": "Le fils du Nuage",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1383,7 +1383,7 @@
     "litTrans": {
       "litTransFr": "Les Rois du Monde du Milieu",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1398,7 +1398,7 @@
     "litTrans": {
       "litTransFr": "Les cavaliers",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1414,7 +1414,7 @@
     "litTrans": {
       "litTransFr": "Ceux qui vainquent par le marteau",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1429,7 +1429,7 @@
     "litTrans": {
       "litTransFr": "Les Ardents",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1444,7 +1444,7 @@
     "litTrans": {
       "litTransFr": "Les Boiteux",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1459,7 +1459,7 @@
     "litTrans": {
       "litTransFr": "Les Premiers",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1491,7 +1491,7 @@
     "litTrans": {
       "litTransFr": "Ceux issus des furieux",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "6"
     }
   },
   {
@@ -1506,7 +1506,7 @@
     "litTrans": {
       "litTransFr": "La Zone de Combat",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "6"
     }
   },
   {
@@ -1521,7 +1521,7 @@
     "litTrans": {
       "litTransFr": "Les blancs",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1537,7 +1537,7 @@
     "litTrans": {
       "litTransFr": "La Force Souterraine",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1552,7 +1552,7 @@
     "litTrans": {
       "litTransFr": "Ceux de l'If",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1568,7 +1568,7 @@
     "litTrans": {
       "litTransFr": "Ceux qui vainquent par l'Orme",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1583,7 +1583,7 @@
     "litTrans": {
       "litTransFr": "Ceux qui vainquent par l'Orme",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "3"
     }
   },
   {
@@ -1616,7 +1616,7 @@
     "litTrans": {
       "litTransFr": "Région des Guerriers Valeureux",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1632,7 +1632,7 @@
     "litTrans": {
       "litTransFr": "Région des lanciers",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1648,7 +1648,7 @@
     "litTrans": {
       "litTransFr": "La Terre Mère",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1664,7 +1664,7 @@
     "litTrans": {
       "litTransFr": "Ceux aux trois tresses",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "6"
     }
   },
   {
@@ -1680,7 +1680,7 @@
     "litTrans": {
       "litTransFr": "Les très Ardents",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1695,7 +1695,7 @@
     "litTrans": {
       "litTransFr": "Celle de l'hydromel",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "9"
     }
   },
   {
@@ -1711,7 +1711,7 @@
     "litTrans": {
       "litTransFr": "La Fredonneuse des Chagrins",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "9"
     }
   },
   {
@@ -1728,7 +1728,7 @@
     "litTrans": {
       "litTransFr": "Le Lumineux à la Ligne Rouge",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "8"
     }
   },
   {
@@ -1743,7 +1743,7 @@
     "litTrans": {
       "litTransFr": "La zone Médiane",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "4"
     }
   },
   {
@@ -1758,7 +1758,7 @@
     "litTrans": {
       "litTransFr": "Le fort",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "6"
     }
   },
   {
@@ -1775,7 +1775,7 @@
     "litTrans": {
       "litTransFr": "La PLaine de la Course de Char",
       "litTransEng": "",
-      "litTransType": "1"
+      "litTransType": "6"
     }
   },
   {
