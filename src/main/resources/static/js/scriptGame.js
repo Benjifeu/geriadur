@@ -1,6 +1,6 @@
 let currentQuestionIndex = 0;
 let score = 0;
-let url = 'http://ec2-16-170-141-83.eu-north-1.compute.amazonaws.com:8080/sessionGame/get'
+let url = 'http://localhost:8080/sessionGame/get'
 let totalQuestionNumber = 0;
 let wordTheme = 0;
 let level;

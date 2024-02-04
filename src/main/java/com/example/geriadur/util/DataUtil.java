@@ -56,7 +56,7 @@ public class DataUtil {
      * InjectionData() the data in order to be transformed as entities and then
      * persisted in the mySql database
      **/
-    //@PostConstruct
+    @PostConstruct
     public void InjectionData() throws IOException {
         readJsonData(jsonAuthors);
         readJsonData(jsonWordStem);
