@@ -3,6 +3,7 @@ package com.example.geriadur.controller.consultation;
 import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.WordClassEnum;
+import com.example.geriadur.dto.ShowWordstem;
 import com.example.geriadur.entity.consultation.WordStem;
 import com.example.geriadur.service.consultation.api.ISemanticFieldService;
 import com.example.geriadur.service.consultation.api.IWordStemService;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController()
 public class WordStemController {
     @Autowired
     private IWordStemService wordStemService;
@@ -25,18 +26,26 @@ public class WordStemController {
 
     //display list of semantic fields
 
-    @GetMapping("wordstems")
-    public String showWordStems(Model model) {
-        return findPaginated(1, model);
+    @GetMapping("/wordstems/page/{pageNo}")
+    public ShowWordstem findPaginated(@PathVariable("pageNo") int pageNo) {
+        int pageSize = 10;
+        Page<WordStem> page = wordStemService.findPaginated(pageNo, pageSize);
+        List<WordStem> wordStems = page.getContent();
+        ShowWordstem showWordstem = new ShowWordstem();
+        showWordstem.setPageWordstems(wordStems);
+        showWordstem.setWordstemsCount((int) page.getTotalElements());
+        showWordstem.setCurrentPage(pageNo);
+        showWordstem.setPageCount(page.getTotalPages());
+        return showWordstem;
     }
 
-    @GetMapping("wordstems/{id}")
+    @GetMapping("/{id}")
     public String showWordStem(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("wordStem", wordStemService.getWordStemByID(id));
         return "wordStems/wordstems-Info";
     }
 
-    @GetMapping("wordstems/add")
+    @GetMapping("/add")
     public String addWordStem(Model model) {
         WordStem wordStem = new WordStem();
         model.addAttribute("wordStem", wordStem);
@@ -44,10 +53,10 @@ public class WordStemController {
         model.addAttribute("wordClasses", WordClassEnum.values());
         model.addAttribute("genders", GenderEnum.values());
         model.addAttribute("semanticFields", semanticFieldService.getAllSemanticField());
-        return "wordStems/wordstems-add";
+        return "/wordstems-add";
     }
 
-    @GetMapping("wordStems/edit/{id}")
+    @GetMapping("/edit/{id}")
     public String editWordStem(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("wordStem", wordStemService.getWordStemByID(id));
         model.addAttribute("languages", LanguageEnum.values());
@@ -57,26 +66,15 @@ public class WordStemController {
         return "wordStems/wordstems-edit";
     }
 
-    @PostMapping("wordstems/save")
+    @PostMapping("/save")
     public String saveWordStem(@ModelAttribute("wordStem") WordStem wordStem) {
         wordStemService.addWordStem(wordStem);
         return "redirect:/wordstems";
     }
 
-    @GetMapping("wordstems/page/{pageNo}")
-    public String findPaginated(@PathVariable("pageNo") int pageNo, Model model) {
-        int pageSize = 5;
-        Page<WordStem> page = wordStemService.findPaginated(pageNo, pageSize);
-        List<WordStem> wordStems = page.getContent();;
-        //wordStemService.getShowWordStems(List<WordStem> wordStems);
-        model.addAttribute("currentPage", pageNo);
-        model.addAttribute("totalPages", page.getTotalPages());
-        model.addAttribute("totalItems", page.getTotalElements());
-        model.addAttribute("wordStems", wordStems);
-        return "wordStems/wordstems-show";
-    }
 
-    @GetMapping("wordStems/delete/{id}")
+
+    @GetMapping("/delete/{id}")
     public String deleteWordStem(@PathVariable(value = "id") Long id) {
         wordStemService.deleteWordStem(id);
         return "redirect:/wordstems";

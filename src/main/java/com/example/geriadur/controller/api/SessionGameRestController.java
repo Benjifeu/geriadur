@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RestController
+@RestController()
 public class SessionGameRestController {
 
     @Autowired
@@ -20,7 +20,7 @@ public class SessionGameRestController {
     private IUserService userService;
 
 
-    @GetMapping("/sessionGame/get")
+    @GetMapping("/sessionGameData")
     public String getSessionGameData(@RequestParam Integer wordTheme) throws JsonProcessingException {
         ObjectMapper om = new ObjectMapper();
         om.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
@@ -29,7 +29,7 @@ public class SessionGameRestController {
         System.out.println(json);
         return json;
     }
-    @PostMapping("/sessionGame/saveResult")
+    @PostMapping("/sessionGameData/saveResult")
     public ResponseEntity<String> saveScore(@RequestBody GameSessionResult gameSessionResult)  {
         ResponseEntity<String> response = userService.saveScore(gameSessionResult.getSessionScore());
         return response;

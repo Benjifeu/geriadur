@@ -19,6 +19,8 @@ import java.util.*;
 
 
 /**
+ * IMPORTANT: this class is unused in a deployed context (the data is fetched from a remote database)
+ *
  * the DataUtil class is responsible to retrieve the data from the JSON files
  * present at the root of the project
  * * (wordStemsInit, , etymonsInit, semanticFieldinit, sourcesInit)
