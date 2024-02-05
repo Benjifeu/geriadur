@@ -1,6 +1,6 @@
 let currentQuestionIndex = 0;
 let score = 0;
-let url = 'http://localhost:8080/sessionGame/get'
+let apiGame = '/sessionGameData'
 let totalQuestionNumber = 0;
 let wordTheme = 0;
 let level;
@@ -27,7 +27,7 @@ chooseWordTheme()
 
 async function getData() {
     try {
-        const response = await fetch(url + "?wordTheme=" + wordTheme);
+        const response = await fetch(host + apiGame+ "?wordTheme=" + wordTheme);
 
         // Check if request successfull
         if (!response.ok) {
