@@ -13,7 +13,8 @@
 
 <div align="center" class="container my-2">
 
-    <h1> List of WordStems</h1>
+    <h1> List of Word Stems</h1>
+    <h2 class="wordstems-count"> Word Stems count:</h2>
     <a th:href="@{/wordStems/add}" class="btn btn-primary btn-sm-mb-3">Add an WordStem</a>
     <table border="1" class="table table-striped table-responsive-md">
         <thead>
@@ -29,7 +30,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="wordStem : ${wordStems}">
+        <tr  th:each="wordStem : ${wordStems}">
             <td><span
                     class="langWordStem"
                     th:text="${wordStem.wordStemLanguage}"
