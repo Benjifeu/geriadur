@@ -9,6 +9,7 @@
     "descrEng": "Literally: who has a white spot on his forehead",
     "referenceWordsFr": "nigaud, con",
     "referenceWordsEng": "goof",
+    "semanticField": "feelings",
     "quotes": [
       "162.a Cheval marqué de blanc au front. tr. Marc'h bailh"
     ],
@@ -24,6 +25,7 @@
     "wordClass": "WN",
     "descrFr": "Littéralement: qui a une tache blanche au front",
     "descrEng": "Literally: who has a white spot on his forehead",
+    "semanticField": "cosmos",
     "referenceWordsFr": "rayon, colonne",
     "referenceWordsEng": "ray, column"
   },
@@ -35,6 +37,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "color",
     "referenceWordsFr": "rouge foncé",
     "referenceWordsEng": "red crimson"
   },
@@ -46,6 +49,7 @@
     "wordClass": "WN",
     "descrFr": "Le terme français barde est issu de la même souche",
     "descrEng": "The english term \"bard\" comes from the same root",
+    "semanticField": "communication",
     "referenceWordsFr": "barde, poète, menestrel",
     "referenceWordsEng": "barde, poet, minstrel"
   },
@@ -57,6 +61,7 @@
     "wordClass": "WN",
     "descrFr": "Forme pluriel: bizhier",
     "descrEng": "",
+    "semanticField": "tool",
     "referenceWordsFr": "bâton, barre, barreau, échelon",
     "referenceWordsEng": "staff, bar"
   },
@@ -68,6 +73,7 @@
     "wordClass": "WN",
     "descrFr": "Signifie initialement le monde des vivants, du gaulois bitu, par opposition à albos / albios le monde d’en haut et dubnos, le monde d’en-bas.",
     "descrEng": "",
+    "semanticField": "cosmos",
     "referenceWordsFr": "monde",
     "referenceWordsEng": "world"
   },
@@ -79,6 +85,7 @@
     "wordClass": "WN",
     "descrFr": "forme archaïque, le terme \"buhez\" est plus commun aujourd'hui.",
     "descrEng": "archaïc form, the term \"buhez\" is more common today.",
+    "semanticField": "nature",
     "referenceWordsFr": "la vie, le vivant, l'être vivant",
     "referenceWordsEng": "the life, the living, the living one"
   },
@@ -90,6 +97,7 @@
     "wordClass": "WN",
     "descrFr": "mot commun aux langue celtiques mais qui ne semble pas d'origine indo-européenne",
     "descrEng": "word common to Celtic languages but which does not seem to be of Indo-European origin",
+    "semanticField": "animal",
     "referenceWordsFr": "loup",
     "referenceWordsEng": "wolf"
   },
@@ -101,6 +109,7 @@
     "wordClass": "WN",
     "descrFr": "A eu anciennement le sens de procès, apparenté au mot \"barn\", jugement",
     "descrEng": "",
+    "semanticField": "feelings",
     "referenceWordsFr": "litige, débat",
     "referenceWordsEng": "dispute"
   },
@@ -112,6 +121,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pomme",
     "referenceWordsEng": "apple"
   },
@@ -123,6 +133,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pomme",
     "referenceWordsEng": "apple"
   },
@@ -134,6 +145,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pommier, pomme",
     "referenceWordsEng": "apple tree",
     "parentsWordStemStr": [
@@ -148,6 +160,7 @@
     "wordClass": "WN",
     "descrFr": "forme restituée, possiblement \"*abalna\"",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pommier, arbre (au sens large)",
     "referenceWordsEng": "apple tree"
   },
@@ -159,6 +172,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pommier",
     "referenceWordsEng": "apple tree",
     "parentsWordStemStr": [
@@ -173,6 +187,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pommier",
     "referenceWordsEng": "apple tree",
     "parentsWordStemStr": [
@@ -187,6 +202,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pomme",
     "referenceWordsEng": "apple"
   },
@@ -198,6 +214,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pommier, pomme",
     "referenceWordsEng": "apple tree"
   },
@@ -209,6 +226,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "pomme",
     "referenceWordsEng": "apple"
   },
@@ -220,6 +238,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "vegetation",
     "referenceWordsFr": "rivière",
     "referenceWordsEng": "river"
   },
@@ -231,6 +250,7 @@
     "wordClass": "WN",
     "descrFr": "Peut être écrit \"avon\"",
     "descrEng": "Can be written \"avon\"",
+    "semanticField": "nature",
     "referenceWordsFr": "rivière",
     "referenceWordsEng": "river"
   },
@@ -242,6 +262,7 @@
     "wordClass": "WN",
     "descrFr": "Attesté dans le calendrier de Coligny",
     "descrEng": "",
+    "semanticField": "cosmos",
     "referenceWordsFr": "temps",
     "referenceWordsEng": "time"
   },
@@ -253,6 +274,7 @@
     "wordClass": "WN",
     "descrFr": "composé du brittonique amman et stera",
     "descrEng": "composed of the brittonic amman and stera",
+    "semanticField": "cosmos",
     "referenceWordsFr": "temps, météorologie",
     "referenceWordsEng": "time, weather"
   },
@@ -264,6 +286,7 @@
     "wordClass": "WN",
     "descrFr": "forme singulière reconstituée d'un pluriel <i>anatia</i>",
     "descrEng": "reconstituted singular form of plural <i>anatia</i>",
+    "semanticField": "life",
     "referenceWordsFr": "souffle",
     "referenceWordsEng": "breath"
   },
@@ -275,6 +298,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
+    "semanticField": "life",
     "referenceWordsFr": "souffle, haleine",
     "referenceWordsEng": "breath"
   },
@@ -286,6 +310,7 @@
     "wordClass": "WN",
     "descrFr": "Le terme suggère un lien que les gaulois faisaient entre richesse matérielle et connexion au divin",
     "descrEng": "The term suggests a link that the Gauls made between material wealth and connection to the divine",
+    "semanticField": "life",
     "referenceWordsFr": "richesse, inspiration",
     "referenceWordsEng": "wealth, inspiration "
   },
