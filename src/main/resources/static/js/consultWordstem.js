@@ -54,29 +54,34 @@ async function getShowWordstem() {
 
 
         function showWordstems() {
-            getShowWordstem()
+            getShowWordstem();
+
+
+
+
+            tbl = document.createElement('table');
+            tbl.style.width = '1000px';
+            tbl.style.border = '1px solid gray';
+
             for (i = 0; i < data.pageWordstems.length; i++) {
-                doculent.createElement("tr");
-                let wsName = document.createElement("td");
-                let wsPhonetic = document.createElement("td");
-                let wsLang = document.createElement("td");
-                let wsGender = document.createElement("td");
-                let wsRefFr = document.createElement("td");
-                let wsParent = document.createElement("td");
-                let wsDel = document.createElement("td");
-                wsName.innerText(data.pageWordstems[i].wordStemName);
-                wsPhonetic.innerText(data.pageWordstems[i].wsPhonetic);
-                wsLang.innerText(data.pageWordstems[i].phonetic);
-                wsGender.innerText(data.pageWordstems[i].gender);
+                const tr = tbl.insertRow();
+                let wsName = tr.insertCell();
+                wsName.innerText = data.pageWordstems[i].wordStemLanguage+" "+data.pageWordstems[i].wordStemName+" [" + data.pageWordstems[i].wsPhonetic + "]";
+                let wsGender = tr.insertCell();
+                wsGender.innerText=data.pageWordstems[i].gender;
+
+                let wsRefFr = tr.insertCell();
+
+                let wsParent = tr.insertCell();
+                let wsDel = tr.insertCell();
+
+                
                 wsRefFr.innerText(data.pageWordstems[i].referenceWordsEng);
                 wsParent.innerText(data.pageWordstems[i].wordStemName);
-                document.createElement("button").onclick(deleteData(pageWordstems[i].id));
-                wsDel.innerText();
+                wsDel.appendChild(document.createElement("button").onclick(deleteData(pageWordstems[i].wordStemId)));
             }
-        };
-
-
-
+        }
+        body.appendChild(tbl);
     }
-
+};
 }
