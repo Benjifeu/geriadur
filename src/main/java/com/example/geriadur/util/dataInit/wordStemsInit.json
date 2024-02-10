@@ -286,7 +286,7 @@
     "wordClass": "WN",
     "descrFr": "forme singulière reconstituée d'un pluriel <i>anatia</i>",
     "descrEng": "reconstituted singular form of plural <i>anatia</i>",
-    "semanticField": "life",
+    "semanticField": "nature",
     "referenceWordsFr": "souffle",
     "referenceWordsEng": "breath"
   },
@@ -298,7 +298,7 @@
     "wordClass": "WN",
     "descrFr": "",
     "descrEng": "",
-    "semanticField": "life",
+    "semanticField": "nature",
     "referenceWordsFr": "souffle, haleine",
     "referenceWordsEng": "breath"
   },
@@ -310,7 +310,7 @@
     "wordClass": "WN",
     "descrFr": "Le terme suggère un lien que les gaulois faisaient entre richesse matérielle et connexion au divin",
     "descrEng": "The term suggests a link that the Gauls made between material wealth and connection to the divine",
-    "semanticField": "life",
+    "semanticField": "nature",
     "referenceWordsFr": "richesse, inspiration",
     "referenceWordsEng": "wealth, inspiration "
   },
@@ -3091,6 +3091,96 @@
     "semanticField": "feelings",
     "referenceWordsFr": "dur, cruel, rude",
     "referenceWordsEng": "hard, cruel, harsh"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "smero",
+    "phonetic": "smero",
+    "gender": "NO",
+    "wordClass": "WADJ",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "semanticField": "feelings",
+    "referenceWordsFr": "prévoyant, pourvoyeur",
+    "referenceWordsEng": "provident, provider, careful"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "noudont",
+    "phonetic": "noudont",
+    "gender": "NO",
+    "wordClass": "WV",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EIHM"
+    ],
+    "semanticField": "action",
+    "referenceWordsFr": "acquérir, prendre, pêcher, attraper, utiliser",
+    "referenceWordsEng": "take, acquire, use"
+  },
+  {
+    "wordStemLanguage": "LOI",
+    "wordStemName": "ness",
+    "phonetic": "ness",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DIL"
+    ],
+    "semanticField": "animal",
+    "referenceWordsFr": "belette",
+    "referenceWordsEng": "weasel"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "bodua",
+    "phonetic": "bodua",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "DLG"
+    ],
+    "semanticField": "animal",
+    "referenceWordsFr": "corneille, divinité guerrière",
+    "referenceWordsEng": "hooded-crow"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "bhel",
+    "phonetic": "bʰel",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EIHM"
+    ],
+    "semanticField": "cosmos",
+    "referenceWordsFr": "éclair",
+    "referenceWordsEng": "lightning"
+  },
+  {
+    "wordStemLanguage": "LPC",
+    "wordStemName": "kwolu",
+    "phonetic": "kʷolu",
+    "gender": "GM",
+    "wordClass": "WN",
+    "descrFr": "",
+    "descrEng": "",
+    "sources": [
+      "EDPC"
+    ],
+    "semanticField": "tool",
+    "referenceWordsFr": "roue",
+    "referenceWordsEng": "wheel"
   }
 ]
 
@@ -3629,7 +3719,6 @@ hir
 slougo
 ->
 lu
-smero
 ->
 amerzh
 Saulio

@@ -83,5 +83,4 @@ async function getShowWordstem() {
         }
         body.appendChild(tbl);
     }
-};
 }
