@@ -3094,8 +3094,8 @@
   },
   {
     "wordStemLanguage": "LPC",
-    "wordStemName": "smerto",
-    "phonetic": "smerto",
+    "wordStemName": "smero",
+    "phonetic": "smero",
     "gender": "NO",
     "wordClass": "WADJ",
     "descrFr": "",
@@ -3181,21 +3181,6 @@
     "semanticField": "tool",
     "referenceWordsFr": "roue",
     "referenceWordsEng": "wheel"
-  },
-  {
-    "wordStemLanguage": "LPC",
-    "wordStemName": "sukkos",
-    "phonetic": "sukkos",
-    "gender": "GM",
-    "wordClass": "WN",
-    "descrFr": "",
-    "descrEng": "",
-    "sources": [
-      "DLG"
-    ],
-    "semanticField": "animal",
-    "referenceWordsFr": "sanglier, cochon",
-    "referenceWordsEng": "boar, pig"
   }
 ]
 

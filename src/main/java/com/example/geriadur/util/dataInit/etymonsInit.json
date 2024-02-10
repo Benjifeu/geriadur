@@ -2037,6 +2037,19 @@
     }
   },
   {
+    "currentName": "Macha",
+    "etymoName": "Macha",
+    "descrFr": "Déesse guerrière et souveraine de l'Irlande.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["mag"],
+    "litTrans": {
+      "litTransFr": "La Plaine",
+      "litTransEng": "The Plain",
+      "litTransType": "9"
+    }
+  },
+  {
     "currentName": "Rosmerta",
     "etymoName": "Rosmerta",
     "descrFr": "Déesse gauloise de la fertilité.",
