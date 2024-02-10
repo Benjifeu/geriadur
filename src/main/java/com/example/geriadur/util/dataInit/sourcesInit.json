@@ -216,8 +216,15 @@
 		"dateOfPublication": "1959",
 		"language": "LF",
 		"description": ""
+	},
+	{
+		"abbreviation": "EIHM",
+		"sourceNameInOriginalLanguage": "Early Irish history and mythology",
+		"sourceNameInEnglish": "Early Irish history and mythology,",
+		"authors": "Thomas F. O'Rahilly",
+		"typeOfSource": "D",
+		"dateOfPublication": "1946",
+		"language": "LE",
+		"description": ""
 	}
-
-
-
 ]

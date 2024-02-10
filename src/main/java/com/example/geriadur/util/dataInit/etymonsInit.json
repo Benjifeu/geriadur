@@ -2009,6 +2009,136 @@
       "litTransEng": "The Oak of Two Blossoms",
       "litTransType": "10"
     }
+  },
+  {
+    "currentName": "Claymore",
+    "etymoName": "Claidheamh-mòr",
+    "descrFr": "Épée à deux mains portée lors des guerres anglo-écossaises par les Highlanders.",
+    "descrEng": "",
+    "wordTheme": 5,
+    "wordStems": ["cladio","maros"],
+    "litTrans": {
+      "litTransFr": "La Grande Épée",
+      "litTransEng": "The Great Sword",
+      "litTransType": "10"
+    }
+  },
+  {
+    "currentName": "Macha",
+    "etymoName": "Macha",
+    "descrFr": "Déesse guerrière et souveraine de l'Irlande.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["mag"],
+    "litTrans": {
+      "litTransFr": "La Plaine",
+      "litTransEng": "The Plain",
+      "litTransType": "9"
+    }
+  },
+  {
+    "currentName": "Rosmerta",
+    "etymoName": "Rosmerta",
+    "descrFr": "Déesse gauloise de la fertilité.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["ro-","smerto"],
+    "litTrans": {
+      "litTransFr": "La Très Prévoyante",
+      "litTransEng": "The Very Careful",
+      "litTransType": "9"
+    }
+  },
+  {
+    "currentName": "Nuada",
+    "etymoName": "Nuada",
+    "descrFr": "Nuada, dit \"à la Main d'Argent\" suite à la perte de cette dernière lors de la première bataille de Mag Tured, est un roi des Danann et un redoutable guerrier, propriétaire de la légendaire épée: Claíomh Solais ayant la capacité de narrer ses exploits lorsque sortie de son fourreau.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["noudont"],
+    "litTrans": {
+      "litTransFr": "L'acquéreur",
+      "litTransEng": "The Taker",
+      "litTransType": "8"
+    }
+  },
+  {
+    "currentName": "Ness",
+    "etymoName": "Ness",
+    "descrFr": "Ness est une reine d'Ulster. Fille d'Eochaid Sálbuide, elle sera séduite par Cathbad et deviendra la mère de Conchobar par lequel elle fera en sorte qu'il gagne le trône d'Ulster en lien et place de Fergus Mac Roeg.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["ness"],
+    "litTrans": {
+      "litTransFr": "La Belette",
+      "litTransEng": "The Weasel",
+      "litTransType": "9"
+    }
+  },
+  {
+    "currentName": "Bodb",
+    "etymoName": "Bodb",
+    "descrFr": "Bodb est la soeur de Macha et de Mórrígan, consituant la trinité des reines guerrières d'Irlande. Elle annonce le destin des guerriers à l'approche d'une bataille.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["bodua"],
+    "litTrans": {
+      "litTransFr": "La Corneille",
+      "litTransEng": "The Hooded-Crow",
+      "litTransType": "9"
+    }
+  },
+  {
+    "currentName": "Balor",
+    "etymoName": "Balor",
+    "descrFr": "Balor est le roi des Fomoires. Doté d'un oeil magique destructeur, il prend le commandement de la deuxième bataille de Mag Tured mais sera battu par le dieu Lug.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["bhel"],
+    "litTrans": {
+      "litTransFr": "L'Éclair",
+      "litTransEng": "The Lightning",
+      "litTransType": "8"
+    }
+  },
+  {
+    "currentName": "Bláthnat",
+    "etymoName": "Bláthnat",
+    "descrFr": "Bláthnat est la femme de Cú Roí et amante de Cú Chulainn, marié contre son gré, elle fera tuer son mari par son amant. Mais son histoire amoureuse sera écourtée par sa mort, vengée par le poète de  Cú Roí, Ferchertne qui se jetera avec elle du haut d'une falaise.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["blatos"],
+    "litTrans": {
+      "litTransFr": "La Petite Fleur",
+      "litTransEng": "The Little Flower",
+      "litTransType": "9"
+    }
+  },
+  {
+    "currentName": "CathBad",
+    "etymoName": "Cathbad",
+    "descrFr": "Cathbad est un chef fianna et un druide opérant à la court du Roi Conchobar dont il est le père. Il initiera Setanta dont il donnera le nom de Cúchulainn.",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["catu","bodua"],
+    "litTrans": {
+      "litTransFr": "Le Corbeau de Combat",
+      "litTransEng": "The Battle Crow",
+      "litTransType": "8"
+    }
+  },
+  {
+    "currentName": "Culhwch",
+    "etymoName": "Culhwch",
+    "descrFr": "",
+    "descrEng": "",
+    "wordTheme": 3,
+    "wordStems": ["kwolu","sukkos"],
+    "litTrans": {
+      "litTransFr": "Le Rapide Sanglier",
+      "litTransEng": "The Fast Boar",
+      "litTransType": "8"
+    }
   }
 ]
 
