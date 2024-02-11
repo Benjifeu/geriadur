@@ -117,7 +117,7 @@ function handleNextButton() {
 
 function showScore() {
     resetState();
-    fetch('http://localhost:8080/sessionGame/saveResult', {
+    fetch(host + apiGame+ '/saveResult', {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
