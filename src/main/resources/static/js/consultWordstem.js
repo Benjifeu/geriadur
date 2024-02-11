@@ -14,6 +14,7 @@ async function showWordstems(currentPage, countByPage) {
         console.log(pageData);
         for (i = 0; i < pageData.pageWordstems.length; i++) {
             const tr = tbl.insertRow();
+
             let wsName = tr.insertCell();
 
             let lang = document.createElement("span");
@@ -23,11 +24,12 @@ async function showWordstems(currentPage, countByPage) {
             wsName.appendChild(lang);
             wsName.innerHTML +=  ": " + data.pageWordstems[i].wordStemName + " [" + data.pageWordstems[i].phonetic + "]";
             let wsGender = tr.insertCell();
+            wsGender.classList.add("genderWS");
             wsGender.innerText = pageData.pageWordstems[i].gender;
             let wsClass = tr.insertCell();
-            wsGender.innerText = pageData.pageWordstems[i].wordClass;
+            wsClass.innerText = pageData.pageWordstems[i].wordClass;
             let wsRef = tr.insertCell();
-            wsRef.innerHTML = "Fr.: " + data.pageWordstems[i].engTranslation + "<br> Eng.: " + data.pageWordstems[i].frTranslation;
+            wsRef.innerHTML = "Fr.: " + data.pageWordstems[i].frTranslation + "<br> Eng.: " + data.pageWordstems[i].engTranslation;
             let wsParent = tr.insertCell();
             wsParent.innerText = data.pageWordstems[i].parentsWordStemStr;
             let wsSemField = tr.insertCell();
@@ -67,7 +69,7 @@ async function showWordstems(currentPage, countByPage) {
         }
     })
     setLanguages();
-
+    setGender();
 }
 
 async function getShowWordstem(currentPage, countByPage) {
