@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Lexique celtique</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
 
-    <script type="text/javascript" src="/js/consultWordstem.js" defer>
-    </script>
-    <script type="text/javascript" src="/js/scriptLanguage.js" defer>
-    </script>
+    <script type="text/javascript" src="/js/configData.js" ></script>
+    <script type="text/javascript" src="/js/scriptLanguage.js"></script>
+    <script type="text/javascript" src="/js/consultWordstem.js" defer></script>
+
 </head>
 
 <body>
@@ -17,7 +16,7 @@
 <div align="center" class="container my-2">
 
     <h1> List of Word Stems</h1>
-    <h2 class="wordstems-count"> Word Stems count:</h2>
+    <h3 id="words-count"></h3>
     <a href="/wordStems/add" class="btn btn-primary btn-sm-mb-3">Add a word stem</a>
     <table border="1"  class="table-striped table-responsive-md">
         <thead>
@@ -34,8 +33,6 @@
 
     </table>
     <div id="pagesbutton">
-        <div id="words-count"></div>
-
     </div>
 </div>
 </body>

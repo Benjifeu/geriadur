@@ -40,15 +40,6 @@ async function getData() {
         totalQuestionNumber = Object.keys(obj).length;  } catch (error) {
         console.error(console.log(error));
     }
-        /*
-    await fetch()
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-
-        })*/
-
     showQuestion();
 }
 
