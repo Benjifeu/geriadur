@@ -173,7 +173,9 @@ public class WordStemService implements IWordStemService {
                     wordStem.getGender().toString(),
                     wordStem.getWordClass().toString(),
                     wordStem.getReferenceWordsEng(),
-                    wordStem.getReferenceWordsFr(), wordStem.getSemanticField().getSemFieldNameFr(), parent);
+                    wordStem.getReferenceWordsFr(),
+                    wordStem.getSemanticField().getSemFieldNameFr(),
+                    parent);
             wordStems.add(showWordstem);
             log.info("The word stem "+wordStem.getWordStemName()+" has been retrieved to be displayed on the wordstem list page.");
         }

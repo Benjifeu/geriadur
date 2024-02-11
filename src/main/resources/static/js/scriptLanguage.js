@@ -1,6 +1,5 @@
 function setLanguages() {
     const lang = document.getElementsByClassName("langWS");
-    const genre = document.getElementById("genWS");
     for (var i = 0; i < lang.length; i++) {
         lang[i].title = lang[i].title.replace("LB", bretonLanguage[siteLanguage])
         lang[i].title = lang[i].title.replace("LC", cornishLanguage[siteLanguage])
@@ -14,9 +13,6 @@ function setLanguages() {
         lang[i].title = lang[i].title.replace("LW", welshLanguage[siteLanguage])
         lang[i].title = lang[i].title.replace("WN", nameWClass[siteLanguage])
         lang[i].title = lang[i].title.replace("WV", verbWClass[siteLanguage])
-        lang[i].title = lang[i].title.replace("GM", mGender[siteLanguage])
-        lang[i].title = lang[i].title.replace("GF", fGender[siteLanguage])
-        lang[i].title = lang[i].title.replace("GN", nGender[siteLanguage])
 
 
         lang[i].innerHTML = lang[i].innerHTML.replace("LB", brLanguage[siteLanguage])
@@ -32,8 +28,18 @@ function setLanguages() {
         lang[i].innerHTML = lang[i].innerHTML.replace("WN", nameWClassAbr[siteLanguage])
         lang[i].innerHTML = lang[i].innerHTML.replace("WV", verbWClassAbr[siteLanguage])
         lang[i].innerHTML = lang[i].innerHTML.replace("WN", verbWClassAbr[siteLanguage])
-        lang[i].innerHTML = lang[i].innerHTML.replace("GM", mGenderAbr[siteLanguage])
-        lang[i].innerHTML = lang[i].innerHTML.replace("GF", fGenderAbr[siteLanguage])
-        lang[i].innerHTML = lang[i].innerHTML.replace("GN", nGenderAbr[siteLanguage])
+    }
+}
+function setGender() {
+    const gender = document.getElementsByClassName("genderWS");
+    for (var i = 0; i < gender.length; i++) {
+        gender[i].title = gender[i].title.replace("GM", mGender[siteLanguage])
+        gender[i].title = gender[i].title.replace("GF", fGender[siteLanguage])
+        gender[i].title = gender[i].title.replace("GN", nGender[siteLanguage])
+        gender[i].innerHTML = gender[i].innerHTML.replace("GM", mGenderAbr[siteLanguage])
+        gender[i].innerHTML = gender[i].innerHTML.replace("GF", fGenderAbr[siteLanguage])
+        gender[i].innerHTML = gender[i].innerHTML.replace("GN", nGenderAbr[siteLanguage])
+        gender[i].innerHTML = gender[i].innerHTML.replace("NO", noGenderAbr[siteLanguage])
+
     }
 }

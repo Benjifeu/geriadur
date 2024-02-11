@@ -57,7 +57,7 @@ public class UserService implements IUserService {
         userRepository.save(userAccount);
     }
 
-    public static String getCurrentUserEmail() {
+    public String getCurrentUserEmail() {
         SecurityContext securityContext = SecurityContextHolder.getContext();
         Authentication authentication = securityContext.getAuthentication();
         if (authentication != null) {
