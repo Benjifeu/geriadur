@@ -1,4 +1,4 @@
-let host = 'http://localhost:8080'
+let host = 'http://ec2-16-171-253-51.eu-north-1.compute.amazonaws.com:8080'
 const siteLanguage = 1
 const language = 1
 

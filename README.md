@@ -21,7 +21,7 @@ The code is composed of an html/javascript/CSS interface layer, a Java layer for
 The java layer is essentially build with the framework Spring and use the Java Persistence API (JPA) to organise relational data.
 
 ## Deployed Version (Work In Progress)
-A work in progress version (v:0.3) is deployed on the below AWS address, some functionalities may are not available according to the actual deployed version: http://ec2-16-170-141-83.eu-north-1.compute.amazonaws.com:8080/login "email": "test" "password": "pass"
+A work in progress version (v:0.3) is deployed on the below AWS address, some functionalities may are not available according to the actual deployed version: http://ec2-16-171-253-51.eu-north-1.compute.amazonaws.com:8080/login "email": "test" "password": "pass"
 
 ## Why?
 The purpose of this project is to share and understand deeper the original sense of the celtic words used today in the celtic languages. A lot 
