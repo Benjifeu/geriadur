@@ -8,6 +8,14 @@
 		"language": 1
 	},
 	{
+		"firstName": "user",
+		"lastName": "two",
+		"email": "test",
+		"password": "pass",
+		"role": "U",
+		"language": 1
+	},
+	{
 		"firstName": "admin",
 		"lastName": "last",
 		"email": "testAdmin@gmol.com",

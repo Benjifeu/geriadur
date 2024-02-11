@@ -1,19 +1,32 @@
 package com.example.geriadur.dto;
 
-import com.example.geriadur.entity.consultation.WordStem;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
-import java.util.List;
-
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 public class ShowWordstem {
-    List<WordStem> pageWordstems;
-    int currentPage;
-    int pageCount;
-    int wordstemsCount;
+
+    private String wordStemName;
+
+    private String wordStemLanguage;
+
+    private String phonetic;
+
+    private String gender;
+
+    private String wordClass;
+
+    private String engTranslation;
+
+    private String frTranslation;
+
+    private String semanticField;
+
+    private String parentsWordStemStr;
+
 }
