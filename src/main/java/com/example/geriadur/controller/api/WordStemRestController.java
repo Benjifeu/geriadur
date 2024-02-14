@@ -8,6 +8,7 @@ import com.example.geriadur.dto.ShowWordstemPage;
 import com.example.geriadur.entity.consultation.WordStem;
 import com.example.geriadur.service.consultation.api.ISemanticFieldService;
 import com.example.geriadur.service.consultation.api.IWordStemService;
+import com.example.geriadur.service.user.api.IUserService;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,10 +25,13 @@ public class WordStemRestController {
     private IWordStemService wordStemService;
     @Autowired
     private ISemanticFieldService semanticFieldService;
-
+    @Autowired
+    private IUserService userService;
 
     @GetMapping("/wordstems/{pnum}/{psize}")
     public ShowWordstemPage findPaginated(@PathVariable("pnum") int pageNo, @PathVariable("psize") int pageSize) {
+        log.info("The user with the email \"" + userService.getCurrentUserEmail()
+                + "\" had retrieved a page from the wordstem table with " + pageSize + "words.");
         return wordStemService.findPaginated(pageNo, pageSize);
     }
 
@@ -63,8 +67,6 @@ public class WordStemRestController {
         wordStemService.addWordStem(wordStem);
         return "redirect:/wordstems";
     }
-
-
 
     @GetMapping("/delete/{id}")
     public String deleteWordStem(@PathVariable(value = "id") Long id) {

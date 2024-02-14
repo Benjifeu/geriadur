@@ -6,7 +6,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 
 public interface IUserService extends UserDetailsService {
     void save(CreateUser registrationDto);
-    ResponseEntity<String> saveScore(int sessionScore);
+    ResponseEntity<String> saveScore(int sessionScore, int sessionTheme);
 String getCurrentUserEmail();
 
 }

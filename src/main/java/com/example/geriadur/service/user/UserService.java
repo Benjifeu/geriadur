@@ -1,10 +1,13 @@
 package com.example.geriadur.service.user;
 
 import com.example.geriadur.constants.UserRoleEnum;
+import com.example.geriadur.dto.CreateWordStem;
+import com.example.geriadur.entity.consultation.Author;
 import com.example.geriadur.entity.user.UserAccount;
 import com.example.geriadur.dto.CreateUser;
 import com.example.geriadur.repositories.UserRepository;
 import com.example.geriadur.service.user.api.IUserService;
+import com.fasterxml.jackson.core.type.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -21,7 +24,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-/** The UserService, . */
+/**
+ * The UserService, .
+ */
 @Service
 public class UserService implements IUserService {
 
@@ -66,13 +71,34 @@ public class UserService implements IUserService {
         return null;
     }
 
-    public ResponseEntity<String> saveScore(int sessionScore) {
+    public ResponseEntity<String> saveScore(int sessionScore, int sessionTheme) {
         UserAccount userAccount =
                 userRepository.findByEmail(getCurrentUserEmail()).get();
-        int finalScore = userAccount.getScore() + sessionScore;
-        userAccount.setScore(finalScore);
+        int finalScore;
+        switch (sessionTheme) {
+            case 1:
+                finalScore = userAccount.getScorePlaces() + sessionScore;
+                userAccount.setScorePlaces(finalScore);
+                break;
+            case 2:
+                finalScore = userAccount.getScoreHfigures() + sessionScore;
+                userAccount.setScoreHfigures(finalScore);
+                break;
+            case 3:
+                finalScore = userAccount.getScoreMfigures() + sessionScore;
+                userAccount.setScoreMfigures(finalScore);
+                break;
+            case 4:
+                finalScore = userAccount.getScoreTribes() + sessionScore;
+                userAccount.setScoreTribes(finalScore);
+                break;
+            case 5:
+                finalScore = userAccount.getScoreObjects() + sessionScore;
+                userAccount.setScoreObjects(finalScore);
+                break;
+        }
         userRepository.save(userAccount);
-        return ResponseEntity.ok().body("Score of the user "+userAccount.getFirstName()+" has been updated");
+        return ResponseEntity.ok().body("Score of the user " + userAccount.getFirstName() + " has been updated");
     }
 
     public UserAccount getAccountInfo() {

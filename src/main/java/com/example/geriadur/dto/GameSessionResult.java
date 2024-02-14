@@ -8,6 +8,13 @@ import java.util.List;
 @AllArgsConstructor
 @Getter
 public class GameSessionResult {
+
+    int sessionTheme;
+
     int sessionScore;
-    List<String> falseResponses;
+    
+    /**
+     * return the list of proper noons that have received a bad answer
+     */
+    List<String> badAnswer;
 }

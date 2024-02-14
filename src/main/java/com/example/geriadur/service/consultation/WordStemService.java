@@ -125,7 +125,6 @@ public class WordStemService implements IWordStemService {
             return quote;
         } else
             throw new RuntimeException("The source " + source + " of the new quote: \"" + quoteStr + "\" doesn't exist.");
-
     }
 
     /**
