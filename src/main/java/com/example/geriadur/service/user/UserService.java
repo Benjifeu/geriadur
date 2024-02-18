@@ -1,13 +1,10 @@
 package com.example.geriadur.service.user;
 
 import com.example.geriadur.constants.UserRoleEnum;
-import com.example.geriadur.dto.CreateWordStem;
-import com.example.geriadur.entity.consultation.Author;
 import com.example.geriadur.entity.user.UserAccount;
 import com.example.geriadur.dto.CreateUser;
 import com.example.geriadur.repositories.UserRepository;
 import com.example.geriadur.service.user.api.IUserService;
-import com.fasterxml.jackson.core.type.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;

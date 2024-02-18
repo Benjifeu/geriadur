@@ -21,7 +21,16 @@ The code is composed of an html/javascript/CSS interface layer, a Java layer for
 The java layer is essentially build with the framework Spring and use the Java Persistence API (JPA) to organise relational data.
 
 ## Deployed Version (Work In Progress)
-A work in progress version (v:0.3) is deployed on the below AWS address, some functionalities may are not available according to the actual deployed version: http://ec2-16-170-141-83.eu-north-1.compute.amazonaws.com:8080/login "email": "test" "password": "pass"
+A work in progress version (v:0.3) is deployed on the below AWS address, some functionalities may are not available according to the actual deployed version: http://ec2-16-171-253-51.eu-north-1.compute.amazonaws.com:8080/login "email": "test" "password": "pass"
+
+## How the project is developed ?
+### Project management with SRUM method on Jira:
+https://riwald.atlassian.net/jira/software/projects/LGER/boards/4/backlog?atlOrigin=eyJpIjoiZGM1NTljZjgyNGU5NDg0Nzg3MmVlYWFjMjliMjA1YmQiLCJwIjoiaiJ9
+
+### Front end model with figma:
+https://www.figma.com/file/dwh8Ie4gIk0RLJh6CV08Yf/Figma-basics?type=design&node-id=1669%3A162202&mode=design&t=3xnStdUY5267NGxx-1
+
 
 ## Why?
 The purpose of this project is to share and understand deeper the original sense of the celtic words used today in the celtic languages. A lot 
+

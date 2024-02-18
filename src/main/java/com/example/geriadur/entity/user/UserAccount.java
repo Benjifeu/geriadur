@@ -1,14 +1,9 @@
 package com.example.geriadur.entity.user;
 
-import com.example.geriadur.entity.EtymonName;
-import com.example.geriadur.entity.consultation.Quote;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
-import java.util.HashSet;
-import java.util.Set;
 
 @Getter
 @Setter
