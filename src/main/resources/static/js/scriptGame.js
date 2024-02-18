@@ -165,6 +165,8 @@ function chooseWordTheme() {
     button5.onclick = setWordTheme;
     answerButtonElement.appendChild(button5);
 }
+
+/* The level option has been desactivated for the moment
 function chooseLevel() {
     const button1 = document.createElement("button");
     button1.textContent = "Entrainement";
@@ -177,13 +179,13 @@ function chooseLevel() {
     button1.classList.add("btn");
     button1.dataset.lvl = "2";
     button1.onclick = setLevel;
-    answerButtonElement.appendChild(button1);
-}
+    answerButtonElement.appendChild(button2);
+}*/
 
 function setWordTheme(wt) {
     wordTheme = wt.target.dataset.wt;
     resetState()
-    chooseLevel()
+    //chooseLevel()
 }
 function setLevel(lvl) {
     level = lvl.target.dataset.lvl;
