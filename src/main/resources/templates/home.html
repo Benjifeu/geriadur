@@ -1,29 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th=" http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Semantic Fields</title>
+    <title>Accueil Geriadur</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
 <header>
-    <h1 style="text-align: center">Bienvenue sur Gerdarzh !</h1>
+    <h2>Geriadur</h2>
+
+    <div class="summary">
+        <div class="language"></div>
+        <div class="summary-btn"><a href="/sessionGame">Jeu Gerdarzh</a></div>
+        <div class="summary-btn"><a href="/wordstems/list">Lexique</a></div>
+        <div class="summary-btn"><a href="/sources">Sources</a></div>
+        <div class="summary-btn"><a href="/userprofile">Mon profile</a></div>
+        <div class="summary-btn"><a href="/leaderboard">Classement</a></div>
+        <div class="summary-btn"><a href="/login?logout">
+            <button class="classic-btn">Account</button>
+        </a></div>
+    </div>
 </header>
-<div align="center" class="container my-2">
-    <hr>
-    <a href="/sessionGame">Démarrer une session Gerdarzh</a>
-    <hr>
-    <a href="/wordstems/list">Lexique étymologique de termes celtiques</a>
-    <hr>
-    <a style="color: #555555" href="/sources">See Sources</a>
-    <hr>
-    <a style="color: #555555" href="/search">"search by name (non implemented)"</a>
-    <hr>
-    <a href="/login?logout">"logout" </a>
+<section>
+    <h1>Bienvenue sur Geriadur</h1></section>
+<div class="home">
+    <section class="intro">
+        <p>Qu’est ce que le site Geriadur ? Geriadur est d’abord un lexique etymologique des langues celtiques. Le
+            principe est de répertorier et de mettre en évidences les éléments communs présents dans les termes d’origine
+            celtiques.<br>
+            Le léxique prend principalement en compte les langue suivantes: le breton, l’irlandais, le gallois, le
+            gaulois et le proto-celtique.<br> Sur la base de ce léxique, nous proposons un parcours ludique de ces termes via le
+            mini-jeu Gerdarzh. Celui-ci consiste en séries de 15 noms propres d’origine celtique dont vous devrez
+            trouver sa signification étymologique.<br>
+            Une description et une décomposition du nom vous seront proposés comme aide à trouver la réponse.</p>
+        <h2>Dernières fiches noms propres débloquées :</h2>
+        <div class="last-nouns"></div>
+    </section>
+    <section class="news">
+        Derniers ajouts : (date)
+    </section>
 </div>
 
-</div>
 </body>
 </html>

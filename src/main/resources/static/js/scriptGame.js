@@ -168,17 +168,22 @@ function chooseLevel() {
     button1.textContent = "Entrainement";
     button1.classList.add("btn");
     button1.dataset.lvl = "1";
-    button1.onclick = setLevel;
+    button1.onclick = lvl.target.dataset.lvl;
     answerButtonElement.appendChild(button1);
     const button2 = document.createElement("button");
     button1.textContent = "Checkpoint";
     button1.classList.add("btn");
     button1.dataset.lvl = "2";
+<<<<<<< HEAD
     button1.onclick = setLevel;
+=======
+    button1.onclick = lvl.target.dataset.lvl;
+>>>>>>> ba8e749f968303af629acb39360ed877162a7612
     answerButtonElement.appendChild(button2);
 }*/
 
 function setWordTheme(wt) {
+<<<<<<< HEAD
   wordTheme = wt.target.dataset.wt;
   resetState();
   //chooseLevel()
@@ -186,7 +191,14 @@ function setWordTheme(wt) {
 function setLevel(lvl) {
   level = lvl.target.dataset.lvl;
   startQuiz();
+=======
+    wordTheme = wt.target.dataset.wt;
+    resetState()
+    //chooseLevel()
+    startQuiz()
+>>>>>>> ba8e749f968303af629acb39360ed877162a7612
 }
+
 function startQuiz() {
   console.log(wordTheme);
   if (wordTheme > 0 && wordTheme < 6) {
