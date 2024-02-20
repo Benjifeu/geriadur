@@ -1,4 +1,4 @@
-package com.example.geriadur.controller;
+package com.example.geriadur.controller.html;
 
 import com.example.geriadur.dto.CreateUser;
 import com.example.geriadur.service.user.api.IUserService;

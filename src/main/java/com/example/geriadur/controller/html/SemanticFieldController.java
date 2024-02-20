@@ -1,4 +1,4 @@
-package com.example.geriadur.controller.consultation;
+package com.example.geriadur.controller.html;
 
 import com.example.geriadur.entity.SemanticField;
 import com.example.geriadur.service.consultation.api.ISemanticFieldService;

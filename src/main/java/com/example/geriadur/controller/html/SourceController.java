@@ -1,4 +1,4 @@
-package com.example.geriadur.controller.consultation;
+package com.example.geriadur.controller.html;
 
 import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;

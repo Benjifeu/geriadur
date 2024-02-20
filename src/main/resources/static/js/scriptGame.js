@@ -174,29 +174,15 @@ function chooseLevel() {
     button1.textContent = "Checkpoint";
     button1.classList.add("btn");
     button1.dataset.lvl = "2";
-<<<<<<< HEAD
-    button1.onclick = setLevel;
-=======
     button1.onclick = lvl.target.dataset.lvl;
->>>>>>> ba8e749f968303af629acb39360ed877162a7612
     answerButtonElement.appendChild(button2);
 }*/
 
 function setWordTheme(wt) {
-<<<<<<< HEAD
   wordTheme = wt.target.dataset.wt;
   resetState();
   //chooseLevel()
-}
-function setLevel(lvl) {
-  level = lvl.target.dataset.lvl;
   startQuiz();
-=======
-    wordTheme = wt.target.dataset.wt;
-    resetState()
-    //chooseLevel()
-    startQuiz()
->>>>>>> ba8e749f968303af629acb39360ed877162a7612
 }
 
 function startQuiz() {
