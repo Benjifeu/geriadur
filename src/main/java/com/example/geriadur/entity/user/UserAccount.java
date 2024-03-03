@@ -1,14 +1,11 @@
 package com.example.geriadur.entity.user;
 
-import com.example.geriadur.entity.EtymonName;
-import com.example.geriadur.entity.consultation.Quote;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -32,6 +29,8 @@ public class UserAccount {
     @Column(name = "password")
     private String password;
 
+    @Column(name = "registration_date", nullable = false)
+    private Date registrationDate;
 
     /**
      * language value: 1=french, 2=english, 3=breton
@@ -60,12 +59,13 @@ public class UserAccount {
      */
     private String role;
 
-    public UserAccount(String firstName, String lastName, String email, int language, String password, String role) {
+    public UserAccount(String firstName, String lastName, String email, int language, String password, String role, Date date) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.language = language;
         this.password = password;
         this.role = role;
+        this.registrationDate = date;
     }
 }

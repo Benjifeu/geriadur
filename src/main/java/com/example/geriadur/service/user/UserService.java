@@ -2,6 +2,7 @@ package com.example.geriadur.service.user;
 
 import com.example.geriadur.constants.UserRoleEnum;
 import com.example.geriadur.dto.CreateWordStem;
+import com.example.geriadur.dto.ShowUser;
 import com.example.geriadur.entity.consultation.Author;
 import com.example.geriadur.entity.user.UserAccount;
 import com.example.geriadur.dto.CreateUser;
@@ -20,6 +21,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -57,7 +60,8 @@ public class UserService implements IUserService {
                 registrationDto.getEmail(),
                 registrationDto.getLanguage(),
                 BCrypt.hashpw(registrationDto.getPassword(), BCrypt.gensalt()),
-                role
+                role,
+                new Date()
         );
         userRepository.save(userAccount);
     }
@@ -69,6 +73,16 @@ public class UserService implements IUserService {
             return authentication.getName();
         }
         return null;
+    }
+
+    @Override
+    public ShowUser getUserById(Long id) {
+       UserAccount userAccount= userRepository.findById(id).get();
+       ShowUser showUser = new ShowUser();
+       showUser.setUserName(userAccount.getFirstName());
+       showUser.setMonthAndYearJoined(userAccount.getRegistrationDate().toString());
+       showUser.setScoreByTheme(Arrays.asList(userAccount.getScorePlaces(),userAccount.getScoreHfigures(),userAccount.getScoreMfigures(),userAccount.getScorePlaces(),userAccount.getScoreObjects()));
+        return showUser;
     }
 
     public ResponseEntity<String> saveScore(int sessionScore, int sessionTheme) {

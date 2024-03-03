@@ -12,4 +12,5 @@ public class CreateUser {
     int language;
     String role;
     String password;
+    String registrationDate;
 }

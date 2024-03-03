@@ -8,8 +8,8 @@
 		"language": 1
 	},
 	{
-		"firstName": "user",
-		"lastName": "two",
+		"firstName": "test",
+		"lastName": "test",
 		"email": "test",
 		"password": "pass",
 		"role": "U",
