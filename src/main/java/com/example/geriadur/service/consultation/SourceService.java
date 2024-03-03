@@ -66,6 +66,21 @@ public class SourceService implements ISourceService {
     }
 
     public void addSource(CreateSource createSource) {
+        Source source = dtoSourceToEntitySource(createSource);
+        sourceRepository.save(source);
+        log.info("The source with the title name: \"" + source.getSourceNameInEnglish() + "\" has been saved.");
+    }
+
+    @Override
+    public void saveAll(List<CreateSource> sourcesInit) {
+        List<Source> sources = new ArrayList<>();
+        for (CreateSource createSource : sourcesInit) {
+            sources.add(dtoSourceToEntitySource(createSource));
+        }
+        sourceRepository.saveAll(sources);
+    }
+
+    public Source dtoSourceToEntitySource(CreateSource createSource) {
         Source source = new Source();
         source.setSourceNameInOriginalLanguage(createSource.getSourceNameInOriginalLanguage());
         source.setSourceNameInEnglish(createSource.getSourceNameInEnglish());
@@ -74,18 +89,21 @@ public class SourceService implements ISourceService {
         source.setAbbreviation(createSource.getAbbreviation());
         source.setDescription(createSource.getDescription());
         source.setDateOfPublication(createSource.getDateOfPublication());
-        System.out.println(createSource.getAuthors());
+        System.out.println("authors in sources :" + createSource.getAuthors());
         if (createSource.getAuthors() != null) {
             source.setAuthors(Stream.of(
                     authorRepository.findAuthorByAuthorName(createSource.getAuthors()).get()
             ).collect(Collectors.toSet()));
         }
-        sourceRepository.save(source);
-        log.info("The source with the title name: \"" +source.getSourceNameInEnglish() + "\" has been saved.");
+        return source;
     }
 
     @Override
     public void addAuthor(Author author) {
         authorRepository.save(author);
+    }
+
+    public void saveAllAuthors(List<Author> authorsInit) {
+        authorRepository.saveAll(authorsInit);
     }
 }

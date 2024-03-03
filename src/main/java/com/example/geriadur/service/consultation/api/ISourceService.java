@@ -22,4 +22,8 @@ public interface ISourceService {
     Source getSourceByID(Long id);
 
     void addAuthor(Author author);
+
+    void saveAll(List<CreateSource> sourcesInit);
+
+    void saveAllAuthors(List<Author> authorsInit);
 }

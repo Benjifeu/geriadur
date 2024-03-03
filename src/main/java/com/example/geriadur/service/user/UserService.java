@@ -1,14 +1,11 @@
 package com.example.geriadur.service.user;
 
 import com.example.geriadur.constants.UserRoleEnum;
-import com.example.geriadur.dto.CreateWordStem;
 import com.example.geriadur.dto.ShowUser;
-import com.example.geriadur.entity.consultation.Author;
 import com.example.geriadur.entity.user.UserAccount;
 import com.example.geriadur.dto.CreateUser;
 import com.example.geriadur.repositories.UserRepository;
 import com.example.geriadur.service.user.api.IUserService;
-import com.fasterxml.jackson.core.type.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
@@ -21,8 +18,6 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -35,14 +30,29 @@ public class UserService implements IUserService {
 
     @Autowired
     private UserRepository userRepository;
-/*
-    public UserService(UserRepository userRepository) {
-        super();
-        this.userRepository = userRepository;
-    }*/
+
+    /*
+        public UserService(UserRepository userRepository) {
+            super();
+            this.userRepository = userRepository;
+        }*/
+
+    public void saveAll(List<CreateUser> createUsers) {
+        List<UserAccount> userAccounts = new ArrayList<>();
+        for (CreateUser createUser : createUsers) {
+            userAccounts.add(dtoUserToEntityUser(createUser));
+        }
+        userRepository.saveAll(userAccounts);
+    }
 
     @Override
     public void save(CreateUser registrationDto) {
+
+        userRepository.save(dtoUserToEntityUser(registrationDto));
+    }
+
+    public UserAccount dtoUserToEntityUser(CreateUser registrationDto) {
+
         String role;
         switch (registrationDto.getRole()) {
             case ("U"):
@@ -63,7 +73,7 @@ public class UserService implements IUserService {
                 role,
                 new Date()
         );
-        userRepository.save(userAccount);
+        return userAccount;
     }
 
     public String getCurrentUserEmail() {
@@ -77,11 +87,11 @@ public class UserService implements IUserService {
 
     @Override
     public ShowUser getUserById(Long id) {
-       UserAccount userAccount= userRepository.findById(id).get();
-       ShowUser showUser = new ShowUser();
-       showUser.setUserName(userAccount.getFirstName());
-       showUser.setMonthAndYearJoined(userAccount.getRegistrationDate().toString());
-       showUser.setScoreByTheme(Arrays.asList(userAccount.getScorePlaces(),userAccount.getScoreHfigures(),userAccount.getScoreMfigures(),userAccount.getScorePlaces(),userAccount.getScoreObjects()));
+        UserAccount userAccount = userRepository.findById(id).get();
+        ShowUser showUser = new ShowUser();
+        showUser.setUserName(userAccount.getFirstName());
+        showUser.setMonthAndYearJoined(userAccount.getRegistrationDate().toString());
+        showUser.setScoreByTheme(Arrays.asList(userAccount.getScorePlaces(), userAccount.getScoreHfigures(), userAccount.getScoreMfigures(), userAccount.getScorePlaces(), userAccount.getScoreObjects()));
         return showUser;
     }
 

@@ -22,4 +22,10 @@ public interface IWordStemService {
     void addWordStem(WordStem wordStem);
     void addSemanticField(SemanticField semanticField);
     StatisticDTO getStatisticInfo();
+
+    void saveAllSemanticField(List<SemanticField> semanticFieldsInit);
+
+    void saveAllProperNouns(List<CreateEtymo> etymonNamesInit);
+
+    void saveAllWordStems(List<CreateWordStem> wordStemsInit);
 }
