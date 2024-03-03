@@ -1,6 +1,7 @@
 let currentQuestionIndex = 0;
 let score = 0;
 let apiGame = "/sessionGameData";
+let fullapi ="http://172.31.41.149:8080/sessionGameData?wordTheme=1"
 let totalQuestionNumber = 0;
 let wordTheme = 0;
 let level;
@@ -34,10 +35,10 @@ async function getData() {
 
     let obj = JSON.parse(localStorage.getItem("quizzData"));
     totalQuestionNumber = Object.keys(obj).length;
+    showQuestion();
   } catch (error) {
     console.error(console.log(error));
   }
-  showQuestion();
 }
 
 function showQuestion() {
