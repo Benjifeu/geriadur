@@ -10,7 +10,7 @@ public class WordStemController {
 
     @GetMapping("/wordstems/list")
     public String findPaginated() {
-        return "wordStems/wordstems-show";
+        return "wordstems-show";
     }
 
 

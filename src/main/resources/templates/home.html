@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <title>Accueil Geriadur</title>
 
-    <link rel="stylesheet" href="../css/main.css" />
-  </head>
-  <body>
-    <header>
-      <h2>Geriadur</h2>
+    <link rel="stylesheet" href="../css/main.css"/>
+</head>
+<body>
+<header>
+    <h2>Geriadur</h2>
 
-      <div class="summary">
+    <div class="summary">
         <div class="language"></div>
         <div class="summary-btn"><a href="/sessionGame">Jeu Gerdarzh</a></div>
         <div class="summary-btn"><a href="/wordstems/list">Lexique</a></div>
         <div class="summary-btn"><a href="/sources">Sources</a></div>
         <div class="summary-btn"><a href="/userprofile">Mon profile</a></div>
         <div class="summary-btn"><a href="/leaderboard">Classement</a></div>
-        <div class="summary-btn">
-          <a href="/login?logout">
-            <button class="classic-btn">Account</button>
-          </a>
-        </div>
-      </div>
-    </header>
-    <section>
-      <h1>Bienvenue sur Geriadur</h1>
-    </section>
-    <div class="home">
-      <section class="intro">
-        <p>
-          Qu’est ce que le site Geriadur ? Geriadur est d’abord un lexique
-          etymologique des langues celtiques. Le principe est de répertorier et
-          de mettre en évidences les éléments communs présents dans les termes
-          d’origine celtiques.<br />
-          Le léxique prend principalement en compte les langue suivantes: le
-          breton, l’irlandais, le gallois, le gaulois et le proto-celtique.<br />
-          Sur la base de ce léxique, nous proposons un parcours ludique de ces
-          termes via le mini-jeu Gerdarzh. Celui-ci consiste en séries de 15
-          noms propres d’origine celtique dont vous devrez trouver sa
-          signification étymologique.<br />
-          Une description et une décomposition du nom vous seront proposés comme
-          aide à trouver la réponse.
-        </p>
-        <h2>Dernières fiches noms propres débloquées :</h2>
-        <div class="last-nouns"></div>
-      </section>
-      <section class="news">Derniers ajouts : (date)</section>
+        <div class="summary-btn"><a href="/login?logout">Log Out</a></div>
+        <!--<div class="summary-btn">
+            <a href="/login?logout">
+                <button class="classic-btn">Log Out</button>
+            </a>
+        </div>-->
     </div>
-  </body>
+</header>
+<section>
+    <h1>Bienvenue sur Geriadur</h1>
+</section>
+<div class="home">
+    <section class="intro">
+        <h2>Qu’est ce que le site Geriadur ?</h2>
+        <h3>Un lexique étymologique</h3>
+        <p>
+            Geriadur est d’abord un lexique
+            etymologique des langues celtiques. Ici nous répéretorions et
+            de mettons en évidences les éléments linguistique récurrents présents dans les termes
+            d’origine celtiques afin d'aboutir à une meilleur compréhension du sens des mots de cette branche
+            linguistique appartenant à la grande famille des langues indo-européennes. <br/>
+            La compréhension des langues celtique ont un intérêt sur plusieurs aspects:<br/></p>
+        <ul>
+            <li> Son omniprésence dans la toponymie française, une grande part des villes et régions française, belges,
+                suisses et des îles brittaniques ont une origine et une signification celtique.
+            </li>
+            <li> Cerner quels sont les fondements de la culture celtique antique et médiévale au travers de son champs
+                lexical réccurrent.
+            </li>
+            <li> Retrouver le sens profond des mots présents dans les langues celtiques actuelles tel que le breton, le
+                gallois ou l'irlandais moderne.
+            </li>
+        </ul>
+        <h3>Le mini-jeu Gerdarzh</h3>
+        <p>Le lexique prend principalement en compte les langues suivantes: le
+        breton, l’irlandais, le gallois, le gaulois et le proto-celtique.<br/>
+        Sur la base de ce lexique, nous proposons un parcours ludique de ces
+        termes via le mini-jeu <a href="/sessionGame">Gerdarzh</a>. Le jeu consiste en séries de 15
+        noms propres d’origine celtique dont vous devrez trouver sa
+        signification étymologique.<br/>
+        En guise d'aide, une description ainsi qu'une décomposition étymologique vous aidera à trouver la traduction!
+        </p>
+        <h2>Dernières fiches de noms propres débloquées :</h2>
+        <div class="last-nouns"></div>
+    </section>
+    <section class="news">Derniers ajouts : (date)
+    <p>
+      - 28/02/03: Refonte de l'IHM, avec passage d'une architecture MVC vers une architecture 3 tiers IHM (html/css/javascript) / Métier (java spring) / BDD (mysql).
+    </p></section>
+</div>
+</body>
 </html>
