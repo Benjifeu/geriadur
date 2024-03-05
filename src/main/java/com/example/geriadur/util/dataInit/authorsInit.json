@@ -54,5 +54,11 @@
     "dateOfBirth": "1875-01-13",
     "dateOfDeath": "1960-01-30",
     "nationality": "FR"
-  }
+  },  {
+  "authorName": "Thomas F. O'Rahilly",
+  "biography": "Linguiste irlandais.",
+  "dateOfBirth": "1882-11-09",
+  "dateOfDeath": "1953-11-16",
+  "nationality": "FR"
+}
 ]

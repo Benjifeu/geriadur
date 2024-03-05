@@ -1,7 +1,7 @@
 package com.example.geriadur.service.user;
 
 import com.example.geriadur.constants.UserRoleEnum;
-import com.example.geriadur.domain.user.UserAccount;
+import com.example.geriadur.entity.user.UserAccount;
 import com.example.geriadur.dto.CreateUser;
 import com.example.geriadur.repositories.UserRepository;
 import com.example.geriadur.service.user.api.IUserService;

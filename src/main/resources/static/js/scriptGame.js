@@ -1,6 +1,6 @@
 let currentQuestionIndex = 0;
 let score = 0;
-let url = 'http://localhost:8080/sessionGame/get'
+let apiGame = '/sessionGameData'
 let totalQuestionNumber = 0;
 let wordTheme = 0;
 let level;
@@ -25,17 +25,22 @@ nextButtonElement.addEventListener("click", () => {
 chooseWordTheme()
 
 
-function getData() {
-    fetch(url + "?wordTheme=" + wordTheme)
-        .then(res => {
-            return res.json();
-        })
-        .then(data => {
-            localStorage.setItem('quizzData', JSON.stringify(data));
-            obj = JSON.parse(localStorage.getItem('quizzData'))
-            totalQuestionNumber = Object.keys(obj).length
-        })
-        .catch(error => console.log(error));
+async function getData() {
+    try {
+        const response = await fetch(host + apiGame+ "?wordTheme=" + wordTheme);
+
+        // Check if request successfull
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        const data = await response.json();
+        localStorage.setItem('quizzData', JSON.stringify(data));
+
+        let obj = JSON.parse(localStorage.getItem('quizzData'));
+        totalQuestionNumber = Object.keys(obj).length;  } catch (error) {
+        console.error(console.log(error));
+    }
+    showQuestion();
 }
 
 function showQuestion() {
@@ -190,7 +195,7 @@ function startQuiz() {
         currentQuestionIndex = 0;
         score = 0;
         getData();
-        showQuestion();
+
     }
 
 }

@@ -224,6 +224,12 @@ p {
     border-radius: 4px;
     cursor: pointer;
 }
+table{
+    border: 1px solid gray;
+    color: white;
+    padding: 8px;
+    row-gap: 10px;
+}
 body{
     background: #222222;
 }

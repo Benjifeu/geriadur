@@ -1,3 +1,8 @@
+let host = 'http://localhost:8080'
+const siteLanguage = 1
+const language = 1
+
+
 const bretonLanguage = ["breton", "breton", "brezhoneg"]
 const cornishLanguage = ["cornish", "cornique", "kerneveureg"]
 const englishLanguage = ["english", "anglais", "saozneg"]
@@ -47,9 +52,4 @@ const fGender = ["feminine", "féminin", "benel"]
 const nGender = ["neutral", "neutre", "neptu"]
 
 
-const siteLanguage = 1
 
-
-
-
-const language = 1

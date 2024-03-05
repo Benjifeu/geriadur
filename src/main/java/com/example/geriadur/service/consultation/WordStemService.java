@@ -1,13 +1,11 @@
 package com.example.geriadur.service.consultation;
 
-import com.example.geriadur.domain.EtymonName;
-import com.example.geriadur.domain.SemanticField;
-import com.example.geriadur.domain.consultation.Source;
-import com.example.geriadur.domain.consultation.WordStem;
-import com.example.geriadur.domain.consultation.Quote;
-import com.example.geriadur.dto.CreateEtymo;
-import com.example.geriadur.dto.CreateWordStem;
-import com.example.geriadur.dto.StatisticDTO;
+import com.example.geriadur.dto.*;
+import com.example.geriadur.entity.EtymonName;
+import com.example.geriadur.entity.SemanticField;
+import com.example.geriadur.entity.consultation.Source;
+import com.example.geriadur.entity.consultation.WordStem;
+import com.example.geriadur.entity.consultation.Quote;
 import com.example.geriadur.repositories.*;
 import com.example.geriadur.service.consultation.api.IWordStemService;
 
@@ -69,9 +67,10 @@ public class WordStemService implements IWordStemService {
         etymonNameRepository.save(etymonName);
     }
 
-    /** addAWordStem(...) save a new wordstem from the dto CreateWordStem
+    /**
+     * addAWordStem(...) save a new wordstem from the dto CreateWordStem
      * and setting the links with the quotes, sources and parents
-     * */
+     */
     public void addAWordStem(CreateWordStem createWordStem) {
         WordStem wordStem = new WordStem();
         wordStem.setWordStemName(createWordStem.getWordStemName());
@@ -83,20 +82,20 @@ public class WordStemService implements IWordStemService {
         wordStem.setReferenceWordsEng(createWordStem.getReferenceWordsEng());
         wordStem.setReferenceWordsFr(createWordStem.getReferenceWordsFr());
         wordStem.setPhonetic(createWordStem.getPhonetic());
-        if (createWordStem.getSemanticField() != null){
+        if (createWordStem.getSemanticField() != null) {
             wordStem.setSemanticField(semanticFieldRepository.findSemanticFieldBySemFieldNameEng(createWordStem.getSemanticField()).get());
         }
 
         if (createWordStem.getQuotes() != null) {
             Set<Quote> quotes = new HashSet<>();
-            for (int i=0; i < createWordStem.getQuotes().size(); i++) {
-                quotes.add(addQuote(createWordStem.getQuotes().get(i) , createWordStem.getSources().get(i)));
+            for (int i = 0; i < createWordStem.getQuotes().size(); i++) {
+                quotes.add(addQuote(createWordStem.getQuotes().get(i), createWordStem.getSources().get(i)));
             }
             wordStem.setQuotes(quotes);
         }
         if (createWordStem.getSources() != null) {
             Set<Source> sources = new HashSet<>();
-            for (int i=0; i < createWordStem.getSources().size(); i++) {
+            for (int i = 0; i < createWordStem.getSources().size(); i++) {
                 sources.add(sourceRepository.findSourceByAbbreviation(createWordStem.getSources().get(i)).get());
             }
             wordStem.setSources(sources);
@@ -111,23 +110,27 @@ public class WordStemService implements IWordStemService {
         log.info("The new word stem: \"" + wordStem.getWordStemName() + "\" has been added.");
     }
 
-    /** addQuote() save a new quote in DB and return it */
+    /**
+     * addQuote() save a new quote in DB and return it
+     */
     @Override
     public Quote addQuote(String quoteStr, String source) {
         Quote quote = new Quote();
         quote.setQuoteText(quoteStr);
-        Optional<Source> optSource =sourceRepository.findSourceByAbbreviation(source);
+        Optional<Source> optSource = sourceRepository.findSourceByAbbreviation(source);
         if (optSource.isPresent()) {
             quote.setSource(optSource.get());
             quoteRepository.save(quote);
-            log.info("A quote for the source: \"" +quote.getSource().getSourceNameInEnglish() + "\" has been added.");
+            log.info("A quote for the source: \"" + quote.getSource().getSourceNameInEnglish() + "\" has been added.");
             return quote;
         } else
-            throw new RuntimeException("The source " + source +" of the new quote: \"" + quoteStr+"\" doesn't exist." );
+            throw new RuntimeException("The source " + source + " of the new quote: \"" + quoteStr + "\" doesn't exist.");
 
     }
 
-    /** getWordStemByID() returns the specified wordStem according to his ID in DB */
+    /**
+     * getWordStemByID() returns the specified wordStem according to his ID in DB
+     */
     @Override
     public WordStem getWordStemByID(Long id) {
         Optional<WordStem> wordStem = wordStemRepository.findById(id);
@@ -137,7 +140,9 @@ public class WordStemService implements IWordStemService {
             throw new RuntimeException("Their is no wordStem with the id:" + id);
     }
 
-    /** deleteWordStem() delete a wordStem according to the his ID in DB */
+    /**
+     * deleteWordStem() delete a wordStem according to the his ID in DB
+     */
     @Override
     public void deleteWordStem(Long id) {
         Optional<WordStem> wordStem = wordStemRepository.findById(id);
@@ -148,14 +153,38 @@ public class WordStemService implements IWordStemService {
     }
 
     /**
-     ** findPaginated returns a list of wordStemsWord with te size define by the
+     * * findPaginated returns a list of wordStemsWord with te size define by the
      * pageSize argument. This data will be show for the client in a pageable table
      **/
     @Override
-    public Page<WordStem> findPaginated(int pageNum, int pageSize) {
+    public ShowWordstemPage findPaginated(int pageNum, int pageSize) {
+        List<ShowWordstem> wordStems = new ArrayList<>();
         Pageable pageable = PageRequest.of(pageNum - 1, pageSize);
-        return wordStemRepository.findAll(pageable);
+        Page page = wordStemRepository.findAll(pageable);
+        for (WordStem wordStem : (List<WordStem>) page.getContent()) {
+            String parent=null;
+            if(!wordStem.getParents().isEmpty()){
+                parent= wordStem.getParents().stream().findFirst().get().getWordStemName();
+            }
+            ShowWordstem showWordstem = new ShowWordstem(
+                    wordStem.getWordStemName(),
+                    wordStem.getWordStemLanguage().toString(),
+                    wordStem.getPhonetic(),
+                    wordStem.getGender().toString(),
+                    wordStem.getWordClass().toString(),
+                    wordStem.getReferenceWordsEng(),
+                    wordStem.getReferenceWordsFr(), wordStem.getSemanticField().getSemFieldNameFr(), parent);
+            wordStems.add(showWordstem);
+            log.info("The word stem "+wordStem.getWordStemName()+" has been retrieved to be displayed on the wordstem list page.");
+        }
+        ShowWordstemPage showWordstemPage = new ShowWordstemPage();
+        showWordstemPage.setPageWordstems(wordStems);
+        showWordstemPage.setWordstemsCount((int) page.getTotalElements());
+        showWordstemPage.setCurrentPage(pageNum);
+        showWordstemPage.setPageCount(page.getTotalPages());
+        return showWordstemPage;
     }
+
 
     public void addWordStem(WordStem wordStem) {
         wordStemRepository.save(wordStem);
@@ -166,7 +195,9 @@ public class WordStemService implements IWordStemService {
     }
 
 
-    /** getStatisticInfo() returns a simple count of each etymon (proper name) registered in DB and group by themes */
+    /**
+     * getStatisticInfo() returns a simple count of each etymon (proper name) registered in DB and group by themes
+     */
     public StatisticDTO getStatisticInfo() {
         StatisticDTO statisticDTO = new StatisticDTO();
         statisticDTO.setPlacesCount(etymonNameRepository.findAllEtymonNamesByWordTheme(1).size());
@@ -185,7 +216,9 @@ public class WordStemService implements IWordStemService {
         return statisticDTO;
     }
 
-    /** getAllWordStems() returns all the wordStems present in the database */
+    /**
+     * getAllWordStems() returns all the wordStems present in the database
+     */
     @Override
     public List<WordStem> getAllWordStems() {
         List<WordStem> wordStems = new ArrayList<>();

@@ -1,6 +1,6 @@
 package com.example.geriadur.dto;
 
-import com.example.geriadur.domain.LiteralTranslation;
+import com.example.geriadur.entity.LiteralTranslation;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

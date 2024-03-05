@@ -1,4 +1,4 @@
-package com.example.geriadur.domain.consultation;
+package com.example.geriadur.entity.consultation;
 
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.TypeOfSourceEnum;

@@ -1,111 +1,39 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th=" http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+
 <head>
     <meta charset="UTF-8">
-    <title>Semantic Fields</title>
+    <title>Lexique celtique</title>
+    <link rel="stylesheet" href="/css/main.css">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/main.css">
+    <script type="text/javascript" src="/js/configData.js" ></script>
+    <script type="text/javascript" src="/js/scriptLanguage.js"></script>
+    <script type="text/javascript" src="/js/consultWordstem.js" defer></script>
 
-    <script type="text/javascript" th:src="@{/js/scriptGame.js}" defer></script>
 </head>
+
 <body>
 
 <div align="center" class="container my-2">
 
-    <h1> List of WordStems</h1>
-    <a th:href="@{/wordStems/add}" class="btn btn-primary btn-sm-mb-3">Add an WordStem</a>
-    <table border="1" class="table table-striped table-responsive-md">
+    <h1> List of Word Stems</h1>
+    <h3 id="words-count"></h3>
+    <a href="/wordStems/add" class="btn btn-primary btn-sm-mb-3">Add a word stem</a>
+    <table border="1"  class="table-striped table-responsive-md">
         <thead>
         <tr>
-            <th> WordStem</th>
-            <th> Traduction</th>
-            <th> Ascendant</th>
-            <th> Descendant</th>
-            <th> Gender</th>
+            <th> Mot</th>
+            <th> Genre</th>
             <th> Wordclass</th>
-            <th> Delete</th>
+            <th> Traduction</th>
+            <th> Parent</th>
             <th></th>
         </tr>
         </thead>
-        <tbody>
-        <tr th:each="wordStem : ${wordStems}">
-            <td><span
-                    class="langWordStem"
-                    th:text="${wordStem.wordStemLanguage}"
-                    th:title="${wordStem.wordStemLanguage}"
-            >
-            </span>:
-                <a th:href="@{/wordStems/{id}(id=${wordStem.wordStemId})}" th:text="${wordStem.wordStemName}">
-                </a> [<span th:text="${wordStem.phonetic}"></span>]
-                </span>
-            </td>
-            <td><p> Eng.: <span th:text="${wordStem.referenceWordsEng}"></span></p>
-                <p>Fr.: <span th:text="${wordStem.referenceWordsFr}"></span></p></td>
-            <td><p th:each="parent : ${wordStem.parents}">
-                <span
-                        class="langWordStem"
-                        th:text="${parent.wordStemLanguage}"
-                        th:title="${parent.wordStemLanguage}"
-                ></span>
-                : <a th:href="@{/wordStems/{id}(id=${parent.wordStemId})}" th:text="${parent.wordStemName}"></a></p></td>
-            <td><p th:each="child : ${wordStem.children}">
-                <span
-                        class="langWordStem"
-                        th:text="${child.wordStemLanguage}"
-                        th:title="${child.wordStemLanguage}"
-                ></span>
-                : <a th:href="@{/wordStems/{id}(id=${child.wordStemId})}" th:text="${child.wordStemName}"></a></p></td>
-            <td>
-                <span
-                        class="langWordStem"
-                        th:text="${wordStem.gender}"
-                        th:title="${wordStem.gender}"
-                ></span>
-            </td>
-            <td><span
-                    class="langWordStem"
-                    th:text="${wordStem.wordClass}"
-                    th:title="${wordStem.wordClass}"
-            ></span>
-            </td>
-            <!-- <td><span th:each="refs : ${wordStem.semanticFields}"><a th:href="@{/wordStems/{id}(id=${refs})}"
-                                                                   th:text="${semanticFields.semanticFieldName}"></a>, </span> -->
-            </td>
-            <td><a th:href="@{/wordStems/delete/{id}(id=${wordStem.wordStemId})}">
-                <button class="btn"><i class="fa fa-trash"></i></button>
-            </a></td>
-        </tr>
-        </tbody>
-    </table>
-    <div th:if="${totalPages > 1}">
-        <div class="row col-sm-10">
-            <div class="col-sm-2">
-                Total WordStems: [[${totalItems}]]
-            </div>
-            <div class="col-sm-1">
-                <span th:each="i:${#numbers.sequence(1, totalPages)}">
-                    <a th:if="${currentPage != i}" th:href="@{'/wordStems/page/' + ${i}}">[[${i}]]</a>
-                    <span th:unless="${currentPage != i}"> [[${i}]]</span> &nbsp;&nbsp;
-                </span>
-            </div>
-            <div class="col-sm-1">
-                <a th:if="${currentPage > 1}" th:href="@{'/wordStems/page/'+${currentPage-1}}">Previous</a>
-                <span th:unless="${currentPage > 1}">Previous</span>
-            </div>
-            <div class="col-sm-1">
-                <a th:if="${currentPage < totalPages}" th:href="@{'/wordStems/page/'+${currentPage+1}}">Next</a>
-                <span th:unless="${currentPage < totalPages}">Next</span>
-            </div>
-            <div class="col-sm-1">
-                <a th:if="${currentPage < totalPages}" th:href="@{'/wordStems/page/'+${totalPages}}">Last</a>
-                <span th:unless="${currentPage < totalPages}">Last</span>
-            </div>
-        </div>
-    </div>
-</div>
+        <tbody id="wordstemtable"></tbody>
 
+    </table>
+    <div id="pagesbutton">
+    </div>
 </div>
 </body>
 </html>

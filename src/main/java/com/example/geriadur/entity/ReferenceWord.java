@@ -1,14 +1,4 @@
-package com.example.geriadur.domain;
-
-import com.example.geriadur.constants.LanguageEnum;
-import com.example.geriadur.domain.consultation.WordStem;
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-import java.util.HashSet;
-import java.util.Set;
+package com.example.geriadur.entity;
 
 /**
  * The referenceWord Entity registered french or english word

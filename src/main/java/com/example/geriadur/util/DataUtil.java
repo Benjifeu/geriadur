@@ -1,7 +1,7 @@
 package com.example.geriadur.util;
 
-import com.example.geriadur.domain.SemanticField;
-import com.example.geriadur.domain.consultation.Author;
+import com.example.geriadur.entity.SemanticField;
+import com.example.geriadur.entity.consultation.Author;
 import com.example.geriadur.dto.*;
 import com.example.geriadur.service.consultation.api.ISourceService;
 import com.example.geriadur.service.consultation.api.IWordStemService;
@@ -9,7 +9,6 @@ import com.example.geriadur.service.user.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.*;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +19,8 @@ import java.util.*;
 
 
 /**
+ * IMPORTANT: this class is unused in a deployed context (the data is fetched from a remote database)
+ *
  * the DataUtil class is responsible to retrieve the data from the JSON files
  * present at the root of the project
  * * (wordStemsInit, , etymonsInit, semanticFieldinit, sourcesInit)

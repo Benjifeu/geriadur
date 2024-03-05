@@ -4,7 +4,7 @@ import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
 import com.example.geriadur.constants.TypeOfSourceEnum;
 import com.example.geriadur.constants.WordClassEnum;
-import com.example.geriadur.domain.consultation.Source;
+import com.example.geriadur.entity.consultation.Source;
 import com.example.geriadur.dto.CreateSource;
 import com.example.geriadur.service.consultation.api.ISourceService;
 

@@ -1,4 +1,4 @@
-package com.example.geriadur.domain.consultation;
+package com.example.geriadur.entity.consultation;
 
 import jakarta.persistence.*;
 import lombok.Getter;

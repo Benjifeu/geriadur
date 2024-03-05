@@ -1,6 +1,6 @@
 package com.example.geriadur.controller.consultation;
 
-import com.example.geriadur.domain.SemanticField;
+import com.example.geriadur.entity.SemanticField;
 import com.example.geriadur.service.consultation.api.ISemanticFieldService;
 
 import org.springframework.beans.factory.annotation.Autowired;

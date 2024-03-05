@@ -63,5 +63,17 @@
   {
     "semFieldNameFr": "nombre",
     "semFieldNameEng": "number"
+  },
+  {
+    "semFieldNameFr": "communication",
+    "semFieldNameEng": "communication"
+  },
+  {
+    "semFieldNameFr": "nature",
+    "semFieldNameEng": "nature"
+  },
+  {
+    "semFieldNameFr": "action",
+    "semFieldNameEng": "action"
   }
 ]
