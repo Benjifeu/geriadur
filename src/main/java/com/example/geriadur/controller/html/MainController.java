@@ -1,4 +1,4 @@
-package com.example.geriadur.controller;
+package com.example.geriadur.controller.html;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

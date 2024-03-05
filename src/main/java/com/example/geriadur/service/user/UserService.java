@@ -1,6 +1,7 @@
 package com.example.geriadur.service.user;
 
 import com.example.geriadur.constants.UserRoleEnum;
+import com.example.geriadur.dto.ShowUser;
 import com.example.geriadur.entity.user.UserAccount;
 import com.example.geriadur.dto.CreateUser;
 import com.example.geriadur.repositories.UserRepository;
@@ -21,20 +22,37 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-/** The UserService, . */
+/**
+ * The UserService, .
+ */
 @Service
 public class UserService implements IUserService {
 
     @Autowired
     private UserRepository userRepository;
-/*
-    public UserService(UserRepository userRepository) {
-        super();
-        this.userRepository = userRepository;
-    }*/
+
+    /*
+        public UserService(UserRepository userRepository) {
+            super();
+            this.userRepository = userRepository;
+        }*/
+
+    public void saveAll(List<CreateUser> createUsers) {
+        List<UserAccount> userAccounts = new ArrayList<>();
+        for (CreateUser createUser : createUsers) {
+            userAccounts.add(dtoUserToEntityUser(createUser));
+        }
+        userRepository.saveAll(userAccounts);
+    }
 
     @Override
     public void save(CreateUser registrationDto) {
+
+        userRepository.save(dtoUserToEntityUser(registrationDto));
+    }
+
+    public UserAccount dtoUserToEntityUser(CreateUser registrationDto) {
+
         String role;
         switch (registrationDto.getRole()) {
             case ("U"):
@@ -52,12 +70,13 @@ public class UserService implements IUserService {
                 registrationDto.getEmail(),
                 registrationDto.getLanguage(),
                 BCrypt.hashpw(registrationDto.getPassword(), BCrypt.gensalt()),
-                role
+                role,
+                new Date()
         );
-        userRepository.save(userAccount);
+        return userAccount;
     }
 
-    public static String getCurrentUserEmail() {
+    public String getCurrentUserEmail() {
         SecurityContext securityContext = SecurityContextHolder.getContext();
         Authentication authentication = securityContext.getAuthentication();
         if (authentication != null) {
@@ -66,13 +85,44 @@ public class UserService implements IUserService {
         return null;
     }
 
-    public ResponseEntity<String> saveScore(int sessionScore) {
+    @Override
+    public ShowUser getUserById(Long id) {
+        UserAccount userAccount = userRepository.findById(id).get();
+        ShowUser showUser = new ShowUser();
+        showUser.setUserName(userAccount.getFirstName());
+        showUser.setMonthAndYearJoined(userAccount.getRegistrationDate().toString());
+        showUser.setScoreByTheme(Arrays.asList(userAccount.getScorePlaces(), userAccount.getScoreHfigures(), userAccount.getScoreMfigures(), userAccount.getScorePlaces(), userAccount.getScoreObjects()));
+        return showUser;
+    }
+
+    public ResponseEntity<String> saveScore(int sessionScore, int sessionTheme) {
         UserAccount userAccount =
                 userRepository.findByEmail(getCurrentUserEmail()).get();
-        int finalScore = userAccount.getScore() + sessionScore;
-        userAccount.setScore(finalScore);
+        int finalScore;
+        switch (sessionTheme) {
+            case 1:
+                finalScore = userAccount.getScorePlaces() + sessionScore;
+                userAccount.setScorePlaces(finalScore);
+                break;
+            case 2:
+                finalScore = userAccount.getScoreHfigures() + sessionScore;
+                userAccount.setScoreHfigures(finalScore);
+                break;
+            case 3:
+                finalScore = userAccount.getScoreMfigures() + sessionScore;
+                userAccount.setScoreMfigures(finalScore);
+                break;
+            case 4:
+                finalScore = userAccount.getScoreTribes() + sessionScore;
+                userAccount.setScoreTribes(finalScore);
+                break;
+            case 5:
+                finalScore = userAccount.getScoreObjects() + sessionScore;
+                userAccount.setScoreObjects(finalScore);
+                break;
+        }
         userRepository.save(userAccount);
-        return ResponseEntity.ok().body("Score of the user "+userAccount.getFirstName()+" has been updated");
+        return ResponseEntity.ok().body("Score of the user " + userAccount.getFirstName() + " has been updated");
     }
 
     public UserAccount getAccountInfo() {

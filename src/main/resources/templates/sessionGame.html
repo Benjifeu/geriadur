@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th=" http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Jeu Gerdarzh</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/main.css">
 
+    <script type="text/javascript" src="/js/configData.js"></script>
+    <script type="text/javascript" src="/js/scriptLanguage.js"></script>
     <script type="text/javascript" src="/js/scriptGame.js" defer></script>
 
 </head>
@@ -15,10 +14,11 @@
 <header>
     <h1>Gerdarzh</h1>
 </header>
+
 <section class="quiz">
     <h2 id="currentName"></h2>
     <div class="description" id="etymoDescription"></div>
-    <div class="etymoForm">
+    <div class="etymoForm" id ="etymoForm">
         Radicaux:
         <span class="etymoBtn" id="etymoName"></span>
     </div>

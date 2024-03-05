@@ -1,4 +1,4 @@
-package com.example.geriadur.controller.consultation;
+package com.example.geriadur.controller.html;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +10,7 @@ public class WordStemController {
 
     @GetMapping("/wordstems/list")
     public String findPaginated() {
-        return "wordStems/wordstems-show";
+        return "wordstems-show";
     }
 
 

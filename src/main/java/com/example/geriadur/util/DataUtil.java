@@ -6,6 +6,7 @@ import com.example.geriadur.dto.*;
 import com.example.geriadur.service.consultation.api.ISourceService;
 import com.example.geriadur.service.consultation.api.IWordStemService;
 import com.example.geriadur.service.user.UserService;
+import com.example.geriadur.service.user.api.IUserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,7 +21,7 @@ import java.util.*;
 
 /**
  * IMPORTANT: this class is unused in a deployed context (the data is fetched from a remote database)
- *
+ * <p>
  * the DataUtil class is responsible to retrieve the data from the JSON files
  * present at the root of the project
  * * (wordStemsInit, , etymonsInit, semanticFieldinit, sourcesInit)
@@ -30,7 +31,7 @@ import java.util.*;
 public class DataUtil {
 
     @Autowired
-    private UserService userService;
+    private IUserService userService;
     @Autowired
     private IWordStemService wordStemService;
     @Autowired
@@ -66,33 +67,22 @@ public class DataUtil {
         readJsonData(jsonUser);
 
         // save all the semanticField
-        for (SemanticField semanticField : semanticFieldsInit) {
-            wordStemService.addSemanticField(semanticField);
-        }
-        // save all the sources
-        for (Author author : authorsInit) {
-            sourceService.addAuthor(author);
-        }
+       sourceService.saveAllAuthors(authorsInit);
+
+        // save all the semanticField
+        wordStemService.saveAllSemanticField(semanticFieldsInit);
 
         // save all the sources
-        for (CreateSource source : sourcesInit) {
-            sourceService.addSource(source);
-        }
+        sourceService.saveAll(sourcesInit);
 
         // save all the etymons
-        for (CreateEtymo createEtymo : etymonNamesInit) {
-            wordStemService.addProperNoun(createEtymo);
-        }
+        wordStemService.saveAllProperNouns(etymonNamesInit);
 
         // save all the wordStems
-        for (CreateWordStem createWordStem : wordStemsInit) {
-            wordStemService.addAWordStem(createWordStem);
-        }
+        wordStemService.saveAllWordStems(wordStemsInit);
 
         // save all default users
-        for (CreateUser createUser : usersInit) {
-            userService.save(createUser);
-        }
+        userService.saveAll(usersInit);
 
         // config the wordStems of each etymons
         for (CreateEtymo etymonName : etymonNamesInit) {
