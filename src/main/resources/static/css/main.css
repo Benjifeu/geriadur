@@ -93,12 +93,13 @@ p {
     opacity: 1;
 }
 .description {
-    max-width: 500px;
-    font-style: italic;
-    margin: auto;
-    font-size: large;
-    font-weight: normal;
-    black: ghostwhite;
+  max-width: 500px;
+  font-style: italic;
+  margin: auto;
+  font-size: large;
+  font-weight: normal;
+  color: black;
+
 }
 
 .summary {
@@ -123,13 +124,14 @@ p {
 .donate-btn {
 }
 .etymoForm {
-    text-align: left;
-    min-width: 600px;
-    black: ghostwhite;
-    font-size: large;
-    font-weight: 800;
-    padding: 30px 20px 20px 20px;
-    border: none;
+
+  text-align: left;
+  min-width: 600px;
+  color: black;
+  font-size: large;
+  font-weight: 800;
+  padding: 30px 20px 20px 20px;
+  border: none;
 }
 
 .answersForm {
@@ -272,19 +274,19 @@ p {
     text-align: center;
 }
 table {
-    font-family: Verdana;
-    border-spacing: 7px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    margin-top: 30px;
-    border: 1px solid grey;
-    color: white;
-    padding: 8px;
-    row-gap: 10px;
+  font-family: Verdana;
+  border-spacing: 7px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  margin-top: 30px;
+  border: 1px solid grey;
+  color: #000000;
+  padding: 8px;
+  row-gap: 10px;
 }
 body {
-    background: #ebe5e0;
+  background: #f6f0ec;
 }
 header {
     display: flex;

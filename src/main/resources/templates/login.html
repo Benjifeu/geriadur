@@ -23,14 +23,20 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" th:href="@{/}">Registration and Login Module</a>
+            <a class="navbar-brand" href="#" th:href="@{/}"></a>
         </div>
     </div>
 </nav>
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-md-offset-3">
-            <h1>User Login Page</h1>
+            <br>
+            <br>
+            <br>
+            <h1>Celtiadur, lexique étymologique des termes celtiques</h1>
+            <br>
+            <p>Bienvenue sur Celtiadur, un lexique des langues celtiques pour découvrir les liens étymologiques entre le breton, le gallois, l'irlandais et le gaulois, ainsi que leurs traces dans la toponymie et les noms propres d'aujourd'hui.</p>
+            <br>
             <form th:action="@{/login}" method="post">
 
                 <!-- error message -->
@@ -46,29 +52,28 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="username"> Username </label> :
+                    <label for="username"> Entrez votre Email: </label> :
                     <input type="text" class="form-control" id="username" name="email"
-                           placeholder="DefaultUsername: <q>test</q>" autofocus="autofocus">
+                           placeholder="Email: test" autofocus="autofocus">
                 </div>
 
                 <div class="form-group">
-                    <label for="password">Password</label>:
+                    <label for="password">Et votre mot de passe: </label>:
                     <input type="password" id="password" name="password" class="form-control"
-                          placeholder="DefaultPassword: <q>pass</q>"/>
+                          placeholder="Mot de passe: pass"/>
                 </div>
 
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3">
                             <input type="submit" name="login-submit" id="login-submit"
-                                   class="form-control btn btn-primary" value="Log In"/>
+                                   class="form-control btn btn-primary" value="Se connecter"/>
                         </div>
                     </div>
                 </div>
             </form>
             <div class="form-group">
-						<span>New userAccount? <a href="/" th:href="@{/registration}">Register
-								here</a></span>
+						<span>Vous êtes nouveau ? <a href="/" th:href="@{/registration}">Inscrivez vous ici</a></span>
             </div>
         </div>
     </div>
