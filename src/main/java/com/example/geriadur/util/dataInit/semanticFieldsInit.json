@@ -18,8 +18,7 @@
   {
     "semFieldNameFr": "couleur",
     "semFieldNameEng": "color"
-  }
-,
+  },
   {
     "semFieldNameFr": "émotions",
     "semFieldNameEng": "feelings"
@@ -35,6 +34,14 @@
   {
     "semFieldNameFr": "outil",
     "semFieldNameEng": "tool"
+  },
+  {
+    "semFieldNameFr": "esprit",
+    "semFieldNameEng": "mind"
+  },
+  {
+    "semFieldNameFr": "mathématique",
+    "semFieldNameEng": "mathematics"
   },
   {
     "semFieldNameFr": "mineral",
@@ -75,5 +82,13 @@
   {
     "semFieldNameFr": "action",
     "semFieldNameEng": "action"
+  },
+  {
+    "semFieldNameFr": "adjectif",
+    "semFieldNameEng": "adjective"
+  },
+  {
+    "semFieldNameFr": "géometrie",
+    "semFieldNameEng": "geometry"
   }
 ]
