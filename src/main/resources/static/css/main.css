@@ -1,3 +1,4 @@
+
 a {
     color: inherit;
     text-decoration: inherit;
@@ -6,7 +7,7 @@ h1 {
     font-family: "Trajan", serif;
     font-size: 230%;
     padding: 5px;
-    color: rgb(40, 20, 10);
+    color:ghostwhite;
     text-align: center;
 }
 
@@ -31,12 +32,21 @@ p {
     min-width: 250px;
     margin: 20px;
     padding: 10px;
+    
 }
 .home {
     display: flex;
     padding: 20px;
     max-width: 1400px;
     margin: auto;
+}
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/ogham.jpg");
+height: 200px;
+background-size: cover;
 }
 
 .classic-btn {
@@ -299,6 +309,8 @@ table {
 }
 body {
   background: #f6f0ec;
+  margin: 0;
+  padding: 0;
 }
 header {
     display: flex;
