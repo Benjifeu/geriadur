@@ -50,8 +50,9 @@ public class SecurityConfiguration {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(authorize -> {
                     authorize.requestMatchers("/admin").hasRole("ADMIN");
-                    authorize.requestMatchers("/**").hasRole("USER");
-                    authorize.anyRequest().authenticated();
+                    //authorize.requestMatchers("/sessionGame").hasRole("USER");
+                    //authorize.requestMatchers("/userprofile").hasRole("USER");
+                    authorize.anyRequest().permitAll();
                 })
                 .formLogin(login -> login.loginPage("/login")
                         .usernameParameter("email")
