@@ -39,6 +39,18 @@ public class WordStemService implements IWordStemService {
     @Autowired
     private SourceRepository sourceRepository;
 
+    public List<ProperNounsDTO> getProperNouns() {
+        List<EtymonName> etymonNames = etymonNameRepository.findAll();
+        List<ProperNounsDTO> createEtymos = new ArrayList<>();
+
+        for (int i = 0; i < etymonNames.size(); ++i) {
+            ProperNounsDTO createEtymo = new ProperNounsDTO();
+            createEtymo.setCurrentNoun(etymonNames.get(i).getCurrentName());
+            createEtymos.add(createEtymo);
+        }
+
+        return createEtymos;
+    }
 
     public void addProperNoun(CreateEtymo createEtymo) {
         EtymonName etymonName = dtoEtymonToEntityEtymon(createEtymo);
@@ -75,7 +87,8 @@ public class WordStemService implements IWordStemService {
             if (wordStem.isPresent()) {
                 wordStems.put(i, wordStem.get());
             } else
-                throw new IllegalArgumentException("the wordStem: \"" + wordStemsString.get(i) + "\" doesn't exist in DB.");
+                throw new IllegalArgumentException(
+                        "the wordStem: \"" + wordStemsString.get(i) + "\" doesn't exist in DB.");
         }
         log.info("Word Stems has been linked to the proper noun: \"" + etymonName.getCurrentName());
         etymonName.setWordStemPc(wordStems);
@@ -91,7 +104,6 @@ public class WordStemService implements IWordStemService {
         wordStemRepository.save(wordStem);
         log.info("The new word stem: \"" + wordStem.getWordStemName() + "\" has been added.");
     }
-
 
     /**
      * saveAllWordStems(...) save a list of wordstem in one DB request,
@@ -118,7 +130,8 @@ public class WordStemService implements IWordStemService {
         wordStem.setReferenceWordsFr(createWordStem.getReferenceWordsFr());
         wordStem.setPhonetic(createWordStem.getPhonetic());
         if (createWordStem.getSemanticField() != null) {
-            wordStem.setSemanticField(semanticFieldRepository.findSemanticFieldBySemFieldNameEng(createWordStem.getSemanticField()).get());
+            wordStem.setSemanticField(semanticFieldRepository
+                    .findSemanticFieldBySemFieldNameEng(createWordStem.getSemanticField()).get());
         }
 
         if (createWordStem.getQuotes() != null) {
@@ -136,15 +149,17 @@ public class WordStemService implements IWordStemService {
             wordStem.setSources(sources);
 
         }
-        /*if (createWordStem.getParentsWordStemStr() != null) {
-            for (String parentStr : createWordStem.getParentsWordStemStr()) {
-                wordStem.getParents().add(wordStemRepository.findByWordStemName(parentStr).get());
-            }
-        }*/
+        /*
+         * if (createWordStem.getParentsWordStemStr() != null) {
+         * for (String parentStr : createWordStem.getParentsWordStemStr()) {
+         * wordStem.getParents().add(wordStemRepository.findByWordStemName(parentStr).
+         * get());
+         * }
+         * }
+         */
 
         return wordStem;
     }
-
 
     /**
      * addQuote() save a new quote in DB and return it
@@ -160,7 +175,8 @@ public class WordStemService implements IWordStemService {
             log.info("A quote for the source: \"" + quote.getSource().getSourceNameInEnglish() + "\" has been added.");
             return quote;
         } else
-            throw new RuntimeException("The source " + source + " of the new quote: \"" + quoteStr + "\" doesn't exist.");
+            throw new RuntimeException(
+                    "The source " + source + " of the new quote: \"" + quoteStr + "\" doesn't exist.");
     }
 
     /**
@@ -212,7 +228,8 @@ public class WordStemService implements IWordStemService {
                     wordStem.getSemanticField().getSemFieldNameFr(),
                     parent);
             wordStems.add(showWordstem);
-            log.info("The word stem " + wordStem.getWordStemName() + " has been retrieved to be displayed on the wordstem list page.");
+            log.info("The word stem " + wordStem.getWordStemName()
+                    + " has been retrieved to be displayed on the wordstem list page.");
         }
         ShowWordstemPage showWordstemPage = new ShowWordstemPage();
         showWordstemPage.setPageWordstems(wordStems);
@@ -221,7 +238,6 @@ public class WordStemService implements IWordStemService {
         showWordstemPage.setPageCount(page.getTotalPages());
         return showWordstemPage;
     }
-
 
     public void addWordStem(WordStem wordStem) {
         wordStemRepository.save(wordStem);
@@ -236,7 +252,8 @@ public class WordStemService implements IWordStemService {
     }
 
     /**
-     * getStatisticInfo() returns a simple count of each etymon (proper name) registered in DB and group by themes
+     * getStatisticInfo() returns a simple count of each etymon (proper name)
+     * registered in DB and group by themes
      */
     public StatisticDTO getStatisticInfo() {
         StatisticDTO statisticDTO = new StatisticDTO();

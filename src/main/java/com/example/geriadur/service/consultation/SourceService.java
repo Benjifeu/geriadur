@@ -2,7 +2,11 @@ package com.example.geriadur.service.consultation;
 
 import com.example.geriadur.entity.consultation.Author;
 import com.example.geriadur.entity.consultation.Source;
+import com.example.geriadur.entity.consultation.WordStem;
 import com.example.geriadur.dto.CreateSource;
+import com.example.geriadur.dto.ShowSourcesPage;
+import com.example.geriadur.dto.ShowWordstem;
+import com.example.geriadur.dto.ShowWordstemPage;
 import com.example.geriadur.repositories.AuthorRepository;
 import com.example.geriadur.repositories.QuoteRepository;
 import com.example.geriadur.repositories.SourceRepository;
@@ -58,11 +62,18 @@ public class SourceService implements ISourceService {
         } else
             throw new RuntimeException("Their is no Source with the id: " + id + " to delete");
     }
-
     @Override
-    public Page<Source> findPaginated(int pageNum, int pageSize) {
+    public ShowSourcesPage findPaginated(int pageNum, int pageSize) {
+
         Pageable pageable = PageRequest.of(pageNum - 1, pageSize);
-        return sourceRepository.findAll(pageable);
+        Page page = sourceRepository.findAll(pageable);
+        
+        ShowSourcesPage showWordstemPage = new ShowSourcesPage();
+        showWordstemPage.setPageSources(page.getContent());
+        showWordstemPage.setWordstemsCount((int) page.getTotalElements());
+        showWordstemPage.setCurrentPage(pageNum);
+        showWordstemPage.setPageCount(page.getTotalPages());
+        return showWordstemPage;
     }
 
     public void addSource(CreateSource createSource) {
