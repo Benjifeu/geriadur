@@ -1,21 +1,74 @@
+/*Functional Styling for tooltip on mobile device*/
+@media (pointer: coarse), (hover: none) {
+    [title] {
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
 
+    [title]:focus::after {
+        content: attr(title);
+        position: absolute;
+        top: 90%;
+        color: #000;
+        background-color: #fff;
+        border: 1px solid;
+        width: fit-content;
+        padding: 3px;
+    }
+}
+
+@font-face {
+font-family: 'Trajan';
+src: url('../font/TrajanPro-Regular.woff') format('woff');
+}
+    
 a {
     color: inherit;
     text-decoration: inherit;
 }
+
 h1 {
-    font-family: "Trajan", serif;
-    font-size: 230%;
+    font-family: 'Trajan';
+    font-size: 330%;
     padding: 5px;
-    color:ghostwhite;
+    color:rgb(233, 233, 233);
     text-align: center;
 }
 
 h2 {
-    font-family: "Trajan", serif;
+    font-family: 'Trajan';
     font-size: 140%;
     padding: 5px;
-    color: rgb(50, 140, 40);
+    color: rgb(67, 133, 61);
+}
+
+p {
+    font-family: sans-serif;
+}
+
+body {
+    background: #e9e5e1;
+    margin: 0;
+    padding: 0;
+  }
+header {
+      display: flex;
+      width: 100%;
+      background: ghostwhite;
+      position: relative;
+      top: 0;
+      padding: 20px;
+      height: 100px;
+  }
+  
+footer {
+      background: #555555;
+      position: relative;
+      bottom: 0;
+      padding: 20px;
+      width: 100%;
+      height: 150px;
 }
 
 strong {
@@ -111,7 +164,11 @@ background-size: cover;
   color: black;
 
 }
-
+#CreativeC{
+    justify-content: center;
+    display: flex;
+    align-content: center;
+}
 .summary {
     font-family: "Arial Black", serif;
     color: black;
@@ -136,10 +193,11 @@ background-size: cover;
     display: flex;
     min-height: 140px;
     border-radius: 10px;
-    background-color: rgb(228, 180, 157);
+    background-color: rgb(227, 234, 236);
     border: none;
     font-size: 14px;
     margin: 15px;
+    box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);
 }
 .new-noon-text {
 padding:10px
@@ -307,46 +365,4 @@ table {
   padding: 8px;
   row-gap: 10px;
 }
-body {
-  background: #f6f0ec;
-  margin: 0;
-  padding: 0;
-}
-header {
-    display: flex;
-    width: 100%;
-    background: ghostwhite;
-    position: relative;
-    top: 0;
-    padding: 20px;
-    height: 100px;
-}
 
-footer {
-    background: #555555;
-    position: relative;
-    bottom: 0;
-    padding: 20px;
-    width: 100%;
-    height: 150px;
-}
-
-/*Functional Styling for tooltip on mobile device*/
-@media (pointer: coarse), (hover: none) {
-    [title] {
-        position: relative;
-        display: flex;
-        justify-content: center;
-    }
-
-    [title]:focus::after {
-        content: attr(title);
-        position: absolute;
-        top: 90%;
-        color: #000;
-        background-color: #fff;
-        border: 1px solid;
-        width: fit-content;
-        padding: 3px;
-    }
-}
