@@ -1,6 +1,7 @@
 package com.example.geriadur.controller.api;
 
 import com.example.geriadur.dto.GameSessionResult;
+import com.example.geriadur.dto.GameSessionStep;
 import com.example.geriadur.service.game.api.ISessionGameService;
 import com.example.geriadur.service.user.api.IUserService;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -8,7 +9,13 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,14 +30,20 @@ public class SessionGameRestController {
 
 
     @GetMapping("/sessionGameData")
-    public String getSessionGameData(@RequestParam Integer wordTheme) throws JsonProcessingException {
+    public ResponseEntity<List<GameSessionStep>> get15Questions(@RequestParam Integer wordTheme) throws JsonProcessingException {
         ObjectMapper om = new ObjectMapper();
         om.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         log.info("The user with the email \""+userService.getCurrentUserEmail()+"\" started a new game session with the theme "+wordTheme+".");
+        
         String json = om.writeValueAsString(ISessionGameService.get15GameSessionStep(wordTheme));
         System.out.println(json);
-        return json;
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Access-Control-Allow-Origin", "*");
+
+        return new ResponseEntity<>(ISessionGameService.get15GameSessionStep(wordTheme), headers, HttpStatus.OK);
     }
+
     @PostMapping("/sessionGameData/saveResult")
     public ResponseEntity<String> saveScore(@RequestBody GameSessionResult gameSessionResult)  {
         ResponseEntity<String> response = userService.saveScore(gameSessionResult.getSessionScore(),gameSessionResult.getSessionTheme());

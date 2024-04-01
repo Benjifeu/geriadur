@@ -1,4 +1,4 @@
-package com.example.geriadur.controller.html;
+package com.example.geriadur.controller.api;
 
 import com.example.geriadur.constants.GenderEnum;
 import com.example.geriadur.constants.LanguageEnum;
@@ -6,7 +6,12 @@ import com.example.geriadur.constants.TypeOfSourceEnum;
 import com.example.geriadur.constants.WordClassEnum;
 import com.example.geriadur.entity.consultation.Source;
 import com.example.geriadur.dto.CreateSource;
+import com.example.geriadur.dto.ShowSourcesPage;
+import com.example.geriadur.dto.ShowWordstemPage;
 import com.example.geriadur.service.consultation.api.ISourceService;
+import com.example.geriadur.service.user.api.IUserService;
+
+import lombok.extern.slf4j.Slf4j;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,27 +21,31 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
-@RequestMapping("sources")
+@Slf4j
+@RestController()
 public class SourceController {
     @Autowired
     private ISourceService sourceService;
-
+    @Autowired
+    private IUserService userService;
 
     //display list of semantic fields
-
-    @GetMapping()
-    public String showallSources(Model model) {
-        return findPaginated(1, model);
+    @GetMapping("/sources/{pnum}/{psize}")
+    public ShowSourcesPage findPaginated(@PathVariable("pnum") int pageNo, @PathVariable("psize") int pageSize) {
+        log.info("The user with the email \"" + userService.getCurrentUserEmail()
+                + "\" had retrieved a page from the wordstem table with " + pageSize + "words.");
+        return sourceService.findPaginated(pageNo, pageSize);
     }
+    
 
-    @GetMapping("/{id}")
+
+    @GetMapping("/sources/{id}")
     public String showSource(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("Source", sourceService.getSourceByID(id));
         return "sources/sources-Info";
     }
 
-    @GetMapping("/add")
+    @GetMapping("/sources/add")
     public String addSource(Model model) {
         Source Source = new Source();
         model.addAttribute("source", Source);
@@ -45,7 +54,7 @@ public class SourceController {
         return "sources/sources-add";
     }
 
-    @GetMapping("/edit/{id}")
+    @GetMapping("/sources/edit/{id}")
     public String editSource(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("Source", sourceService.getSourceByID(id));
         model.addAttribute("languages", LanguageEnum.values());
@@ -54,26 +63,15 @@ public class SourceController {
         return "sources/sources-edit";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/sources/save")
     public String saveSource(@ModelAttribute("Source") CreateSource Source) {
         sourceService.addSource(Source);
         return "redirect:/Sources";
     }
 
-    @GetMapping("/page/{pageNo}")
-    public String findPaginated(@PathVariable("pageNo") int pageNo, Model model) {
-        int pageSize = 5;
-        Page<Source> page = sourceService.findPaginated(pageNo, pageSize);
-        List<Source> Sources = page.getContent();
-        System.out.println(Sources);
-        model.addAttribute("currentPage", pageNo);
-        model.addAttribute("totalPages", page.getTotalPages());
-        model.addAttribute("totalItems", page.getTotalElements());
-        model.addAttribute("Sources", Sources);
-        return "sources/sources";
-    }
 
-    @GetMapping("/delete/{id}")
+
+    @GetMapping("/sources/delete/{id}")
     public String deleteSource(@PathVariable(value = "id") Long id) {
         sourceService.deleteSource(id);
         return "redirect:/Sources";
