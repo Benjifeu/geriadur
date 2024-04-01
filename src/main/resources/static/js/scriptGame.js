@@ -128,7 +128,6 @@ function showScore() {
   nextButtonElement.innerHTML = "Play Again";
   nextButtonElement.style.display = "block";
 }
-
 function chooseWordTheme() {
   const button1 = document.createElement("button");
   button1.textContent = "Lieux et Pays";
