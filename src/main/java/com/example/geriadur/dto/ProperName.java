@@ -12,4 +12,5 @@ public class ProperName {
     String currentName;
     String etymoName;
     String descr;
+    String image;
 }

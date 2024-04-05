@@ -29,6 +29,10 @@ public class EtymonName {
     @Column(name = "etymo_name", nullable = false)
     private String etymoName;
 
+
+    @Column(name = "image", nullable = true)
+    private String image;
+
     /**
      * linked proto-celtic wordStem
      */
