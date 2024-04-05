@@ -45,7 +45,7 @@ public class SourceController {
         return "sources/sources-Info";
     }
 
-    @GetMapping("/sources/add")
+    @PostMapping("/sources/add")
     public String addSource(Model model) {
         Source Source = new Source();
         model.addAttribute("source", Source);
@@ -54,7 +54,7 @@ public class SourceController {
         return "sources/sources-add";
     }
 
-    @GetMapping("/sources/edit/{id}")
+    @PutMapping("/sources/edit/{id}")
     public String editSource(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("Source", sourceService.getSourceByID(id));
         model.addAttribute("languages", LanguageEnum.values());
@@ -63,15 +63,7 @@ public class SourceController {
         return "sources/sources-edit";
     }
 
-    @PostMapping("/sources/save")
-    public String saveSource(@ModelAttribute("Source") CreateSource Source) {
-        sourceService.addSource(Source);
-        return "redirect:/Sources";
-    }
-
-
-
-    @GetMapping("/sources/delete/{id}")
+    @DeleteMapping("/sources/delete/{id}")
     public String deleteSource(@PathVariable(value = "id") Long id) {
         sourceService.deleteSource(id);
         return "redirect:/Sources";

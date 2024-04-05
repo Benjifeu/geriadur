@@ -25,4 +25,8 @@ public class SectionsController {
     public String showRegistrationForm() {
         return "user-profile";
     }
+    @GetMapping("leaderboard")
+    public String showLeaderboard() {
+        return "leaderboard";
+    }
 }
