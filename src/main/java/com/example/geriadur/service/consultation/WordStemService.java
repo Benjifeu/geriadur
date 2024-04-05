@@ -15,7 +15,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.*;
 
 @Service
@@ -160,6 +162,20 @@ public class WordStemService implements IWordStemService {
 
         return wordStem;
     }
+
+     /**
+     * saveImage(MultipartFile file, long properNounId) update or create the image linked to the properNouns
+     */
+    public void saveImage(MultipartFile file, long properNounId) {
+        EtymonName etymonName = etymonNameRepository.findById(properNounId).get();
+        try {
+            etymonName.setImage(Base64.getEncoder().encodeToString(file.getBytes()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        etymonNameRepository.save(etymonName);
+    }
+
 
     /**
      * addQuote() save a new quote in DB and return it

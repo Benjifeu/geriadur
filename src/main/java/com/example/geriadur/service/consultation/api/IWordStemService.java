@@ -8,6 +8,8 @@ import com.example.geriadur.entity.consultation.WordStem;
 
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public interface IWordStemService {
     List<ProperNounsDTO> getProperNouns();
     List<WordStem> getAllWordStems();
@@ -22,6 +24,7 @@ public interface IWordStemService {
     void addWordStem(WordStem wordStem);
     void addSemanticField(SemanticField semanticField);
     StatisticDTO getStatisticInfo();
+    void saveImage(MultipartFile file, long properNounId);
 
     void saveAllSemanticField(List<SemanticField> semanticFieldsInit);
 
