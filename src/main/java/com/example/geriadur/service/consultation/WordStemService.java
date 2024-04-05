@@ -1,7 +1,7 @@
 package com.example.geriadur.service.consultation;
 
 import com.example.geriadur.dto.*;
-import com.example.geriadur.entity.EtymonName;
+import com.example.geriadur.entity.ProperNoun;
 import com.example.geriadur.entity.SemanticField;
 import com.example.geriadur.entity.consultation.Source;
 import com.example.geriadur.entity.consultation.WordStem;
@@ -31,7 +31,7 @@ public class WordStemService implements IWordStemService {
     @Autowired
     private WordStemRepository wordStemRepository;
     @Autowired
-    private EtymonNameRepository etymonNameRepository;
+    private ProperNounRepository properNounRepository;
     @Autowired
     private QuoteRepository quoteRepository;
     @Autowired
@@ -42,47 +42,47 @@ public class WordStemService implements IWordStemService {
     private SourceRepository sourceRepository;
 
     public List<ProperNounsDTO> getProperNouns() {
-        List<EtymonName> etymonNames = etymonNameRepository.findAll();
+        List<ProperNoun> properNouns = properNounRepository.findAll();
         List<ProperNounsDTO> createEtymos = new ArrayList<>();
 
-        for (int i = 0; i < etymonNames.size(); ++i) {
+        for (int i = 0; i < properNouns.size(); ++i) {
             ProperNounsDTO createEtymo = new ProperNounsDTO();
-            createEtymo.setCurrentNoun(etymonNames.get(i).getCurrentName());
+            createEtymo.setCurrentNoun(properNouns.get(i).getCurrentName());
             createEtymos.add(createEtymo);
         }
 
         return createEtymos;
     }
 
-    public void addProperNoun(CreateEtymo createEtymo) {
-        EtymonName etymonName = dtoEtymonToEntityEtymon(createEtymo);
-        etymonNameRepository.save(etymonName);
-        log.info("The proper noun stem: \"" + etymonName.getCurrentName() + "\" has been added.");
+    public void addProperNoun(CreateProperNoun createEtymo) {
+        ProperNoun properNoun = dtoEtymonToEntityEtymon(createEtymo);
+        properNounRepository.save(properNoun);
+        log.info("The proper noun stem: \"" + properNoun.getCurrentName() + "\" has been added.");
     }
 
-    public void saveAllProperNouns(List<CreateEtymo> etymonNamesInit) {
-        List<EtymonName> etymonNames = new ArrayList<>();
-        for (CreateEtymo createEtymo : etymonNamesInit) {
-            etymonNames.add(dtoEtymonToEntityEtymon(createEtymo));
+    public void saveAllProperNouns(List<CreateProperNoun> properNounsInit) {
+        List<ProperNoun> properNouns = new ArrayList<>();
+        for (CreateProperNoun createEtymo : properNounsInit) {
+            properNouns.add(dtoEtymonToEntityEtymon(createEtymo));
             log.info("The proper noun stem: \"" + createEtymo.getEtymoName() + "\" has been added.");
         }
-        etymonNameRepository.saveAll(etymonNames);
+        properNounRepository.saveAll(properNouns);
     }
 
-    private EtymonName dtoEtymonToEntityEtymon(CreateEtymo createEtymo) {
+    private ProperNoun dtoEtymonToEntityEtymon(CreateProperNoun createEtymo) {
         literalTranslationRepository.save(createEtymo.getLitTrans());
-        EtymonName etymonName = new EtymonName();
-        etymonName.setEtymoName(createEtymo.getEtymoName());
-        etymonName.setCurrentName(createEtymo.getCurrentName());
-        etymonName.setWordTheme(createEtymo.getWordTheme());
-        etymonName.setLitTrans(createEtymo.getLitTrans());
-        etymonName.setDescrFr(createEtymo.getDescrFr());
-        etymonName.setDescrEng(createEtymo.getDescrEng());
-        return etymonName;
+        ProperNoun properNoun = new ProperNoun();
+        properNoun.setEtymoName(createEtymo.getEtymoName());
+        properNoun.setCurrentName(createEtymo.getCurrentName());
+        properNoun.setWordTheme(createEtymo.getWordTheme());
+        properNoun.setLitTrans(createEtymo.getLitTrans());
+        properNoun.setDescrFr(createEtymo.getDescrFr());
+        properNoun.setDescrEng(createEtymo.getDescrEng());
+        return properNoun;
     }
 
-    public void setWordStemEtymonLink(String etymonNameStr, List<String> wordStemsString) {
-        EtymonName etymonName = etymonNameRepository.findEtymonNameByCurrentName(etymonNameStr).get();
+    public void setWordStemEtymonLink(String properNounStr, List<String> wordStemsString) {
+        ProperNoun properNoun = properNounRepository.findProperNounByCurrentName(properNounStr).get();
         Map<Integer, WordStem> wordStems = new HashMap<>();
         for (int i = 0; i < wordStemsString.size(); ++i) {
             Optional<WordStem> wordStem = wordStemRepository.findByWordStemName(wordStemsString.get(i));
@@ -92,9 +92,9 @@ public class WordStemService implements IWordStemService {
                 throw new IllegalArgumentException(
                         "the wordStem: \"" + wordStemsString.get(i) + "\" doesn't exist in DB.");
         }
-        log.info("Word Stems has been linked to the proper noun: \"" + etymonName.getCurrentName());
-        etymonName.setWordStemPc(wordStems);
-        etymonNameRepository.save(etymonName);
+        log.info("Word Stems has been linked to the proper noun: \"" + properNoun.getCurrentName());
+        properNoun.setWordStemPc(wordStems);
+        properNounRepository.save(properNoun);
     }
 
     /**
@@ -167,13 +167,13 @@ public class WordStemService implements IWordStemService {
      * saveImage(MultipartFile file, long properNounId) update or create the image linked to the properNouns
      */
     public void saveImage(MultipartFile file, long properNounId) {
-        EtymonName etymonName = etymonNameRepository.findById(properNounId).get();
+        ProperNoun properNoun = properNounRepository.findById(properNounId).get();
         try {
-            etymonName.setImage(Base64.getEncoder().encodeToString(file.getBytes()));
+            properNoun.setImage(Base64.getEncoder().encodeToString(file.getBytes()));
         } catch (IOException e) {
             e.printStackTrace();
         }
-        etymonNameRepository.save(etymonName);
+        properNounRepository.save(properNoun);
     }
 
 
@@ -273,11 +273,11 @@ public class WordStemService implements IWordStemService {
      */
     public StatisticDTO getStatisticInfo() {
         StatisticDTO statisticDTO = new StatisticDTO();
-        statisticDTO.setPlacesCount(etymonNameRepository.findAllEtymonNamesByWordTheme(1).size());
-        statisticDTO.setHistoristicFiguresCount(etymonNameRepository.findAllEtymonNamesByWordTheme(2).size());
-        statisticDTO.setMythicFiguresCount(etymonNameRepository.findAllEtymonNamesByWordTheme(3).size());
-        statisticDTO.setTribesCount(etymonNameRepository.findAllEtymonNamesByWordTheme(4).size());
-        statisticDTO.setObjectsCount(etymonNameRepository.findAllEtymonNamesByWordTheme(5).size());
+        statisticDTO.setPlacesCount(properNounRepository.findAllProperNounsByWordTheme(1).size());
+        statisticDTO.setHistoristicFiguresCount(properNounRepository.findAllProperNounsByWordTheme(2).size());
+        statisticDTO.setMythicFiguresCount(properNounRepository.findAllProperNounsByWordTheme(3).size());
+        statisticDTO.setTribesCount(properNounRepository.findAllProperNounsByWordTheme(4).size());
+        statisticDTO.setObjectsCount(properNounRepository.findAllProperNounsByWordTheme(5).size());
         statisticDTO.setWordStemsCount((int) wordStemRepository.count());
         System.out.println(
                 " WordStems count: " + statisticDTO.getWordStemsCount() +
