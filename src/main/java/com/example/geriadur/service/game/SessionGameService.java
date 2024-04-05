@@ -48,7 +48,7 @@ public class SessionGameService implements ISessionGameService {
                             etymonName.getCurrentName(),
                             etymonName.getEtymoName(),
                             etymonName.getDescrFr(),
-                            etymonName.getImage(),"test"),
+                            etymonName.getImage()),
                     radicals));
         }
         return gameSessionSteps;
