@@ -40,7 +40,7 @@ public class DataUtil {
     //list of data transfer objects that will be persisted in the database
     private List<CreateWordStem> wordStemsInit = new ArrayList<>();
     private List<Author> authorsInit = new ArrayList<>();
-    private List<CreateEtymo> etymonNamesInit = new ArrayList<>();
+    private List<CreateProperNoun> etymonNamesInit = new ArrayList<>();
     private List<CreateSource> sourcesInit = new ArrayList<>();
     private List<SemanticField> semanticFieldsInit = new ArrayList<>();
     private List<CreateUser> usersInit = new ArrayList<>();
@@ -49,7 +49,7 @@ public class DataUtil {
     private final String jsonAuthors = "authorsInit";
     private final String jsonWordStem = "wordStemsInit";
     private final String jsonSource = "sourcesInit";
-    private final String jsonEtymon = "etymonsInit";
+    private final String jsonEtymon = "propernounsInit";
     private final String jsonSemField = "semanticFieldsInit";
     private final String jsonUser = "usersInit";
 
@@ -85,7 +85,7 @@ public class DataUtil {
         userService.saveAll(usersInit);
 
         // config the wordStems of each etymons
-        for (CreateEtymo etymonName : etymonNamesInit) {
+        for (CreateProperNoun etymonName : etymonNamesInit) {
             wordStemService.setWordStemEtymonLink(etymonName.getCurrentName(), etymonName.getWordStems());
         }
 
@@ -119,7 +119,7 @@ public class DataUtil {
                     log.info("authorsInit data read and converted");
                     break;
                 case jsonEtymon:
-                    etymonNamesInit = mapper.readValue(is, new TypeReference<List<CreateEtymo>>() {
+                    etymonNamesInit = mapper.readValue(is, new TypeReference<List<CreateProperNoun>>() {
                     });
                     log.info("etymonNamesInit data read and converted");
                     break;
