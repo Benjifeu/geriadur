@@ -9,19 +9,19 @@ import lombok.Setter;
 import java.util.Map;
 
 /**
- * The etymon define the proto-celtic root world and all his descandant
+ * The ProperNoun define a proper noun that have celtic etymological origins
  */
 @Getter
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "etymon_name")
-public class EtymonName {
+@Table(name = "propernoun")
+public class ProperNoun {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "etymon_id")
-    private Long etymonId;
+    @Column(name = "propernoun_id")
+    private Long propernounId;
 
     @Column(name = "current_name", nullable = false)
     private String currentName;
@@ -41,8 +41,8 @@ public class EtymonName {
     @ManyToMany( fetch = FetchType.LAZY,
             cascade = {CascadeType.ALL}
     )
-    @JoinTable( name="wordStem_etymon",
-            joinColumns = @JoinColumn(name = "etymon_id"),
+    @JoinTable( name="word_stem_propernoun",
+            joinColumns = @JoinColumn(name = "propernoun_id"),
             inverseJoinColumns = @JoinColumn(name = "wordStem_id")
     )
     private Map<Integer, WordStem> wordStemPc;

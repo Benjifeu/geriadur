@@ -10,7 +10,7 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
-public class CreateEtymo {
+public class CreateProperNoun {
 
 
     private String currentName;

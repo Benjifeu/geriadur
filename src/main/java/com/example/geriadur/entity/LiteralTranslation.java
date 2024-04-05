@@ -41,6 +41,6 @@ public class LiteralTranslation {
     private int litTransType;
 
     @OneToOne(mappedBy = "litTrans")
-    private EtymonName etymonName;
+    private ProperNoun etymonName;
 
 }
