@@ -44,13 +44,13 @@ public class WordStemRestController {
         return new ResponseEntity<>(wordStemService.findPaginated(pageNo, pageSize), headers, HttpStatus.OK);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/wordstems/{id}")
     public String showWordStem(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("wordStem", wordStemService.getWordStemByID(id));
         return "wordStems/wordstems-Info";
     }
 
-    @PostMapping("/noun-image/{id}")
+    @PostMapping("/wordstems/noun-image/{id}")
     public ResponseEntity<String> saveImage(@RequestBody MultipartFile image, @PathVariable("id") int properNounId) {
         wordStemService.saveImage(image, properNounId);
         return new ResponseEntity<>(
@@ -58,7 +58,7 @@ public class WordStemRestController {
             HttpStatus.OK);
     }
 
-    @PutMapping("/edit/{id}")
+    @PutMapping("/wordstems/edit/{id}")
     public String editWordStem(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("wordStem", wordStemService.getWordStemByID(id));
         model.addAttribute("languages", LanguageEnum.values());
@@ -68,13 +68,13 @@ public class WordStemRestController {
         return "wordStems/wordstems-edit";
     }
 
-    @PostMapping("/save")
+    @PostMapping("/wordstems/save")
     public String saveWordStem(@ModelAttribute("wordStem") WordStem wordStem) {
         wordStemService.addWordStem(wordStem);
         return "redirect:/wordstems";
     }
 
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("/wordstems/{id}")
     public String deleteWordStem(@PathVariable(value = "id") Long id) {
         wordStemService.deleteWordStem(id);
         return "redirect:/wordstems";
