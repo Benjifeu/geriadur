@@ -4,7 +4,9 @@ let apiGame = "/sessionGameData";
 let totalQuestionNumber = 0;
 let wordTheme = 0;
 let level;
+const formElement = document.getElementById("pres");
 const currentNameElement = document.getElementById("currentName");
+const imgElement = document.getElementById("etymoImg");
 const etymoNameElement = document.getElementById("etymoName");
 const answerButtonElement = document.getElementById("answer-btn");
 const nextButtonElement = document.getElementById("next-btn");
@@ -23,7 +25,10 @@ chooseWordTheme();
 
 async function getData() {
   try {
-    const response = await fetch(host + apiGame + "?wordTheme=" + wordTheme);
+    const response = await fetch(host + apiGame + "?wordTheme=" + wordTheme, {
+      method: "GET"
+    }
+    );
 
     // Check if request successfull
     if (!response.ok) {
@@ -37,6 +42,7 @@ async function getData() {
   } catch (error) {
     console.error(console.log(error));
   }
+  formElement.innerText = "Radicaux composant le nom:"
   showQuestion();
 }
 
@@ -45,12 +51,17 @@ function showQuestion() {
   var currentQuestion = JSON.parse(localStorage.getItem("quizzData"))[
     currentQuestionIndex
   ];
-  console.log(currentQuestion);
   let questionNo = currentQuestionIndex + 1;
   currentNameElement.innerHTML =
     questionNo + ". " + currentQuestion.properName.currentName;
+  if (currentQuestion.properName.image != (null&&"null"&&'')) {
+    var image = new Image();
+    image.src = 'data:image/png;base64,' + currentQuestion.properName.image;
+    imgElement.appendChild(image);
+  }
+
   etymoDescrElement.innerHTML = currentQuestion.properName.descr;
-  currentQuestion.pCelticRadicals.map((radical) => {
+  currentQuestion.pcelticRadicals.map((radical) => {
     const etymonButton = document.createElement("button");
     etymonButton.textContent = radical.name.toString();
     etymonButton.setAttribute("title", radical.translation);
@@ -96,6 +107,9 @@ function resetState() {
   while (answerButtonElement.firstChild) {
     answerButtonElement.removeChild(answerButtonElement.firstChild);
   }
+  while (imgElement.firstChild) {
+    imgElement.removeChild(imgElement.firstChild);
+  }
   etymoNameElement.innerText = "";
 }
 
@@ -124,11 +138,12 @@ function showScore() {
     .then()
     .then((response) => console.log(response));
 
-  answerButtonElement.innerHTML = `You scored ${score} out of ${totalQuestionNumber}`;
-  nextButtonElement.innerHTML = "Play Again";
+  answerButtonElement.innerHTML = `Votre score et de ${score} sur ${totalQuestionNumber}`;
+  nextButtonElement.innerHTML = "Rejouer";
   nextButtonElement.style.display = "block";
 }
 function chooseWordTheme() {
+  formElement.innerText = "Choisissez un thème lexical:"
   const button1 = document.createElement("button");
   button1.textContent = "Lieux et Pays";
   button1.classList.add("btn");
