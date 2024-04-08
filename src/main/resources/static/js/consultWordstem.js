@@ -12,25 +12,35 @@ async function showWordstems(currentPage, countByPage) {
     console.log(pageData);
     for (i = 0; i < pageData.pageWordstems.length; i++) {
       const tr = tbl.insertRow();
+      tr.classList.add("wstr");
 
       let wsName = tr.insertCell();
-
       let lang = document.createElement("span");
-      lang.classList.add("langWS");
+      lang.classList.add("langws");
       lang.innerText = pageData.pageWordstems[i].wordStemLanguage;
       lang.title = pageData.pageWordstems[i].wordStemLanguage;
       wsName.appendChild(lang);
       wsName.innerHTML +=
-        ": " +
+        ": <b>" +
         data.pageWordstems[i].wordStemName +
-        " [" +
+        "</b> [" +
         data.pageWordstems[i].phonetic +
         "]";
+
       let wsGender = tr.insertCell();
-      wsGender.classList.add("genderWS");
-      wsGender.innerText = pageData.pageWordstems[i].gender;
+      let gender = document.createElement("span");
+      gender.classList.add("langws");
+      gender.innerText = pageData.pageWordstems[i].gender;
+      gender.title = pageData.pageWordstems[i].gender;
+      wsGender.appendChild(gender);
+
       let wsClass = tr.insertCell();
-      wsClass.innerText = pageData.pageWordstems[i].wordClass;
+      let wordclass = document.createElement("span");
+      wordclass.classList.add("langws");
+      wordclass.innerText = pageData.pageWordstems[i].wordClass;
+      wordclass.title = pageData.pageWordstems[i].wordClass;
+      wsClass.appendChild(wordclass);
+
       let wsRef = tr.insertCell();
       wsRef.innerHTML =
         "Fr.: " +
@@ -52,7 +62,7 @@ async function showWordstems(currentPage, countByPage) {
 
     if (currentPage > 1) {
       let prevBtn = document.createElement("button");
-      prevBtn.textContent = "Previous";
+      prevBtn.textContent = "Précédent";
       prevBtn.addEventListener("click", () => {
         showWordstems(currentPage - 1, countByPage);
       });
@@ -60,7 +70,7 @@ async function showWordstems(currentPage, countByPage) {
     }
     if (currentPage < data.pageCount - 1) {
       let nextBtn = document.createElement("button");
-      nextBtn.textContent = "Next";
+      nextBtn.textContent = "Suivant";
       nextBtn.addEventListener("click", () => {
         showWordstems(currentPage + 1, countByPage);
       });
@@ -76,7 +86,6 @@ async function showWordstems(currentPage, countByPage) {
     }
   });
   setLanguages();
-  setGender();
 }
 
 async function getShowWordstem(currentPage, countByPage) {
