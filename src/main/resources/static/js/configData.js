@@ -47,11 +47,13 @@ const conjWClassAbr = ["cnj.", "cnj.", "stg."]
 const mGenderAbr = ["m.", "m.", "g."]
 const fGenderAbr = ["f.", "f.", "b."]
 const nGenderAbr = ["n.", "n.", "n."]
-const noGenderAbr = ["n.", "n.", "n."]
+const noGenderAbr = ["n/a", "n/a", "n/a"]
+const uGenderAbr = ["un.", "inc.", "dia."]
 
 const mGender = ["male", "masculin", "gourel"]
 const fGender = ["feminine", "féminin", "benel"]
 const nGender = ["neutral", "neutre", "neptu"]
+const uGender = ["unknow", "inconnu", "dianav"]
 
 
 
