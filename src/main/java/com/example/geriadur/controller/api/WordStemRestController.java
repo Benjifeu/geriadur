@@ -38,10 +38,13 @@ public class WordStemRestController {
     public ResponseEntity<ShowWordstemPage> findPaginated(@PathVariable("pnum") int pageNo, @PathVariable("psize") int pageSize) {
         log.info("The user with the email \"" + userService.getCurrentUserEmail()
                 + "\" had retrieved a page from the wordstem table with " + pageSize + "words.");
-                HttpHeaders headers = new HttpHeaders();
-                headers.add("Access-Control-Allow-Origin", "*");
 
-        return new ResponseEntity<>(wordStemService.findPaginated(pageNo, pageSize), headers, HttpStatus.OK);
+        ShowWordstemPage response = wordStemService.findPaginated(pageNo, pageSize);
+        System.out.println(response);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Access-Control-Allow-Origin", "*");
+
+        return new ResponseEntity<>(response, headers, HttpStatus.OK);
     }
 
     @GetMapping("/wordstems/{id}")

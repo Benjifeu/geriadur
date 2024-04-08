@@ -31,17 +31,15 @@ public class SessionGameRestController {
 
     @GetMapping("/sessionGameData")
     public ResponseEntity<List<GameSessionStep>> get15Questions(@RequestParam Integer wordTheme) throws JsonProcessingException {
-        ObjectMapper om = new ObjectMapper();
-        om.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         log.info("The user with the email \""+userService.getCurrentUserEmail()+"\" started a new game session with the theme "+wordTheme+".");
         
-        String json = om.writeValueAsString(ISessionGameService.get15GameSessionStep(wordTheme));
-        System.out.println(json);
+        List<GameSessionStep> response = ISessionGameService.get15GameSessionStep(wordTheme);
+        System.out.println(response);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Access-Control-Allow-Origin", "*");
 
-        return new ResponseEntity<>(ISessionGameService.get15GameSessionStep(wordTheme), headers, HttpStatus.OK);
+        return new ResponseEntity<>(response, headers, HttpStatus.OK);
     }
 
     @PostMapping("/sessionGameData/saveResult")
