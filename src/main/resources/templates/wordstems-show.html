@@ -31,20 +31,20 @@
 <h2>Lexique etymologique</h2>
 <h3 id="words-count"></h3>
 <!--<a href="/wordStems/add" class="btn">Ajouter un terme</a>-->
-<table class="wstable">
+<div id="pagesbutton"></div>
+<table class="wstable" id="wstable">
     <thead style="background-color: rgb(204, 202, 195);">
     <tr>
-        <th> Mot</th>
-        <th> Genre</th>
-        <th> Wordclass</th>
-        <th> Traduction</th>
-        <th> Parent</th>
-        <th> Champs Lexical</th>
+        <th><a href="#" onclick="sortTable(0);"> Mot</a></th>
+        <th><a href="#" onclick="sortTable(1);"> Genre</a></th>
+        <th><a href="#" onclick="sortTable(2);"> Nature<br>grammaticale</a></th>
+        <th><a href="#" onclick="sortTable(3);"> Traduction</a></th>
+        <th><a href="#" onclick="sortTable(4);"> Parent</a></th>
+        <th><a href="#" onclick="sortTable(5);"> Champs Lexical</a></th>
     </tr>
     </thead>
     <tbody id="wordstemtable"></tbody>
 </table>
-<div id="pagesbutton">
 </div>
 </section>
 </body>
