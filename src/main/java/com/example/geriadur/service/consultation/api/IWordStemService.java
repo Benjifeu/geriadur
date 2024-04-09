@@ -20,15 +20,12 @@ public interface IWordStemService {
     Quote addQuote(String quoteStr, String source);
     WordStem getWordStemByID(Long id);
     void deleteWordStem(Long id);
-    ShowWordstemPage findPaginated(int pageNum, int pageSize);
     void addWordStem(WordStem wordStem);
     void addSemanticField(SemanticField semanticField);
     StatisticDTO getStatisticInfo();
     void saveImage(MultipartFile file, long properNounId);
-
     void saveAllSemanticField(List<SemanticField> semanticFieldsInit);
-
     void saveAllProperNouns(List<CreateProperNoun> etymonNamesInit);
-
     void saveAllWordStems(List<CreateWordStem> wordStemsInit);
+    List<ShowWordstem> findAll();
 }

@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -220,20 +221,24 @@ public class WordStemService implements IWordStemService {
     }
 
     /**
-     * * findPaginated returns a list of wordStemsWord with te size define by the
-     * pageSize argument. This data will be show for the client in a pageable table
+     * * findAll returns the whole list of wordStemsWord
      **/
     @Override
-    public ShowWordstemPage findPaginated(int pageNum, int pageSize) {
-        List<ShowWordstem> wordStems = new ArrayList<>();
-        Pageable pageable = PageRequest.of(pageNum - 1, pageSize);
-        Page page = wordStemRepository.findAll(pageable);
-        for (WordStem wordStem : (List<WordStem>) page.getContent()) {
-            String parent = null;
-            if (!wordStem.getParents().isEmpty()) {
-                parent = wordStem.getParents().stream().findFirst().get().getWordStemName();
-            }
-            ShowWordstem showWordstem = new ShowWordstem(
+    public List<ShowWordstem> findAll(){
+       List<WordStem> wordStems= wordStemRepository.findAll();
+       List<ShowWordstem> showWordstems = new ArrayList<>();
+       for (WordStem wordStem : wordStems) {
+        showWordstems.add(getWordstemBasicDTO(wordStem));
+       }
+        return showWordstems;
+
+    }
+    ShowWordstem getWordstemBasicDTO(WordStem wordStem){
+        String parent = null;
+        if (!wordStem.getParents().isEmpty()) {
+            parent = wordStem.getParents().stream().findFirst().get().getWordStemName();
+        }
+    return new ShowWordstem(
                     wordStem.getWordStemName(),
                     wordStem.getWordStemLanguage().toString(),
                     wordStem.getPhonetic(),
@@ -243,18 +248,7 @@ public class WordStemService implements IWordStemService {
                     wordStem.getReferenceWordsFr(),
                     wordStem.getSemanticField().getSemFieldNameFr(),
                     parent);
-            wordStems.add(showWordstem);
-            log.info("The word stem " + wordStem.getWordStemName()
-                    + " has been retrieved to be displayed on the wordstem list page.");
-        }
-        ShowWordstemPage showWordstemPage = new ShowWordstemPage();
-        showWordstemPage.setPageWordstems(wordStems);
-        showWordstemPage.setWordstemsCount((int) page.getTotalElements());
-        showWordstemPage.setCurrentPage(pageNum);
-        showWordstemPage.setPageCount(page.getTotalPages());
-        return showWordstemPage;
-    }
-
+}
     public void addWordStem(WordStem wordStem) {
         wordStemRepository.save(wordStem);
     }
