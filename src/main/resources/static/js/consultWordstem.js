@@ -1,97 +1,76 @@
 let apiWordstem = "/wordstems";
-let data;
 
-const countElement = document.getElementById("wordstems-count");
-const wordStemNameElement = document.getElementById("wordstems-name");
-const currentNameElement = document.getElementById("currentName");
-
-async function showWordstems(currentPage, countByPage) {
-  let tbl = document.getElementById("wordstemtable");
-  tbl.innerText = "";
-  await getShowWordstem(currentPage, countByPage).then((pageData) => {
-    console.log(pageData);
-    for (i = 0; i < pageData.pageWordstems.length; i++) {
-      const tr = tbl.insertRow();
-      tr.classList.add("wstr");
-
-      let wsName = tr.insertCell();
-      let lang = document.createElement("span");
-      lang.classList.add("langws");
-      lang.innerText = pageData.pageWordstems[i].wordStemLanguage;
-      lang.title = pageData.pageWordstems[i].wordStemLanguage;
-      wsName.appendChild(lang);
-      wsName.innerHTML +=
-        ": <b>" +
-        data.pageWordstems[i].wordStemName +
-        "</b> [" +
-        data.pageWordstems[i].phonetic +
-        "]";
-
-      let wsGender = tr.insertCell();
-      let gender = document.createElement("span");
-      gender.classList.add("langws");
-      gender.innerText = pageData.pageWordstems[i].gender;
-      gender.title = pageData.pageWordstems[i].gender;
-      wsGender.appendChild(gender);
-
-      let wsClass = tr.insertCell();
-      let wordclass = document.createElement("span");
-      wordclass.classList.add("langws");
-      wordclass.innerText = pageData.pageWordstems[i].wordClass;
-      wordclass.title = pageData.pageWordstems[i].wordClass;
-      wsClass.appendChild(wordclass);
-
-      let wsRef = tr.insertCell();
-      wsRef.innerHTML =
-        "Fr.: " +
-        data.pageWordstems[i].frTranslation +
-        "<br> Eng.: " +
-        data.pageWordstems[i].engTranslation;
-      let wsParent = tr.insertCell();
-      wsParent.innerText = data.pageWordstems[i].parentsWordStemStr;
-      let wsSemField = tr.insertCell();
-      wsSemField.innerText = data.pageWordstems[i].semanticField;
-      //let wsDel = tr.insertCell();
-      //wsDel.appendChild(document.createElement("button").onclick(deleteData(pageWordstems[i].wordStemId)));
-    }
-
-    let wsCount = document.getElementById("words-count");
-    wsCount.innerText = "Nombre total de mots: " + data.wordstemsCount;
-    let pagesBtn = document.getElementById("pagesbutton");
-    pagesBtn.innerText = "";
-
-    if (currentPage > 1) {
-      let prevBtn = document.createElement("button");
-      prevBtn.textContent = "Précédent";
-      prevBtn.addEventListener("click", () => {
-        showWordstems(currentPage - 1, countByPage);
-      });
-      pagesBtn.appendChild(prevBtn);
-    }
-    if (currentPage < data.pageCount - 1) {
-      let nextBtn = document.createElement("button");
-      nextBtn.textContent = "Suivant";
-      nextBtn.addEventListener("click", () => {
-        showWordstems(currentPage + 1, countByPage);
-      });
-      pagesBtn.appendChild(nextBtn);
-    }
-    if (currentPage < data.pageCount) {
-      let lastBtn = document.createElement("button");
-      lastBtn.textContent = "... " + data.pageCount;
-      lastBtn.addEventListener("click", () => {
-        showWordstems(data.pageCount, countByPage);
-      });
-      pagesBtn.appendChild(lastBtn);
-    }
+async function showWordstems() {
+  await getShowWordstem().then((data) => {
+    localStorage.setItem("wordstemlist", JSON.stringify(data));
   });
-  setLanguages();
+  sortTable(0);
 }
 
-async function getShowWordstem(currentPage, countByPage) {
+function insertdata(data, pageNum, pageSize) {
+  console.log(data);
+  let tbl = document.getElementById("wordstemtable");
+  tbl.innerText = "";
+  data.filter((row, index) => {
+    if (index >= (pageNum - 1) * pageSize && index < (pageNum) * pageSize) return true;
+  }).forEach(wordstemRow => {
+
+    console.log(wordstemRow)
+    const tr = tbl.insertRow();
+    tr.classList.add("wstr");
+
+    let wsName = tr.insertCell();
+    let lang = document.createElement("span");
+    lang.classList.add("langws");
+    lang.innerText = wordstemRow.wordStemLanguage;
+    lang.title = wordstemRow.wordStemLanguage;
+    wsName.appendChild(lang);
+    wsName.innerHTML +=
+      ": <b>" +
+      wordstemRow.wordStemName +
+      "</b> [" +
+      wordstemRow.phonetic +
+      "]";
+
+    let wsGender = tr.insertCell();
+    let gender = document.createElement("span");
+    gender.classList.add("langws");
+    gender.innerText = wordstemRow.gender;
+    gender.title = wordstemRow.gender;
+    wsGender.appendChild(gender);
+
+    let wsClass = tr.insertCell();
+    let wordclass = document.createElement("span");
+    wordclass.classList.add("langws");
+    wordclass.innerText = wordstemRow.wordClass;
+    wordclass.title = wordstemRow.wordClass;
+    wsClass.appendChild(wordclass);
+
+    let wsRef = tr.insertCell();
+    wsRef.innerHTML =
+      "<span class=\"langws\" title=\"LF\">LF</span>: <i>" +
+      wordstemRow.frTranslation +
+      "</i><br> <span class=\"langws\" title=\"LE\">LE</span>: <i>" +
+      wordstemRow.engTranslation + "</i>";
+    let wsParent = tr.insertCell();
+    wsParent.innerText = wordstemRow.parentsWordStemStr;
+    let wsSemField = tr.insertCell();
+    wsSemField.innerText = wordstemRow.semanticField;
+    //let wsDel = tr.insertCell();
+    //wsDel.appendChild(document.createElement("button").onclick(deleteData(pageWordstems[i].wordStemId)));
+  });
+
+  let wsCount = document.getElementById("words-count");
+  wsCount.innerText = "Nombre total de mots: " + data.length;
+
+  setLanguages();
+  setPagesButton(data, pageNum, pageSize);
+}
+
+async function getShowWordstem() {
   try {
     const response = await fetch(
-      host + apiWordstem + "/" + currentPage + "/" + countByPage,
+      host + apiWordstem,
       {
         method: "GET",
         headers: {
@@ -103,12 +82,73 @@ async function getShowWordstem(currentPage, countByPage) {
     if (!response.ok) {
       throw new Error(`HTTP error! Status: ${response.status}`);
     }
-    data = await response.json();
+    const data = await response.json();
     return data;
-    //data = JSON.stringify(dataJSON);
+
   } catch (error) {
     console.error(console.log(error));
   }
+}
+
+function setPagesButton(data, pageNum, pageSize) {
+  let pagesBtn = document.getElementById("pagesbutton");
+  pagesBtn.innerText = "";
+
+  if (pageNum > 1) {
+    let prevBtn = document.createElement("button");
+    prevBtn.textContent = "Précédent";
+    prevBtn.addEventListener("click", () => {
+      insertdata(data, pageNum - 1, pageSize);
+    });
+    pagesBtn.appendChild(prevBtn);
+  }
+  let currentpage = document.createElement("SPAN");
+  currentpage.innerHTML="Page: " + pageNum;
+  pagesBtn.appendChild(currentpage);
+  if (pageNum < Math.ceil(data.length / pageSize) - 1) {
+    let nextBtn = document.createElement("button");
+    nextBtn.textContent = "Suivant";
+    nextBtn.addEventListener("click", () => {
+      insertdata(data, pageNum + 1, pageSize);
+    });
+    pagesBtn.appendChild(nextBtn);
+  }
+  if (pageNum < Math.ceil(data.length / pageSize)) {
+    let lastBtn = document.createElement("button");
+    lastBtn.textContent = "... " + Math.ceil(data.length / pageSize);
+    lastBtn.addEventListener("click", () => {
+      insertdata(data, Math.ceil(data.length / pageSize), pageSize);
+    });
+    pagesBtn.appendChild(lastBtn);
+  }
+
+}
+
+function sortTable(columnIndex) {
+  let datalist = JSON.parse(localStorage.getItem("wordstemlist"))
+  switch (columnIndex) {
+    case 0:
+      datalist.sort((a, b) => (a.wordStemName > b.wordStemName) ? 1 : -1);
+      break;
+    case 1:
+      datalist.sort((a, b) => (a.gender > b.gender) ? 1 : -1);
+      break;
+    case 2:
+      datalist.sort((a, b) => (a.wordClass > b.wordClass) ? 1 : -1);
+      break;
+    case 3:
+      datalist.sort((a, b) => (a.frTranslation > b.frTranslation) ? 1 : -1);
+      break;
+    case 4:
+      datalist.sort((a, b) => (a.parentsWordStemStr > b.parentsWordStemStr) ? 1 : -1);
+      break;
+    case 5:
+      datalist.sort((a, b) => (a.semanticField > b.semanticField) ? 1 : -1);
+      break;
+    default:
+      console.log(`No corresponding column to sort.`);
+  }
+  insertdata(datalist, 1, 10);
 }
 
 async function deleteData(id) {
