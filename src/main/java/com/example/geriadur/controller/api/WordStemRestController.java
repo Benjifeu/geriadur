@@ -34,12 +34,11 @@ public class WordStemRestController {
     @Autowired
     private IUserService userService;
 
-    @GetMapping("/wordstems/{pnum}/{psize}")
-    public ResponseEntity<ShowWordstemPage> findPaginated(@PathVariable("pnum") int pageNo, @PathVariable("psize") int pageSize) {
+    @GetMapping("/wordstems")
+    public ResponseEntity<List<ShowWordstem>> findAll() {
         log.info("The user with the email \"" + userService.getCurrentUserEmail()
-                + "\" had retrieved a page from the wordstem table with " + pageSize + "words.");
-
-        ShowWordstemPage response = wordStemService.findPaginated(pageNo, pageSize);
+                + "\" had retrieved all wordstems.");
+        List<ShowWordstem> response = wordStemService.findAll();
         System.out.println(response);
         HttpHeaders headers = new HttpHeaders();
         headers.add("Access-Control-Allow-Origin", "*");
