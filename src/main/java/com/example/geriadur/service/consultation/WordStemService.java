@@ -11,10 +11,6 @@ import com.example.geriadur.service.consultation.api.IWordStemService;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -200,10 +196,31 @@ public class WordStemService implements IWordStemService {
      * getWordStemByID() returns the specified wordStem according to his ID in DB
      */
     @Override
-    public WordStem getWordStemByID(Long id) {
-        Optional<WordStem> wordStem = wordStemRepository.findById(id);
+    public WordstemFullDTO getWordStemByName(String id) {
+        Optional<WordStem> wordStem = wordStemRepository.findByWordStemName(id);
         if (wordStem.isPresent()) {
-            return wordStem.get();
+            String parent = null;
+            if (!wordStem.get().getParents().isEmpty()) {
+                parent = wordStem.get().getParents().stream().findFirst().get().getWordStemName();
+            }
+            List<String> sources = new ArrayList<>();
+                for (Source source : wordStem.get().getSources()) {
+                    sources.add(source.getSourceNameInOriginalLanguage() + " ("+source.getAbbreviation()+") ");
+                };
+
+            WordstemFullDTO wordstemFullDTO = new WordstemFullDTO();
+            wordstemFullDTO.setWordStemLanguage(wordStem.get().getWordStemLanguage().toString());
+            wordstemFullDTO.setWordStemName(wordStem.get().getWordStemName());
+            wordstemFullDTO.setFrTranslation(wordStem.get().getReferenceWordsFr());
+            wordstemFullDTO.setEngTranslation(wordStem.get().getReferenceWordsEng());
+            wordstemFullDTO.setGender(wordStem.get().getGender().toString());
+            wordstemFullDTO.setPhonetic(wordStem.get().getPhonetic());
+            wordstemFullDTO.setDescrFr(wordStem.get().getDescrFr());
+            wordstemFullDTO.setSources(sources);
+            //wordstemFullDTO.setProperNouns(wordStem.get().getEtymonNames());
+            wordstemFullDTO.setParents(Arrays.asList(parent));
+            wordstemFullDTO.setWordClass(wordStem.get().getWordClass().toString());
+            return wordstemFullDTO;
         } else
             throw new RuntimeException("Their is no wordStem with the id:" + id);
     }
@@ -224,21 +241,18 @@ public class WordStemService implements IWordStemService {
      * * findAll returns the whole list of wordStemsWord
      **/
     @Override
-    public List<ShowWordstem> findAll(){
+    public List<WordstemBasicDTO> findAll(){
        List<WordStem> wordStems= wordStemRepository.findAll();
-       List<ShowWordstem> showWordstems = new ArrayList<>();
+       List<WordstemBasicDTO> showWordstems = new ArrayList<>();
        for (WordStem wordStem : wordStems) {
         showWordstems.add(getWordstemBasicDTO(wordStem));
        }
         return showWordstems;
 
     }
-    ShowWordstem getWordstemBasicDTO(WordStem wordStem){
-        String parent = null;
-        if (!wordStem.getParents().isEmpty()) {
-            parent = wordStem.getParents().stream().findFirst().get().getWordStemName();
-        }
-    return new ShowWordstem(
+    WordstemBasicDTO getWordstemBasicDTO(WordStem wordStem){
+
+    return new WordstemBasicDTO(
                     wordStem.getWordStemName(),
                     wordStem.getWordStemLanguage().toString(),
                     wordStem.getPhonetic(),
@@ -246,8 +260,8 @@ public class WordStemService implements IWordStemService {
                     wordStem.getWordClass().toString(),
                     wordStem.getReferenceWordsEng(),
                     wordStem.getReferenceWordsFr(),
-                    wordStem.getSemanticField().getSemFieldNameFr(),
-                    parent);
+                    wordStem.getSemanticField().getSemFieldNameFr()
+                    );
 }
     public void addWordStem(WordStem wordStem) {
         wordStemRepository.save(wordStem);
