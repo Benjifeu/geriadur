@@ -360,6 +360,11 @@ p {
     display: none;
 }
 
+#pagesbutton{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
 /* footer parameters*/
 
 .menu-btn {
