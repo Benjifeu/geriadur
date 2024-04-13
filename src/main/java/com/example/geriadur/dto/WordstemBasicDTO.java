@@ -26,5 +26,7 @@ public class WordstemBasicDTO {
     private String frTranslation;
 
     private String semanticField;
+    
+    private int firstOccurence;
 
 }

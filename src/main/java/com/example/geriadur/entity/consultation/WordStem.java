@@ -54,6 +54,9 @@ public class WordStem {
     @Column(name = "descr_eng")
     private String descrEng;
 
+    @Column(name = "first_occurence")
+    private int firstOccurence;
+
     @ManyToOne
     @JoinColumn(name = "sem_field_id")
     private SemanticField semanticField;
