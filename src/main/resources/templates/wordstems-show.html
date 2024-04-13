@@ -7,45 +7,47 @@
 
     <script type="text/javascript" src="/js/configData.js"></script>
     <script type="text/javascript" src="/js/scriptLanguage.js"></script>
-    <script type="text/javascript" src="/js/consultWordstem.js" defer></script>
+    <script type="text/javascript" src="/js/consultWordstemList.js" defer></script>
 </head>
 
 <body>
     <header>
-        <img style="top: 30px;;"  src="../images/logo.png" width="50" height="50" alt="test">
+        <img style="top: 30px;" src="../images/logo.png" width="50" height="50" alt="test">
         <h1 style="color: rgb(51, 51, 51); font-size: 20px;"><a href="/">Celtiadur</a></h1>
-    
+
         <div class="summary">
-          <div class="language"></div>
-          <div class="summary-btn"><a href="/sessionGame">Jeu Gerdarzh</a></div>
-          <div class="summary-btn"><a href="/wordstems/list">Lexique</a></div>
-          <div class="summary-btn"><a href="/sources/list">Sources</a></div>
-          <div class="summary-btn"><a href="/userprofile">Mon profil</a></div>
-          <div class="summary-btn"><a href="/leaderboard">Classement</a></div>
-          <div>
-              <button class="classic-btn" top="20px">Se déconnecter</button>
-          </div>
+            <div class="language"></div>
+            <div class="summary-btn"><a href="/sessionGame">Jeu Gerdarzh</a></div>
+            <div class="summary-btn"><a href="/wordstems/list">Lexique</a></div>
+            <div class="summary-btn"><a href="/sources/list">Sources</a></div>
+            <div class="summary-btn"><a href="/userprofile">Mon profil</a></div>
+            <div class="summary-btn"><a href="/leaderboard">Classement</a></div>
+            <div>
+                <button class="classic-btn" top="20px">Se déconnecter</button>
+            </div>
         </div>
-      </header>
-<section class="showWS">
-<h2>Lexique etymologique</h2>
-<h3 id="words-count"></h3>
-<!--<a href="/wordStems/add" class="btn">Ajouter un terme</a>-->
-<div id="pagesbutton"></div>
-<table class="wstable" id="wstable">
-    <thead style="background-color: rgb(204, 202, 195);">
-    <tr>
-        <th><a href="#" onclick="sortTable(0);"> Mot</a></th>
-        <th><a href="#" onclick="sortTable(1);"> Genre</a></th>
-        <th><a href="#" onclick="sortTable(2);"> Nature<br>grammaticale</a></th>
-        <th><a href="#" onclick="sortTable(3);"> Traduction</a></th>
-        <th><a href="#" onclick="sortTable(4);"> Parent</a></th>
-        <th><a href="#" onclick="sortTable(5);"> Champs Lexical</a></th>
-    </tr>
-    </thead>
-    <tbody id="wordstemtable"></tbody>
-</table>
-</div>
-</section>
+    </header>
+    <section class="showWS">
+        <h2>Lexique etymologique</h2>
+        <h3 id="words-count"></h3>
+        <!--<a href="/wordStems/add" class="btn">Ajouter un terme</a>-->
+        <div>
+            <table class="wstable" id="wstable">
+                <thead style="background-color: rgb(204, 202, 195);">
+                    <tr>
+                        <th style="width: 20px;"><a href="#" onclick="sortTable(0);"> Lg.</a></th>
+                        <th><a href="#" onclick="sortTable(1);"> Mot</a></th>
+                        <th><a href="#" onclick="sortTable(2);"> Nature<br>grammaticale</a></th>
+                        <th><a href="#" onclick="sortTable(3);"> Traduction</a></th>
+                        <th><a href="#" onclick="sortTable(4);"> Année<br>d'occurence</a></th>
+                        <th><a href="#" onclick="sortTable(5);"> Champs Lexical</a></th>
+                    </tr>
+                </thead>
+                <tbody id="wordstemtable"></tbody>
+            </table>
+            <div id="pagesbutton"></div>
+        </div>
+    </section>
 </body>
+
 </html>
