@@ -13,7 +13,7 @@ public enum LanguageEnum {
     LG("Gaul.", "Gaulois"),
     LGER("Ger.", "Germanique"),
     LIE("P.I.E.", "Proto-indo-européen"),
-    LI("Ga.", "Irlandais"),
+    LIR("Ga.", "Irlandais"),
     LOI("Ga.", "vieil Irlandais"),
     LS("S.Ga.", "Gaélique écossais"),
     LPC("Pr.Cel.", "Proto-celte"),
