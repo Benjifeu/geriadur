@@ -260,7 +260,8 @@ public class WordStemService implements IWordStemService {
                     wordStem.getWordClass().toString(),
                     wordStem.getReferenceWordsEng(),
                     wordStem.getReferenceWordsFr(),
-                    wordStem.getSemanticField().getSemFieldNameFr()
+                    wordStem.getSemanticField().getSemFieldNameFr(),
+                    wordStem.getFirstOccurence()
                     );
 }
     public void addWordStem(WordStem wordStem) {
