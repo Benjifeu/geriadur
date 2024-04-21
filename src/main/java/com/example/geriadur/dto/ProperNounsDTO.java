@@ -13,9 +13,9 @@ import java.util.List;
 public class ProperNounsDTO {
 
 
-    private String currentNoun;
+    private String currentName;
 
-    private String etymoNoun;
+    private String etymoName;
 
     private List<String> wordStemsPC;
 
@@ -25,7 +25,10 @@ public class ProperNounsDTO {
 
     private Long wordTheme;
 
-    private Long semanticField;
+    private String litTransFr;
+    
+    private String litTransEng;
 
+    private int litTransType;
 
 }

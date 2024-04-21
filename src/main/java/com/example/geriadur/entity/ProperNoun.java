@@ -65,7 +65,7 @@ public class ProperNoun {
     private Long wordTheme;
 
 
-    @OneToOne(cascade = CascadeType.MERGE)
+    @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "lit_trans_id")
     private LiteralTranslation litTrans;
 
