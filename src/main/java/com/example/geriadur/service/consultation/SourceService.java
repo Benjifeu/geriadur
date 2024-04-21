@@ -4,6 +4,7 @@ import com.example.geriadur.entity.consultation.Author;
 import com.example.geriadur.entity.consultation.Source;
 import com.example.geriadur.dto.CreateSource;
 import com.example.geriadur.dto.ShowSourcesPage;
+import com.example.geriadur.dto.SourceBasicDTO;
 import com.example.geriadur.repositories.AuthorRepository;
 import com.example.geriadur.repositories.QuoteRepository;
 import com.example.geriadur.repositories.SourceRepository;
@@ -105,6 +106,15 @@ public class SourceService implements ISourceService {
         }
         return source;
     }
+
+    public List<SourceBasicDTO> getSourceStringList(){
+        List<SourceBasicDTO> sourceStr = new ArrayList<>();
+        for (Source source : sourceRepository.findAll()) {
+            sourceStr.add(new SourceBasicDTO(source.getSourceNameInOriginalLanguage(),source.getAbbreviation()));
+        }
+        return sourceStr;
+    }
+
 
     @Override
     public void addAuthor(Author author) {

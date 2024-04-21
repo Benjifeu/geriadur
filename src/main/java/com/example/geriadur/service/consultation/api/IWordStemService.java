@@ -11,20 +11,17 @@ import org.springframework.web.multipart.MultipartFile;
 
 public interface IWordStemService {
     List<ProperNounsDTO> getProperNouns();
-    List<WordStem> getAllWordStems();
+    List<WordstemBasicDTO> findAll();
+    List<String> getWordStemsPCStringList();
     void setWordStemQuoteLink(Quote quote, String wordStemStr);
-    void addProperNoun(CreateProperNoun createEtymo);
     void setWordStemEtymonLink(String etymonNameStr, List<String> wordStemsString);
-    void addAWordStem(CreateWordStem createWordStem);
-    Quote addQuote(String quoteStr, String source);
     WordstemFullDTO getWordStemByName(String id);
     void deleteWordStem(Long id);
-    void addWordStem(WordStem wordStem);
+    void addProperNoun(ProperNounsDTO createEtymo);
+    WordStem addWordStem(WordstemBasicDTO wordStem);
+    Quote addQuote(String quoteStr, String source);
     void addSemanticField(SemanticField semanticField);
     StatisticDTO getStatisticInfo();
     void saveImage(MultipartFile file, long properNounId);
     void saveAllSemanticField(List<SemanticField> semanticFieldsInit);
-    void saveAllProperNouns(List<CreateProperNoun> etymonNamesInit);
-    void saveAllWordStems(List<CreateWordStem> wordStemsInit);
-    List<WordstemBasicDTO> findAll();
 }
