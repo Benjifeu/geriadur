@@ -180,7 +180,119 @@ async function getWordstemList() {
   }
 }
 
+var modal = document.getElementById("myModal");
 
+// Get the button that opens the modal
+var btn = document.getElementById("modalAddWordstemBtn");
 
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function () {
+  modal.style.display = "block";
+
+  getSources();
+  let sourceElement = document.getElementById("source");
+  let sourcelist = localStorage.getItem("sourcelist");
+  console.log(sourcelist)
+  JSON.parse(sourcelist).forEach((source) => {
+    newOption = document.createElement("option")
+    console.log(source)
+    newOption.value = source.sourceAbbreviation;
+    newOption.innerText = source.sourceOriginalName;
+    sourceElement.appendChild(newOption)
+  });
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 showWordstems(1, 10);
+
+
+
+/*post methods */
+
+class WordstemBasicDTO {
+  constructor(wordStemName, wordStemLanguage, phonetic, gender, wordClass, engTranslation, frTranslation, semanticField, firstOccurence, source) {
+    this.wordStemName = wordStemName;
+    this.wordStemLanguage = wordStemLanguage;
+    this.phonetic = phonetic;
+    this.gender = gender;
+    this.wordClass = wordClass;
+    this.engTranslation = engTranslation;
+    this.frTranslation = frTranslation;
+    this.semanticField = semanticField;
+    this.firstOccurence = firstOccurence;
+    this.source = source;
+  }
+}
+
+class SourceBasicDTO{
+  constructor(sourceOriginalName,sourceAbbreviation){
+    this.sourceOriginalName = sourceOriginalName;
+    this.sourceAbbreviation = sourceAbbreviation;
+  }
+}
+
+document.getElementById('wordstemForm').addEventListener('submit', function (event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const wordstemDTO = new WordstemBasicDTO(
+    document.getElementById('wordStemName').value,
+    document.getElementById('wordStemLanguage').value,
+    document.getElementById('phonetic').value,
+    document.getElementById('gender').value,
+    document.getElementById('wordClass').value,
+    document.getElementById('engTranslation').value,
+    document.getElementById('frTranslation').value,
+    document.getElementById('semanticField').value,
+    document.getElementById('firstOccurence').value,
+    document.getElementById('source').value
+  );
+
+  console.log(wordstemDTO);
+
+  fetch(host + apiWordstem, {
+    method: 'POST',
+    body: JSON.stringify(wordstemDTO),
+    headers: {
+      "Content-Type": "application/json",
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    }
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log(response.status);
+      }
+      throw new Error('Network response was not ok.');
+    })
+});
+
+async function getSources() {
+  try {
+    const response = await fetch(host + "/sources", {
+      method: "GET"
+    }
+    );
+
+    // Check if request successfull
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json();
+    localStorage.setItem("sourcelist", JSON.stringify(data));
+  } catch (error) {
+    console.error(error);
+  }
+}
