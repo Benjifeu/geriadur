@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+
 import java.util.List;
 
 @RestController()
@@ -52,12 +53,27 @@ public class WordStemRestController {
 
         return new ResponseEntity<>(response, headers, HttpStatus.OK);
     }
+    @GetMapping("/wordStems/Str")
+    public ResponseEntity<List<String>> getWordStemsStrList()  {
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Access-Control-Allow-Origin", "*");
+        List<String> response = wordStemService.getWordStemsPCStringList();
+        return new ResponseEntity<>(response, headers, HttpStatus.OK);
+    }
 
     @PostMapping("/wordstems/noun-image/{id}")
     public ResponseEntity<String> saveImage(@RequestBody MultipartFile image, @PathVariable("id") int properNounId) {
         wordStemService.saveImage(image, properNounId);
         return new ResponseEntity<>(
             "Image saved for proper noun with id ." + properNounId, 
+            HttpStatus.OK);
+    }
+
+    @PostMapping("/wordstems")
+    public ResponseEntity<String> saveWordStem(@RequestBody WordstemBasicDTO createWordStem) {
+        WordStem wordStem = wordStemService.addWordStem(createWordStem);
+        return new ResponseEntity<>(
+            "Image saved for proper noun with id ." + wordStem.getWordStemId(), 
             HttpStatus.OK);
     }
 
@@ -71,16 +87,9 @@ public class WordStemRestController {
         return "wordStems/wordstems-edit";
     }
 
-    @PostMapping("/wordstems/save")
-    public String saveWordStem(@ModelAttribute("wordStem") WordStem wordStem) {
-        wordStemService.addWordStem(wordStem);
-        return "redirect:/wordstems";
-    }
-
     @DeleteMapping("/wordstems/{id}")
     public String deleteWordStem(@PathVariable(value = "id") Long id) {
         wordStemService.deleteWordStem(id);
         return "redirect:/wordstems";
     }
-
 }
