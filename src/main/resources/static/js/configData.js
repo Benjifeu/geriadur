@@ -61,3 +61,36 @@ const uGender = ["unknow", "inconnu", "dianav"]
 const noGender = ["", "", ""]
 
 
+function setPagesButton(data, pageNum, pageSize) {
+    let pagesBtn = document.getElementById("pagesbutton");
+    pagesBtn.innerText = "";
+  
+    if (pageNum > 1) {
+      let prevBtn = document.createElement("button");
+      prevBtn.textContent = "Précédent";
+      prevBtn.addEventListener("click", () => {
+        insertdata(data, pageNum - 1, pageSize);
+      });
+      pagesBtn.appendChild(prevBtn);
+    }
+    let currentpage = document.createElement("SPAN");
+    currentpage.innerHTML = "Page: " + pageNum;
+    pagesBtn.appendChild(currentpage);
+    if (pageNum < Math.ceil(data.length / pageSize) - 1) {
+      let nextBtn = document.createElement("button");
+      nextBtn.textContent = "Suivant";
+      nextBtn.addEventListener("click", () => {
+        insertdata(data, pageNum + 1, pageSize);
+      });
+      pagesBtn.appendChild(nextBtn);
+    }
+    if (pageNum < Math.ceil(data.length / pageSize)) {
+      let lastBtn = document.createElement("button");
+      lastBtn.textContent = "... " + Math.ceil(data.length / pageSize);
+      lastBtn.addEventListener("click", () => {
+        insertdata(data, Math.ceil(data.length / pageSize), pageSize);
+      });
+      pagesBtn.appendChild(lastBtn);
+    }
+  
+  }

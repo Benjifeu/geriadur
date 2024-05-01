@@ -92,39 +92,6 @@ async function getWordstemList() {
   }
 }
 
-function setPagesButton(data, pageNum, pageSize) {
-  let pagesBtn = document.getElementById("pagesbutton");
-  pagesBtn.innerText = "";
-
-  if (pageNum > 1) {
-    let prevBtn = document.createElement("button");
-    prevBtn.textContent = "Précédent";
-    prevBtn.addEventListener("click", () => {
-      insertdata(data, pageNum - 1, pageSize);
-    });
-    pagesBtn.appendChild(prevBtn);
-  }
-  let currentpage = document.createElement("SPAN");
-  currentpage.innerHTML = "Page: " + pageNum;
-  pagesBtn.appendChild(currentpage);
-  if (pageNum < Math.ceil(data.length / pageSize) - 1) {
-    let nextBtn = document.createElement("button");
-    nextBtn.textContent = "Suivant";
-    nextBtn.addEventListener("click", () => {
-      insertdata(data, pageNum + 1, pageSize);
-    });
-    pagesBtn.appendChild(nextBtn);
-  }
-  if (pageNum < Math.ceil(data.length / pageSize)) {
-    let lastBtn = document.createElement("button");
-    lastBtn.textContent = "... " + Math.ceil(data.length / pageSize);
-    lastBtn.addEventListener("click", () => {
-      insertdata(data, Math.ceil(data.length / pageSize), pageSize);
-    });
-    pagesBtn.appendChild(lastBtn);
-  }
-
-}
 
 function sortTable(columnIndex) {
   let datalist = JSON.parse(localStorage.getItem("wordstemlist"))
@@ -180,16 +147,16 @@ async function getWordstemList() {
   }
 }
 
-var modal = document.getElementById("myModal");
+var modal = document.getElementById("modal-bg");
 
 // Get the button that opens the modal
-var btn = document.getElementById("modalAddWordstemBtn");
+var addWordStemBtn = document.getElementById("modalAddWordstemBtn");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var closeBtn = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
-btn.onclick = function () {
+addWordStemBtn.onclick = function () {
   modal.style.display = "block";
 
   getSources();
@@ -206,7 +173,7 @@ btn.onclick = function () {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function () {
+closeBtn.onclick = function () {
   modal.style.display = "none";
 }
 
