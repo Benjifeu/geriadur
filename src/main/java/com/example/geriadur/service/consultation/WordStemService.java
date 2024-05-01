@@ -47,6 +47,12 @@ public class WordStemService implements IWordStemService {
         for (int i = 0; i < properNouns.size(); ++i) {
             ProperNounsDTO properNousDTO = new ProperNounsDTO();
             properNousDTO.setCurrentName(properNouns.get(i).getCurrentName());
+            properNousDTO.setWordTheme(properNouns.get(i).getWordTheme());
+            properNousDTO.setCountry(properNouns.get(i).getCountry());
+            properNousDTO.setPeriod(properNouns.get(i).getPeriod());
+            properNousDTO.setPlace(properNouns.get(i).getPlace());
+            properNousDTO.setYear(properNouns.get(i).getYear());
+            properNousDTO.setShortDescrFr(properNouns.get(i).getShortDescrFr());
             properNousDTOList.add(properNousDTO);
         }
 

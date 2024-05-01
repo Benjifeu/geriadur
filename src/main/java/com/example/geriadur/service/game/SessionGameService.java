@@ -37,7 +37,6 @@ public class SessionGameService implements ISessionGameService {
         for (ProperNoun properNoun : properNouns) {
             List<PCelticRadical> radicals = new ArrayList<>();
             for (int i = 0; i < properNoun.getWordStemPc().size(); i++) {
-
                 radicals.add(
                         new PCelticRadical(properNoun.getWordStemPc().get(i).getWordStemName(),
                                 properNoun.getWordStemPc().get(i).getReferenceWordsFr()));
