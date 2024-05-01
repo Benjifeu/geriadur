@@ -21,6 +21,11 @@ public class SectionsController {
         return "wordstems-info";
     }
 
+    @GetMapping("/noun/list")
+    public String findNouns() {
+        return "noun-show";
+    }
+
     @GetMapping("/sources/list")
     public String findPaginatedSources() {
         return "sources-show";
