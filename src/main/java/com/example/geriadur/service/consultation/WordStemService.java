@@ -1,6 +1,10 @@
 package com.example.geriadur.service.consultation;
 
+import com.example.geriadur.constants.GenderEnum;
+import com.example.geriadur.constants.LanguageEnum;
+import com.example.geriadur.constants.WordClassEnum;
 import com.example.geriadur.dto.*;
+import com.example.geriadur.entity.LiteralTranslation;
 import com.example.geriadur.entity.ProperNoun;
 import com.example.geriadur.entity.SemanticField;
 import com.example.geriadur.entity.consultation.Source;
@@ -11,10 +15,6 @@ import com.example.geriadur.service.consultation.api.IWordStemService;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -36,49 +36,64 @@ public class WordStemService implements IWordStemService {
     @Autowired
     private QuoteRepository quoteRepository;
     @Autowired
-    private LiteralTranslationRepository literalTranslationRepository;
-    @Autowired
     private SemanticFieldRepository semanticFieldRepository;
     @Autowired
     private SourceRepository sourceRepository;
 
     public List<ProperNounsDTO> getProperNouns() {
         List<ProperNoun> properNouns = properNounRepository.findAll();
-        List<ProperNounsDTO> createEtymos = new ArrayList<>();
+        List<ProperNounsDTO> properNousDTOList = new ArrayList<>();
 
         for (int i = 0; i < properNouns.size(); ++i) {
-            ProperNounsDTO createEtymo = new ProperNounsDTO();
-            createEtymo.setCurrentNoun(properNouns.get(i).getCurrentName());
-            createEtymos.add(createEtymo);
+            ProperNounsDTO properNousDTO = new ProperNounsDTO();
+            properNousDTO.setCurrentName(properNouns.get(i).getCurrentName());
+            properNousDTO.setWordTheme(properNouns.get(i).getWordTheme());
+            properNousDTO.setCountry(properNouns.get(i).getCountry());
+            properNousDTO.setPeriod(properNouns.get(i).getPeriod());
+            properNousDTO.setPlace(properNouns.get(i).getPlace());
+            properNousDTO.setYear(properNouns.get(i).getYear());
+            properNousDTO.setShortDescrFr(properNouns.get(i).getShortDescrFr());
+            properNousDTOList.add(properNousDTO);
         }
 
-        return createEtymos;
+        return properNousDTOList;
     }
 
-    public void addProperNoun(CreateProperNoun createEtymo) {
-        ProperNoun properNoun = dtoEtymonToEntityEtymon(createEtymo);
+    public void addProperNoun(ProperNounsDTO properNousDTO) {
+        ProperNoun properNoun = dtoProperNounToEntityProperNoun(properNousDTO);
         properNounRepository.save(properNoun);
         log.info("The proper noun stem: \"" + properNoun.getCurrentName() + "\" has been added.");
     }
+    /*
+     * public void saveAllProperNouns(List<CreateProperNoun> properNounsInit) {
+     * List<ProperNoun> properNouns = new ArrayList<>();
+     * for (CreateProperNoun createEtymo : properNounsInit) {
+     * properNouns.add(dtoEtymonToEntityEtymon(createEtymo));
+     * log.info("The proper noun stem: \"" + createEtymo.getEtymoName() +
+     * "\" has been added.");
+     * }
+     * properNounRepository.saveAll(properNouns);
+     * }
+     */
 
-    public void saveAllProperNouns(List<CreateProperNoun> properNounsInit) {
-        List<ProperNoun> properNouns = new ArrayList<>();
-        for (CreateProperNoun createEtymo : properNounsInit) {
-            properNouns.add(dtoEtymonToEntityEtymon(createEtymo));
-            log.info("The proper noun stem: \"" + createEtymo.getEtymoName() + "\" has been added.");
-        }
-        properNounRepository.saveAll(properNouns);
-    }
-
-    private ProperNoun dtoEtymonToEntityEtymon(CreateProperNoun createEtymo) {
-        literalTranslationRepository.save(createEtymo.getLitTrans());
+    private ProperNoun dtoProperNounToEntityProperNoun(ProperNounsDTO properNounDTO) {
+        LiteralTranslation literalTranslation = new LiteralTranslation();
+        literalTranslation.setLitTransFr(properNounDTO.getLitTransFr());
+        literalTranslation.setLitTransEng(properNounDTO.getLitTransEng());
+        literalTranslation.setLitTransType(properNounDTO.getLitTransType());
         ProperNoun properNoun = new ProperNoun();
-        properNoun.setEtymoName(createEtymo.getEtymoName());
-        properNoun.setCurrentName(createEtymo.getCurrentName());
-        properNoun.setWordTheme(createEtymo.getWordTheme());
-        properNoun.setLitTrans(createEtymo.getLitTrans());
-        properNoun.setDescrFr(createEtymo.getDescrFr());
-        properNoun.setDescrEng(createEtymo.getDescrEng());
+        literalTranslation.setEtymonName(properNoun);
+        properNoun.setEtymoName(properNounDTO.getEtymoName());
+        properNoun.setCurrentName(properNounDTO.getCurrentName());
+        properNoun.setWordTheme(properNounDTO.getWordTheme());
+        properNoun.setLitTrans(literalTranslation);
+        properNoun.setDescrFr(properNounDTO.getDescrFr());
+        properNoun.setDescrEng(properNounDTO.getDescrEng());
+        Map<Integer, WordStem> wordStems = new HashMap<>();
+        for (int i = 0; i < properNounDTO.getWordStemsPC().size(); i++) {
+            wordStems.put(i, wordStemRepository.findByWordStemName(properNounDTO.getWordStemsPC().get(i)).get());
+        }
+        properNoun.setWordStemPc(wordStems);
         return properNoun;
     }
 
@@ -150,7 +165,6 @@ public class WordStemService implements IWordStemService {
                 sources.add(sourceRepository.findSourceByAbbreviation(createWordStem.getSources().get(i)).get());
             }
             wordStem.setSources(sources);
-
         }
         /*
          * if (createWordStem.getParentsWordStemStr() != null) {
@@ -164,8 +178,9 @@ public class WordStemService implements IWordStemService {
         return wordStem;
     }
 
-     /**
-     * saveImage(MultipartFile file, long properNounId) update or create the image linked to the properNouns
+    /**
+     * saveImage(MultipartFile file, long properNounId) update or create the image
+     * linked to the properNouns
      */
     public void saveImage(MultipartFile file, long properNounId) {
         ProperNoun properNoun = properNounRepository.findById(properNounId).get();
@@ -176,7 +191,6 @@ public class WordStemService implements IWordStemService {
         }
         properNounRepository.save(properNoun);
     }
-
 
     /**
      * addQuote() save a new quote in DB and return it
@@ -200,10 +214,32 @@ public class WordStemService implements IWordStemService {
      * getWordStemByID() returns the specified wordStem according to his ID in DB
      */
     @Override
-    public WordStem getWordStemByID(Long id) {
-        Optional<WordStem> wordStem = wordStemRepository.findById(id);
+    public WordstemFullDTO getWordStemByName(String id) {
+        Optional<WordStem> wordStem = wordStemRepository.findByWordStemName(id);
         if (wordStem.isPresent()) {
-            return wordStem.get();
+            String parent = null;
+            if (!wordStem.get().getParents().isEmpty()) {
+                parent = wordStem.get().getParents().stream().findFirst().get().getWordStemName();
+            }
+            List<String> sources = new ArrayList<>();
+            for (Source source : wordStem.get().getSources()) {
+                sources.add(source.getSourceNameInOriginalLanguage() + " (" + source.getAbbreviation() + ") ");
+            }
+            ;
+
+            WordstemFullDTO wordstemFullDTO = new WordstemFullDTO();
+            wordstemFullDTO.setWordStemLanguage(wordStem.get().getWordStemLanguage().toString());
+            wordstemFullDTO.setWordStemName(wordStem.get().getWordStemName());
+            wordstemFullDTO.setFrTranslation(wordStem.get().getReferenceWordsFr());
+            wordstemFullDTO.setEngTranslation(wordStem.get().getReferenceWordsEng());
+            wordstemFullDTO.setGender(wordStem.get().getGender().toString());
+            wordstemFullDTO.setPhonetic(wordStem.get().getPhonetic());
+            wordstemFullDTO.setDescrFr(wordStem.get().getDescrFr());
+            wordstemFullDTO.setSources(sources);
+            // wordstemFullDTO.setProperNouns(wordStem.get().getEtymonNames());
+            wordstemFullDTO.setParents(Arrays.asList(parent));
+            wordstemFullDTO.setWordClass(wordStem.get().getWordClass().toString());
+            return wordstemFullDTO;
         } else
             throw new RuntimeException("Their is no wordStem with the id:" + id);
     }
@@ -224,33 +260,44 @@ public class WordStemService implements IWordStemService {
      * * findAll returns the whole list of wordStemsWord
      **/
     @Override
-    public List<ShowWordstem> findAll(){
-       List<WordStem> wordStems= wordStemRepository.findAll();
-       List<ShowWordstem> showWordstems = new ArrayList<>();
-       for (WordStem wordStem : wordStems) {
-        showWordstems.add(getWordstemBasicDTO(wordStem));
-       }
+    public List<WordstemBasicDTO> findAll() {
+        List<WordStem> wordStems = wordStemRepository.findAll();
+        List<WordstemBasicDTO> showWordstems = new ArrayList<>();
+        for (WordStem wordStem : wordStems) {
+            showWordstems.add(getWordstemBasicDTO(wordStem));
+        }
         return showWordstems;
 
     }
-    ShowWordstem getWordstemBasicDTO(WordStem wordStem){
-        String parent = null;
-        if (!wordStem.getParents().isEmpty()) {
-            parent = wordStem.getParents().stream().findFirst().get().getWordStemName();
-        }
-    return new ShowWordstem(
-                    wordStem.getWordStemName(),
-                    wordStem.getWordStemLanguage().toString(),
-                    wordStem.getPhonetic(),
-                    wordStem.getGender().toString(),
-                    wordStem.getWordClass().toString(),
-                    wordStem.getReferenceWordsEng(),
-                    wordStem.getReferenceWordsFr(),
-                    wordStem.getSemanticField().getSemFieldNameFr(),
-                    parent);
-}
-    public void addWordStem(WordStem wordStem) {
-        wordStemRepository.save(wordStem);
+
+    WordstemBasicDTO getWordstemBasicDTO(WordStem wordStem) {
+
+        return new WordstemBasicDTO(
+                wordStem.getWordStemName(),
+                wordStem.getWordStemLanguage().toString(),
+                wordStem.getPhonetic(),
+                wordStem.getGender().toString(),
+                wordStem.getWordClass().toString(),
+                wordStem.getReferenceWordsEng(),
+                wordStem.getReferenceWordsFr(),
+                wordStem.getSemanticField().getSemFieldNameFr(),
+                wordStem.getFirstOccurence());
+    }
+
+    public WordStem addWordStem(WordstemBasicDTO wordStemDTO) {
+        WordStem wordStem = new WordStem();
+        wordStem.setWordStemName(wordStemDTO.getWordStemName());
+        wordStem.setWordStemLanguage(LanguageEnum.valueOf(wordStemDTO.getWordStemLanguage()));
+        wordStem.setPhonetic(wordStemDTO.getPhonetic());
+        wordStem.setGender(GenderEnum.valueOf(wordStemDTO.getGender()));
+        wordStem.setWordClass(WordClassEnum.valueOf(wordStemDTO.getWordClass()));
+        wordStem.setReferenceWordsEng(wordStemDTO.getEngTranslation());
+        wordStem.setReferenceWordsFr(wordStemDTO.getFrTranslation());
+        wordStem.setSemanticField(
+                semanticFieldRepository.findById(Long.parseLong(wordStemDTO.getSemanticField())).get());
+        wordStem.setFirstOccurence(wordStemDTO.getFirstOccurence());
+
+        return wordStemRepository.save(wordStem);
     }
 
     public void addSemanticField(SemanticField semanticField) {
@@ -286,13 +333,16 @@ public class WordStemService implements IWordStemService {
     /**
      * getAllWordStems() returns all the wordStems present in the database
      */
+
     @Override
-    public List<WordStem> getAllWordStems() {
-        List<WordStem> wordStems = new ArrayList<>();
+    public List<String> getWordStemsPCStringList() {
+        List<String> wordStemsStr = new ArrayList<>();
         for (WordStem wordStem : wordStemRepository.findAll()) {
-            wordStems.add(wordStem);
+            if (wordStem.getWordStemLanguage() == LanguageEnum.LPC) {
+                wordStemsStr.add(wordStem.getWordStemName());
+            }
         }
-        return wordStems;
+        return wordStemsStr;
     }
 
     public void setWordStemQuoteLink(Quote quote, String wordStemStr) {

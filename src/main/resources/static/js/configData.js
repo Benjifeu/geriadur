@@ -9,11 +9,11 @@ const cornishLanguage = ["cornish", "cornique", "kerneveureg"]
 const englishLanguage = ["english", "anglais", "saozneg"]
 const frenchLanguage = ["french", "français", "galleg"]
 const gaulishLanguage = ["gaulish", "gaulois", "galianeg"]
-const IELanguage = ["Indo-Eur.", "Indo-Eur", "Indez-Eur"]
+const IELanguage = ["indo-european", "indo-européen", "indezeuropeg"]
 const irishLanguage = ["irish", "irlandais", "iwerzhoneg"]
 const oldIrishLanguage= ["old irish.", "vieil irlandais", "heniwerzhoneg."]
 const scotLanguage = ["scottish", "écossais", "skoseg"]
-const protoCeltLanguage = ["pr.celtic", "pr.celtic", "kt.keltiek"]
+const protoCeltLanguage = ["proto-celtic", "proto-celtique", "kent-keltiek"]
 const welshLanguage = ["welsh", "gallois", "kembraeg"]
 
 const brLanguage = ["br.", "br.", "br."]
@@ -36,8 +36,9 @@ const artWClass = ["article", "article", "doareenn"]
 const prnWClass = ["pronoun", "pronom.", "raganv"]
 const prepWClass = ["preposition", "préposition.", "araogenn."]
 const conjWClass = ["conjunction", "conjonction", "stagell"]
+const affixWClass = ["affix", "affixe", "lostger"]
 
-const nameWClassAbr = ["name", "nom", "anv"]
+const nameWClassAbr = ["n.", "n.", "an."]
 const verbWClassAbr = ["vrb.", "vrb.", "vrb."]
 const adjWClassAbr = ["adj.", "adj.", "a.-gw."]
 const advWClassAbr = ["adv.", "adv.", "rgv."]
@@ -45,17 +46,51 @@ const artWClassAbr = ["art.", "art.", "doa."]
 const prnWClassAbr = ["prn.", "prn.", "rag."]
 const prepWClassAbr = ["prp.", "prp.", "ara."]
 const conjWClassAbr = ["cnj.", "cnj.", "stg."]
+const affixWClassAbr = ["aff.", "aff.", "lst"]
 
 const mGenderAbr = ["m.", "m.", "g."]
 const fGenderAbr = ["f.", "f.", "b."]
 const nGenderAbr = ["n.", "n.", "n."]
-const noGenderAbr = ["n/a", "n/a", "n/a"]
+const noGenderAbr = ["", "", ""]
 const uGenderAbr = ["un.", "inc.", "dia."]
 
 const mGender = ["male", "masculin", "gourel"]
 const fGender = ["feminine", "féminin", "benel"]
 const nGender = ["neutral", "neutre", "neptu"]
 const uGender = ["unknow", "inconnu", "dianav"]
+const noGender = ["", "", ""]
 
 
-
+function setPagesButton(data, pageNum, pageSize) {
+    let pagesBtn = document.getElementById("pagesbutton");
+    pagesBtn.innerText = "";
+  
+    if (pageNum > 1) {
+      let prevBtn = document.createElement("button");
+      prevBtn.textContent = "Précédent";
+      prevBtn.addEventListener("click", () => {
+        insertdata(data, pageNum - 1, pageSize);
+      });
+      pagesBtn.appendChild(prevBtn);
+    }
+    let currentpage = document.createElement("SPAN");
+    currentpage.innerHTML = "Page: " + pageNum;
+    pagesBtn.appendChild(currentpage);
+    if (pageNum < Math.ceil(data.length / pageSize) - 1) {
+      let nextBtn = document.createElement("button");
+      nextBtn.textContent = "Suivant";
+      nextBtn.addEventListener("click", () => {
+        insertdata(data, pageNum + 1, pageSize);
+      });
+      pagesBtn.appendChild(nextBtn);
+    }
+    if (pageNum < Math.ceil(data.length / pageSize)) {
+      let lastBtn = document.createElement("button");
+      lastBtn.textContent = "... " + Math.ceil(data.length / pageSize);
+      lastBtn.addEventListener("click", () => {
+        insertdata(data, Math.ceil(data.length / pageSize), pageSize);
+      });
+      pagesBtn.appendChild(lastBtn);
+    }
+  
+  }

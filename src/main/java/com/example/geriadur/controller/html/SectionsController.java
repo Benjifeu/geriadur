@@ -12,8 +12,18 @@ public class SectionsController {
     }
     
     @GetMapping("/wordstems/list")
-    public String findPaginated() {
+    public String returnWordstemList() {
         return "wordstems-show";
+    }
+
+    @GetMapping("/lexique/entree")
+    public String returnSpecificWordstemList() {
+        return "wordstems-info";
+    }
+
+    @GetMapping("/noun/list")
+    public String findNouns() {
+        return "noun-show";
     }
 
     @GetMapping("/sources/list")

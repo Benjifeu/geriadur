@@ -12,10 +12,9 @@ import java.util.List;
 @NoArgsConstructor
 public class ProperNounsDTO {
 
+    private String currentName;
 
-    private String currentNoun;
-
-    private String etymoNoun;
+    private String etymoName;
 
     private List<String> wordStemsPC;
 
@@ -23,9 +22,20 @@ public class ProperNounsDTO {
 
     private String descrEng;
 
+    private String shortDescrFr;
+    
+    private String shortDescrEng;
+
     private Long wordTheme;
 
-    private Long semanticField;
+    private String litTransFr;
+    
+    private String litTransEng;
+    private int litTransType;
+    private String place;
 
+    private String country;
 
+    private String period;
+    private int year;
 }

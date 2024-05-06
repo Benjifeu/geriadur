@@ -1,37 +1,112 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <title>Jeu Gerdarzh</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
-
     <script type="text/javascript" src="/js/configData.js"></script>
     <script type="text/javascript" src="/js/scriptLanguage.js"></script>
     <script type="text/javascript" src="/js/scriptGame.js" defer></script>
 
 </head>
+
 <body>
-<header style="background-color: rgb(54, 54, 54);">
-    <h1>Gerdarzh</h1>
-</header>
+    <section class="gameHeader">
+        <div style="top: 0px;">
+            <h1>Gerdarzh</h1>
+        </div>
+    </section>
+    <div style="display: flex; justify-content: center;">
 
-
-
-<section class="quiz">
-    <h2 id="currentName"></h2>
-    <div  id="etymoImg"></div>
-    <div class="description" id="etymoDescription"></div>
-    <div class="etymoForm" id ="etymoForm">
-        <span id="pres"></span>
-        <span class="etymoBtn" id="etymoName"></span>
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-bar-in">
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="answersForm" id="answer-btn"></div>
-    <button id="next-btn">Next</button>
-</section>
-<footer>
-    <a href="..">
-        <button class="menu-btn">Menu</button>
-    </a>
-</footer>
+    <section class="quiz">
+
+        <div class="etymoInfo">
+            <div id="etymoImg"></div>
+            <div style="padding: 30px;">
+                <h2 id="currentName"></h2>
+                <div class="description" id="etymoDescription"></div>
+            </div>
+        </div>
+        <div class="etymoForm" id="etymoForm">
+            <div id="pres"></div>
+            <div id="etymoName"></div>
+        </div>
+        <div class="answersForm" id="answer-btn"></div>
+        <button id="next-btn">Suivant</button>
+    </section>
+    <footer>
+        <div id="CreativeC">
+            <a href="..">
+                <button class="menu-btn">Menu</button>
+            </a>
+        </div>
+        <button id="modalAddPropreNounBtn">Proposer une nouvelle entitée</button>
+    </footer>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="properNounForm">
+                <label for="pNCurrentName">Nom de l'entité :</label>
+                <input type="text" id="pNCurrentName" name="pNCurrentName" required><br><br>
+
+                <label for="pNEtymoName">Forme ancienne ou étymologique :</label>
+                <input type="text" id="pNEtymoName" name="pNEtymoName" required><br><br>
+
+                <label for="wordStemsPC">Radicaux proto-celtique :</label>
+                <div class="autocomplete" style="width:300px;">
+                    <input id="radicalPCInput" type="text" name="radicalPC" placeholder="Radical celtique">
+                </div><br>
+                <div id="wordstemList"></div><br>
+
+                <label for="descrFr">Description (une cinquantaine de mots au plus) :</label>
+                <input type="text" id="descrFr" name="descrFr"><br><br>
+
+                <label for="descrEng">Description en anlais (une cinquantaine de mots au plus) :</label>
+                <input type="text" id="descrEng" name="descrEng"><br><br>
+
+                <label for="wordTheme">Thème lexical :</label>
+                <select id="wordTheme" name="wordTheme">
+                    <option value="1">Lieux et Pays</option>
+                    <option value="2">Figures Historiques</option>
+                    <option value="3">Figures Mythiques</option>
+                    <option value="4">Peuples et Tribus</option>
+                    <option value="5">Armes et Créatures</option>
+                </select><br><br>
+
+                <label for="litTransFr">Traduction littérale :</label>
+                <input type="litTransFr" id="litTransFr" name="litTransFr"><br><br>
+
+                <label for="litTransEng">Traduction littérale anglaise:</label>
+                <input type="litTransEng" id="litTransEng" name="litTransEng"><br><br>
+
+                <label for="litTransType">Type de traduction :</label>
+                <select id="litTransType" name="litTransType">
+                    <option value="1">Nom masculin</option>
+                    <option value="2">Nom féminin</option>
+                    <option value="3">Nom d'un clan ou d'une tribu</option>
+                    <option value="4">Nom singulier masculin d'un lieu</option>
+                    <option value="5">Nom singulier féminin d'un lieu</option>
+                    <option value="6">Nom pluriel d'un lieu</option>
+                    <!--<option value="7">Nom de fleuve ou rivère</option>
+                    <option value="8">Cosmos</option>-->
+                    <option value="9">Nom de créature</option>
+                    <option value="10">Nom d'arme ou objet</option>
+                </select><br><br>
+
+                <input type="submit" value="Ajouter">
+            </form>
+        </div>
+    </div>
 </body>
+
 </html>

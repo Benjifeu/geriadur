@@ -1,5 +1,6 @@
 package com.example.geriadur.controller.api;
 
+import com.example.geriadur.dto.ProperNounsDTO;
 import com.example.geriadur.service.consultation.api.IWordStemService;
 import com.example.geriadur.service.user.api.IUserService;
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
@@ -7,7 +8,13 @@ import com.fasterxml.jackson.annotation.PropertyAccessor;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController()
@@ -21,12 +28,22 @@ public class ProperNounsController {
 
 
     @GetMapping("/properNouns")
-    public String getProperNounq() throws JsonProcessingException {
+    public ResponseEntity<List<ProperNounsDTO>> getProperNouns() throws JsonProcessingException {
         ObjectMapper om = new ObjectMapper();
         om.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
-
-        String json = om.writeValueAsString(iWordStemService.getProperNouns());
-        System.out.println(json);
-        return json;
+        List<ProperNounsDTO> properNounDTO = iWordStemService.getProperNouns();
+        System.out.println(properNounDTO);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("Access-Control-Allow-Origin", "*");
+        return new ResponseEntity<>(properNounDTO, headers, HttpStatus.OK);
     }
+
+    @PostMapping("/properNouns")
+    public ResponseEntity<String> saveWordStem(@RequestBody ProperNounsDTO properNounDTO) {
+        iWordStemService.addProperNoun(properNounDTO);
+        return new ResponseEntity<>(
+            "The entity with the name " +properNounDTO.getCurrentName() +" has been saved", 
+            HttpStatus.OK);
+    }
+
 }

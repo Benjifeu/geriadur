@@ -53,6 +53,12 @@ public class ProperNoun {
     @Column(name = "descr_eng", length =3000)
     private String descrEng;
 
+    @Column(name = "short_descr_fr", length =150)
+    private String shortDescrFr;
+
+    @Column(name = "short_descr_eng", length =150)
+    private String shortDescrEng;
+
     /**
      * The wordTheme chosen for the gameSession
      * 1: places and countries
@@ -64,9 +70,22 @@ public class ProperNoun {
     @Column(name = "word_theme")
     private Long wordTheme;
 
+    @Column(name = "confirmed")
+    private boolean confirmed;
 
-    @OneToOne(cascade = CascadeType.MERGE)
+    @Column(name = "place")
+    private String place;
+
+    @Column(name = "country")
+    private String country;
+
+    @Column(name = "year")
+    private int year;
+
+    @Column(name = "period")
+    private String period;
+
+    @OneToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "lit_trans_id")
     private LiteralTranslation litTrans;
-
 }

@@ -76,10 +76,10 @@ public class DataUtil {
         sourceService.saveAll(sourcesInit);
 
         // save all the etymons
-        wordStemService.saveAllProperNouns(etymonNamesInit);
+        //wordStemService.saveAllProperNouns(etymonNamesInit);
 
         // save all the wordStems
-        wordStemService.saveAllWordStems(wordStemsInit);
+        //wordStemService.saveAllWordStems(wordStemsInit);
 
         // save all default users
         userService.saveAll(usersInit);

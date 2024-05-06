@@ -1,9 +1,12 @@
+//const swup = new Swup();
 let currentQuestionIndex = 0;
 let score = 0;
 let apiGame = "/sessionGameData";
 let totalQuestionNumber = 0;
 let wordTheme = 0;
 let level;
+
+
 const formElement = document.getElementById("pres");
 const currentNameElement = document.getElementById("currentName");
 const imgElement = document.getElementById("etymoImg");
@@ -12,6 +15,8 @@ const answerButtonElement = document.getElementById("answer-btn");
 const nextButtonElement = document.getElementById("next-btn");
 const etymoDescrElement = document.getElementById("etymoDescription");
 const levelElement = document.getElementById("level-btn");
+
+
 
 nextButtonElement.addEventListener("click", () => {
   if (currentQuestionIndex < totalQuestionNumber) {
@@ -54,9 +59,9 @@ function showQuestion() {
   let questionNo = currentQuestionIndex + 1;
   currentNameElement.innerHTML =
     questionNo + ". " + currentQuestion.properName.currentName;
-  if (currentQuestion.properName.image != (null&&"null"&&'')) {
+  if (currentQuestion.properName.image != (null && "null" && '')) {
     var image = new Image();
-    image.src = 'data:image/png;base64,' + currentQuestion.properName.image;
+    image.src = "../images/nouns/" + currentQuestion.properName.image;
     imgElement.appendChild(image);
   }
 
@@ -64,7 +69,7 @@ function showQuestion() {
   currentQuestion.pcelticRadicals.map((radical) => {
     const etymonButton = document.createElement("button");
     etymonButton.textContent = radical.name.toString();
-    etymonButton.setAttribute("title", radical.translation);
+    etymonButton.setAttribute("alt", radical.translation);
     etymonButton.classList.add("etymoBtn2");
     etymoNameElement.appendChild(etymonButton);
   });
@@ -90,6 +95,7 @@ function selectAnswer(e) {
     //selectedBtn.style.background = "#9aeabc";
     selectedBtn.classList.add("correct");
     score++;
+    fillProgressGauge();
   } else {
     selectedBtn.classList.add("incorrect");
   }
@@ -169,7 +175,7 @@ function chooseWordTheme() {
   button4.onclick = setWordTheme;
   answerButtonElement.appendChild(button4);
   const button5 = document.createElement("button");
-  button5.textContent = "Objets divers";
+  button5.textContent = "Armes et Créatures";
   button5.classList.add("btn");
   button5.dataset.wt = "5";
   button5.onclick = setWordTheme;
@@ -191,6 +197,11 @@ function chooseLevel() {
     button1.onclick = lvl.target.dataset.lvl;
     answerButtonElement.appendChild(button2);
 }*/
+
+function fillProgressGauge() {
+  let progressBar = document.getElementById("progressBar");
+  progressBar.style.width = (score * 6.6) + "%";
+}
 
 function setWordTheme(wt) {
   wordTheme = wt.target.dataset.wt;

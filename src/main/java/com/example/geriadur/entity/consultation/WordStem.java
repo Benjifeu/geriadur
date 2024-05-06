@@ -6,6 +6,7 @@ import com.example.geriadur.constants.WordClassEnum;
 import com.example.geriadur.entity.ProperNoun;
 import com.example.geriadur.entity.SemanticField;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -18,6 +19,7 @@ import java.util.Set;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "wordStem")
 public class WordStem {
@@ -53,6 +55,9 @@ public class WordStem {
 
     @Column(name = "descr_eng")
     private String descrEng;
+
+    @Column(name = "first_occurence")
+    private int firstOccurence;
 
     @ManyToOne
     @JoinColumn(name = "sem_field_id")

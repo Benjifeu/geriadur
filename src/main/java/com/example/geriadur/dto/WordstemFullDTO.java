@@ -1,5 +1,7 @@
 package com.example.geriadur.dto;
 
+import java.util.List;
+
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,7 +11,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class ShowWordstem {
+public class WordstemFullDTO {
 
     private String wordStemName;
 
@@ -20,13 +22,17 @@ public class ShowWordstem {
     private String gender;
 
     private String wordClass;
+    private List<String> sources;
 
     private String engTranslation;
 
     private String frTranslation;
 
+    private String descrFr;
+
     private String semanticField;
 
-    private String parentsWordStemStr;
+    private List<ProperNounsDTO> properNouns;
+    private List<String> parents;
 
 }

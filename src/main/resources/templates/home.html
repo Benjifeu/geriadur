@@ -3,9 +3,11 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Accueil Geriadur</title>
-
   <link rel="stylesheet" href="../css/main.css" />
+  <script src="https://d3js.org/d3.v7.min.js"></script> <!-- Include D3.js -->
+  <script type="text/javascript" src="/js/clusterData.js" defer></script>
 </head>
 
 <body>
@@ -33,6 +35,9 @@
     <section class="intro">
       <h2>Qu’est ce que le site Geriadur ?</h2>
       <h3>Un lexique étymologique</h3>
+      <div style="display: flex;
+      justify-content: center;">
+      <a href="../images/flc.jpg"><img src="../images/flc.jpg" width="400" alt="arbre etymologique des langues celtiques"></a></div>
       <p>
         Geriadur est d’abord un lexique
         etymologique des langues celtiques. Ici nous répéretorions et
@@ -52,7 +57,7 @@
         </li>
       </ul>
     </p></div>
-      <h3>Le mini-jeu Gerdarzh</h3>
+    <a href="/sessionGame"><b><u><h3>Le mini-jeu Gerdarzh</h3></u></b></a>
       <p>Le lexique prend principalement en compte les langues suivantes: le
         breton, l’irlandais, le gallois, le gaulois et le proto-celtique.<br />
         Sur la base de ce lexique, nous proposons un parcours ludique de ces
@@ -61,7 +66,6 @@
         signification étymologique.<br />
         En guise d'aide, une description ainsi qu'une décomposition étymologique vous aidera à trouver la traduction!
       </p>
-
       <br>
       <br>
       <h2>Dernières fiches de noms propres débloquées :</h2>
@@ -86,7 +90,7 @@
       <div class="last-nouns">
         <div class="new-noon">
           <div class="new-noon-img">
-            <img src="../images/rouen.jpg" width="150" height="150" border-radius="10" alt="Paris">
+            <a href="../images/rouen.jpg"><img src="../images/rouen.jpg" width="150" height="150" border-radius="10" alt="Paris"></a>
           </div>
           <div class="new-noon-text">
             <h3>Rouen</h3>
@@ -100,7 +104,7 @@
         </div>
       </div>
     </section>
-    <section class="news">Derniers ajouts : (date)
+    <section class="news">Derniers ajouts :
       <p>
         <b>- 28/02/24:</b> Refonte de l'IHM, avec passage d'une architecture MVC vers une architecture 3 tiers IHM
         (html/css/javascript) / Métier (java spring) / BDD (mysql).
@@ -108,6 +112,11 @@
       <p>
         <b>- 15/03/24:</b> Ajout de textes et de fiches de noms par default en page d'accueil avant gestion des comptes utilisateurs<br>
         Possibilité de consulter la partie lexique et jeu.
+      </p>
+      <p>
+        <b>- 10/04/24:</b> Ajout d'images pour chaque noms propre du jeu Gerdarzh ainsi qu'une jauge de progression.<br>
+        Accès anticipé aux fiches consultatives de mots du lexique.
+        Ajout d'une illustration représentant la filiation des langues celtique en page d'accueil.
       </p>
     </section>
   </div>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lexique celtique</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/js/configData.js"></script>
+    <script type="text/javascript" src="/js/scriptLanguage.js"></script>
+    <script type="text/javascript" src="/js/consultProperNounList.js" defer></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+
+<body>
+    <header>
+        <img style="top: 30px;" src="../images/logo.png" width="50" height="50" alt="test">
+        <h1 style="color: rgb(51, 51, 51); font-size: 20px;"><a href="/">Celtiadur</a></h1>
+
+        <div class="summary">
+            <div class="language"></div>
+            <div class="summary-btn"><a href="/sessionGame">Jeu Gerdarzh</a></div>
+            <div class="summary-btn"><a href="/wordstems/list">Lexique</a></div>
+            <div class="summary-btn"><a href="/noun/list">Noms Propres</a></div>
+            <div class="summary-btn"><a href="/userprofile">Mon profil</a></div>
+            <div class="summary-btn"><a href="/leaderboard">Classement</a></div>
+            <div>
+                <button class="classic-btn" top="20px">Se déconnecter</button>
+            </div>
+        </div>
+    </header>
+    <section class="showWS">
+        <h2>Noms celtiques</h2>
+        <h3 id="words-count"></h3>
+        <div>
+            <table class="wstable" id="wstable">
+                <thead style="background-color: rgb(204, 202, 195);">
+                    <tr>
+                        <th><a href="#" onclick="sortTable(0);"> Mot</a></th>
+                        <th><a href="#" onclick="sortTable(1);"> Thème lexical</a></th>
+                        <th  style="max-width: 50px;"><a href="#" onclick="sortTable(2);"> Période</a></th>
+                        <th><a href="#" onclick="sortTable(3);"> Lieu</a></th>
+                        <th><a href="#" onclick="sortTable(4);"> Pays</a></th>
+                        <th><a href="#" onclick="sortTable(5);"> Description</a></th>
+                    </tr>
+                </thead>
+                <tbody id="nountable"></tbody>
+            </table>
+            <div id="pagesbutton"></div>
+            <button id="modalAddPropreNounBtn">Proposer une nouvelle entitée</button>
+        </div>
+        <div id="modal-bg" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Proposer une nouvelle entité au jeu</h2>
+                <form id="properNounForm">
+                    <div class="formField"><label for="wordTheme">Thème lexical :</label>
+                        <select id="wordTheme" name="wordTheme">
+                            <option value="1">Lieux et Pays</option>
+                            <option value="2">Figures Historiques</option>
+                            <option value="3">Figures Mythiques</option>
+                            <option value="4">Peuples et Tribus</option>
+                            <option value="5">Armes et Créatures</option>
+                        </select>
+                    </div>
+                    <div class="formField"><label for="litTransType">Type de traduction :</label>
+                        <select id="litTransType" name="litTransType">
+                            <option value="1">Nom masculin</option>
+                            <option value="2">Nom féminin</option>
+                            <option value="3">Nom d'un clan ou d'une tribu</option>
+                            <option value="4">Nom singulier masculin d'un lieu</option>
+                            <option value="5">Nom singulier féminin d'un lieu</option>
+                            <option value="6">Nom pluriel d'un lieu</option>
+                            <option value="10">Nom d'arme ou objet</option>
+                        </select>
+                    </div>
+                    <div class="formField"><label for="pNCurrentName">Nom de l'entité :</label>
+                        <input type="text" id="pNCurrentName" name="pNCurrentName" required>
+                    </div>
+    
+                    <div class="formField"><label for="pNEtymoName">Forme ancienne ou étymologique :</label>
+                        <input type="text" id="pNEtymoName" name="pNEtymoName" required>
+                    </div>
+    
+                    <div class="formField"><label for="radicalPCInput">Radicaux proto-celtique :</label>
+                        <div class="autocomplete" style="width:300px;">
+                            <input id="radicalPCInput" type="text" name="radicalPC" placeholder="Radical celtique">
+                        </div><br>
+                        <div id="wordstemList"></div>
+                    </div>
+    
+                    <div class="formField"><label for="litTransFr">Traduction littérale :</label>
+                        <input type="text" id="litTransFr" name="litTransFr">
+                    </div>
+    
+                    <div class="formField"><label for="litTransEng">Traduction littérale anglaise:</label>
+                        <input type="text" id="litTransEng" name="litTransEng">
+                    </div>
+    
+                    <div class="formField"><label for="descrFr">Description (une cinquantaine de mots au plus) :</label><br>
+                        <textarea id="descrFr" name="descrFr" rows="7" cols="90" style= "max-width: 90%;"></textarea>
+                    </div>
+    
+                    <div class="formField"><label for="descrEng">Description en anglais (une cinquantaine de mots au plus)
+                            :</label><br>
+                        <textarea id="descrEng" name="descrEng" rows="7" cols="90" style= "max-width: 90%;"></textarea>
+                    </div>
+                    <input id="submitProperNoun" type="submit" class="btn" value="Ajouter">
+                </form>
+            </div>
+        </div>
+        <div id="lottieSubmitted"> </div>
+        </section>
+</body>
+
+</html>

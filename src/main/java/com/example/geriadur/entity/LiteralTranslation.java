@@ -26,15 +26,13 @@ public class LiteralTranslation {
     private String litTransFr;
 
     /**The type of literal transcription refer to the nature of the proper noun
-     * 1: male person or god name (singular)
-     * 2: female person or goddess name (singular)
+     * 1: male individual entity (singular)
+     * 2: female individual entity (singular)
      * 3: tribe or people name (plural)
      * 4: country name (singular)
      * 5: country name (plural)
      * 6: city name (singular)
      * 7: river name (singular)
-     * 8: god and heroes name
-     * 9: goddess name
      * 10: object
      */
     @Column(name = "lit_trans_type", nullable = false)
