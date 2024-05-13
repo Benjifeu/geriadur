@@ -1,5 +1,9 @@
 
 # Gerdarzh
+A MVC project you can access here: 
+http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8081
+A newer version of project using Vue and Django is publish here:
+http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8080
 
 ## An application about the celtic languages
 The application Gerdarzh is a dictionary and mini-game around the theme of celtic languages (Gaulish, Irish, Breton and Welsh essentially). The project is currently under construction and is not fully runnable for now.
@@ -21,7 +25,8 @@ The code is composed of an html/javascript/CSS interface layer, a Java layer for
 The java layer is essentially build with the framework Spring and use the Java Persistence API (JPA) to organise relational data.
 
 ## Deployed Version (Work In Progress)
-A work in progress version (v:0.3) is deployed on the below AWS address, some functionalities may are not available according to the actual deployed version: http://ec2-16-171-253-51.eu-north-1.compute.amazonaws.com:8080/login "email": "test" "password": "pass"
+A work in progress version (v:0.3) is deployed on the below AWS address, some functionalities may are not available according to the actual deployed version:
+http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8081
 
 ## How the project is developed ?
 ### Project management with SRUM method on Jira:
