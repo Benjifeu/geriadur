@@ -1,6 +1,9 @@
 package com.example.geriadur.util;
 
 import com.example.geriadur.service.user.api.IUserService;
+
+import java.util.Arrays;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,6 +17,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import org.springframework.web.filter.CorsFilter;
 
 @Configuration
 @EnableWebSecurity
@@ -21,6 +27,18 @@ public class SecurityConfiguration {
     @Lazy
     @Autowired
     public IUserService userService;
+
+    @Bean
+    public CorsFilter corsFilter() {
+        CorsConfiguration corsConfiguration = new CorsConfiguration();
+        corsConfiguration.addAllowedOrigin("*"); // Allow all origins
+        corsConfiguration.addAllowedMethod("GET"); // Allow all methods (GET, POST, etc.)
+        corsConfiguration.addAllowedMethod("POST"); // Allow all methods (GET, POST, etc.)
+        corsConfiguration.addAllowedHeader("*"); // Allow all headers
+        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+        source.registerCorsConfiguration("/**", corsConfiguration);
+        return new CorsFilter(source);
+    }
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -64,9 +82,12 @@ public class SecurityConfiguration {
                         .permitAll())
                 .build();
     }
-/*
-    @Bean
-    public WebSecurityCustomizer webSecurityCustomizer() {
-        return (web -> web.ignoring().requestMatchers("/sessionGame/**"));
-    }*/
+    
+
+    /*
+     * @Bean
+     * public WebSecurityCustomizer webSecurityCustomizer() {
+     * return (web -> web.ignoring().requestMatchers("/sessionGame/**"));
+     * }
+     */
 }

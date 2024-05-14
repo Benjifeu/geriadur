@@ -30,17 +30,15 @@ public class SourceController {
     private IUserService userService;
 
     //display list of semantic fields
-    @GetMapping("/sources")
+    @GetMapping("/sources/")
     public ResponseEntity<List<SourceBasicDTO>> getSources()  {
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Access-Control-Allow-Origin", "*");
         List<SourceBasicDTO> response = sourceService.getSourceStringList();
-        return new ResponseEntity<>(response, headers, HttpStatus.OK);
+        return new ResponseEntity<>(response,  HttpStatus.OK);
     }
     
 
 
-    @GetMapping("/sources/{id}")
+    @GetMapping("/sources/{id}/")
     public String showSource(@PathVariable(value = "id") Long id, Model model) {
         model.addAttribute("Source", sourceService.getSourceByID(id));
         return "sources/sources-Info";
