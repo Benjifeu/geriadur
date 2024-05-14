@@ -1,4 +1,4 @@
-let apiNouns = "/properNouns";
+let apiNouns = "/properNouns/";
 var allWordstemsPc = []
 let wordStemsOfNewProperNoun = [];
 
@@ -164,7 +164,7 @@ window.onclick = function (event) {
 
 async function getRadicalsPC() {
   try {
-    const response = await fetch(host + "/wordStems/Str", {
+    const response = await fetch(host + "/wordStems/Str/", {
       method: "GET"
     }
     );
@@ -331,7 +331,7 @@ document.getElementById('properNounForm').addEventListener('submit', function (e
 
   console.log(properNounDTO);
 
-  fetch(host + "/properNouns", {
+  fetch(host + apiNouns, {
     method: 'POST',
     body: JSON.stringify(properNounDTO),
     headers: {

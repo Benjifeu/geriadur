@@ -1,4 +1,4 @@
-let apiWordstem = "/sources";
+let apiWordstem = "/sources/";
 let data;
 
 const countElement = document.getElementById("wordstems-count");
