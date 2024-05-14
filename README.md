@@ -1,7 +1,9 @@
 
 # Gerdarzh
 A MVC project you can access here: 
-http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8081
+http://ec2-13-50-16-65.eu-north-1.compute.amazonaws.com:8081
+
+![alt text](http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8080/src/images/architecture_project.jpg?t=1715612450630)
 A newer version of project using Vue and Django is publish here:
 http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8080
 
@@ -26,7 +28,7 @@ The java layer is essentially build with the framework Spring and use the Java P
 
 ## Deployed Version (Work In Progress)
 A work in progress version (v:0.3) is deployed on the below AWS address, some functionalities may are not available according to the actual deployed version:
-http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8081
+http://ec2-13-50-16-65.eu-north-1.compute.amazonaws.com:8081/
 
 ## How the project is developed ?
 ### Project management with SRUM method on Jira:
