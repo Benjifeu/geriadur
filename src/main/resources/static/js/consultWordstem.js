@@ -1,4 +1,4 @@
-let apiWordstem = "/wordstems";
+let apiWordstem = "/wordstems/";
 
 
 async function showWordstem() {
@@ -11,7 +11,7 @@ async function showWordstem() {
     localStorage.setItem("wordstem", JSON.stringify(data));
   });
   insertdata(JSON.parse(localStorage.getItem("wordstem")))
-  console.log(host + apiWordstem + "/" + wordname)
+  console.log(host + apiWordstem  + wordname)
 }
 
 

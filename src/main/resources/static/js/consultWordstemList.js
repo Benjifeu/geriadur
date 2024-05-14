@@ -1,4 +1,4 @@
-let apiWordstem = "/wordstems";
+let apiWordstem = "/wordstems/";
 
 async function showWordstems() {
   await getWordstemList().then((data) => {
@@ -248,7 +248,7 @@ document.getElementById('wordstemForm').addEventListener('submit', function (eve
 
 async function getSources() {
   try {
-    const response = await fetch(host + "/sources", {
+    const response = await fetch(host + "/sources/", {
       method: "GET"
     }
     );

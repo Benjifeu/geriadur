@@ -27,18 +27,14 @@ public class ProperNounsController {
     private IUserService userService;
 
 
-    @GetMapping("/properNouns")
+    @GetMapping("/properNouns/")
     public ResponseEntity<List<ProperNounsDTO>> getProperNouns() throws JsonProcessingException {
-        ObjectMapper om = new ObjectMapper();
-        om.setVisibility(PropertyAccessor.FIELD, JsonAutoDetect.Visibility.ANY);
         List<ProperNounsDTO> properNounDTO = iWordStemService.getProperNouns();
         System.out.println(properNounDTO);
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Access-Control-Allow-Origin", "*");
-        return new ResponseEntity<>(properNounDTO, headers, HttpStatus.OK);
+        return new ResponseEntity<>(properNounDTO, HttpStatus.OK);
     }
 
-    @PostMapping("/properNouns")
+    @PostMapping("/properNouns/")
     public ResponseEntity<String> saveWordStem(@RequestBody ProperNounsDTO properNounDTO) {
         iWordStemService.addProperNoun(properNounDTO);
         return new ResponseEntity<>(

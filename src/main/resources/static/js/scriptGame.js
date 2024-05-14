@@ -1,7 +1,7 @@
 //const swup = new Swup();
 let currentQuestionIndex = 0;
 let score = 0;
-let apiGame = "/sessionGameData";
+let apiGame = "/sessionGameData/";
 let totalQuestionNumber = 0;
 let wordTheme = 0;
 let level;
@@ -61,12 +61,12 @@ function showQuestion() {
     questionNo + ". " + currentQuestion.properName.currentName;
   if (currentQuestion.properName.image != (null && "null" && '')) {
     var image = new Image();
-    image.src = "../images/nouns/" + currentQuestion.properName.image;
+    image.src = "../images/nouns/" + currentQuestion.properName.image + ".jpg";
     imgElement.appendChild(image);
   }
 
   etymoDescrElement.innerHTML = currentQuestion.properName.descr;
-  currentQuestion.pcelticRadicals.map((radical) => {
+  currentQuestion.celticRadicals.map((radical) => {
     const etymonButton = document.createElement("button");
     etymonButton.textContent = radical.name.toString();
     etymonButton.setAttribute("alt", radical.translation);

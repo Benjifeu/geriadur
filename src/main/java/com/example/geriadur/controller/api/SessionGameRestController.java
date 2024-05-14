@@ -29,20 +29,15 @@ public class SessionGameRestController {
     private IUserService userService;
 
 
-    @GetMapping("/sessionGameData")
+    @GetMapping("/sessionGameData/")
     public ResponseEntity<List<GameSessionStep>> get15Questions(@RequestParam Integer wordTheme) throws JsonProcessingException {
         log.info("The user with the email \""+userService.getCurrentUserEmail()+"\" started a new game session with the theme "+wordTheme+".");
-        
         List<GameSessionStep> response = ISessionGameService.get15GameSessionStep(wordTheme);
         System.out.println(response);
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Access-Control-Allow-Origin", "*");
-
-        return new ResponseEntity<>(response, headers, HttpStatus.OK);
+        return new ResponseEntity<>(response, HttpStatus.OK);
     }
 
-    @PostMapping("/sessionGameData/saveResult")
+    @PostMapping("/sessionGameData/saveResult/")
     public ResponseEntity<String> saveScore(@RequestBody GameSessionResult gameSessionResult)  {
         ResponseEntity<String> response = userService.saveScore(gameSessionResult.getSessionScore(),gameSessionResult.getSessionTheme());
         return response;

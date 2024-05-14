@@ -13,5 +13,5 @@ import java.util.List;
 public class GameSessionStep implements IDto{
     List<ResponseChoice> proposedLiteralTranslationList;
     ProperName properName;
-    List<PCelticRadical> pCelticRadicals;
+    List<PCelticRadical> celticRadicals;
 }
