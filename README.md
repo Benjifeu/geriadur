@@ -1,11 +1,13 @@
 
 # Gerdarzh
-A MVC project you can access here: 
-http://ec2-13-50-16-65.eu-north-1.compute.amazonaws.com:8081
+A newer version of project using Vue and Django here:
+http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8080
+
 
 ![alt text](http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8080/src/images/architecture_project.jpg?t=1715612450630)
-A newer version of project using Vue and Django is publish here:
-http://ec2-51-20-9-64.eu-north-1.compute.amazonaws.com:8080
+
+The MVC project is always accessible herer: 
+http://ec2-13-50-16-65.eu-north-1.compute.amazonaws.com:8081
 
 ## An application about the celtic languages
 The application Gerdarzh is a dictionary and mini-game around the theme of celtic languages (Gaulish, Irish, Breton and Welsh essentially). The project is currently under construction and is not fully runnable for now.
